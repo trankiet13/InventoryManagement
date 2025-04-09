@@ -113,8 +113,7 @@
             this.txtUser.Size = new System.Drawing.Size(229, 48);
             this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUser.TabIndex = 5;
-            
-            
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             // 
             // txtPassword
             // 
@@ -137,7 +136,6 @@
             this.txtPassword.Size = new System.Drawing.Size(229, 48);
             this.txtPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPassword.TabIndex = 6;
-          
             // 
             // lbForgetPass
             // 

@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\inventorymanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\frmmain1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\frmmain1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,10 +39,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },
@@ -53,14 +49,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmMain1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\frmMain1.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\frmMain1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\frmMain1.cs [Design]",
-              "RelativeToolTip": "InventoryManagement\\frmMain1.cs [Design]",
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.Designer.cs",
+              "RelativeToolTip": "InventoryManagement\\Form1.Designer.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAqwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:16:28.77Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-09T16:33:40.795Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,9 +65,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Form1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs*",
-              "RelativeToolTip": "InventoryManagement\\Form1.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAywBoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs",
+              "RelativeToolTip": "InventoryManagement\\Form1.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvxQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T16:08:09.901Z",
               "EditorCaption": ""
@@ -81,8 +78,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Form1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs [Design]*",
-              "RelativeToolTip": "InventoryManagement\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Form1.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T15:54:01.971Z",
               "EditorCaption": " [Design]"
@@ -90,7 +87,7 @@
           ]
         },
         {
-          "DockedWidth": 151,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

@@ -16,5 +16,10 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
