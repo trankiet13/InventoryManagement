@@ -1,0 +1,12 @@
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe.config
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\Inventor.F96114ED.Up2Date
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.LoginForm.resources
