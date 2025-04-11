@@ -39,6 +39,8 @@
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbForgetPass = new System.Windows.Forms.Label();
+            this.btLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +151,27 @@
             this.lbForgetPass.TabIndex = 7;
             this.lbForgetPass.Text = "Forget Password ?";
             // 
+            // btLogin
+            // 
+            this.btLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btLogin.ForeColor = System.Drawing.Color.White;
+            this.btLogin.Location = new System.Drawing.Point(527, 379);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(153, 34);
+            this.btLogin.TabIndex = 8;
+            this.btLogin.Text = "BtLogin";
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLogin);
             this.Controls.Add(this.lbForgetPass);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -163,7 +181,9 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WELCOME";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -180,6 +200,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private System.Windows.Forms.Label lbWelCome;
         private System.Windows.Forms.Label lbForgetPass;
+        private Guna.UI2.WinForms.Guna2Button btLogin;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }
 
