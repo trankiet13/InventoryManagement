@@ -42,6 +42,7 @@
             this.bnHome = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btUser = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -92,6 +93,7 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1070, 45);
             this.pnTop.TabIndex = 3;
+            this.pnTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTop_Paint);
             // 
             // pnRight
             // 
@@ -102,10 +104,12 @@
             this.pnRight.Name = "pnRight";
             this.pnRight.Size = new System.Drawing.Size(733, 608);
             this.pnRight.TabIndex = 4;
+            this.pnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnRight_Paint);
             // 
             // pnLeft
             // 
             this.pnLeft.BorderRadius = 60;
+            this.pnLeft.Controls.Add(this.btUser);
             this.pnLeft.Controls.Add(this.btSales);
             this.pnLeft.Controls.Add(this.bnCustomers);
             this.pnLeft.Controls.Add(this.bnPurchase);
@@ -251,6 +255,25 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // btUser
+            // 
+            this.btUser.AutoRoundedCorners = true;
+            this.btUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUser.ForeColor = System.Drawing.Color.White;
+            this.btUser.Location = new System.Drawing.Point(73, 523);
+            this.btUser.Name = "btUser";
+            this.btUser.Size = new System.Drawing.Size(180, 45);
+            this.btUser.TabIndex = 8;
+            this.btUser.Text = "User";
+            this.btUser.Click += new System.EventHandler(this.btUser_Click);
+            // 
             // frmMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,5 +311,6 @@
         private Guna.UI2.WinForms.Guna2Button bnProducts;
         private Guna.UI2.WinForms.Guna2Button bnCategoy;
         private Guna.UI2.WinForms.Guna2Button bnHome;
+        private Guna.UI2.WinForms.Guna2Button btUser;
     }
 }

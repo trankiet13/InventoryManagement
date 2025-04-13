@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using InventoryManagement.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,10 +41,39 @@ namespace InventoryManagement
             }
             
         }
-
+        public void AddControls (Form F)
+        {
+            this.pnRight.Controls.Clear();
+            F.Dock = DockStyle.Fill;
+            F.TopLevel = false;
+            pnRight.Controls.Add(F);
+            F.Show();
+        }
         private void btExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btUser_Click(object sender, EventArgs e)
+        {
+            View.frmViewUser frmViewUser = new View.frmViewUser();
+
+            frmViewUser.TopLevel = false;
+            pnRight.Controls.Clear();
+            pnRight.Controls.Add(frmViewUser);
+            frmViewUser.Dock = DockStyle.Fill;
+            frmViewUser.FormBorderStyle = FormBorderStyle.None;
+            frmViewUser.Show();
+        }
+
+        private void pnTop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
