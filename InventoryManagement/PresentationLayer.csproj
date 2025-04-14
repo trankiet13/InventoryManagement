@@ -64,6 +64,13 @@
     <Compile Include="frmMai.Designer.cs">
       <DependentUpon>frmMai.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="Model\frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +91,12 @@
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmViewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewCategory.Designer.cs">
+      <DependentUpon>frmViewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmViewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMai.resx">
       <DependentUpon>frmMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
@@ -113,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewCategory.resx">
+      <DependentUpon>frmViewCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewUser.resx">
       <DependentUpon>frmViewUser.cs</DependentUpon>

@@ -9,3 +9,4 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\BusinessLayer\obj\Debug\Busin
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\BusinessLayer\bin\Debug\Guna.UI2.dll

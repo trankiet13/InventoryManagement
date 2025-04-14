@@ -34,18 +34,18 @@
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
             this.pnRight = new Guna.UI2.WinForms.Guna2Panel();
             this.pnLeft = new Guna.UI2.WinForms.Guna2Panel();
+            this.btUser = new Guna.UI2.WinForms.Guna2Button();
             this.btSales = new Guna.UI2.WinForms.Guna2Button();
             this.bnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.bnPurchase = new Guna.UI2.WinForms.Guna2Button();
             this.bnProducts = new Guna.UI2.WinForms.Guna2Button();
             this.bnCategoy = new Guna.UI2.WinForms.Guna2Button();
             this.bnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btUser = new Guna.UI2.WinForms.Guna2Button();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.pictureboxUsername = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxUsername)).BeginInit();
             this.SuspendLayout();
             // 
             // btMaxizeBox
@@ -116,8 +116,8 @@
             this.pnLeft.Controls.Add(this.bnProducts);
             this.pnLeft.Controls.Add(this.bnCategoy);
             this.pnLeft.Controls.Add(this.bnHome);
-            this.pnLeft.Controls.Add(this.label1);
-            this.pnLeft.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnLeft.Controls.Add(this.lbUsername);
+            this.pnLeft.Controls.Add(this.pictureboxUsername);
             this.pnLeft.CustomizableEdges.BottomLeft = false;
             this.pnLeft.CustomizableEdges.BottomRight = false;
             this.pnLeft.CustomizableEdges.TopLeft = false;
@@ -127,6 +127,25 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(331, 614);
             this.pnLeft.TabIndex = 4;
+            // 
+            // btUser
+            // 
+            this.btUser.AutoRoundedCorners = true;
+            this.btUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUser.ForeColor = System.Drawing.Color.White;
+            this.btUser.Location = new System.Drawing.Point(73, 523);
+            this.btUser.Name = "btUser";
+            this.btUser.Size = new System.Drawing.Size(180, 45);
+            this.btUser.TabIndex = 8;
+            this.btUser.Text = "User";
+            this.btUser.Click += new System.EventHandler(this.btUser_Click);
             // 
             // btSales
             // 
@@ -217,6 +236,7 @@
             this.bnCategoy.Size = new System.Drawing.Size(180, 45);
             this.bnCategoy.TabIndex = 3;
             this.bnCategoy.Text = "Category";
+            this.bnCategoy.Click += new System.EventHandler(this.bnCategoy_Click);
             // 
             // bnHome
             // 
@@ -236,43 +256,24 @@
             this.bnHome.TabIndex = 2;
             this.bnHome.Text = "Home";
             // 
-            // label1
+            // lbUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Location = new System.Drawing.Point(119, 109);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(70, 16);
+            this.lbUsername.TabIndex = 1;
+            this.lbUsername.Text = "Username";
             // 
-            // guna2CirclePictureBox1
+            // pictureboxUsername
             // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(111, 37);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // btUser
-            // 
-            this.btUser.AutoRoundedCorners = true;
-            this.btUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUser.ForeColor = System.Drawing.Color.White;
-            this.btUser.Location = new System.Drawing.Point(73, 523);
-            this.btUser.Name = "btUser";
-            this.btUser.Size = new System.Drawing.Size(180, 45);
-            this.btUser.TabIndex = 8;
-            this.btUser.Text = "User";
-            this.btUser.Click += new System.EventHandler(this.btUser_Click);
+            this.pictureboxUsername.ImageRotate = 0F;
+            this.pictureboxUsername.Location = new System.Drawing.Point(111, 37);
+            this.pictureboxUsername.Name = "pictureboxUsername";
+            this.pictureboxUsername.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureboxUsername.Size = new System.Drawing.Size(64, 64);
+            this.pictureboxUsername.TabIndex = 0;
+            this.pictureboxUsername.TabStop = false;
             // 
             // frmMai
             // 
@@ -290,7 +291,7 @@
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             this.pnLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxUsername)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,8 +304,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnTop;
         private Guna.UI2.WinForms.Guna2Panel pnRight;
         private Guna.UI2.WinForms.Guna2Panel pnLeft;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Label lbUsername;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureboxUsername;
         private Guna.UI2.WinForms.Guna2Button btSales;
         private Guna.UI2.WinForms.Guna2Button bnCustomers;
         private Guna.UI2.WinForms.Guna2Button bnPurchase;

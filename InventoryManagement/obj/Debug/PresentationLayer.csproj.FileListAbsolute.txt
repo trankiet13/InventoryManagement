@@ -20,4 +20,6 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\bin\Debug
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.SampleAdd.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.SampleView.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewUser.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddCategory.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewCategory.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser.resources

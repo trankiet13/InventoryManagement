@@ -18,18 +18,18 @@ namespace InventoryManagement
             InitializeComponent();
         }
 
+        //public virtual void btAddNew_Click(object sender, EventArgs e)
+        //{
+        //    frmAddUser frmaddUSer = new frmAddUser();
+        //    frmaddUSer.ShowDialog();
+        //}
+
+        public void SampleView_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public virtual void btAddNew_Click(object sender, EventArgs e)
-        {
-            frmAddUser frmaddUSer = new frmAddUser();
-            frmaddUSer.ShowDialog();
-        }
-
-        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SampleView_Load(object sender, EventArgs e)
         {
 
         }

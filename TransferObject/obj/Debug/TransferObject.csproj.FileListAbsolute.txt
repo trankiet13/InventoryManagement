@@ -4,3 +4,5 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\obj\Debug\Tran
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\obj\Debug\TransferObject.dll
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\obj\Debug\TransferObject.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\TransferObject\obj\Debug\Transfer.F5B4361A.Up2Date

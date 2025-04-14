@@ -5,12 +5,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace DataLayer
-{
+{ 
     public class DataProvider
     {
-        private SqlConnection cn;
+        public SqlConnection cn;
         public DataProvider()
         {
             string cnStr = "Data Source=.;Initial Catalog=QuanLy_Kho;Integrated Security=True";
@@ -76,5 +77,6 @@ namespace DataLayer
                 throw ex;
             }
         }
+      
     }
 }

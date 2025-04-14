@@ -10,14 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace InventoryManagement
 {
     public partial class frmMai : Form
     {
+        
         public frmMai()
         {
             InitializeComponent();
+           
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -40,6 +43,7 @@ namespace InventoryManagement
                 Application.Exit();
             }
             
+            
         }
         public void AddControls (Form F)
         {
@@ -58,22 +62,29 @@ namespace InventoryManagement
         {
 
         }
+        private void LoadChildForm(Form childForm)
+        {
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
 
+            pnRight.Controls.Clear();
+            pnRight.Controls.Add(childForm);
+            childForm.Show();
+        }
         private void btUser_Click(object sender, EventArgs e)
         {
-            View.frmViewUser frmViewUser = new View.frmViewUser();
-
-            frmViewUser.TopLevel = false;
-            pnRight.Controls.Clear();
-            pnRight.Controls.Add(frmViewUser);
-            frmViewUser.Dock = DockStyle.Fill;
-            frmViewUser.FormBorderStyle = FormBorderStyle.None;
-            frmViewUser.Show();
+            LoadChildForm(new View.frmViewUser());
         }
 
         private void pnTop_Paint(object sender, PaintEventArgs e)
         {
+            //LoadChildForm(new Model.frmAddUser());
+        }
 
+        private void bnCategoy_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new View.frmViewCategory());
         }
     }
 }
