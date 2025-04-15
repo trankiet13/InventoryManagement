@@ -19,10 +19,12 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddCategory : SampleAdd
     {
+        private frmViewCategory parentForm;
         public int id = 0;
-        public frmAddCategory()
+        public frmAddCategory(frmViewCategory parent)
         {
             InitializeComponent();
+            parentForm = parent;
         }
 
         private void frmAddCategory_Load(object sender, EventArgs e)
@@ -31,8 +33,33 @@ namespace InventoryManagement.Model
         }
         public override void btSave_Click(object sender, EventArgs e)
         {
-            
+            if (Validation(this) == false)
+            {
+                Guna2MessageDialog messageDialog = new Guna2MessageDialog();
+                messageDialog.Buttons = MessageDialogButtons.OK;
+                messageDialog.Text = "Please fill all the required fields.";
+                messageDialog.Icon = MessageDialogIcon.Warning;
+                return;
+            }
+            string ten = txtName.Text.Trim();
+
+            //if (string.IsNullOrEmpty(ten))
+            //{
+            //    MessageBox.Show("Vui lòng nhập tên danh mục.");
+            //    return;
+            //}
+
+            CategoryBL categoryBL = new CategoryBL();
+            int result = categoryBL.SaveCategory(ten);
+
+            if (result > 0)
+            {
+                MessageBox.Show("Thêm danh mục thành công!");
+                parentForm.LoadCategoryGrid(); // Gọi ViewCategory cập nhật dữ liệu
+                this.Close();
+            }
         }
+        
         public override void btClosee_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -76,19 +103,6 @@ namespace InventoryManagement.Model
         }
         private void bnSave_Click(object sender, EventArgs e)
         {
-            if (Validation(this) == false)
-            {
-                Guna2MessageDialog messageDialog = new Guna2MessageDialog();
-                messageDialog.Buttons = MessageDialogButtons.OK;
-                messageDialog.Text = "Please fill all the required fields.";
-                messageDialog.Icon = MessageDialogIcon.Warning;
-                return;
-            }
-            else
-            {
-                
-
-            }
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)

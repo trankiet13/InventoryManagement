@@ -35,15 +35,19 @@ namespace InventoryManagement.View
                 throw ex;
             }
         }
-
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
         public override void btAddNew_Click(object sender, EventArgs e)
         {
-            frmAddCategory frmaddCategory = new frmAddCategory();
+            frmAddCategory frmaddCategory = new frmAddCategory(this);
             frmaddCategory.ShowDialog();
+        }
+        public void LoadCategoryGrid()
+        {
+            CategoryBL categoryBL = new CategoryBL();
+            dgvViewCategory.DataSource = categoryBL.GetAllCategories();
         }
     }
 }

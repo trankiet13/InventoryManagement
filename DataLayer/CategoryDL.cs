@@ -30,7 +30,7 @@ namespace DataLayer
                 {
                     ID = reader[0].ToString();
                     TEN = reader[1].ToString();
-                    Category category = new Category(TEN);
+                    Category category = new Category(ID,TEN);
                     categories.Add(category);
                 }
                 reader.Close();
@@ -47,27 +47,28 @@ namespace DataLayer
             }
 
         }
-        public bool AddCategory(Category category)
+
+        public int InsertCategory(string ten)
         {
-            string sql = "INSERT INTO dbo.tb_DTV values(@Name)";
-            SqlCommand cmd = new SqlCommand(sql, cn);
-            //cmd.Parameters.AddWithValue("@ID", category.id);
-            cmd.Parameters.AddWithValue("@Name", category.name);
-            try
-            {
-                Connect();
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch(SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Disconnect();
-            }
+            string query = "INSERT INTO dbo.tb_DVT (TEN) VALUES (@TEN)";
+            SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@TEN", ten);
+
+            cn.Open();
+            int rows = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return rows;
         }
-       
+
+        public DataTable LoadCategories()
+        {
+            string query = "SELECT ID, TEN FROM dbo.tb_DVT";
+            SqlDataAdapter da = new SqlDataAdapter(query, cn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
     }
 }

@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TransferObject;
 using DataLayer;
-    
+using System.Data;
+
 namespace BusinessLayer
 {
     public class CategoryBL
@@ -19,9 +20,13 @@ namespace BusinessLayer
         {
             return categoryDL.GetAllCategories();
         }
-        public bool AddCategory(Category category)
+        public int SaveCategory(string ten)
         {
-            return categoryDL.AddCategory(category);
+            return categoryDL.InsertCategory(ten);
+        }
+        public DataTable GetCategories()
+        {
+            return categoryDL.LoadCategories();
         }
     }
 }

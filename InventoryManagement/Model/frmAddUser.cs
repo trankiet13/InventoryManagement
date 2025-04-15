@@ -28,53 +28,11 @@ namespace InventoryManagement.Model
 
         private void frmAddUser_Load(object sender, EventArgs e)
         {
-            //LoadDataGridView();
+            
         }
         public override void btSave_Click(object sender, EventArgs e)
         {
-            //if (MainClass.Validation(this)==false)
-            //{
 
-            //    messageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            //    messageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-            //    messageDialog.Show("Please fill all the required fields");
-            //    return;
-            //}
-            //else
-            //{
-            //    string qry = "";
-            //    if (MainClass.id == 0)
-            //    {
-            //        qry = @"INSERT INTO dbo.tb_SYS_USER values @UserName, @PASSWD, @FULLNAME, @MACTY";
-
-            //    }
-            //    else
-            //    {
-            //        qry = @"UPDATE dbo.tb_SYS_USER SET USERNAME = @UserName, PASSWD = @PASSWD, FULLNAME = @FULLNAME, MACTY = @MACTY WHERE ID = @ID";
-            //    }
-            //    Image temp = new Bitmap(pictureBox.Image);
-            //    MemoryStream ms = new MemoryStream();
-            //    temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            //    byte[] arr = ms.ToArray();
-            //    ms.Close();
-
-            //    Hashtable ht = new Hashtable();
-            //    ht.Add("UserName", txtUsername.Text);
-            //    ht.Add(@"PASSWD", txtPassword.Text);
-            //    ht.Add(@"FULLNAME", txtName.Text);
-            //    ht.Add(@"MACTY", txtPhone.Text);
-            //    if (MainClass.SQL(qry, ht) > 0)
-            //    {
-            //        messageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            //        messageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            //        messageDialog.Show("User added successfully");
-            //        MainClass.id = 0;
-            //        txtName.Text = "";
-            //        txtPassword.Text = "";
-            //        txtPhone.Text = "";
-            //        txtUsername.Text = "";
-            //    }
-            //}
             if (MainClass.Validation(this) == false)
             {
                 messageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;

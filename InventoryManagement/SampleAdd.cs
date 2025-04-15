@@ -17,10 +17,6 @@ namespace InventoryManagement
         public SampleAdd()
         {
             InitializeComponent();
-            //txtName.Visible = false;
-            //txtUsername.Visible = false;
-            //txtPassword.Visible = false;
-            //txtPhone.Visible = false;
         }
 
         public void SampleAdd_Load(object sender, EventArgs e)
