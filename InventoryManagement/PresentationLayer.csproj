@@ -52,17 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMai.Designer.cs">
       <DependentUpon>frmMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
     <Compile Include="Model\frmAddCategory.cs">
@@ -77,23 +77,11 @@
     <Compile Include="Model\frmAddPurchase.Designer.cs">
       <DependentUpon>frmAddPurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\frmAddSales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmAddSales.Designer.cs">
-      <DependentUpon>frmAddSales.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\frmAddUser.Designer.cs">
       <DependentUpon>frmAddUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ucProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Model\ucProduct.Designer.cs">
-      <DependentUpon>ucProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,23 +109,17 @@
     <Compile Include="View\frmViewPurchase.Designer.cs">
       <DependentUpon>frmViewPurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmViewSales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmViewSales.Designer.cs">
-      <DependentUpon>frmViewSales.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmViewUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmViewUser.Designer.cs">
       <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMai.resx">
       <DependentUpon>frmMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddCategory.resx">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
@@ -147,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\ucProduct.resx">
-      <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewPurchase.resx">
       <DependentUpon>frmViewPurchase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmViewSales.resx">
-      <DependentUpon>frmViewSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewUser.resx">
       <DependentUpon>frmViewUser.cs</DependentUpon>
@@ -204,7 +180,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

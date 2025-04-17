@@ -86,5 +86,10 @@ namespace InventoryManagement
         {
             LoadChildForm(new View.frmViewCategory());
         }
+
+        private void bnPurchase_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new View.frmViewPurchase());
+        }
     }
 }

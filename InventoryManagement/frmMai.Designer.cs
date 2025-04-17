@@ -200,6 +200,7 @@
             this.bnPurchase.Size = new System.Drawing.Size(180, 45);
             this.bnPurchase.TabIndex = 5;
             this.bnPurchase.Text = "Purchases";
+            this.bnPurchase.Click += new System.EventHandler(this.bnPurchase_Click);
             // 
             // bnProducts
             // 
