@@ -24,6 +24,7 @@ namespace InventoryManagement.Model
         {
             InitializeComponent();
         }
+        //check kh duoc de trong txt.
         public static bool Validation(Form F)
         {
             bool isValid = false;
@@ -79,7 +80,7 @@ namespace InventoryManagement.Model
             {
                 UserBL bl = new UserBL();
 
-                // Xử lý giá trị cbbRole thành giá trị bit
+               
                 int role = 0;
                 if (cbbRole.SelectedItem != null)
                 {
@@ -106,7 +107,7 @@ namespace InventoryManagement.Model
                 {
                     guna2MessageDialog1.Show("Lưu thành công");
 
-                    // Reset UI sau khi luu
+                    // Reset txt ve 0 sau khi luu
                     id = 0;
                     txtUser.Clear();
                     txtName.Clear();
