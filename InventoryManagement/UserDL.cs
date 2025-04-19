@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -12,22 +12,35 @@ namespace DataLayer
     public class UserDL : DataProvider
     {
         //Trả về datatable hiện thị cho dgv
-        public DataTable GetDataTable(string query)
+        // Trong UserDL.cs
+        public DataTable GetDataTable(string query, Hashtable parameters = null)
         {
             try
             {
                 Connect();
                 SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.CommandType = CommandType.Text;
+
+                if (parameters != null)
+                {
+                    foreach (DictionaryEntry item in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                    }
+                }
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                Disconnect();
                 return dt;
             }
             catch (Exception ex)
             {
-                Disconnect();
                 throw new Exception("Lỗi khi tải dữ liệu", ex);
+            }
+            finally
+            {
+                Disconnect();
             }
         }
         //  Dùng để thêm user
@@ -57,4 +70,3 @@ namespace DataLayer
 
     }
 }
-
