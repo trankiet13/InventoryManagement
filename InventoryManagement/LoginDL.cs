@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -12,20 +12,46 @@ namespace DataLayer
 {
     public class LoginDL : DataProvider
     {
-        public bool Login(Account account)
+        public Account GetAccount(string username, string password)
         {
-            /// string sql = "SELECT COUNT(username) FROM User WHERE Username ='" + account.Username + "'And PASSWD = '" + account.Password + "'";
-            string sql = "SELECT COUNT(USERNAME) FROM tb_SYS_USER WHERE USERNAME = '" + account.Username + "' AND PASSWD = '" + account.Password + "'";
+            string sql = @"SELECT IDUSER, USERNAME, PASSWD, ISGROUP
+                   FROM tb_SYS_USER
+                   WHERE USERNAME = @username AND PASSWD = @password";
 
             try
             {
-                return ((int)(MyExecuteScalar(sql, CommandType.Text)) > 0);
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Account acc = new Account
+                    {
+                        UserID = Convert.ToInt32(reader["IDUSER"]),
+                        Username = reader["USERNAME"].ToString(),
+                        Password = reader["PASSWD"].ToString(),
+                        IsGroup = Convert.ToInt32(reader["ISGROUP"])
+                    };
+                    reader.Close();
+                    Disconnect();
+                    return acc;
+                }
+
+                reader.Close();
+                Disconnect();
+                return null;
             }
             catch (SqlException ex)
             {
+                Disconnect();
                 throw ex;
             }
         }
+
 
     }
 }
