@@ -1,4 +1,4 @@
-﻿using InventoryManagement.Model;
+using InventoryManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +14,8 @@ using System.Security.AccessControl;
 using Guna.UI2.WinForms;
 using System.Collections;
 using TransferObject;
+using System.Web.Security;
+
 
 namespace InventoryManagement.View
 {
@@ -28,14 +30,8 @@ namespace InventoryManagement.View
         {
             LoadDt();
         }
-        public Account LoggedInAccount { get; set; }
-        public override void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmUserAdd addForm = new frmUserAdd();
-    
-            addForm.ShowDialog();
-            LoadDt(); // Sau khi thêm xong, load lại dữ liệu
-        }
+
+
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
@@ -81,54 +77,74 @@ namespace InventoryManagement.View
                 }
             }
         }
+        public override void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (LoginInfo.CurrentUser.IsGroup == 1)
+            {
+                frmUserAdd addForm = new frmUserAdd();
+                addForm.ShowDialog();
+                LoadDt(); // Sau khi thêm xong, load lại dữ liệu
+            }
+            else
+            {
+                MessageBox.Show("Bạn không phải admin!", "Từ chối", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
 
 
-
-
-
-
-
+        }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return; // Bỏ qua nếu header
+            if (e.RowIndex < 0) return;
 
             string colName = guna2DataGridView1.Columns[e.ColumnIndex].Name;
+            int selectedUserId = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
 
             if (colName == "dgvEdit")
             {
+                // Kiểm tra quyền
+                if (LoginInfo.CurrentUser.IsGroup != 1) // Không phải Admin
+                {
+                    // Chỉ được sửa thông tin của chính mình
+                    if (selectedUserId != LoginInfo.CurrentUser.UserID)
+                    {
+                        MessageBox.Show("Bạn không có quyền sửa thông tin người khác!", "Từ chối", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        return;
+                    }
+                }
+
+                // Mở form chỉnh sửa
                 frmUserAdd frm = new frmUserAdd();
+                frm.id = selectedUserId;
+                frm.txtUser.Text = guna2DataGridView1.CurrentRow.Cells["dgvUserName"].Value.ToString();
+                frm.txtName.Text = guna2DataGridView1.CurrentRow.Cells["dgvName"].Value.ToString();
+                frm.txtPass.Text = guna2DataGridView1.CurrentRow.Cells["dgvPass"].Value.ToString();
+                frm.txtMaCongTy.Text = guna2DataGridView1.CurrentRow.Cells["dgvCty"].Value.ToString();
+                frm.txtDonVi.Text = guna2DataGridView1.CurrentRow.Cells["dgvdvi"].Value.ToString();
 
-                // Gán dữ liệu từ DataGridView vào frmUserAdd
-                frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                frm.txtUser.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvUserName"].Value);
-                frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
-                frm.txtPass.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPass"].Value);
-                frm.txtMaCongTy.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvCty"].Value);
-                frm.txtDonVi.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvdvi"].Value);
-
-                // Lấy giá trị quyền từ cột ISGROUP (dgvRole) và gán vào ComboBox
+                // Set giá trị quyền (chỉ Admin được thay đổi)
                 string roleText = guna2DataGridView1.CurrentRow.Cells["dgvRole"].Value.ToString();
-
-                if (roleText == "Admin")
-                    frm.cbbRole.SelectedItem = "Admin";
-                else if (roleText == "User")
-                    frm.cbbRole.SelectedItem = "User";
-                else if (roleText == "Staff")
-                    frm.cbbRole.SelectedItem = "Staff";
+                frm.cbbRole.SelectedItem = roleText;
+                frm.cbbRole.Enabled = (LoginInfo.CurrentUser.IsGroup == 1); // Chỉ Admin được chọn quyền
 
                 frm.ShowDialog();
-                LoadDt(); // Cập nhật lại danh sách
+                LoadDt();
             }
-
-            if (colName == "dgvDel")
+            else if (colName == "dgvDel")
             {
-                int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+                // Chỉ Admin được xóa
+                if (LoginInfo.CurrentUser.IsGroup != 1)
+                {
+                    MessageBox.Show("Bạn không có quyền xóa người dùng!", "Từ chối", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
 
+                // Xử lý xóa...
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa người dùng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     UserBL userBL = new UserBL();
-                    int kq = userBL.DeleteUser(id); // Gọi BusinessLayer để xóa
+                    int kq = userBL.DeleteUser(selectedUserId);
                     if (kq > 0)
                     {
                         guna2MessageDialog1.Show("Xóa thành công");
@@ -141,35 +157,16 @@ namespace InventoryManagement.View
                 }
             }
         }
+
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
-
-
-
-//            if (colName == "dgvDel")
-//            {
-//                int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-
-//                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa người dùng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-//                if (result == DialogResult.Yes)
-//                {
-//                    UserBL userBL = new UserBL();
-//                    int kq = userBL.DeleteUser(id); // Gọi BusinessLayer để xóa
-//                    if (kq > 0)
-//                    {
-//                        // Thay đổi phần này để không gặp lỗi circular reference
-
-//                        guna2MessageDialog1.Show("Xóa thành công");
-//                        LoadDt();
-//                    }
-//                    else
-//                    {
-
-//                        guna2MessageDialog1.Show("Xóa thất bại");
-//                    }
-//                }
-//            }
-//        }
-
-//    }
-//}
