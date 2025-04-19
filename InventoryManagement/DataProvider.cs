@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -97,18 +97,32 @@ namespace DataLayer
             }
         }
         // Trả về nhiều dòng(SqlDataReader),khi đọc dữ liệu lớn, xử lý từng dòng
-        public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        public object MyExecuteScalar(string sql, CommandType type, Hashtable parameters = null)
         {
             try
             {
+                Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
-                return cmd.ExecuteReader();
+
+                // Thêm parameters nếu có
+                if (parameters != null)
+                {
+                    foreach (DictionaryEntry item in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                    }
+                }
+
+                return cmd.ExecuteScalar();
             }
             catch (SqlException ex)
             {
-
                 throw ex;
+            }
+            finally
+            {
+                Disconnect();
             }
         }
     }
