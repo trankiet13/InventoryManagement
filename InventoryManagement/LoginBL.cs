@@ -1,10 +1,11 @@
-﻿using DataLayer;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using TransferObject;
 
 namespace BusinessLayer
@@ -16,17 +17,10 @@ namespace BusinessLayer
         {
             loginDL = new LoginDL();
         }
-        public bool Login(Account account)
+        public Account GetAccount(string username, string password)
         {
-            try
-            {
-                return loginDL.Login(account);
-            }
-            catch (SqlException ex)
-            {
-
-                throw ex;
-            }
+            return loginDL.GetAccount(username, password);
         }
+
     }
 }
