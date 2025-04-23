@@ -46,7 +46,7 @@ namespace InventoryManagement.View
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(935, 32);
+            this.label1.Size = new System.Drawing.Size(777, 26);
             this.label1.Text = "User";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -74,11 +74,12 @@ namespace InventoryManagement.View
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(180, 122);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -127,13 +128,14 @@ namespace InventoryManagement.View
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvViewUser.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewUser.Location = new System.Drawing.Point(41, 186);
+            this.dgvViewUser.Location = new System.Drawing.Point(31, 151);
+            this.dgvViewUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvViewUser.Name = "dgvViewUser";
             this.dgvViewUser.ReadOnly = true;
             this.dgvViewUser.RowHeadersVisible = false;
             this.dgvViewUser.RowHeadersWidth = 51;
             this.dgvViewUser.RowTemplate.Height = 24;
-            this.dgvViewUser.Size = new System.Drawing.Size(867, 325);
+            this.dgvViewUser.Size = new System.Drawing.Size(650, 264);
             this.dgvViewUser.TabIndex = 2;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,9 +161,9 @@ namespace InventoryManagement.View
             // 
             // frmViewUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 556);
+            this.ClientSize = new System.Drawing.Size(738, 452);
             this.Controls.Add(this.dgvViewUser);
             this.Controls.Add(this.guna2DataGridView1);
             this.Name = "frmViewUser";
