@@ -39,7 +39,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(2191, 26);
+            this.label1.Size = new System.Drawing.Size(4896, 26);
             this.label1.Text = "Product List";
             // 
             // guna2Panel1
@@ -48,7 +48,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(933, 678);
+            this.guna2Panel1.Size = new System.Drawing.Size(1608, 822);
             this.guna2Panel1.TabIndex = 4;
             // 
             // dgvProductView
@@ -75,13 +75,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvProductView.Location = new System.Drawing.Point(-2, 63);
+            this.dgvProductView.Location = new System.Drawing.Point(-2, 127);
             this.dgvProductView.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductView.Name = "dgvProductView";
             this.dgvProductView.RowHeadersVisible = false;
             this.dgvProductView.RowHeadersWidth = 51;
             this.dgvProductView.RowTemplate.Height = 24;
-            this.dgvProductView.Size = new System.Drawing.Size(933, 695);
+            this.dgvProductView.Size = new System.Drawing.Size(1608, 695);
             this.dgvProductView.TabIndex = 3;
             this.dgvProductView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProductView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -104,12 +104,13 @@
             this.dgvProductView.ThemeStyle.RowsStyle.Height = 24;
             this.dgvProductView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProductView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvProductView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductView_CellClick);
             // 
             // frmProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 678);
+            this.ClientSize = new System.Drawing.Size(1608, 822);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "frmProductView";
             this.Text = "Product View";

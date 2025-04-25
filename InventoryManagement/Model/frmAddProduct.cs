@@ -16,9 +16,12 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddProduct : SampleAdd
     {
-        public frmAddProduct(View.frmProductView frmProductView)
+        private Product selectedProduct;
+
+        public frmAddProduct(View.frmProductView frmProductView,Product product = null)
         {
             InitializeComponent();
+            selectedProduct = product;    
         }
 
         private void frmAddProduct_Load(object sender, EventArgs e)
@@ -26,6 +29,21 @@ namespace InventoryManagement.Model
             LoadXuatXu();
             LoadNhaCungCap();
             LoadDVT();
+
+            if (selectedProduct != null)
+            {
+                txtBarcode.Text = selectedProduct.BARCODE;
+                txtBarcode.Enabled = false;
+
+                txtTenHH.Text = selectedProduct.TENHH;
+                txtTentat.Text = selectedProduct.TENTAT;
+                spGia.Text = selectedProduct.DONGIA?.ToString();
+                cbDvt.Text = selectedProduct.DVT?.ToString();
+                cbNcc.SelectedValue = selectedProduct.MANCC;
+                cbXuatxu.SelectedValue = selectedProduct.MAXX;
+                txtMota.Text = selectedProduct.MOTA;
+                chkDisabled.Checked = selectedProduct.DISABLED ?? false;
+            }
         }
 
         public override void btSave_Click(object sender, EventArgs e)
@@ -65,21 +83,35 @@ namespace InventoryManagement.Model
 
 
                 ProductsBL productsBL = new ProductsBL();
-                int success = productsBL.AddProduct(product); // gọi xuống BL
+                int success;
+
+                if (selectedProduct == null)
+                {
+                    // Add new product
+                    success = productsBL.AddProduct(product);
+                }
+                else
+                {
+                    // Update existing product
+                    success = productsBL.UpdateProduct(product);
+                }
+
                 if (success > 0)
                 {
-                    MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(selectedProduct == null ? "Thêm sản phẩm thành công!" : "Cập nhật sản phẩm thành công!",
+                                  "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Lỗi khi thêm sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(selectedProduct == null ? "Lỗi khi thêm sản phẩm." : "Lỗi khi cập nhật sản phẩm.",
+                                  "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (SqlException ex)
-            { 
-                throw ex;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -84,6 +84,53 @@ namespace DataLayer
             }
         }
 
+        public int UpdateProduct(Product product)
+        {
+            string sql = "uspUpdateProduct";
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@BARCODE", product.BARCODE),
+                new SqlParameter("@TENHH", product.TENHH),
+            new SqlParameter("@TENTAT", product.TENTAT),
+            new SqlParameter("@DVT", product.DVT),
+            new SqlParameter("@DONGIA", product.DONGIA),
+            new SqlParameter("@MANCC", product.MANCC),
+            new SqlParameter("@MAXX", product.MAXX),
+            new SqlParameter("@IDNHOM", product.IDNHOM),
+            new SqlParameter("@MOTA", product.MOTA),
+            new SqlParameter("@CREATED_DATE", product.CREATED_DATE),
+            new SqlParameter("@CREATED_BY", product.CREATED_BY),
+            new SqlParameter("@DISABLED", product.DISABLED)
+            };
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int DeleteProduct(string barcode)
+        {
+            string sql = "uspDeleteProduct";
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@BARCODE", barcode)
+            };
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         protected DataTable MyGetDataTable(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             using (SqlCommand cmd = new SqlCommand(sql, cn))
@@ -156,6 +203,7 @@ namespace DataLayer
             }
             finally { Disconnect(); }
         }
+
 
     }
 }

@@ -76,24 +76,26 @@ namespace DataLayer
                 throw ex;
             }
         }
-      
+
         public int MyExecuteNonQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             try
             {
                 Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = type;
-
-                if (parameters != null)
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-                    foreach (SqlParameter param in parameters)
+                    cmd.CommandType = type;
+
+                    if (parameters != null)
                     {
-                        cmd.Parameters.Add(param);
+                        foreach (SqlParameter param in parameters)
+                        {
+                            cmd.Parameters.Add(param);
+                        }
                     }
+
+                    return cmd.ExecuteNonQuery();
                 }
-                
-                return cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)
             {
@@ -104,5 +106,6 @@ namespace DataLayer
                 Disconnect();
             }
         }
+
     }
 }

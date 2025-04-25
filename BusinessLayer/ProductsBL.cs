@@ -35,6 +35,29 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+        public int UpdateProduct(Product product)
+        {
+            try
+            {
+                return productsDL.UpdateProduct(product);
+            }
+            catch (SqlException ex)
+            {
+                throw ex; 
+            }
+        }
+
+        public int DeleteProduct(string barcode)
+        {
+            try
+            {
+                return productsDL.DeleteProduct(barcode);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
 
         public DataTable LoadXuatXu()
         {
@@ -50,5 +73,7 @@ namespace BusinessLayer
         {
             return productsDL.GetDVT();
         }
+
+
     }
 }
