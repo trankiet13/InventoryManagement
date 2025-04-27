@@ -36,7 +36,6 @@
             this.txtTentat = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.spGia = new DevExpress.XtraEditors.SpinEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.cbDvt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMota = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,7 +45,9 @@
             this.cbNcc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.chkDisabled = new Guna.UI2.WinForms.Guna2CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.spGia.Properties)).BeginInit();
+            this.spGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbNhom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -157,29 +158,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(382, 173);
+            this.label6.Location = new System.Drawing.Point(382, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Trị giá";
-            // 
-            // spGia
-            // 
-            this.spGia.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spGia.Location = new System.Drawing.Point(447, 167);
-            this.spGia.Name = "spGia";
-            this.spGia.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spGia.Properties.Appearance.Options.UseFont = true;
-            this.spGia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.spGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spGia.Properties.MaskSettings.Set("mask", "");
-            this.spGia.Size = new System.Drawing.Size(173, 26);
-            this.spGia.TabIndex = 13;
             // 
             // label7
             // 
@@ -218,7 +201,7 @@
             this.txtMota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMota.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMota.Location = new System.Drawing.Point(447, 216);
+            this.txtMota.Location = new System.Drawing.Point(447, 271);
             this.txtMota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMota.Name = "txtMota";
             this.txtMota.PlaceholderText = "";
@@ -230,7 +213,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(382, 232);
+            this.label8.Location = new System.Drawing.Point(382, 287);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 16;
@@ -297,7 +280,7 @@
             this.chkDisabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkDisabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDisabled.ForeColor = System.Drawing.Color.Red;
-            this.chkDisabled.Location = new System.Drawing.Point(447, 389);
+            this.chkDisabled.Location = new System.Drawing.Point(447, 444);
             this.chkDisabled.Name = "chkDisabled";
             this.chkDisabled.Size = new System.Drawing.Size(98, 24);
             this.chkDisabled.TabIndex = 22;
@@ -307,11 +290,60 @@
             this.chkDisabled.UncheckedState.BorderThickness = 0;
             this.chkDisabled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
+            // spGia
+            // 
+            this.spGia.AutoRoundedCorners = true;
+            this.spGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.spGia.DefaultText = "";
+            this.spGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.spGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.spGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.spGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.spGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.spGia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.spGia.Location = new System.Drawing.Point(447, 216);
+            this.spGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spGia.Name = "spGia";
+            this.spGia.PlaceholderText = "";
+            this.spGia.SelectedText = "";
+            this.spGia.Size = new System.Drawing.Size(173, 32);
+            this.spGia.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(382, 173);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 20);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Nhóm";
+            // 
+            // cbNhom
+            // 
+            this.cbNhom.AutoRoundedCorners = true;
+            this.cbNhom.BackColor = System.Drawing.Color.Transparent;
+            this.cbNhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNhom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNhom.ItemHeight = 30;
+            this.cbNhom.Location = new System.Drawing.Point(447, 161);
+            this.cbNhom.Name = "cbNhom";
+            this.cbNhom.Size = new System.Drawing.Size(173, 36);
+            this.cbNhom.TabIndex = 25;
+            // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 525);
+            this.Controls.Add(this.cbNhom);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.spGia);
             this.Controls.Add(this.chkDisabled);
             this.Controls.Add(this.cbNcc);
             this.Controls.Add(this.label10);
@@ -321,7 +353,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbDvt);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.spGia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTentat);
             this.Controls.Add(this.label5);
@@ -335,7 +366,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Product";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.spGia.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,7 +381,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTentat;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.SpinEdit spGia;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbDvt;
         private Guna.UI2.WinForms.Guna2TextBox txtMota;
@@ -361,5 +390,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbNcc;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2CheckBox chkDisabled;
+        private Guna.UI2.WinForms.Guna2TextBox spGia;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ComboBox cbNhom;
     }
 }

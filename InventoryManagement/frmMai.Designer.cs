@@ -55,7 +55,7 @@
             this.btMaxizeBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btMaxizeBox.IconColor = System.Drawing.Color.White;
             this.btMaxizeBox.Location = new System.Drawing.Point(713, 7);
-            this.btMaxizeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btMaxizeBox.Margin = new System.Windows.Forms.Padding(2);
             this.btMaxizeBox.Name = "btMaxizeBox";
             this.btMaxizeBox.Size = new System.Drawing.Size(34, 24);
             this.btMaxizeBox.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.btExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btExit.IconColor = System.Drawing.Color.White;
             this.btExit.Location = new System.Drawing.Point(760, 7);
-            this.btExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btExit.Margin = new System.Windows.Forms.Padding(2);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(34, 24);
             this.btExit.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.btMinizeBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btMinizeBox.IconColor = System.Drawing.Color.White;
             this.btMinizeBox.Location = new System.Drawing.Point(660, 7);
-            this.btMinizeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btMinizeBox.Margin = new System.Windows.Forms.Padding(2);
             this.btMinizeBox.Name = "btMinizeBox";
             this.btMinizeBox.Size = new System.Drawing.Size(34, 24);
             this.btMinizeBox.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.pnTop.Controls.Add(this.btMinizeBox);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
-            this.pnTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(802, 37);
             this.pnTop.TabIndex = 3;
@@ -105,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnRight.Location = new System.Drawing.Point(253, 41);
-            this.pnRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnRight.Margin = new System.Windows.Forms.Padding(2);
             this.pnRight.Name = "pnRight";
             this.pnRight.Size = new System.Drawing.Size(550, 494);
             this.pnRight.TabIndex = 4;
@@ -129,7 +129,7 @@
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(201)))));
             this.pnLeft.Location = new System.Drawing.Point(0, 37);
-            this.pnLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnLeft.Margin = new System.Windows.Forms.Padding(2);
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(248, 498);
             this.pnLeft.TabIndex = 4;
@@ -147,7 +147,7 @@
             this.btUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUser.ForeColor = System.Drawing.Color.White;
             this.btUser.Location = new System.Drawing.Point(55, 425);
-            this.btUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btUser.Margin = new System.Windows.Forms.Padding(2);
             this.btUser.Name = "btUser";
             this.btUser.Size = new System.Drawing.Size(135, 37);
             this.btUser.TabIndex = 8;
@@ -167,7 +167,7 @@
             this.btSales.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSales.ForeColor = System.Drawing.Color.White;
             this.btSales.Location = new System.Drawing.Point(53, 375);
-            this.btSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btSales.Margin = new System.Windows.Forms.Padding(2);
             this.btSales.Name = "btSales";
             this.btSales.Size = new System.Drawing.Size(135, 37);
             this.btSales.TabIndex = 7;
@@ -186,7 +186,7 @@
             this.bnCustomers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCustomers.ForeColor = System.Drawing.Color.White;
             this.bnCustomers.Location = new System.Drawing.Point(53, 323);
-            this.bnCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnCustomers.Margin = new System.Windows.Forms.Padding(2);
             this.bnCustomers.Name = "bnCustomers";
             this.bnCustomers.Size = new System.Drawing.Size(135, 37);
             this.bnCustomers.TabIndex = 6;
@@ -205,7 +205,7 @@
             this.bnPurchase.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnPurchase.ForeColor = System.Drawing.Color.White;
             this.bnPurchase.Location = new System.Drawing.Point(53, 269);
-            this.bnPurchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.bnPurchase.Name = "bnPurchase";
             this.bnPurchase.Size = new System.Drawing.Size(135, 37);
             this.bnPurchase.TabIndex = 5;
@@ -225,7 +225,7 @@
             this.bnProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnProducts.ForeColor = System.Drawing.Color.White;
             this.bnProducts.Location = new System.Drawing.Point(53, 223);
-            this.bnProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnProducts.Margin = new System.Windows.Forms.Padding(2);
             this.bnProducts.Name = "bnProducts";
             this.bnProducts.Size = new System.Drawing.Size(135, 37);
             this.bnProducts.TabIndex = 4;
@@ -245,7 +245,7 @@
             this.bnCategoy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCategoy.ForeColor = System.Drawing.Color.White;
             this.bnCategoy.Location = new System.Drawing.Point(53, 173);
-            this.bnCategoy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnCategoy.Margin = new System.Windows.Forms.Padding(2);
             this.bnCategoy.Name = "bnCategoy";
             this.bnCategoy.Size = new System.Drawing.Size(135, 37);
             this.bnCategoy.TabIndex = 3;
@@ -265,11 +265,12 @@
             this.bnHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnHome.ForeColor = System.Drawing.Color.White;
             this.bnHome.Location = new System.Drawing.Point(53, 132);
-            this.bnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnHome.Margin = new System.Windows.Forms.Padding(2);
             this.bnHome.Name = "bnHome";
             this.bnHome.Size = new System.Drawing.Size(135, 37);
             this.bnHome.TabIndex = 2;
             this.bnHome.Text = "Home";
+            this.bnHome.Click += new System.EventHandler(this.bnHome_Click);
             // 
             // lbUsername
             // 
@@ -285,7 +286,7 @@
             // 
             this.pictureboxUsername.ImageRotate = 0F;
             this.pictureboxUsername.Location = new System.Drawing.Point(83, 30);
-            this.pictureboxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureboxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.pictureboxUsername.Name = "pictureboxUsername";
             this.pictureboxUsername.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureboxUsername.Size = new System.Drawing.Size(48, 52);
@@ -301,7 +302,7 @@
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMai";
             this.Text = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

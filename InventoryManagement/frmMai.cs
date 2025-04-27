@@ -94,7 +94,24 @@ namespace InventoryManagement
 
         private void bnProducts_Click(object sender, EventArgs e)
         {
-            AddControls(new frmProductView());
+            LoadChildForm(new View.frmProductView());
+            //AddControls(new frmProductView());
+        }
+
+        private void bnHome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProductsBL productsBL = new ProductsBL();
+                var products = productsBL.GetAllProducts();
+
+                frmProductStatistical frmProductStatistical = new frmProductStatistical(products);
+                LoadChildForm(frmProductStatistical);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu thống kê: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

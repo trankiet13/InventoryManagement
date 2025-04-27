@@ -65,3 +65,4 @@ D:\InventoryManagement\InventoryManagement\bin\Debug\DevExpress.XtraEditors.v22.
 D:\InventoryManagement\InventoryManagement\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
 D:\InventoryManagement\InventoryManagement\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
 D:\InventoryManagement\InventoryManagement\bin\Debug\DevExpress.XtraBars.v22.2.xml
+D:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmProductStatistical.resources

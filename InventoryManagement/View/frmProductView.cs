@@ -30,32 +30,52 @@ namespace InventoryManagement.View
             {
                 dgvProductView.DataSource = productsBL.GetAllProducts();
 
-                // Thêm nút Update nếu chưa có
                 if (!dgvProductView.Columns.Contains("Update"))
                 {
-                    DataGridViewButtonColumn updateButton = new DataGridViewButtonColumn();
-                    updateButton.Name = "Update";
-                    updateButton.HeaderText = "Sửa";
-                    updateButton.Text = "Sửa";
-                    updateButton.UseColumnTextForButtonValue = true;
+                    DataGridViewButtonColumn updateButton = new DataGridViewButtonColumn
+                    {
+                        Name = "Update",
+                        HeaderText = "Update",
+                        Text = "Sửa",
+                        UseColumnTextForButtonValue = true,
+                        FlatStyle = FlatStyle.Popup,
+                        DefaultCellStyle = new DataGridViewCellStyle
+                        {
+                            BackColor = Color.LightBlue
+                        }
+                    };
                     dgvProductView.Columns.Add(updateButton);
                 }
 
-                // Thêm nút Delete nếu chưa có
+                // Thêm nút Xóa
                 if (!dgvProductView.Columns.Contains("Delete"))
                 {
-                    DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
-                    deleteButton.Name = "Delete";
-                    deleteButton.HeaderText = "Xóa";
-                    deleteButton.Text = "Xóa";
-                    deleteButton.UseColumnTextForButtonValue = true;
+                    DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn
+                    {
+                        Name = "Delete",
+                        Text = "Xóa",
+                        UseColumnTextForButtonValue = true,
+                        FlatStyle = FlatStyle.Popup,
+                        DefaultCellStyle = new DataGridViewCellStyle
+                        {
+                            BackColor = Color.LightCoral
+                        }
+                    };
                     dgvProductView.Columns.Add(deleteButton);
                 }
 
-                // Gắn sự kiện nếu chưa gắn
-                dgvProductView.CellClick -= dgvProductView_CellClick;
-                dgvProductView.CellClick += dgvProductView_CellClick;
+                // Ẩn các cột không cần thiết
+                if (dgvProductView.Columns.Contains("IDNHOM"))
+                    dgvProductView.Columns["IDNHOM"].Visible = false;
+                dgvProductView.Columns["MANCC"].Visible = false;
+                dgvProductView.Columns["MAXX"].Visible = false;
 
+                // Định dạng cột giá
+                if (dgvProductView.Columns.Contains("DONGIA"))
+                {
+                    dgvProductView.Columns["DONGIA"].DefaultCellStyle.Format = "N0";
+                    dgvProductView.Columns["DONGIA"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                }
             }
             catch (SqlException ex)
             {
@@ -119,6 +139,14 @@ namespace InventoryManagement.View
                     }
                 }
             }
+        }
+
+        private void btnstatistical_Click(object sender, EventArgs e)
+        {
+            var products = productsBL.GetAllProducts();
+            frmProductStatistical frmStatistical = new frmProductStatistical(products);
+            frmStatistical.StartPosition = FormStartPosition.CenterParent;
+            frmStatistical.ShowDialog();
         }
     }
 }

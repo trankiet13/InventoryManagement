@@ -204,6 +204,23 @@ namespace DataLayer
             finally { Disconnect(); }
         }
 
-
+        public DataTable GetNhomSanPham()
+        {
+            string sql = "SELECT IDNHOM, TENNHOM FROM tb_NHOMHH WHERE IDNHOM IS NOT NULL";
+            try
+            {
+                Connect();
+                DataTable dt = MyGetDataTable(sql, CommandType.Text);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally 
+            { 
+                Disconnect();
+            }
+        }
     }
 }

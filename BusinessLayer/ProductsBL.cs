@@ -73,7 +73,10 @@ namespace BusinessLayer
         {
             return productsDL.GetDVT();
         }
-
-
+        
+        public DataTable LoadNhomSanPham()
+        {
+            return productsDL.GetNhomSanPham();
+        }
     }
 }
