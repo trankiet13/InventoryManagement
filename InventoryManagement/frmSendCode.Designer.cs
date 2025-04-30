@@ -1,0 +1,237 @@
+﻿namespace InventoryManagement
+{
+    partial class frmSendCode
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSendCode));
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbWelCome = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.GNClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCode = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderThickness = 3;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtEmail.Location = new System.Drawing.Point(528, 264);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "abc@gmail.com";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(229, 48);
+            this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtEmail.TabIndex = 11;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BorderThickness = 3;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUser.IconLeft")));
+            this.txtUser.Location = new System.Drawing.Point(528, 198);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PlaceholderText = "Username";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(229, 48);
+            this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtUser.TabIndex = 10;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            // 
+            // lbWelCome
+            // 
+            this.lbWelCome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWelCome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelCome.Location = new System.Drawing.Point(595, 157);
+            this.lbWelCome.Name = "lbWelCome";
+            this.lbWelCome.Size = new System.Drawing.Size(107, 23);
+            this.lbWelCome.TabIndex = 9;
+            this.lbWelCome.Text = "WELCOME";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(584, 45);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(121, 98);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 8;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel1.Location = new System.Drawing.Point(43, -1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(401, 452);
+            this.guna2Panel1.TabIndex = 7;
+            // 
+            // GNClose
+            // 
+            this.GNClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GNClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.GNClose.BorderColor = System.Drawing.Color.DimGray;
+            this.GNClose.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.GNClose.IconColor = System.Drawing.Color.White;
+            this.GNClose.Location = new System.Drawing.Point(743, 11);
+            this.GNClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GNClose.Name = "GNClose";
+            this.GNClose.Size = new System.Drawing.Size(45, 30);
+            this.GNClose.TabIndex = 12;
+            // 
+            // btnSendCode
+            // 
+            this.btnSendCode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendCode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSendCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSendCode.ForeColor = System.Drawing.Color.White;
+            this.btnSendCode.Location = new System.Drawing.Point(477, 388);
+            this.btnSendCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendCode.Name = "btnSendCode";
+            this.btnSendCode.Size = new System.Drawing.Size(153, 34);
+            this.btnSendCode.TabIndex = 13;
+            this.btnSendCode.Text = "Send code";
+            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(537, 337);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.TabIndex = 14;
+            // 
+            // txtCode
+            // 
+            this.txtCode.BorderThickness = 3;
+            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCode.DefaultText = "";
+            this.txtCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtCode.Location = new System.Drawing.Point(528, 320);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.PlaceholderText = "Nhập mã code";
+            this.txtCode.SelectedText = "";
+            this.txtCode.Size = new System.Drawing.Size(229, 48);
+            this.txtCode.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtCode.TabIndex = 11;
+            // 
+            // btnCode
+            // 
+            this.btnCode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCode.ForeColor = System.Drawing.Color.White;
+            this.btnCode.Location = new System.Drawing.Point(648, 388);
+            this.btnCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCode.Name = "btnCode";
+            this.btnCode.Size = new System.Drawing.Size(140, 34);
+            this.btnCode.TabIndex = 13;
+            this.btnCode.Text = "Xác nhận";
+            this.btnCode.Click += new System.EventHandler(this.btnCode_Click);
+            // 
+            // frmSendCode
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCode);
+            this.Controls.Add(this.btnSendCode);
+            this.Controls.Add(this.GNClose);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.lbWelCome);
+            this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Controls.Add(this.guna2Panel1);
+            this.Name = "frmSendCode";
+            this.Text = "frmSendCode";
+            this.Load += new System.EventHandler(this.frmSendCode_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label lbWelCome;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox GNClose;
+        private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        public Guna.UI2.WinForms.Guna2TextBox txtUser;
+        public Guna.UI2.WinForms.Guna2Button btnSendCode;
+        public Guna.UI2.WinForms.Guna2TextBox txtCode;
+        public Guna.UI2.WinForms.Guna2Button btnCode;
+    }
+}
