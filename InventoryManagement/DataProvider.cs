@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -17,7 +17,33 @@ namespace DataLayer
             string cnStr = "Data Source=.;Initial Catalog=QuanLy_Kho;Integrated Security=True;Encrypt=False";
             cn = new SqlConnection(cnStr);
         }
+        public int MyExecuteNoQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
 
+                if (parameters != null)
+                {
+                    foreach (SqlParameter param in parameters)
+                    {
+                        cmd.Parameters.Add(param);
+                    }
+                }
+
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi SQL: " + ex.Message, ex);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
         public int MyExecuteNonQuery(string sql, Hashtable ht)   // Hàm trả lại số dòng bị thay đổi để thực thi các câu lệnh SQL
         {
             int res = 0; // dùng để đếm số dòng đã được thay đổi trong cơ sở dữ liệu
@@ -94,6 +120,19 @@ namespace DataLayer
             finally
             {
                 Disconnect();
+            }
+        }
+        public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                return cmd.ExecuteReader();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
             }
         }
         // Trả về nhiều dòng(SqlDataReader),khi đọc dữ liệu lớn, xử lý từng dòng
