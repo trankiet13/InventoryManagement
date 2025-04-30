@@ -25,3 +25,10 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddPurchase.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewPurchase.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddProduct.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewProduct.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddCustomer.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewCustomer.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewSale.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddSale.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.ucProduct.resources

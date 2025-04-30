@@ -8,20 +8,20 @@ namespace TransferObject
 {
     public class Product
     {
+        public string BARCODE { get; set; }
         public string TENHH { get; set; }
         public string TENTAT { get; set; }
         public string DVT { get; set; }
-        public string DONGGIA { get; set; }
-        public string MANCC { get; set; }
-        public string XUATXU { get; set; }
-
-        public Product(string tENHH, string tENTAT, string dVT)
+        public decimal? DONGIA { get; set; }
+        public int MANCC { get; set; }
+        public int MAXX { get; set; }
+        public string IDNHOM { get; set; }
+        public string MOTA { get; set; }
+        public DateTime? CREATED_DATE { get; set; }
+        public int? CREATED_BY { get; set; }
+        public bool? DISABLED { get; set; }
+        public Product()
         {
-            TENHH = tENHH;
-            TENTAT = tENTAT;
-            DVT = dVT;
-            
-          
         }
     }
 }

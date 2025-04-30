@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewPurchase));
             this.dgvViewPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,14 +39,14 @@
             this.dgvSupid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewPurchase)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(285, 32);
+            this.label1.Size = new System.Drawing.Size(341, 32);
             // 
             // dgvViewPurchase
             // 
@@ -70,8 +71,8 @@
             this.dgvSupid,
             this.dgvSupplier,
             this.dgvAmount,
-            this.Column1,
-            this.Column2});
+            this.dgvEdit,
+            this.dgvDelete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,19 +154,21 @@
             this.dgvAmount.Name = "dgvAmount";
             this.dgvAmount.ReadOnly = true;
             // 
-            // Column1
+            // dgvEdit
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.dgvEdit.HeaderText = "Edit";
+            this.dgvEdit.Image = ((System.Drawing.Image)(resources.GetObject("dgvEdit.Image")));
+            this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dgvEdit.MinimumWidth = 6;
+            this.dgvEdit.Name = "dgvEdit";
+            this.dgvEdit.ReadOnly = true;
             // 
-            // Column2
+            // dgvDelete
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.dgvDelete.HeaderText = "Delete";
+            this.dgvDelete.MinimumWidth = 6;
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
             // 
             // frmViewPurchase
             // 
@@ -175,6 +178,7 @@
             this.Controls.Add(this.dgvViewPurchase);
             this.Name = "frmViewPurchase";
             this.Text = "frmViewPurchase";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmViewPurchase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewPurchase)).EndInit();
             this.ResumeLayout(false);
@@ -190,7 +194,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSupid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSupplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
+        private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
     }
 }

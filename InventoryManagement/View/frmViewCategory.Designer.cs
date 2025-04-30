@@ -42,7 +42,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(0, 32);
+            this.label1.Size = new System.Drawing.Size(80, 32);
             // 
             // guna2DataGridView1
             // 
@@ -156,9 +156,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 450);
             this.Controls.Add(this.dgvViewCategory);
             this.Controls.Add(this.guna2DataGridView1);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmViewCategory";
             this.Text = "frmViewCategory";
             this.Load += new System.EventHandler(this.frmViewCategory_Load);

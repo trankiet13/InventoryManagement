@@ -46,7 +46,7 @@ namespace InventoryManagement.View
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(935, 32);
+            this.label1.Size = new System.Drawing.Size(1139, 32);
             this.label1.Text = "User";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -108,6 +108,9 @@ namespace InventoryManagement.View
             this.dgvViewUser.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvViewUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvViewUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,6 +167,7 @@ namespace InventoryManagement.View
             this.ClientSize = new System.Drawing.Size(984, 556);
             this.Controls.Add(this.dgvViewUser);
             this.Controls.Add(this.guna2DataGridView1);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmViewUser";
             this.Text = "frmViewUser";
             this.Load += new System.EventHandler(this.frmViewUser_Load);
@@ -176,6 +180,6 @@ namespace InventoryManagement.View
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvViewUser;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvViewUser;
     }
 }

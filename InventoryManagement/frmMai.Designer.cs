@@ -164,6 +164,7 @@
             this.btSales.Size = new System.Drawing.Size(180, 45);
             this.btSales.TabIndex = 7;
             this.btSales.Text = "Sales";
+            this.btSales.Click += new System.EventHandler(this.btSales_Click);
             // 
             // bnCustomers
             // 
@@ -182,6 +183,7 @@
             this.bnCustomers.Size = new System.Drawing.Size(180, 45);
             this.bnCustomers.TabIndex = 6;
             this.bnCustomers.Text = "Customers";
+            this.bnCustomers.Click += new System.EventHandler(this.bnCustomers_Click);
             // 
             // bnPurchase
             // 
@@ -219,6 +221,7 @@
             this.bnProducts.Size = new System.Drawing.Size(180, 45);
             this.bnProducts.TabIndex = 4;
             this.bnProducts.Text = "Products";
+            this.bnProducts.Click += new System.EventHandler(this.bnProducts_Click);
             // 
             // bnCategoy
             // 
@@ -232,7 +235,7 @@
             this.bnCategoy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.bnCategoy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCategoy.ForeColor = System.Drawing.Color.White;
-            this.bnCategoy.Location = new System.Drawing.Point(71, 213);
+            this.bnCategoy.Location = new System.Drawing.Point(71, 223);
             this.bnCategoy.Name = "bnCategoy";
             this.bnCategoy.Size = new System.Drawing.Size(180, 45);
             this.bnCategoy.TabIndex = 3;

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbName = new System.Windows.Forms.Label();
             this.txtBarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.cbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -48,6 +48,7 @@
             this.btAddNew = new Guna.UI2.WinForms.Guna2Button();
             this.dgvAddPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvproid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,23 +120,23 @@
             this.txtQuantity.TabIndex = 9;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
-            // guna2DateTimePicker1
+            // txtDateTime
             // 
-            this.guna2DateTimePicker1.Animated = true;
-            this.guna2DateTimePicker1.AutoRoundedCorners = true;
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.IndicateFocus = true;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(57, 150);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
-            this.guna2DateTimePicker1.TabIndex = 11;
-            this.guna2DateTimePicker1.UseTransparentBackground = true;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 4, 15, 21, 29, 2, 179);
+            this.txtDateTime.Animated = true;
+            this.txtDateTime.AutoRoundedCorners = true;
+            this.txtDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.txtDateTime.Checked = true;
+            this.txtDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtDateTime.IndicateFocus = true;
+            this.txtDateTime.Location = new System.Drawing.Point(57, 150);
+            this.txtDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtDateTime.Name = "txtDateTime";
+            this.txtDateTime.Size = new System.Drawing.Size(200, 36);
+            this.txtDateTime.TabIndex = 11;
+            this.txtDateTime.UseTransparentBackground = true;
+            this.txtDateTime.Value = new System.DateTime(2025, 4, 15, 21, 29, 2, 179);
             // 
             // label3
             // 
@@ -177,6 +178,7 @@
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(187, 36);
             this.cbProduct.TabIndex = 14;
+            this.cbProduct.Tag = "v";
             this.cbProduct.SelectedIndexChanged += new System.EventHandler(this.cbProduct_SelectedIndexChanged);
             // 
             // lbSupplier
@@ -279,33 +281,37 @@
             // 
             this.dgvAddPurchase.AllowUserToAddRows = false;
             this.dgvAddPurchase.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAddPurchase.ColumnHeadersHeight = 18;
             this.dgvAddPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAddPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSR,
+            this.dgvproid,
             this.dgvid,
             this.dgvname,
             this.dgvqty,
             this.dgvCost,
             this.dgvAmount});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAddPurchase.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddPurchase.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvAddPurchase.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAddPurchase.Location = new System.Drawing.Point(83, 352);
             this.dgvAddPurchase.Name = "dgvAddPurchase";
@@ -336,6 +342,7 @@
             this.dgvAddPurchase.ThemeStyle.RowsStyle.Height = 24;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAddPurchase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAddPurchase_CellFormatting);
             // 
             // dgvSR
             // 
@@ -344,9 +351,16 @@
             this.dgvSR.Name = "dgvSR";
             this.dgvSR.ReadOnly = true;
             // 
+            // dgvproid
+            // 
+            this.dgvproid.HeaderText = "Proid";
+            this.dgvproid.MinimumWidth = 6;
+            this.dgvproid.Name = "dgvproid";
+            this.dgvproid.ReadOnly = true;
+            // 
             // dgvid
             // 
-            this.dgvid.HeaderText = "proid";
+            this.dgvid.HeaderText = "id";
             this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
@@ -396,12 +410,13 @@
             this.Controls.Add(this.cbProduct);
             this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.txtDateTime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.txtBarcode);
             this.Name = "frmAddPurchase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cost";
             this.Load += new System.EventHandler(this.frmAddPurchase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddPurchase)).EndInit();
@@ -416,7 +431,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtBarcode;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtQuantity;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDateTime;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cbSupplier;
         private Guna.UI2.WinForms.Guna2ComboBox cbProduct;
@@ -429,6 +444,7 @@
         public Guna.UI2.WinForms.Guna2Button btAddNew;
         private Guna.UI2.WinForms.Guna2DataGridView dgvAddPurchase;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvproid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvqty;

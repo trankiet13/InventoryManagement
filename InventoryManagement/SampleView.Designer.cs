@@ -38,6 +38,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.search);
             this.guna2Panel1.Controls.Add(this.btAddNew);
@@ -68,6 +69,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(286, 48);
             this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // search
             // 
@@ -75,8 +77,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.search.AutoSize = true;
+            this.search.BackColor = System.Drawing.Color.Transparent;
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.search.ForeColor = System.Drawing.Color.Transparent;
             this.search.Location = new System.Drawing.Point(571, 47);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(50, 16);
@@ -94,7 +97,7 @@
             this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btAddNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btAddNew.ForeColor = System.Drawing.Color.White;
-            this.btAddNew.Location = new System.Drawing.Point(60, 83);
+            this.btAddNew.Location = new System.Drawing.Point(60, 71);
             this.btAddNew.Name = "btAddNew";
             this.btAddNew.Size = new System.Drawing.Size(180, 45);
             this.btAddNew.TabIndex = 2;

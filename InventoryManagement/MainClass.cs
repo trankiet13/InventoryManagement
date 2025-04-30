@@ -39,9 +39,27 @@ namespace InventoryManagement
                         }
                         else
                         {
-                            t.BorderColor = Color.FromArgb(95, 69, 204);
+                            t.BorderColor = Color.FromArgb(213, 218, 223);
+                            t.FocusedState.BorderColor = Color.FromArgb(95, 61, 204);
+                            t.HoverState.BorderColor = Color.FromArgb(95, 61, 204);
+                        }
+                    }
+                    // For combobox
+                    if (c is Guna.UI2.WinForms.Guna2ComboBox)
+                    {
+                        Guna.UI2.WinForms.Guna2ComboBox t = (Guna.UI2.WinForms.Guna2ComboBox)c;
+                        if (t.SelectedIndex == -1)
+                        {
+                            t.BorderColor = Color.Red;
                             t.FocusedState.BorderColor = Color.Red;
                             t.HoverState.BorderColor = Color.Red;
+                            count++;
+                        }
+                        else
+                        {
+                            t.BorderColor = Color.FromArgb(213, 218, 223);
+                            t.FocusedState.BorderColor = Color.FromArgb(95, 61, 204);
+                            t.HoverState.BorderColor = Color.FromArgb(95, 61, 204);
                         }
                     }
                 }
@@ -56,7 +74,7 @@ namespace InventoryManagement
             }
             return isValid;
         }
-        public static void SQL(string qry, Hashtable ht)
+        public static int SQL(string qry, Hashtable ht)
         {
             int res = 0;
             try
@@ -76,6 +94,7 @@ namespace InventoryManagement
                 throw ex;
                 con.Close();
             }
+            return res;
         }
         public static Image img
         {
@@ -109,7 +128,7 @@ namespace InventoryManagement
                 BackGround.Size = frmMai.ActiveForm.Size;
 
                 BackGround.WindowState = FormWindowState.Maximized;
-                BackGround.BackColor = Color.FromArgb(0, 0, 0, 0);
+                //BackGround.BackColor = Color.FromArgb(150, Color.Gray);
                 
                 BackGround.ShowInTaskbar = false;
                 BackGround.Show();
