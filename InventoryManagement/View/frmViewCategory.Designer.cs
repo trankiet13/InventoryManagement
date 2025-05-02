@@ -42,7 +42,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(80, 32);
+            this.label1.Size = new System.Drawing.Size(320, 32);
             // 
             // guna2DataGridView1
             // 
@@ -101,8 +101,12 @@
             // 
             this.dgvViewCategory.AllowUserToAddRows = false;
             this.dgvViewCategory.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.dgvViewCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvViewCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvViewCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,46 +115,46 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvViewCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvViewCategory.ColumnHeadersHeight = 18;
+            this.dgvViewCategory.ColumnHeadersHeight = 40;
             this.dgvViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvViewCategory.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvViewCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewCategory.Location = new System.Drawing.Point(37, 179);
+            this.dgvViewCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewCategory.Location = new System.Drawing.Point(96, 179);
             this.dgvViewCategory.Name = "dgvViewCategory";
             this.dgvViewCategory.ReadOnly = true;
             this.dgvViewCategory.RowHeadersVisible = false;
             this.dgvViewCategory.RowHeadersWidth = 51;
-            this.dgvViewCategory.RowTemplate.Height = 24;
-            this.dgvViewCategory.Size = new System.Drawing.Size(714, 227);
+            this.dgvViewCategory.RowTemplate.Height = 30;
+            this.dgvViewCategory.Size = new System.Drawing.Size(655, 227);
             this.dgvViewCategory.TabIndex = 2;
             this.dgvViewCategory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewCategory.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvViewCategory.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvViewCategory.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvViewCategory.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvViewCategory.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvViewCategory.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvViewCategory.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewCategory.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewCategory.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvViewCategory.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvViewCategory.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvViewCategory.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvViewCategory.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewCategory.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvViewCategory.ThemeStyle.HeaderStyle.Height = 18;
+            this.dgvViewCategory.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvViewCategory.ThemeStyle.ReadOnly = true;
-            this.dgvViewCategory.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvViewCategory.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewCategory.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvViewCategory.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvViewCategory.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvViewCategory.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvViewCategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewCategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvViewCategory.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvViewCategory.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvViewCategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewCategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // frmViewCategory
             // 
@@ -159,7 +163,6 @@
             this.ClientSize = new System.Drawing.Size(962, 450);
             this.Controls.Add(this.dgvViewCategory);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmViewCategory";
             this.Text = "frmViewCategory";
             this.Load += new System.EventHandler(this.frmViewCategory_Load);

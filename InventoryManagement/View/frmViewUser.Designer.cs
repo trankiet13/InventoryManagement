@@ -46,7 +46,9 @@ namespace InventoryManagement.View
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(1139, 32);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(196, 19);
+            this.label1.Size = new System.Drawing.Size(142, 32);
             this.label1.Text = "User";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -73,7 +75,7 @@ namespace InventoryManagement.View
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(30, 0);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -106,11 +108,13 @@ namespace InventoryManagement.View
             // 
             this.dgvViewUser.AllowUserToAddRows = false;
             this.dgvViewUser.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             this.dgvViewUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvViewUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvViewUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,46 +123,46 @@ namespace InventoryManagement.View
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvViewUser.ColumnHeadersHeight = 18;
+            this.dgvViewUser.ColumnHeadersHeight = 40;
             this.dgvViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvViewUser.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewUser.Location = new System.Drawing.Point(41, 186);
+            this.dgvViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewUser.Location = new System.Drawing.Point(104, 186);
             this.dgvViewUser.Name = "dgvViewUser";
             this.dgvViewUser.ReadOnly = true;
             this.dgvViewUser.RowHeadersVisible = false;
             this.dgvViewUser.RowHeadersWidth = 51;
-            this.dgvViewUser.RowTemplate.Height = 24;
-            this.dgvViewUser.Size = new System.Drawing.Size(867, 325);
+            this.dgvViewUser.RowTemplate.Height = 30;
+            this.dgvViewUser.Size = new System.Drawing.Size(821, 325);
             this.dgvViewUser.TabIndex = 2;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvViewUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvViewUser.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvViewUser.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvViewUser.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewUser.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewUser.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvViewUser.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvViewUser.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvViewUser.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvViewUser.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewUser.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvViewUser.ThemeStyle.HeaderStyle.Height = 18;
+            this.dgvViewUser.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvViewUser.ThemeStyle.ReadOnly = true;
-            this.dgvViewUser.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvViewUser.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewUser.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvViewUser.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvViewUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvViewUser.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvViewUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvViewUser.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvViewUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvViewUser.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvViewUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // frmViewUser
             // 
@@ -167,7 +171,6 @@ namespace InventoryManagement.View
             this.ClientSize = new System.Drawing.Size(984, 556);
             this.Controls.Add(this.dgvViewUser);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmViewUser";
             this.Text = "frmViewUser";
             this.Load += new System.EventHandler(this.frmViewUser_Load);

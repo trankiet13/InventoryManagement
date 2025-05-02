@@ -48,17 +48,20 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(882, 154);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txtSearch
             // 
             this.txtSearch.Animated = true;
             this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -80,7 +83,7 @@
             this.search.BackColor = System.Drawing.Color.Transparent;
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.ForeColor = System.Drawing.Color.Transparent;
-            this.search.Location = new System.Drawing.Point(571, 47);
+            this.search.Location = new System.Drawing.Point(568, 42);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(50, 16);
             this.search.TabIndex = 4;
@@ -94,10 +97,10 @@
             this.btAddNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btAddNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btAddNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(215)))), ((int)(((byte)(207)))));
             this.btAddNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btAddNew.ForeColor = System.Drawing.Color.White;
-            this.btAddNew.Location = new System.Drawing.Point(60, 71);
+            this.btAddNew.Location = new System.Drawing.Point(161, 68);
             this.btAddNew.Name = "btAddNew";
             this.btAddNew.Size = new System.Drawing.Size(180, 45);
             this.btAddNew.TabIndex = 2;
@@ -110,7 +113,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 32);
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(164, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 32);
             this.label1.TabIndex = 0;
@@ -120,6 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(882, 515);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "SampleView";

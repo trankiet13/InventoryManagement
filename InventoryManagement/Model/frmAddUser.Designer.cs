@@ -42,10 +42,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(66, 34);
+            // 
             // txtFullName
             // 
             this.txtFullName.Animated = true;
             this.txtFullName.AutoRoundedCorners = true;
+            this.txtFullName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.DefaultText = "";
             this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -54,6 +59,7 @@
             this.txtFullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.Location = new System.Drawing.Point(346, 263);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -96,6 +102,7 @@
             // 
             this.txtID.Animated = true;
             this.txtID.AutoRoundedCorners = true;
+            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.DefaultText = "";
             this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -104,6 +111,7 @@
             this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.Location = new System.Drawing.Point(346, 168);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -117,6 +125,7 @@
             // lnIDCompany
             // 
             this.lnIDCompany.AutoSize = true;
+            this.lnIDCompany.ForeColor = System.Drawing.Color.Transparent;
             this.lnIDCompany.Location = new System.Drawing.Point(366, 145);
             this.lnIDCompany.Name = "lnIDCompany";
             this.lnIDCompany.Size = new System.Drawing.Size(78, 16);
@@ -126,6 +135,7 @@
             // lnFullName
             // 
             this.lnFullName.AutoSize = true;
+            this.lnFullName.ForeColor = System.Drawing.Color.Transparent;
             this.lnFullName.Location = new System.Drawing.Point(364, 238);
             this.lnFullName.Name = "lnFullName";
             this.lnFullName.Size = new System.Drawing.Size(65, 16);
@@ -136,6 +146,7 @@
             // 
             this.txtPassword.Animated = true;
             this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -144,6 +155,7 @@
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(45, 265);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -157,6 +169,7 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
+            this.lbPassword.ForeColor = System.Drawing.Color.Transparent;
             this.lbPassword.Location = new System.Drawing.Point(65, 242);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(67, 16);
@@ -167,6 +180,7 @@
             // 
             this.txtUsername.Animated = true;
             this.txtUsername.AutoRoundedCorners = true;
+            this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -175,6 +189,7 @@
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Location = new System.Drawing.Point(45, 168);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -188,6 +203,7 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
+            this.lbName.ForeColor = System.Drawing.Color.Transparent;
             this.lbName.Location = new System.Drawing.Point(65, 145);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(70, 16);
@@ -198,6 +214,7 @@
             // 
             this.txtMACTY.Animated = true;
             this.txtMACTY.AutoRoundedCorners = true;
+            this.txtMACTY.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtMACTY.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMACTY.DefaultText = "";
             this.txtMACTY.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -206,6 +223,7 @@
             this.txtMACTY.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMACTY.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMACTY.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMACTY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
             this.txtMACTY.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMACTY.Location = new System.Drawing.Point(186, 340);
             this.txtMACTY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -232,7 +250,6 @@
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lbName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddUser";

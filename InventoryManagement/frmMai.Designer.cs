@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMai));
             this.btMaxizeBox = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btMinizeBox = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -97,12 +98,10 @@
             // 
             // pnRight
             // 
-            this.pnRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnRight.Location = new System.Drawing.Point(337, 51);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRight.Location = new System.Drawing.Point(244, 45);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(733, 608);
+            this.pnRight.Size = new System.Drawing.Size(826, 614);
             this.pnRight.TabIndex = 4;
             this.pnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnRight_Paint);
             // 
@@ -122,27 +121,30 @@
             this.pnLeft.CustomizableEdges.BottomRight = false;
             this.pnLeft.CustomizableEdges.TopLeft = false;
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(201)))));
+            this.pnLeft.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
             this.pnLeft.Location = new System.Drawing.Point(0, 45);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(331, 614);
+            this.pnLeft.Size = new System.Drawing.Size(244, 614);
             this.pnLeft.TabIndex = 4;
             // 
             // btUser
             // 
             this.btUser.AutoRoundedCorners = true;
-            this.btUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btUser.BackColor = System.Drawing.Color.Transparent;
+            this.btUser.BorderColor = System.Drawing.Color.Transparent;
             this.btUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUser.FillColor = System.Drawing.Color.Transparent;
+            this.btUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUser.ForeColor = System.Drawing.Color.White;
-            this.btUser.Location = new System.Drawing.Point(73, 523);
+            this.btUser.Image = ((System.Drawing.Image)(resources.GetObject("btUser.Image")));
+            this.btUser.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btUser.ImageSize = new System.Drawing.Size(30, 30);
+            this.btUser.Location = new System.Drawing.Point(32, 543);
             this.btUser.Name = "btUser";
-            this.btUser.Size = new System.Drawing.Size(180, 45);
+            this.btUser.Size = new System.Drawing.Size(177, 45);
             this.btUser.TabIndex = 8;
             this.btUser.Text = "User";
             this.btUser.Click += new System.EventHandler(this.btUser_Click);
@@ -150,120 +152,136 @@
             // btSales
             // 
             this.btSales.AutoRoundedCorners = true;
-            this.btSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btSales.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btSales.BackColor = System.Drawing.Color.Transparent;
+            this.btSales.BorderColor = System.Drawing.Color.Transparent;
             this.btSales.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btSales.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btSales.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btSales.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btSales.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btSales.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSales.FillColor = System.Drawing.Color.Transparent;
+            this.btSales.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSales.ForeColor = System.Drawing.Color.White;
-            this.btSales.Location = new System.Drawing.Point(71, 462);
+            this.btSales.Image = ((System.Drawing.Image)(resources.GetObject("btSales.Image")));
+            this.btSales.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btSales.ImageSize = new System.Drawing.Size(35, 35);
+            this.btSales.Location = new System.Drawing.Point(34, 478);
             this.btSales.Name = "btSales";
-            this.btSales.Size = new System.Drawing.Size(180, 45);
+            this.btSales.Size = new System.Drawing.Size(177, 45);
             this.btSales.TabIndex = 7;
-            this.btSales.Text = "Sales";
+            this.btSales.Text = "Sale";
             this.btSales.Click += new System.EventHandler(this.btSales_Click);
             // 
             // bnCustomers
             // 
             this.bnCustomers.AutoRoundedCorners = true;
-            this.bnCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnCustomers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.bnCustomers.BackColor = System.Drawing.Color.Transparent;
+            this.bnCustomers.BorderColor = System.Drawing.Color.Transparent;
             this.bnCustomers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnCustomers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bnCustomers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bnCustomers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bnCustomers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnCustomers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnCustomers.FillColor = System.Drawing.Color.Transparent;
+            this.bnCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCustomers.ForeColor = System.Drawing.Color.White;
-            this.bnCustomers.Location = new System.Drawing.Point(71, 397);
+            this.bnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("bnCustomers.Image")));
+            this.bnCustomers.ImageSize = new System.Drawing.Size(30, 30);
+            this.bnCustomers.Location = new System.Drawing.Point(34, 420);
             this.bnCustomers.Name = "bnCustomers";
-            this.bnCustomers.Size = new System.Drawing.Size(180, 45);
+            this.bnCustomers.Size = new System.Drawing.Size(177, 45);
             this.bnCustomers.TabIndex = 6;
-            this.bnCustomers.Text = "Customers";
+            this.bnCustomers.Text = "   Customer";
             this.bnCustomers.Click += new System.EventHandler(this.bnCustomers_Click);
             // 
             // bnPurchase
             // 
             this.bnPurchase.AutoRoundedCorners = true;
-            this.bnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnPurchase.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.bnPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.bnPurchase.BorderColor = System.Drawing.Color.Transparent;
             this.bnPurchase.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnPurchase.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bnPurchase.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bnPurchase.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bnPurchase.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnPurchase.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnPurchase.FillColor = System.Drawing.Color.Transparent;
+            this.bnPurchase.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnPurchase.ForeColor = System.Drawing.Color.White;
-            this.bnPurchase.Location = new System.Drawing.Point(71, 331);
+            this.bnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("bnPurchase.Image")));
+            this.bnPurchase.ImageSize = new System.Drawing.Size(30, 30);
+            this.bnPurchase.Location = new System.Drawing.Point(33, 364);
             this.bnPurchase.Name = "bnPurchase";
-            this.bnPurchase.Size = new System.Drawing.Size(180, 45);
+            this.bnPurchase.Size = new System.Drawing.Size(178, 45);
             this.bnPurchase.TabIndex = 5;
-            this.bnPurchase.Text = "Purchases";
+            this.bnPurchase.Text = "   Purchase";
             this.bnPurchase.Click += new System.EventHandler(this.bnPurchase_Click);
             // 
             // bnProducts
             // 
             this.bnProducts.AutoRoundedCorners = true;
-            this.bnProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnProducts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.bnProducts.BackColor = System.Drawing.Color.Transparent;
+            this.bnProducts.BorderColor = System.Drawing.Color.Transparent;
             this.bnProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bnProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bnProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bnProducts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnProducts.FillColor = System.Drawing.Color.Transparent;
+            this.bnProducts.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnProducts.ForeColor = System.Drawing.Color.White;
-            this.bnProducts.Location = new System.Drawing.Point(71, 274);
+            this.bnProducts.Image = ((System.Drawing.Image)(resources.GetObject("bnProducts.Image")));
+            this.bnProducts.ImageSize = new System.Drawing.Size(35, 35);
+            this.bnProducts.Location = new System.Drawing.Point(34, 305);
             this.bnProducts.Name = "bnProducts";
-            this.bnProducts.Size = new System.Drawing.Size(180, 45);
+            this.bnProducts.Size = new System.Drawing.Size(177, 45);
             this.bnProducts.TabIndex = 4;
-            this.bnProducts.Text = "Products";
+            this.bnProducts.Text = "  Products";
             this.bnProducts.Click += new System.EventHandler(this.bnProducts_Click);
             // 
             // bnCategoy
             // 
             this.bnCategoy.AutoRoundedCorners = true;
-            this.bnCategoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnCategoy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.bnCategoy.BackColor = System.Drawing.Color.Transparent;
+            this.bnCategoy.BorderColor = System.Drawing.Color.Transparent;
             this.bnCategoy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnCategoy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bnCategoy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bnCategoy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bnCategoy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnCategoy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnCategoy.FillColor = System.Drawing.Color.Transparent;
+            this.bnCategoy.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCategoy.ForeColor = System.Drawing.Color.White;
-            this.bnCategoy.Location = new System.Drawing.Point(71, 223);
+            this.bnCategoy.Image = ((System.Drawing.Image)(resources.GetObject("bnCategoy.Image")));
+            this.bnCategoy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnCategoy.ImageSize = new System.Drawing.Size(35, 35);
+            this.bnCategoy.Location = new System.Drawing.Point(34, 244);
             this.bnCategoy.Name = "bnCategoy";
-            this.bnCategoy.Size = new System.Drawing.Size(180, 45);
+            this.bnCategoy.Size = new System.Drawing.Size(177, 45);
             this.bnCategoy.TabIndex = 3;
-            this.bnCategoy.Text = "Category";
+            this.bnCategoy.Text = "       Category";
             this.bnCategoy.Click += new System.EventHandler(this.bnCategoy_Click);
             // 
             // bnHome
             // 
             this.bnHome.AutoRoundedCorners = true;
-            this.bnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.bnHome.BackColor = System.Drawing.Color.Transparent;
+            this.bnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnHome.BackgroundImage")));
+            this.bnHome.BorderColor = System.Drawing.Color.Transparent;
             this.bnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.bnHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnHome.FillColor = System.Drawing.Color.Transparent;
+            this.bnHome.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnHome.ForeColor = System.Drawing.Color.White;
-            this.bnHome.Location = new System.Drawing.Point(71, 162);
+            this.bnHome.Image = ((System.Drawing.Image)(resources.GetObject("bnHome.Image")));
+            this.bnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnHome.ImageSize = new System.Drawing.Size(30, 30);
+            this.bnHome.Location = new System.Drawing.Point(33, 170);
             this.bnHome.Name = "bnHome";
-            this.bnHome.Size = new System.Drawing.Size(180, 45);
+            this.bnHome.Size = new System.Drawing.Size(178, 45);
             this.bnHome.TabIndex = 2;
-            this.bnHome.Text = "Home";
+            this.bnHome.Text = "  Home";
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(119, 109);
+            this.lbUsername.Location = new System.Drawing.Point(79, 116);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(70, 16);
             this.lbUsername.TabIndex = 1;
@@ -272,7 +290,7 @@
             // pictureboxUsername
             // 
             this.pictureboxUsername.ImageRotate = 0F;
-            this.pictureboxUsername.Location = new System.Drawing.Point(111, 37);
+            this.pictureboxUsername.Location = new System.Drawing.Point(81, 38);
             this.pictureboxUsername.Name = "pictureboxUsername";
             this.pictureboxUsername.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureboxUsername.Size = new System.Drawing.Size(64, 64);
@@ -283,6 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1070, 659);
             this.Controls.Add(this.pnRight);
             this.Controls.Add(this.pnLeft);

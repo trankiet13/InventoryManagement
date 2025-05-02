@@ -50,7 +50,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(37, 32);
+            this.label1.Size = new System.Drawing.Size(386, 32);
             this.label1.Text = "Sales List";
             // 
             // guna2DataGridView1
@@ -107,8 +107,14 @@
             // 
             // dgvViewSale
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvViewSale.AllowUserToAddRows = false;
+            this.dgvViewSale.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.dgvViewSale.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvViewSale.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvViewSale.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,7 +123,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvViewSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvViewSale.ColumnHeadersHeight = 18;
+            this.dgvViewSale.ColumnHeadersHeight = 30;
             this.dgvViewSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvViewSale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSr,
@@ -129,40 +135,41 @@
             this.dgvDelete,
             this.dgvUpdate});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvViewSale.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvViewSale.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvViewSale.Location = new System.Drawing.Point(41, 201);
+            this.dgvViewSale.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewSale.Location = new System.Drawing.Point(104, 186);
             this.dgvViewSale.Name = "dgvViewSale";
+            this.dgvViewSale.ReadOnly = true;
             this.dgvViewSale.RowHeadersVisible = false;
             this.dgvViewSale.RowHeadersWidth = 51;
-            this.dgvViewSale.RowTemplate.Height = 24;
-            this.dgvViewSale.Size = new System.Drawing.Size(696, 182);
+            this.dgvViewSale.RowTemplate.Height = 40;
+            this.dgvViewSale.Size = new System.Drawing.Size(821, 325);
             this.dgvViewSale.TabIndex = 2;
             this.dgvViewSale.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewSale.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvViewSale.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvViewSale.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvViewSale.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvViewSale.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvViewSale.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvViewSale.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvViewSale.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewSale.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvViewSale.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvViewSale.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvViewSale.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvViewSale.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvViewSale.ThemeStyle.HeaderStyle.Height = 18;
-            this.dgvViewSale.ThemeStyle.ReadOnly = false;
+            this.dgvViewSale.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvViewSale.ThemeStyle.ReadOnly = true;
             this.dgvViewSale.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewSale.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvViewSale.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvViewSale.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvViewSale.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvViewSale.ThemeStyle.RowsStyle.Height = 40;
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvViewSale.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
@@ -172,58 +179,68 @@
             this.dgvSr.HeaderText = "Sr";
             this.dgvSr.MinimumWidth = 6;
             this.dgvSr.Name = "dgvSr";
+            this.dgvSr.ReadOnly = true;
             // 
             // dgvId
             // 
             this.dgvId.HeaderText = "ID";
             this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
             // 
             // dgvDate
             // 
             this.dgvDate.HeaderText = "Date";
             this.dgvDate.MinimumWidth = 6;
             this.dgvDate.Name = "dgvDate";
+            this.dgvDate.ReadOnly = true;
             // 
             // dgvCusID
             // 
             this.dgvCusID.HeaderText = "CustomerID";
             this.dgvCusID.MinimumWidth = 6;
             this.dgvCusID.Name = "dgvCusID";
+            this.dgvCusID.ReadOnly = true;
             // 
             // dgvCustomer
             // 
             this.dgvCustomer.HeaderText = "Customer";
             this.dgvCustomer.MinimumWidth = 6;
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
             // 
             // dgvAmount
             // 
             this.dgvAmount.HeaderText = "Amount";
             this.dgvAmount.MinimumWidth = 6;
             this.dgvAmount.Name = "dgvAmount";
+            this.dgvAmount.ReadOnly = true;
             // 
             // dgvDelete
             // 
             this.dgvDelete.HeaderText = "Delete";
             this.dgvDelete.MinimumWidth = 6;
             this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
             // 
             // dgvUpdate
             // 
             this.dgvUpdate.HeaderText = "Update";
             this.dgvUpdate.MinimumWidth = 6;
             this.dgvUpdate.Name = "dgvUpdate";
+            this.dgvUpdate.ReadOnly = true;
             // 
             // frmViewSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(972, 547);
             this.Controls.Add(this.dgvViewSale);
             this.Controls.Add(this.guna2DataGridView1);
             this.Name = "frmViewSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmViewSale";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewSale)).EndInit();
             this.ResumeLayout(false);
