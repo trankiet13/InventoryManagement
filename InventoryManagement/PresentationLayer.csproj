@@ -41,6 +41,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.cs">
+      <Link>Model\frmUserAdd.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.Designer.cs">
+      <Link>Model\frmUserAdd.Designer.cs</Link>
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,17 +98,23 @@
     <Compile Include="Model\frmAddSale.Designer.cs">
       <DependentUpon>frmAddSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\frmAddUser.cs">
+    <Compile Include="Model\frmAddUser1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model\frmAddUser.Designer.cs">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
+    <Compile Include="Model\frmAddUser1.Designer.cs">
+      <DependentUpon>frmAddUser1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\frmAddProduct.Designer.cs">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmProductStatistical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmProductStatistical.Designer.cs">
+      <DependentUpon>frmProductStatistical.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ucProduct.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +124,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample.Designer.cs">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </Compile>
     <Compile Include="SampleAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +141,24 @@
     </Compile>
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSendCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSendCode.Designer.cs">
+      <DependentUpon>frmSendCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmViewCategory.cs">
       <SubType>Form</SubType>
@@ -157,6 +196,10 @@
     <Compile Include="View\frmViewUser.Designer.cs">
       <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.resx">
+      <Link>Model\frmUserAdd.resx</Link>
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMai.resx">
       <DependentUpon>frmMai.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,8 +221,11 @@
     <EmbeddedResource Include="Model\frmAddSale.resx">
       <DependentUpon>frmAddSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmAddUser.resx">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
+    <EmbeddedResource Include="Model\frmAddUser1.resx">
+      <DependentUpon>frmAddUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmProductStatistical.resx">
+      <DependentUpon>frmProductStatistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
@@ -199,6 +245,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSendCode.resx">
+      <DependentUpon>frmSendCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewCategory.resx">
       <DependentUpon>frmViewCategory.cs</DependentUpon>

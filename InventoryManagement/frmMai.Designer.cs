@@ -44,6 +44,7 @@
             this.bnHome = new Guna.UI2.WinForms.Guna2Button();
             this.lbUsername = new System.Windows.Forms.Label();
             this.pictureboxUsername = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxUsername)).BeginInit();
@@ -101,13 +102,15 @@
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnRight.Location = new System.Drawing.Point(244, 45);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(826, 614);
+            this.pnRight.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.pnRight.Size = new System.Drawing.Size(826, 702);
             this.pnRight.TabIndex = 4;
             this.pnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnRight_Paint);
             // 
             // pnLeft
             // 
             this.pnLeft.BorderRadius = 60;
+            this.pnLeft.Controls.Add(this.btnSetting);
             this.pnLeft.Controls.Add(this.btUser);
             this.pnLeft.Controls.Add(this.btSales);
             this.pnLeft.Controls.Add(this.bnCustomers);
@@ -124,7 +127,7 @@
             this.pnLeft.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
             this.pnLeft.Location = new System.Drawing.Point(0, 45);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(244, 614);
+            this.pnLeft.Size = new System.Drawing.Size(244, 702);
             this.pnLeft.TabIndex = 4;
             // 
             // btUser
@@ -140,11 +143,13 @@
             this.btUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUser.ForeColor = System.Drawing.Color.White;
             this.btUser.Image = ((System.Drawing.Image)(resources.GetObject("btUser.Image")));
-            this.btUser.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.btUser.Location = new System.Drawing.Point(32, 543);
+            this.btUser.Location = new System.Drawing.Point(32, 542);
+            this.btUser.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btUser.Name = "btUser";
-            this.btUser.Size = new System.Drawing.Size(177, 45);
+            this.btUser.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btUser.Size = new System.Drawing.Size(200, 50);
             this.btUser.TabIndex = 8;
             this.btUser.Text = "User";
             this.btUser.Click += new System.EventHandler(this.btUser_Click);
@@ -162,13 +167,15 @@
             this.btSales.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSales.ForeColor = System.Drawing.Color.White;
             this.btSales.Image = ((System.Drawing.Image)(resources.GetObject("btSales.Image")));
-            this.btSales.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btSales.ImageSize = new System.Drawing.Size(35, 35);
+            this.btSales.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btSales.ImageSize = new System.Drawing.Size(30, 30);
             this.btSales.Location = new System.Drawing.Point(34, 478);
+            this.btSales.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btSales.Name = "btSales";
-            this.btSales.Size = new System.Drawing.Size(177, 45);
+            this.btSales.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btSales.Size = new System.Drawing.Size(200, 50);
             this.btSales.TabIndex = 7;
-            this.btSales.Text = "Sale";
+            this.btSales.Text = " Sale";
             this.btSales.Click += new System.EventHandler(this.btSales_Click);
             // 
             // bnCustomers
@@ -184,12 +191,15 @@
             this.bnCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnCustomers.ForeColor = System.Drawing.Color.White;
             this.bnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("bnCustomers.Image")));
+            this.bnCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bnCustomers.ImageSize = new System.Drawing.Size(30, 30);
             this.bnCustomers.Location = new System.Drawing.Point(34, 420);
+            this.bnCustomers.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bnCustomers.Name = "bnCustomers";
-            this.bnCustomers.Size = new System.Drawing.Size(177, 45);
+            this.bnCustomers.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.bnCustomers.Size = new System.Drawing.Size(200, 50);
             this.bnCustomers.TabIndex = 6;
-            this.bnCustomers.Text = "   Customer";
+            this.bnCustomers.Text = "Customer";
             this.bnCustomers.Click += new System.EventHandler(this.bnCustomers_Click);
             // 
             // bnPurchase
@@ -205,12 +215,14 @@
             this.bnPurchase.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnPurchase.ForeColor = System.Drawing.Color.White;
             this.bnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("bnPurchase.Image")));
+            this.bnPurchase.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bnPurchase.ImageSize = new System.Drawing.Size(30, 30);
             this.bnPurchase.Location = new System.Drawing.Point(33, 364);
+            this.bnPurchase.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bnPurchase.Name = "bnPurchase";
-            this.bnPurchase.Size = new System.Drawing.Size(178, 45);
+            this.bnPurchase.Size = new System.Drawing.Size(200, 50);
             this.bnPurchase.TabIndex = 5;
-            this.bnPurchase.Text = "   Purchase";
+            this.bnPurchase.Text = "Purchase";
             this.bnPurchase.Click += new System.EventHandler(this.bnPurchase_Click);
             // 
             // bnProducts
@@ -226,18 +238,22 @@
             this.bnProducts.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnProducts.ForeColor = System.Drawing.Color.White;
             this.bnProducts.Image = ((System.Drawing.Image)(resources.GetObject("bnProducts.Image")));
-            this.bnProducts.ImageSize = new System.Drawing.Size(35, 35);
+            this.bnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnProducts.ImageSize = new System.Drawing.Size(30, 30);
             this.bnProducts.Location = new System.Drawing.Point(34, 305);
+            this.bnProducts.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bnProducts.Name = "bnProducts";
-            this.bnProducts.Size = new System.Drawing.Size(177, 45);
+            this.bnProducts.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.bnProducts.Size = new System.Drawing.Size(200, 50);
             this.bnProducts.TabIndex = 4;
-            this.bnProducts.Text = "  Products";
+            this.bnProducts.Text = "Products";
             this.bnProducts.Click += new System.EventHandler(this.bnProducts_Click);
             // 
             // bnCategoy
             // 
             this.bnCategoy.AutoRoundedCorners = true;
             this.bnCategoy.BackColor = System.Drawing.Color.Transparent;
+            this.bnCategoy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnCategoy.BackgroundImage")));
             this.bnCategoy.BorderColor = System.Drawing.Color.Transparent;
             this.bnCategoy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bnCategoy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -248,12 +264,14 @@
             this.bnCategoy.ForeColor = System.Drawing.Color.White;
             this.bnCategoy.Image = ((System.Drawing.Image)(resources.GetObject("bnCategoy.Image")));
             this.bnCategoy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bnCategoy.ImageSize = new System.Drawing.Size(35, 35);
-            this.bnCategoy.Location = new System.Drawing.Point(34, 244);
+            this.bnCategoy.ImageSize = new System.Drawing.Size(30, 30);
+            this.bnCategoy.Location = new System.Drawing.Point(34, 240);
+            this.bnCategoy.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bnCategoy.Name = "bnCategoy";
-            this.bnCategoy.Size = new System.Drawing.Size(177, 45);
+            this.bnCategoy.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.bnCategoy.Size = new System.Drawing.Size(200, 50);
             this.bnCategoy.TabIndex = 3;
-            this.bnCategoy.Text = "       Category";
+            this.bnCategoy.Text = "Category";
             this.bnCategoy.Click += new System.EventHandler(this.bnCategoy_Click);
             // 
             // bnHome
@@ -273,10 +291,13 @@
             this.bnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bnHome.ImageSize = new System.Drawing.Size(30, 30);
             this.bnHome.Location = new System.Drawing.Point(33, 170);
+            this.bnHome.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.bnHome.Name = "bnHome";
-            this.bnHome.Size = new System.Drawing.Size(178, 45);
+            this.bnHome.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.bnHome.Size = new System.Drawing.Size(200, 50);
             this.bnHome.TabIndex = 2;
-            this.bnHome.Text = "  Home";
+            this.bnHome.Text = "Home";
+            this.bnHome.Click += new System.EventHandler(this.bnHome_Click);
             // 
             // lbUsername
             // 
@@ -297,12 +318,32 @@
             this.pictureboxUsername.TabIndex = 0;
             this.pictureboxUsername.TabStop = false;
             // 
+            // btnSetting
+            // 
+            this.btnSetting.AutoRoundedCorners = true;
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Location = new System.Drawing.Point(33, 604);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(180, 46);
+            this.btnSetting.TabIndex = 9;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
             // frmMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1070, 659);
+            this.ClientSize = new System.Drawing.Size(1070, 747);
             this.Controls.Add(this.pnRight);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
@@ -336,5 +377,6 @@
         private Guna.UI2.WinForms.Guna2Button bnCategoy;
         private Guna.UI2.WinForms.Guna2Button bnHome;
         private Guna.UI2.WinForms.Guna2Button btUser;
+        public Guna.UI2.WinForms.Guna2Button btnSetting;
     }
 }

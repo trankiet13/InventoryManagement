@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TransferObject;
+using System.Collections;
 
 namespace DataLayer
 {
@@ -92,6 +93,126 @@ namespace DataLayer
             cn.Close();
 
             return dt;
+        }
+        public DataTable GetUsersByName(string keyword)
+        {
+            string query = @"
+                SELECT IDUSER, USERNAME, PASSWD, FULLNAME, MACTY, MADVI, LAST_PWD_CHANGED, DISABLED, ISGROUP, Email
+                FROM tb_SYS_USER
+                WHERE USERNAME LIKE @keyword
+                ORDER BY IDUSER";
+
+            Hashtable parameters = new Hashtable();
+            parameters.Add("@keyword", $"%{keyword}%");
+
+            return GetDataTable(query, parameters);
+        }
+
+        // Trả về người dùng theo ID
+        public DataTable GetUserById(int userId)
+        {
+            string query = "SELECT * FROM tb_SYS_USER WHERE IDUSER = @userId";
+            Hashtable parameters = new Hashtable();
+            parameters.Add("@userId", userId);
+            return GetDataTable(query, parameters);
+        }
+
+        // Xoá người dùng theo ID
+        public int DeleteUser(int id)
+        {
+            string sql = "DELETE FROM tb_SYS_USER WHERE IDUSER = @id";
+            Hashtable ht = new Hashtable();
+            ht.Add("@id", id);
+            return MyExecuteNonQuery(sql, ht);
+        }
+
+        // Lấy danh sách công ty
+        public DataTable GetCongTyList()
+        {
+            string sql = "SELECT MACTY, TENCTY FROM tb_CONGTY";
+            return GetDataTable(sql);  // Gọi phương thức GetDataTable trong UserDL để lấy kết quả dưới dạng DataTable
+        }
+
+        // Lấy danh sách đơn vị theo mã công ty
+        public DataTable GetDonViListByMaCongTy(string maCongTy)
+        {
+            string sql = "SELECT MADVI, TENDVI FROM tb_DONVI WHERE MACTY = @maCongTy";
+            Hashtable ht = new Hashtable();
+            ht.Add("@maCongTy", maCongTy);
+            return GetDataTable(sql, ht);  // Gọi phương thức GetDataTable và truyền tham số Hashtable
+        }
+
+
+
+
+        // Thêm hoặc cập nhật người dùng
+        public int InsertOrUpdateUser(int id, string username, string fullname, string pass, string macty, string madvi, int role, string email)
+        {
+            string sql = id == 0 ?
+                "INSERT INTO tb_SYS_USER (USERNAME, FULLNAME, PASSWD, MACTY, MADVI, ISGROUP, Email) VALUES (@username, @fullname, @pass, @macty, @madvi, @role, @email)" :
+                "UPDATE tb_SYS_USER SET USERNAME = @username, FULLNAME = @fullname, PASSWD = @pass, MACTY = @macty, MADVI = @madvi, ISGROUP = @role, Email = @email WHERE IDUSER = @id";
+
+            Hashtable ht = new Hashtable();
+            ht.Add("@username", username);
+            ht.Add("@fullname", fullname);
+            ht.Add("@pass", pass);
+            ht.Add("@macty", macty);
+            ht.Add("@madvi", madvi);
+            ht.Add("@role", role);
+            ht.Add("@email", email);
+            if (id != 0) ht.Add("@id", id);
+
+            return MyExecuteNonQuery(sql, ht);
+        }
+
+
+        // Kiểm tra username đã tồn tại chưa (trừ user hiện tại)
+        public bool IsUsernameExists(string username, int? currentUserId = null)
+        {
+            string query = "SELECT COUNT(*) FROM tb_SYS_USER WHERE USERNAME = @username";
+            Hashtable parameters = new Hashtable();
+            parameters.Add("@username", username);
+
+            if (currentUserId != null)
+            {
+                query += " AND IDUSER != @currentUserId";
+                parameters.Add("@currentUserId", currentUserId.Value);
+            }
+
+            int count = Convert.ToInt32(MyExecuteScalar(query, CommandType.Text, parameters));
+            return count > 0;
+        }
+
+        // Truy xuất dữ liệu chung
+        public DataTable GetDataTable(string query, Hashtable parameters = null)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.CommandType = CommandType.Text;
+
+                if (parameters != null)
+                {
+                    foreach (DictionaryEntry item in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                    }
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tải dữ liệu", ex);
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
     }
 }

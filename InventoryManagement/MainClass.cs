@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
-using Guna.UI2.WinForms;
+
 
 namespace InventoryManagement
 {
@@ -136,7 +136,29 @@ namespace InventoryManagement
                 BackGround.Dispose();   
             }
         }
-        public static void LoadData(string qry,DataGridView gv, ListBox lb)
+        //public static void LoadData(string qry,DataGridView gv, ListBox lb)
+        //{
+        //    gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand(qry, con);
+        //        cmd.CommandType = CommandType.Text;
+        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //        DataTable dt = new DataTable();
+        //        da.Fill(dt);
+        //        for (int i = 0; i < lb.Items.Count; i++)
+        //        {
+        //            string colName1 = ((DataGridViewTextBoxColumn)lb.Items[i]).Name;
+        //            gv.Columns[colName1].DataPropertyName = dt.Columns[i].ToString();
+        //        }
+        //        gv.DataSource = dt;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    } 
+        //}
+        public static void LoadData(string qry, DataGridView gv, ListBox lb)
         {
             gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
             try
@@ -146,18 +168,22 @@ namespace InventoryManagement
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
+                // Đảm bảo rằng các cột trong ListBox là kiểu phù hợp
                 for (int i = 0; i < lb.Items.Count; i++)
                 {
-                    string colName1 = ((DataGridViewTextBoxColumn)lb.Items[i]).Name;
+                    string colName1 =((DataGridViewColumn)lb.Items[i]).Name;
                     gv.Columns[colName1].DataPropertyName = dt.Columns[i].ToString();
                 }
-                gv.DataSource = dt;
+                gv.DataSource = dt;  // Liên kết DataTable với DataGridView
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-            } 
+                MessageBox.Show(ex.ToString());
+                con.Close();    // Hiển thị thông báo lỗi nếu có
+            }
         }
+
         public static void gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Guna.UI2.WinForms.Guna2DataGridView gv = (Guna.UI2.WinForms.Guna2DataGridView)sender;

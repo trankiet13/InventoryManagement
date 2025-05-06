@@ -2,6 +2,7 @@
 using Guna.UI2.WinForms;
 using InventoryManagement.View;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,10 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddCategory : SampleAdd
     {
+        
         private frmViewCategory parentForm;
         public int id = 0;
+
         public frmAddCategory(frmViewCategory parent)
         {
             InitializeComponent();
@@ -41,22 +44,33 @@ namespace InventoryManagement.Model
                 messageDialog.Icon = MessageDialogIcon.Warning;
                 return;
             }
-            string ten = txtName.Text.Trim();
-
-            //if (string.IsNullOrEmpty(ten))
-            //{
-            //    MessageBox.Show("Vui lòng nhập tên danh mục.");
-            //    return;
-            //}
-
-            CategoryBL categoryBL = new CategoryBL();
-            int result = categoryBL.SaveCategory(ten);
-
-            if (result > 0)
+            else
             {
-                MessageBox.Show("Thêm danh mục thành công!");
-                parentForm.LoadCategoryGrid(); // Gọi ViewCategory cập nhật dữ liệu
-                this.Close();
+                string qry = "";
+                if (id == 0)
+                {
+                    qry = "Insert into dbo.tb_DVT values( @TEN)";
+                }
+                else
+                {
+                     qry = "Update dbo.tb_DVT set TEN = @TEN where ID = @ID";
+                }
+                Hashtable ht = new Hashtable();
+                ht.Add("@ID", id);
+                ht.Add("@TEN", txtName.Text);
+              
+
+                if (MainClass.SQL(qry, ht) > 0)
+                {
+                    Guna.UI2.WinForms.Guna2MessageDialog messageDialog = new Guna2MessageDialog();
+                    messageDialog.Buttons = MessageDialogButtons.OK;
+                    messageDialog.Text = "Cập nhật danh mục thành công!";
+                    messageDialog.Icon = MessageDialogIcon.Information;
+                    messageDialog.Show();
+                    id = 0;
+                    txtName.Text = "";
+                    txtName.Focus();
+                }
             }
         }
         
@@ -109,7 +123,7 @@ namespace InventoryManagement.Model
         {
 
         }
-
+        
 
     }
 }

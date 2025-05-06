@@ -21,6 +21,10 @@ namespace InventoryManagement.Model
         public int id = 0;
         public override void btClosee_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+        public override void btSave_Click(object sender, EventArgs e)
+        {
             if (MainClass.Validation(this) == false)
             {
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
@@ -44,8 +48,8 @@ namespace InventoryManagement.Model
                 ht.Add("@name", txtName.Text);
                 ht.Add("@phone", txtPhone.Text);
                 ht.Add("@Email", txtEmail.Text);
-                
-                if(MainClass.SQL(qry, ht) > 0)
+
+                if (MainClass.SQL(qry, ht) > 0)
                 {
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
@@ -53,12 +57,11 @@ namespace InventoryManagement.Model
                     id = 0;
                     txtName.Text = "";
                     txtPhone.Text = "";
-                     txtEmail.Text = "";
+                    txtEmail.Text = "";
                     txtName.Focus();
 
                 }
-               
             }
-        }
+            }
     }
 }

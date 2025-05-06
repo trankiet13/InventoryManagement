@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

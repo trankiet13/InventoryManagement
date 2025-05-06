@@ -45,11 +45,12 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(553, 32);
+            this.label1.Size = new System.Drawing.Size(648, 32);
             this.label1.Text = "Customer List";
             // 
             // dgvViewCustomer
             // 
+            this.dgvViewCustomer.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.dgvViewCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvViewCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 

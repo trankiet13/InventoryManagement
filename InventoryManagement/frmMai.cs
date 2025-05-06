@@ -106,5 +106,27 @@ namespace InventoryManagement
         {
             LoadChildForm(new View.frmViewSale());
         }
+
+        private void bnHome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProductsBL productsBL = new ProductsBL();
+                var products = productsBL.GetAllProducts();
+
+                frmProductStatistical frmProductStatistical = new frmProductStatistical(products);
+                LoadChildForm(frmProductStatistical);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu thống kê: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            frmSetting st = new frmSetting();
+            st.Show();
+        }
     }
 }

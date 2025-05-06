@@ -22,7 +22,6 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewUser.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddCategory.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewCategory.resources
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddPurchase.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewPurchase.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddProduct.resources
@@ -32,3 +31,9 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewSale.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddSale.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.ucProduct.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmProductStatistical.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmResetPassword.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSendCode.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSetting.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmUserAdd.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser1.resources

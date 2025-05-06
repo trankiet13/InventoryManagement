@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace TransferObject
 {
-    public class Category
-    {
-        //public string id { get; set; }
-        public string id { get; set; }
-        public string name { get; set; }
-        public Category( string id,string name)
-        {
-            this.id = id;
-            this.name = name;
-        }
-    }
+    //public class Category
+    //{
+    //    //public string id { get; set; }
+    //    public string id { get; set; }
+    //    public string name { get; set; }
+    //    public Category( string id,string name)
+    //    {
+    //        this.id = id;
+    //        this.name = name;
+    //    }
+    //}
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BusinessLayer.SaleBL;
 
 namespace InventoryManagement.View
 {
@@ -48,6 +49,41 @@ namespace InventoryManagement.View
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //// Update
+            //if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvEdit")
+            //{
+            //    frmAddSale frmAddSale = new frmAddSale();
+            //    frmAddSale.id = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvid"].Value);
+            //    frmAddSale.cusID = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvCustomer"].Value);
+            //    MainClass.BlurBackGround(frmAddSale);
+            //    LoadData();
+            //}
+            //// Delete
+            //if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvDelete")
+            //{
+            //    Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            //    guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            //    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            //    if (guna2MessageDialog1.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
+            //    {
+            //        int id = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvid"].Value);
+            //        string qry = "delete from tblMian where MainID = " + id + "";
+            //        string qry2 = "delete from tblDetails where dMainID = " + id + "";
+            //        Hashtable ht = new Hashtable();
+            //        MainClass.SQL(qry, ht);
+            //        if (MainClass.SQL(qry2, ht) > 0)
+            //        {
+            //            Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            //            guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            //            guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            //            guna2MessageDialog.Text = "Record deleted successfully.";
+            //            guna2MessageDialog.Show();
+            //            LoadData();
+            //        }
+
+            //    }
+
+            //}
             // Update
             if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
@@ -57,31 +93,33 @@ namespace InventoryManagement.View
                 MainClass.BlurBackGround(frmAddSale);
                 LoadData();
             }
+
             // Delete
             if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvDelete")
             {
-                Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
-                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
-                if (guna2MessageDialog1.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
+                var dialog = new Guna.UI2.WinForms.Guna2MessageDialog
+                {
+                    Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo,
+                    Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning
+                };
+
+                if (dialog.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "delete from tblMian where MainID = " + id + "";
-                    string qry2 = "delete from tblDetails where dMainID = " + id + "";
-                    Hashtable ht = new Hashtable();
-                    MainClass.SQL(qry, ht);
-                    if (MainClass.SQL(qry2, ht) > 0)
+                    SaleBLL bll = new SaleBLL();
+
+                    if (bll.DeleteSale(id))
                     {
-                        Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
-                        guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                        guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                        guna2MessageDialog.Text = "Record deleted successfully.";
-                        guna2MessageDialog.Show();
+                        var successDialog = new Guna.UI2.WinForms.Guna2MessageDialog
+                        {
+                            Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK,
+                            Icon = Guna.UI2.WinForms.MessageDialogIcon.Information,
+                            Text = "Record deleted successfully."
+                        };
+                        successDialog.Show();
                         LoadData();
                     }
-
                 }
-
             }
 
         }

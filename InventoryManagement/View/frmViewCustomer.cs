@@ -48,10 +48,10 @@ namespace InventoryManagement.View
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Update
-            if (dgvViewCustomer.CurrentCell.OwningColumn.Name == "dgvEdit")
+            if (dgvViewCustomer.CurrentCell.OwningColumn.Name == "dgvUpdate")
             {
                 frmAddCustomer frmAddCustomer = new frmAddCustomer();
-                frmAddCustomer.id = Convert.ToInt32(dgvViewCustomer.CurrentRow.Cells["dgvid"].Value);
+                frmAddCustomer.id = Convert.ToInt32(dgvViewCustomer.CurrentRow.Cells["dgvId"].Value);
                 frmAddCustomer.txtName.Text = dgvViewCustomer.CurrentRow.Cells["dgvName"].Value.ToString();
                 frmAddCustomer.txtPhone.Text = dgvViewCustomer.CurrentRow.Cells["dgvPhone"].Value.ToString();
                 frmAddCustomer.txtEmail.Text = dgvViewCustomer.CurrentRow.Cells["dgvEmail"].Value.ToString();
@@ -67,8 +67,9 @@ namespace InventoryManagement.View
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
                 if (guna2MessageDialog1.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(dgvViewCustomer.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "delete from Customer where MainID = " + id + "";
+                    object value = Convert.ToInt32(dgvViewCustomer.CurrentRow.Cells["dgvId"].Value);
+                    
+                    string qry = "delete from Customer where cusID = " + value + "";
 
                     Hashtable ht = new Hashtable();
                     MainClass.SQL(qry, ht);

@@ -65,8 +65,8 @@
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(157, 29);
-            this.label2.Text = "Add Products";
+            this.label11.Size = new System.Drawing.Size(157, 29);
+            this.label11.Text = "Add Products";
             // 
             // btAddNew
             // 

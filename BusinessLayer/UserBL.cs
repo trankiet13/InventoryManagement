@@ -37,5 +37,43 @@ namespace BusinessLayer
         {
             return userDL.GetUsers();
         }
+        public DataTable GetUsersByName(string keyword)
+        {
+            return userDL.GetUsersByName(keyword);
+        }
+
+        // Lấy chi tiết người dùng theo ID
+        public DataTable GetUserById(int userId)
+        {
+            return userDL.GetUserById(userId);
+        }
+
+        // Xoá người dùng
+        public int DeleteUser(int id)
+        {
+            return userDL.DeleteUser(id);
+        }
+        // Gọi tới DataLayer để lấy danh sách công ty
+        public DataTable GetCongTyList()
+        {
+            return userDL.GetCongTyList();
+        }
+
+        // Gọi tới DataLayer để lấy danh sách đơn vị theo mã công ty
+        public DataTable GetDonViListByMaCongTy(string maCongTy)
+        {
+            return userDL.GetDonViListByMaCongTy(maCongTy);
+        }
+
+        // Lưu thông tin người dùng
+        public int SaveUser(int id, string username, string fullname, string pass, string macty, string madvi, int role, string email)
+        {
+            if (userDL.IsUsernameExists(username, id == 0 ? (int?)null : id))
+            {
+                throw new Exception("Username đã tồn tại trong hệ thống!");
+            }
+
+            return userDL.InsertOrUpdateUser(id, username, fullname, pass, macty, madvi, role, email);
+        }
     }
   }
