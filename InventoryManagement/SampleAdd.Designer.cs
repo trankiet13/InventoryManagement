@@ -35,7 +35,7 @@
             this.bnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.btClosee = new Guna.UI2.WinForms.Guna2Button();
             this.btSave = new Guna.UI2.WinForms.Guna2Button();
@@ -116,7 +116,7 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.guna2Panel3.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel3.Controls.Add(this.label11);
+            this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
@@ -135,17 +135,17 @@
             this.guna2ControlBox1.TabIndex = 1;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
-            // label11
+            // label1
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(65, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 29);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "UserDetail";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "UserDetail";
             // 
             // guna2Panel4
             // 
@@ -196,11 +196,11 @@
             // 
             // SampleAdd
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(847, 511);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SampleAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.SampleAdd_Load_1);
@@ -221,7 +221,7 @@
         private Guna.UI2.WinForms.Guna2Button btClose;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2Button btClosee;
         public Guna.UI2.WinForms.Guna2Button btSave;
         public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;

@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace InventoryManagement
 {
-    public partial class SampleAdd : Form
+    public partial class SampleAdd : Sample
     {
         public SampleAdd()
         {

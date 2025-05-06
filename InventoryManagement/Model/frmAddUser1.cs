@@ -255,6 +255,10 @@ namespace InventoryManagement.Model
         {
             this.Close();
         }
-        
+
+        private void frmAddUser1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

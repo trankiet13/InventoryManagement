@@ -107,7 +107,6 @@ namespace DataLayer
 
             return GetDataTable(query, parameters);
         }
-
         // Trả về người dùng theo ID
         public DataTable GetUserById(int userId)
         {

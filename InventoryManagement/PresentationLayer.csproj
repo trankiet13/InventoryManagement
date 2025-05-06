@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -53,14 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.cs">
-      <Link>Model\frmUserAdd.cs</Link>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.Designer.cs">
-      <Link>Model\frmUserAdd.Designer.cs</Link>
-      <DependentUpon>frmUserAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +108,30 @@
     <Compile Include="Model\frmProductStatistical.Designer.cs">
       <DependentUpon>frmProductStatistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmSendCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmSendCode.Designer.cs">
+      <DependentUpon>frmSendCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmUserAdd.Designer.cs">
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,23 +158,11 @@
     <Compile Include="SampleView.Designer.cs">
       <DependentUpon>SampleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmResetPassword.cs">
+    <Compile Include="View\frmUserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmResetPassword.Designer.cs">
-      <DependentUpon>frmResetPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmSendCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmSendCode.Designer.cs">
-      <DependentUpon>frmSendCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmSetting.Designer.cs">
-      <DependentUpon>frmSetting.cs</DependentUpon>
+    <Compile Include="View\frmUserView.Designer.cs">
+      <DependentUpon>frmUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmViewCategory.cs">
       <SubType>Form</SubType>
@@ -196,10 +200,6 @@
     <Compile Include="View\frmViewUser.Designer.cs">
       <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="..\..\inventorymanagement1\inventorymanagement\inventorymanagement\model\frmUserAdd.resx">
-      <Link>Model\frmUserAdd.resx</Link>
-      <DependentUpon>frmUserAdd.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMai.resx">
       <DependentUpon>frmMai.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,11 +227,23 @@
     <EmbeddedResource Include="Model\frmProductStatistical.resx">
       <DependentUpon>frmProductStatistical.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmSendCode.resx">
+      <DependentUpon>frmSendCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmUserAdd.resx">
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -246,14 +258,8 @@
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmResetPassword.resx">
-      <DependentUpon>frmResetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmSendCode.resx">
-      <DependentUpon>frmSendCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmSetting.resx">
-      <DependentUpon>frmSetting.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmUserView.resx">
+      <DependentUpon>frmUserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewCategory.resx">
       <DependentUpon>frmViewCategory.cs</DependentUpon>
@@ -298,7 +304,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\tired dog Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy Bear Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Party Drumming Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face Wow Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy Dog Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delivery Entrega Sticker by Bonito.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

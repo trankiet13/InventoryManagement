@@ -16,6 +16,10 @@ namespace BusinessLayer
         {
             loginDL = new LoginDL();
         }
+        public Account GetAccount(string username, string password)
+        {
+            return loginDL.GetAccount(username, password);
+        }
         public bool Login(Account account)
         {
             try

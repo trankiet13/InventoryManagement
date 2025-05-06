@@ -20,7 +20,11 @@ namespace InventoryManagement
         public frmMai()
         {
             InitializeComponent();
-           
+            ///kiểm tra k phải admin thì ẩn btUser
+            if (LoginInfo.CurrentUser != null && LoginInfo.CurrentUser.IsGroup != 1)
+            {
+                btUser.Visible = false; // Ẩn nút nếu không phải admin
+            }
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -37,13 +41,18 @@ namespace InventoryManagement
             if (result == DialogResult.OK)
             {
                 this.Enabled = true;
+                if (LoginInfo.CurrentUser.IsGroup != 1)
+                {
+                    btUser.Visible = false;
+                }
+
             }
             else
             {
                 Application.Exit();
             }
-            
-            
+
+
         }
         public void AddControls (Form F)
         {
@@ -74,7 +83,7 @@ namespace InventoryManagement
         }
         private void btUser_Click(object sender, EventArgs e)
         {
-            LoadChildForm(new View.frmViewUser());
+            LoadChildForm(new View.frmUserView());
         }
 
         private void pnTop_Paint(object sender, PaintEventArgs e)

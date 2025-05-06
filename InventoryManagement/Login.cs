@@ -32,6 +32,7 @@ namespace InventoryManagement
         {
             
         }
+        //kiểm tra login tồn tại k
         bool UserLogin(Account account)
         {
             try
@@ -47,29 +48,46 @@ namespace InventoryManagement
         }
         private void btLogin_Click(object sender, EventArgs e)
         {
-            string user, pass;
-            user = txtUser.Text.Trim();
-            pass = txtPassword.Text;
+            string user = txtUser.Text.Trim();
+            string pass = txtPassword.Text;
 
-            Account account = new Account(user, pass);
-            if (UserLogin(account) == true)
+            LoginBL loginBL = new LoginBL();
+            Account acc = loginBL.GetAccount(user, pass);
+
+            if (acc != null)
             {
-                this.DialogResult = DialogResult.OK;
+                // Lưu tài khoản đăng nhập để dùng phân quyền
+                LoginInfo.CurrentUser = acc;
+
+
+                this.DialogResult = DialogResult.OK; // Đóng form login
             }
+
+
             else
             {
-                string mess = " User or Password is incorrect ! ";
-                DialogResult result = MessageBox.Show(mess, "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                string mess = "Tài khoản hoặc mật khẩu không đúng!";
+                DialogResult result = MessageBox.Show(mess, "Đăng nhập",
+                    MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
                 if (result == DialogResult.Retry)
                 {
                     txtPassword.Clear();
                     txtUser.Focus();
                 }
                 else
+                {
                     this.DialogResult = DialogResult.Cancel;
+                }
             }
         }
 
 
+        private void lbForgetPass_Click_1(object sender, EventArgs e)
+        {
+            frmSendCode sc = new frmSendCode();
+
+            sc.ShowDialog();
+        }
     }
 }

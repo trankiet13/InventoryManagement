@@ -40,8 +40,10 @@
             this.lbForgetPass = new System.Windows.Forms.Label();
             this.btLogin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWelCome.BackColor = System.Drawing.Color.Transparent;
             this.lbWelCome.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelCome.ForeColor = System.Drawing.Color.DimGray;
+            this.lbWelCome.ForeColor = System.Drawing.Color.White;
             this.lbWelCome.Location = new System.Drawing.Point(534, 50);
             this.lbWelCome.Name = "lbWelCome";
             this.lbWelCome.Size = new System.Drawing.Size(127, 50);
@@ -92,7 +94,7 @@
             this.txtUser.BorderColor = System.Drawing.Color.DimGray;
             this.txtUser.BorderThickness = 3;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultText = "Admin";
+            this.txtUser.DefaultText = "";
             this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -106,7 +108,8 @@
             this.txtUser.Location = new System.Drawing.Point(485, 123);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.PlaceholderText = "User";
+            this.txtUser.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtUser.PlaceholderText = "Username";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(229, 40);
             this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -118,7 +121,7 @@
             this.txtPassword.BorderColor = System.Drawing.Color.DimGray;
             this.txtPassword.BorderThickness = 3;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "kiet";
+            this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -145,13 +148,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbForgetPass.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgetPass.ForeColor = System.Drawing.Color.DimGray;
-            this.lbForgetPass.Location = new System.Drawing.Point(508, 331);
+            this.lbForgetPass.ForeColor = System.Drawing.Color.White;
+            this.lbForgetPass.Location = new System.Drawing.Point(473, 337);
             this.lbForgetPass.Name = "lbForgetPass";
-            this.lbForgetPass.Size = new System.Drawing.Size(187, 30);
+            this.lbForgetPass.Size = new System.Drawing.Size(261, 30);
             this.lbForgetPass.TabIndex = 7;
-            this.lbForgetPass.Text = "Forget Password ?";
+            this.lbForgetPass.Text = "Forget Password? Click here";
             this.lbForgetPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbForgetPass.Click += new System.EventHandler(this.lbForgetPass_Click_1);
             // 
             // btLogin
             // 
@@ -172,15 +176,25 @@
             this.btLogin.Text = "LOGIN";
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::InventoryManagement.Properties.Resources.Happy_Bear_Sticker_by_takadabear;
+            this.pictureBox1.Location = new System.Drawing.Point(295, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 463);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(109, 123);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(48, 114);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(176, 200);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(190, 201);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -191,6 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.lbForgetPass);
             this.Controls.Add(this.txtPassword);
@@ -204,6 +219,7 @@
             this.Text = "WELCOME";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -221,6 +237,7 @@
         private System.Windows.Forms.Label lbForgetPass;
         private Guna.UI2.WinForms.Guna2Button btLogin;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

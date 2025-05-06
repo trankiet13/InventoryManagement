@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using BusinessLayer;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace InventoryManagement
 {
@@ -74,7 +75,7 @@ namespace InventoryManagement
         {
             if (randomCode == txtCode.Text.Trim())
             {
-                
+
                 // Mở form reset password và truyền username + mã OTP
                 frmResetPassword rp = new frmResetPassword(_username, randomCode);
                 rp.ShowDialog();
@@ -90,7 +91,7 @@ namespace InventoryManagement
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void frmSendCode_Load(object sender, EventArgs e)

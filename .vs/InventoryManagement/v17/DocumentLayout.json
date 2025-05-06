@@ -1,71 +1,81 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\",
+  "WorkspaceRootPath": "E:\\InventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\view\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|e:\\inventorymanagement\\inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\transferobject\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|solutionrelative:transferobject\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PresentationLayer||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\transferobject\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|solutionrelative:transferobject\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\datalayer\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\businesslayer\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmuseradd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\model\\frmadduser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmadduser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|E:\\InventoryManagement\\businesslayer\\loginbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\loginbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\model\\frmadduser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmadduser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\model\\frmadduser1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmadduser1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\view\\frmsetting.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmsetting.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|E:\\InventoryManagement\\datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\view\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|E:\\InventoryManagement\\datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|E:\\InventoryManagement\\transferobject\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{689A14DD-A821-46C8-BC62-D2904580F32F}|TransferObject\\TransferObject.csproj|solutionrelative:transferobject\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\inventorymanagement\\inventorymanagement\\view\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|E:\\InventoryManagement\\datalayer\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,255 +85,236 @@
       "DocumentGroups": [
         {
           "DockedWidth": 328,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 390,
           "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginDL.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\DataLayer\\LoginDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\LoginDL.cs",
+              "ToolTip": "E:\\InventoryManagement\\DataLayer\\LoginDL.cs",
+              "RelativeToolTip": "DataLayer\\LoginDL.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAmwEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:16:36.93Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Login.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeToolTip": "InventoryManagement\\Login.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAA/wEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:38:29.692Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmSetting.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSetting.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSetting.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSetting.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSetting.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T07:35:20.461Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmSetting.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSetting.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSetting.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSetting.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSetting.cs",
+              "ViewState": "AQIAAM8AAAAAAAAAAADwv+AAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:15:15.738Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\TransferObject\\Account.cs",
-              "RelativeDocumentMoniker": "TransferObject\\Account.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\TransferObject\\Account.cs",
-              "RelativeToolTip": "TransferObject\\Account.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwBoAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "frmResetPassword.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAuwD8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:50:19.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginInfo.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\TransferObject\\LoginInfo.cs",
-              "RelativeDocumentMoniker": "TransferObject\\LoginInfo.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\TransferObject\\LoginInfo.cs",
-              "RelativeToolTip": "TransferObject\\LoginInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:10:30.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:10:51.152Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserDL.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\DataLayer\\UserDL.cs",
-              "RelativeDocumentMoniker": "DataLayer\\UserDL.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\DataLayer\\UserDL.cs",
-              "RelativeToolTip": "DataLayer\\UserDL.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Title": "frmResetPassword.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmResetPassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:10:24.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:10:16.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserBL.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\BusinessLayer\\UserBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\UserBL.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\BusinessLayer\\UserBL.cs",
-              "RelativeToolTip": "BusinessLayer\\UserBL.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "frmViewCustomer.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewCustomer.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:10:20.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:10:10.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmSendCode.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAswGUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:01:14.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PresentationLayer",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\PresentationLayer.csproj",
+              "RelativeDocumentMoniker": "InventoryManagement\\PresentationLayer.csproj",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\PresentationLayer.csproj",
+              "RelativeToolTip": "InventoryManagement\\PresentationLayer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-06T10:37:44.277Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "frmUserAdd.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmUserAdd.Designer.cs",
-              "RelativeDocumentMoniker": "..\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmUserAdd.Designer.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmUserAdd.Designer.cs",
-              "RelativeToolTip": "..\\inventorymanagement1\\inventorymanagement\\inventorymanagement\\model\\frmUserAdd.Designer.cs",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAMwAoBAAAzAAAAAAAAAA==",
+              "Title": "frmSendCode.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSendCode.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:04:15.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T10:21:41.133Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmUserAdd.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "RelativeDocumentMoniker": "..\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "RelativeToolTip": "..\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAUwNAAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "SampleAdd.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\SampleAdd.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\SampleAdd.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\SampleAdd.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\SampleAdd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:03:00.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T10:21:30.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmUserAdd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "RelativeDocumentMoniker": "..\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs [Design]",
-              "RelativeToolTip": "..\\InventoryManagement1\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "SampleView.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\SampleView.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs",
+              "RelativeToolTip": "InventoryManagement\\SampleView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:02:55.113Z",
+              "WhenOpened": "2025-05-06T09:30:49.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmViewUser.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewUser.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T09:21:53.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Login.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Login.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:38:28.356Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "frmAddUser1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.Designer.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddUser1.Designer.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.Designer.cs",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddUser1.Designer.cs",
-              "ViewState": "AgIAAPIAAAAAAAAAAAAYwAEBAAAhAAAAAAAAAA==",
+              "Title": "LoginBL.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\BusinessLayer\\LoginBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\LoginBL.cs",
+              "ToolTip": "E:\\InventoryManagement\\BusinessLayer\\LoginBL.cs",
+              "RelativeToolTip": "BusinessLayer\\LoginBL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:59:12.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmAddUser1.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddUser1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.cs",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddUser1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAPsAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:57:34.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmAddUser1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddUser1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\Model\\frmAddUser1.cs [Design]",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddUser1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:57:30.726Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmSetting.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.Designer.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmSetting.Designer.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.Designer.cs",
-              "RelativeToolTip": "InventoryManagement\\View\\frmSetting.Designer.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAtwI8BAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:55:54.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SampleAdd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\SampleAdd.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\SampleAdd.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\SampleAdd.cs [Design]",
-              "RelativeToolTip": "InventoryManagement\\SampleAdd.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:54:44.529Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-06T08:36:59.584Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "frmSetting.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmSetting.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.cs [Design]",
-              "RelativeToolTip": "InventoryManagement\\View\\frmSetting.cs [Design]",
+              "Title": "frmMai.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\frmMai.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\frmMai.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\frmMai.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\frmMai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:54:08.289Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-06T08:32:06.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmSetting.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmSetting.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSetting.cs",
-              "RelativeToolTip": "InventoryManagement\\View\\frmSetting.cs",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAtwNgAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "UserDL.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\DataLayer\\UserDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\UserDL.cs",
+              "ToolTip": "E:\\InventoryManagement\\DataLayer\\UserDL.cs",
+              "RelativeToolTip": "DataLayer\\UserDL.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwHQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:54:04.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T08:21:36.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginInfo.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\TransferObject\\LoginInfo.cs",
+              "RelativeDocumentMoniker": "TransferObject\\LoginInfo.cs",
+              "ToolTip": "E:\\InventoryManagement\\TransferObject\\LoginInfo.cs",
+              "RelativeToolTip": "TransferObject\\LoginInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:17:48.429Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "frmSendCode.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSendCode.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmSendCode.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmSendCode.cs [Design]",
-              "RelativeToolTip": "InventoryManagement\\View\\frmSendCode.cs [Design]",
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\DataLayer\\DataProvider.cs",
+              "RelativeDocumentMoniker": "DataLayer\\DataProvider.cs",
+              "ToolTip": "E:\\InventoryManagement\\DataLayer\\DataProvider.cs",
+              "RelativeToolTip": "DataLayer\\DataProvider.cs",
+              "ViewState": "AQIAAB8BAAAAAAAAAAAmwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:51:23.349Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "frmMai.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\frmMai.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\frmMai.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\frmMai.cs",
-              "RelativeToolTip": "InventoryManagement\\frmMai.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAqwH8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T06:36:41.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmViewUser.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewUser.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs",
-              "RelativeToolTip": "InventoryManagement\\View\\frmViewUser.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowC0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T07:38:04.194Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 184,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2025-05-06T08:16:09.673Z"
             }
           ]
         }

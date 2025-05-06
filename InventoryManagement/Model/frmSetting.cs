@@ -16,7 +16,7 @@ namespace InventoryManagement
     public partial class frmSetting : SampleAdd
     {
         public int id = 0;
-        Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+
         public frmSetting()
         {
             InitializeComponent();
@@ -164,6 +164,8 @@ namespace InventoryManagement
 
             return isValid;
         }
+
+
         public override void btSave_Click(object sender, EventArgs e)
         {
             try
@@ -214,7 +216,7 @@ namespace InventoryManagement
         {
             LoadCongTyAndDonVi();
             // Ẩn Mã công ty, Mã đơn vị và Vai trò nếu không phải admin
-            if (LoginInfo.CurrentUser.IsGroup != 1) 
+            if (LoginInfo.CurrentUser.IsGroup != 1)
             {
                 cbbMaCty.Visible = false;
                 cbbMaDvi.Visible = false;
@@ -225,7 +227,7 @@ namespace InventoryManagement
                 lbMaDvi.Visible = false;
                 lbRole.Visible = false;
             }
-            
+
 
         }
 

@@ -35,7 +35,7 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,8 +54,9 @@
             // 
             // label1
             // 
-            this.label10.Size = new System.Drawing.Size(317, 32);
-            this.label10.Text = "Chỉnh sửa thông tin cá nhân";
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Size = new System.Drawing.Size(229, 49);
+            this.label1.Text = "User Detail";
             // 
             // txtEmail
             // 
@@ -170,12 +171,12 @@
             // 
             // label2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(147, 118);
-            this.label11.Name = "label2";
-            this.label11.Size = new System.Drawing.Size(91, 23);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Username:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(147, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Username:";
             // 
             // txtUserName
             // 
@@ -201,6 +202,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(125, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 23);
@@ -231,6 +233,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(128, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 23);
@@ -261,11 +264,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(125, 285);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 23);
+            this.label7.Size = new System.Drawing.Size(84, 23);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Mật khẩu:";
+            this.label7.Text = "Password:";
             // 
             // txtMail
             // 
@@ -278,7 +282,7 @@
             this.txtMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtMail.Location = new System.Drawing.Point(240, 347);
+            this.txtMail.Location = new System.Drawing.Point(240, 337);
             this.txtMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMail.Name = "txtMail";
             this.txtMail.PlaceholderText = "";
@@ -291,6 +295,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(125, 360);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 23);
@@ -300,25 +305,28 @@
             // lbMaCty
             // 
             this.lbMaCty.AutoSize = true;
+            this.lbMaCty.ForeColor = System.Drawing.Color.White;
             this.lbMaCty.Location = new System.Drawing.Point(125, 407);
             this.lbMaCty.Name = "lbMaCty";
-            this.lbMaCty.Size = new System.Drawing.Size(100, 23);
+            this.lbMaCty.Size = new System.Drawing.Size(87, 23);
             this.lbMaCty.TabIndex = 14;
-            this.lbMaCty.Text = "Mã công ty:";
+            this.lbMaCty.Text = "Company:";
             // 
             // lbMaDvi
             // 
             this.lbMaDvi.AutoSize = true;
+            this.lbMaDvi.ForeColor = System.Drawing.Color.White;
             this.lbMaDvi.Location = new System.Drawing.Point(125, 479);
             this.lbMaDvi.Name = "lbMaDvi";
-            this.lbMaDvi.Size = new System.Drawing.Size(90, 23);
+            this.lbMaDvi.Size = new System.Drawing.Size(67, 23);
             this.lbMaDvi.TabIndex = 14;
-            this.lbMaDvi.Text = "Mã đơn vị:";
+            this.lbMaDvi.Text = "Branch:";
             // 
             // lbRole
             // 
             this.lbRole.AutoSize = true;
-            this.lbRole.Location = new System.Drawing.Point(125, 558);
+            this.lbRole.ForeColor = System.Drawing.Color.White;
+            this.lbRole.Location = new System.Drawing.Point(133, 558);
             this.lbRole.Name = "lbRole";
             this.lbRole.Size = new System.Drawing.Size(47, 23);
             this.lbRole.TabIndex = 14;
@@ -343,7 +351,7 @@
             "Admin",
             "User",
             "Staff"});
-            this.cbbMaCty.Location = new System.Drawing.Point(240, 407);
+            this.cbbMaCty.Location = new System.Drawing.Point(240, 404);
             this.cbbMaCty.Name = "cbbMaCty";
             this.cbbMaCty.Size = new System.Drawing.Size(358, 31);
             this.cbbMaCty.TabIndex = 16;
@@ -381,6 +389,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label5);
             this.Name = "frmSetting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSetting";
             this.Load += new System.EventHandler(this.frmSetting_Load);
             this.ResumeLayout(false);
@@ -397,7 +406,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2TextBox txtUser;
-        //private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label label5;
         public Guna.UI2.WinForms.Guna2TextBox txtFullName;

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace InventoryManagement
 {
-    public partial class SampleView : Form
+    public partial class SampleView : Sample
     {
         public SampleView()
         {
@@ -34,9 +34,8 @@ namespace InventoryManagement
 
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

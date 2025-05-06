@@ -42,9 +42,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // label11
             // 
-            this.label11.Location = new System.Drawing.Point(66, 34);
+            this.label1.Location = new System.Drawing.Point(66, 34);
             // 
             // txtFullName
             // 
@@ -234,7 +234,7 @@
             this.txtMACTY.TabIndex = 25;
             this.txtMACTY.Tag = "v";
             // 
-            // frmAddUser
+            // frmAddUser1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,9 +250,10 @@
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lbName);
-            this.Name = "frmAddUser";
+            this.Name = "frmAddUser1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddUser";
+            this.Load += new System.EventHandler(this.frmAddUser1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

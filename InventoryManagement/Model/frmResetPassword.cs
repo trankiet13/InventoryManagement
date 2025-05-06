@@ -15,7 +15,7 @@ namespace InventoryManagement
             InitializeComponent();
             _accountBL = new AccountBL();
             _username = username;
-          
+
         }
 
         private void btnResetPassword_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace InventoryManagement
 
         private void GNClose_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

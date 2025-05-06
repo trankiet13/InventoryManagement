@@ -46,12 +46,13 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(882, 154);
+            this.guna2Panel1.Size = new System.Drawing.Size(882, 148);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Animated = true;
             this.txtSearch.AutoRoundedCorners = true;
             this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
@@ -76,9 +77,7 @@
             // 
             // search
             // 
-            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search.AutoSize = true;
             this.search.BackColor = System.Drawing.Color.Transparent;
             this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,11 +99,11 @@
             this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(215)))), ((int)(((byte)(207)))));
             this.btAddNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btAddNew.ForeColor = System.Drawing.Color.White;
-            this.btAddNew.Location = new System.Drawing.Point(161, 68);
+            this.btAddNew.Location = new System.Drawing.Point(72, 79);
             this.btAddNew.Name = "btAddNew";
             this.btAddNew.Size = new System.Drawing.Size(180, 45);
             this.btAddNew.TabIndex = 2;
-            this.btAddNew.Text = "btAddNew";
+            this.btAddNew.Text = "Add New";
             this.btAddNew.Click += new System.EventHandler(this.btAddNew_Click);
             // 
             // label1
@@ -114,15 +113,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(164, 29);
+            this.label1.Location = new System.Drawing.Point(81, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 32);
+            this.label1.Size = new System.Drawing.Size(201, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sample Header";
             // 
             // SampleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(882, 515);

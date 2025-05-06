@@ -36,8 +36,8 @@
             // 
             // label2
             // 
-            this.label11.Size = new System.Drawing.Size(159, 29);
-            this.label11.Text = "Add Category";
+            this.label1.Size = new System.Drawing.Size(159, 29);
+            this.label1.Text = "Add Category";
             // 
             // txtName
             // 
