@@ -140,13 +140,5 @@ namespace InventoryManagement.View
                 }
             }
         }
-
-        private void btnstatistical_Click(object sender, EventArgs e)
-        {
-            var products = productsBL.GetAllProducts();
-            frmProductStatistical frmStatistical = new frmProductStatistical(products);
-            frmStatistical.StartPosition = FormStartPosition.CenterParent;
-            frmStatistical.ShowDialog();
-        }
     }
 }

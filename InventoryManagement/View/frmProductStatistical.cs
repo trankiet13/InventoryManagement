@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using BusinessLayer;
 using TransferObject;
 
 namespace InventoryManagement.View
@@ -12,6 +13,7 @@ namespace InventoryManagement.View
     public partial class frmProductStatistical : Form
     {
         private List<Product> _products;
+        private UserBL userBL = new UserBL();
 
         public frmProductStatistical(List<Product> products)
         {
@@ -94,7 +96,7 @@ namespace InventoryManagement.View
             chartNhom.Legends.Clear();
 
             chartNhom.ChartAreas.Add(new ChartArea("AreaNhom"));
-            chartNhom.ChartAreas[0].BackColor = Color.White;
+            chartNhom.ChartAreas[0].BackColor = Color.FromArgb(30, 35, 70);
 
             var groupedByGroup = _products
                 .Where(p => !string.IsNullOrEmpty(p.IDNHOM))
@@ -108,7 +110,7 @@ namespace InventoryManagement.View
                 ChartType = SeriesChartType.Pie,
                 IsValueShownAsLabel = true,
                 Font = new Font("Segoe UI", 9, FontStyle.Bold),
-                LabelForeColor = Color.Black
+                LabelForeColor = Color.White
             };
 
             foreach (var item in groupedByGroup)
@@ -117,13 +119,39 @@ namespace InventoryManagement.View
             }
 
             seriesNhom["PieLabelStyle"] = "Outside";
-            seriesNhom["PieLineColor"] = "Black";
+            seriesNhom["PieLineColor"] = "White";
             seriesNhom.Label = "#PERCENT{P1}";
             seriesNhom.LegendText = "#VALX";
 
             chartNhom.Series.Add(seriesNhom);
             chartNhom.Titles.Add("Tỷ lệ sản phẩm theo Nhóm");
+            chartNhom.Titles[0].ForeColor = Color.White;
+            chartNhom.Titles[0].Font = new Font("Segoe UI", 12, FontStyle.Bold);
             chartNhom.Legends.Add(new Legend("LegendNhom") { Docking = Docking.Right });
+            chartNhom.BackColor = Color.FromArgb(30, 35, 70);
+
+            // hiển thị số lượng các label
+            lbTotalProduct.Text = $"Tổng sản phẩm: {_products.Count}";
+            int totalUsers = userBL.GetAccounts().Count;
+            lbTotalUser.Text = $"Tổng user: {totalUsers}";
+
+            // Đặt vị trí - góc dưới bên phải
+            int padding = 30;
+            lbTotalUser.Location = new Point(
+                this.ClientSize.Width - lbTotalUser.Width - padding,
+                this.ClientSize.Height - lbTotalUser.Height - padding
+            );
+
+            lbTotalProduct.Location = new Point(
+                this.ClientSize.Width - lbTotalProduct.Width - padding,
+                lbTotalUser.Top - lbTotalProduct.Height - padding / 2
+            );
+
+            // Đảm bảo label luôn hiển thị trên cùng
+            lbTotalProduct.BringToFront();
+            lbTotalUser.BringToFront();
         }
+
+        
     }
 }
