@@ -36,7 +36,6 @@ C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSendCode.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSetting.resources
 C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmUserAdd.resources
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser1.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
@@ -77,3 +76,4 @@ E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmRese
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSendCode.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\Presenta.9C561136.Up2Date
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmUserView.resources
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmUserView.resources

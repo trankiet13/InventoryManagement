@@ -50,7 +50,7 @@
             // 
             this.label1.AllowDrop = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Size = new System.Drawing.Size(355, 32);
+            this.label1.Size = new System.Drawing.Size(432, 32);
             this.label1.Text = "User Detail";
             // 
             // guna2DataGridView1
@@ -93,7 +93,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(108, 205);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(106, 239);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;

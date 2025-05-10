@@ -43,7 +43,7 @@ namespace InventoryManagement.View
         }
         public override void btAddNew_Click(object sender, EventArgs e)
         {
-            frmAddUser1 frmaddUser = new frmAddUser1();
+            frmUserAdd frmaddUser = new frmUserAdd();
             frmaddUser.ShowDialog();
             
         }

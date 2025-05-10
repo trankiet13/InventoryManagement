@@ -123,5 +123,10 @@ namespace InventoryManagement.View
             }
 
         }
+
+        private void frmViewSale_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
     }

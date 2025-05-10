@@ -63,7 +63,7 @@ namespace InventoryManagement.Model
                      }
                  }
                  // if dont find product in row
-                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName,1,wdg.Price,wdg.Pcost });
+                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName,1,wdg.Price,wdg.Pcost,null,null });
                  GrandTotal();
              };
         }

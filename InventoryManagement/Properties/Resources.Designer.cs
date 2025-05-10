@@ -63,6 +63,16 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap delet {
+            get {
+                object obj = ResourceManager.GetObject("delet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Delivery_Entrega_Sticker_by_Bonito {
             get {
                 object obj = ResourceManager.GetObject("Delivery_Entrega_Sticker_by_Bonito", resourceCulture);
@@ -103,6 +113,16 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Image1 {
+            get {
+                object obj = ResourceManager.GetObject("Image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Party_Drumming_Sticker_by_takadabear {
             get {
                 object obj = ResourceManager.GetObject("Party_Drumming_Sticker_by_takadabear", resourceCulture);
@@ -116,6 +136,16 @@ namespace InventoryManagement.Properties {
         public static System.Drawing.Bitmap tired_dog_Sticker_by_takadabear {
             get {
                 object obj = ResourceManager.GetObject("tired_dog_Sticker_by_takadabear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap update {
+            get {
+                object obj = ResourceManager.GetObject("update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

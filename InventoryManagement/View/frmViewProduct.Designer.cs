@@ -37,7 +37,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(1233, 32);
+            this.label1.Size = new System.Drawing.Size(3106, 46);
             this.label1.Text = "Product";
             // 
             // dgvProductView
@@ -50,7 +50,7 @@
             this.dgvProductView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -60,20 +60,19 @@
             this.dgvProductView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            this.dgvProductView.Location = new System.Drawing.Point(102, 179);
-            this.dgvProductView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductView.Location = new System.Drawing.Point(106, 239);
             this.dgvProductView.Name = "dgvProductView";
             this.dgvProductView.RowHeadersVisible = false;
             this.dgvProductView.RowHeadersWidth = 51;
             this.dgvProductView.RowTemplate.Height = 30;
-            this.dgvProductView.Size = new System.Drawing.Size(1102, 338);
+            this.dgvProductView.Size = new System.Drawing.Size(1240, 486);
             this.dgvProductView.TabIndex = 4;
             this.dgvProductView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProductView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -100,10 +99,12 @@
             // 
             // frmViewProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 709);
+            this.ClientSize = new System.Drawing.Size(1455, 1019);
             this.Controls.Add(this.dgvProductView);
+            this.Location = new System.Drawing.Point(106, 239);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmViewProduct";
             this.Text = "Products";
             this.Load += new System.EventHandler(this.frmViewProduct_Load);

@@ -45,7 +45,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(648, 32);
+            this.label1.Size = new System.Drawing.Size(1380, 46);
             this.label1.Text = "Customer List";
             // 
             // dgvViewCustomer
@@ -59,7 +59,7 @@
             this.dgvViewCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -77,19 +77,20 @@
             this.dgvUpdate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvViewCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvViewCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            this.dgvViewCustomer.Location = new System.Drawing.Point(131, 173);
+            this.dgvViewCustomer.Location = new System.Drawing.Point(106, 239);
+            this.dgvViewCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvViewCustomer.Name = "dgvViewCustomer";
             this.dgvViewCustomer.RowHeadersVisible = false;
             this.dgvViewCustomer.RowHeadersWidth = 51;
             this.dgvViewCustomer.RowTemplate.Height = 30;
-            this.dgvViewCustomer.Size = new System.Drawing.Size(711, 220);
+            this.dgvViewCustomer.Size = new System.Drawing.Size(800, 316);
             this.dgvViewCustomer.TabIndex = 1;
             this.dgvViewCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvViewCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,21 +148,27 @@
             // dgvDelete
             // 
             this.dgvDelete.HeaderText = "Delete";
+            this.dgvDelete.Image = global::InventoryManagement.Properties.Resources.delet;
+            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvDelete.MinimumWidth = 6;
             this.dgvDelete.Name = "dgvDelete";
             // 
             // dgvUpdate
             // 
             this.dgvUpdate.HeaderText = "Update";
+            this.dgvUpdate.Image = global::InventoryManagement.Properties.Resources.update;
+            this.dgvUpdate.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvUpdate.MinimumWidth = 6;
             this.dgvUpdate.Name = "dgvUpdate";
             // 
             // frmViewCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 450);
+            this.ClientSize = new System.Drawing.Size(1099, 647);
             this.Controls.Add(this.dgvViewCustomer);
+            this.Location = new System.Drawing.Point(106, 239);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmViewCustomer";
             this.Text = "frmViewCustomer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -35,6 +35,7 @@
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
             this.pnRight = new Guna.UI2.WinForms.Guna2Panel();
             this.pnLeft = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.btUser = new Guna.UI2.WinForms.Guna2Button();
             this.btSales = new Guna.UI2.WinForms.Guna2Button();
             this.bnCustomers = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.bnHome = new Guna.UI2.WinForms.Guna2Button();
             this.lbUsername = new System.Windows.Forms.Label();
             this.pictureboxUsername = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxUsername)).BeginInit();
@@ -130,6 +130,26 @@
             this.pnLeft.Size = new System.Drawing.Size(244, 702);
             this.pnLeft.TabIndex = 4;
             // 
+            // btnSetting
+            // 
+            this.btnSetting.AutoRoundedCorners = true;
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Location = new System.Drawing.Point(33, 604);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(180, 46);
+            this.btnSetting.TabIndex = 9;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
             // btUser
             // 
             this.btUser.AutoRoundedCorners = true;
@@ -139,13 +159,13 @@
             this.btUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btUser.FillColor = System.Drawing.Color.Transparent;
+            this.btUser.FillColor = System.Drawing.Color.IndianRed;
             this.btUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUser.ForeColor = System.Drawing.Color.White;
             this.btUser.Image = ((System.Drawing.Image)(resources.GetObject("btUser.Image")));
             this.btUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.btUser.Location = new System.Drawing.Point(32, 542);
+            this.btUser.Location = new System.Drawing.Point(32, 538);
             this.btUser.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btUser.Name = "btUser";
             this.btUser.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -317,26 +337,6 @@
             this.pictureboxUsername.Size = new System.Drawing.Size(64, 64);
             this.pictureboxUsername.TabIndex = 0;
             this.pictureboxUsername.TabStop = false;
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.AutoRoundedCorners = true;
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(33, 604);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(180, 46);
-            this.btnSetting.TabIndex = 9;
-            this.btnSetting.Text = "Setting";
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // frmMai
             // 
