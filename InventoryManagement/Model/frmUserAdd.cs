@@ -211,7 +211,10 @@ namespace InventoryManagement.Model
         {
             LoadCongTyAndDonVi();
         }
-
+        public override void btClosee_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
 

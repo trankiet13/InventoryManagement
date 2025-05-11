@@ -46,12 +46,14 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(140, 32);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Size = new System.Drawing.Size(142, 27);
             this.label1.Text = "User Details";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(147, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 23);
@@ -82,6 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(150, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 23);
@@ -99,12 +102,12 @@
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtName.Location = new System.Drawing.Point(262, 149);
+            this.txtName.Location = new System.Drawing.Point(262, 156);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(358, 34);
+            this.txtName.Size = new System.Drawing.Size(358, 29);
             this.txtName.TabIndex = 0;
             this.txtName.Tag = "v";
             this.txtName.TextOffset = new System.Drawing.Point(10, 0);
@@ -113,11 +116,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(147, 205);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 23);
+            this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Mật khẩu:";
+            this.label4.Text = "Password:";
             // 
             // txtPass
             // 
@@ -130,12 +134,12 @@
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtPass.Location = new System.Drawing.Point(262, 191);
+            this.txtPass.Location = new System.Drawing.Point(262, 200);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(358, 37);
+            this.txtPass.Size = new System.Drawing.Size(358, 29);
             this.txtPass.TabIndex = 2;
             this.txtPass.Tag = "v";
             this.txtPass.TextOffset = new System.Drawing.Point(10, 0);
@@ -143,15 +147,17 @@
             // lbMaDvi
             // 
             this.lbMaDvi.AutoSize = true;
+            this.lbMaDvi.ForeColor = System.Drawing.Color.White;
             this.lbMaDvi.Location = new System.Drawing.Point(143, 293);
             this.lbMaDvi.Name = "lbMaDvi";
-            this.lbMaDvi.Size = new System.Drawing.Size(97, 23);
+            this.lbMaDvi.Size = new System.Drawing.Size(67, 23);
             this.lbMaDvi.TabIndex = 0;
-            this.lbMaDvi.Text = "Tên Đơn Vị:";
+            this.lbMaDvi.Text = "Branch:";
             // 
             // lbRole
             // 
             this.lbRole.AutoSize = true;
+            this.lbRole.ForeColor = System.Drawing.Color.White;
             this.lbRole.Location = new System.Drawing.Point(150, 337);
             this.lbRole.Name = "lbRole";
             this.lbRole.Size = new System.Drawing.Size(47, 23);
@@ -161,11 +167,12 @@
             // lbMaCty
             // 
             this.lbMaCty.AutoSize = true;
+            this.lbMaCty.ForeColor = System.Drawing.Color.White;
             this.lbMaCty.Location = new System.Drawing.Point(143, 249);
             this.lbMaCty.Name = "lbMaCty";
-            this.lbMaCty.Size = new System.Drawing.Size(107, 23);
+            this.lbMaCty.Size = new System.Drawing.Size(87, 23);
             this.lbMaCty.TabIndex = 0;
-            this.lbMaCty.Text = "Tên Công Ty:";
+            this.lbMaCty.Text = "Company:";
             // 
             // cbbRole
             // 
@@ -174,7 +181,7 @@
             "Admin",
             "User",
             "Staff"});
-            this.cbbRole.Location = new System.Drawing.Point(262, 334);
+            this.cbbRole.Location = new System.Drawing.Point(262, 336);
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Size = new System.Drawing.Size(358, 31);
             this.cbbRole.TabIndex = 9;
@@ -190,12 +197,12 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtEmail.Location = new System.Drawing.Point(262, 383);
+            this.txtEmail.Location = new System.Drawing.Point(262, 382);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(358, 36);
+            this.txtEmail.Size = new System.Drawing.Size(358, 29);
             this.txtEmail.TabIndex = 3;
             this.txtEmail.Tag = "v";
             this.txtEmail.TextOffset = new System.Drawing.Point(10, 0);
@@ -204,6 +211,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(147, 396);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 23);
@@ -217,7 +225,7 @@
             "Admin",
             "User",
             "Staff"});
-            this.cbbMaCty.Location = new System.Drawing.Point(262, 249);
+            this.cbbMaCty.Location = new System.Drawing.Point(262, 244);
             this.cbbMaCty.Name = "cbbMaCty";
             this.cbbMaCty.Size = new System.Drawing.Size(358, 31);
             this.cbbMaCty.TabIndex = 9;

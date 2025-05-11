@@ -230,7 +230,10 @@ namespace InventoryManagement
 
 
         }
-
+        public override void btClosee_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

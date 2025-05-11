@@ -220,12 +220,12 @@
             this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtFullName.Location = new System.Drawing.Point(240, 202);
+            this.txtFullName.Location = new System.Drawing.Point(240, 201);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PlaceholderText = "";
             this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(358, 34);
+            this.txtFullName.Size = new System.Drawing.Size(358, 29);
             this.txtFullName.TabIndex = 10;
             this.txtFullName.Tag = "v";
             this.txtFullName.TextOffset = new System.Drawing.Point(10, 0);
@@ -251,12 +251,12 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtPassword.Location = new System.Drawing.Point(240, 271);
+            this.txtPassword.Location = new System.Drawing.Point(240, 270);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(358, 37);
+            this.txtPassword.Size = new System.Drawing.Size(358, 29);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.Tag = "v";
             this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
@@ -282,12 +282,12 @@
             this.txtMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.txtMail.Location = new System.Drawing.Point(240, 337);
+            this.txtMail.Location = new System.Drawing.Point(240, 339);
             this.txtMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMail.Name = "txtMail";
             this.txtMail.PlaceholderText = "";
             this.txtMail.SelectedText = "";
-            this.txtMail.Size = new System.Drawing.Size(358, 36);
+            this.txtMail.Size = new System.Drawing.Size(358, 29);
             this.txtMail.TabIndex = 15;
             this.txtMail.Tag = "v";
             this.txtMail.TextOffset = new System.Drawing.Point(10, 0);
@@ -351,7 +351,7 @@
             "Admin",
             "User",
             "Staff"});
-            this.cbbMaCty.Location = new System.Drawing.Point(240, 404);
+            this.cbbMaCty.Location = new System.Drawing.Point(240, 408);
             this.cbbMaCty.Name = "cbbMaCty";
             this.cbbMaCty.Size = new System.Drawing.Size(358, 31);
             this.cbbMaCty.TabIndex = 16;
@@ -364,7 +364,7 @@
             "Admin",
             "User",
             "Staff"});
-            this.cbbMaDvi.Location = new System.Drawing.Point(240, 471);
+            this.cbbMaDvi.Location = new System.Drawing.Point(240, 479);
             this.cbbMaDvi.Name = "cbbMaDvi";
             this.cbbMaDvi.Size = new System.Drawing.Size(358, 31);
             this.cbbMaDvi.TabIndex = 16;
