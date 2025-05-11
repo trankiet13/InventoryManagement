@@ -34,7 +34,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label2
+            // label1
             // 
             this.label1.Size = new System.Drawing.Size(159, 29);
             this.label1.Text = "Add Category";
@@ -52,7 +52,7 @@
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(80, 169);
+            this.txtName.Location = new System.Drawing.Point(80, 164);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
@@ -63,22 +63,21 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(92, 147);
+            this.lbName.ForeColor = System.Drawing.Color.Transparent;
+            this.lbName.Location = new System.Drawing.Point(92, 135);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(44, 16);
+            this.lbName.Size = new System.Drawing.Size(56, 23);
             this.lbName.TabIndex = 6;
             this.lbName.Text = "Name";
             // 
             // frmAddCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 333);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.txtName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddCategory";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddCategory";
             this.Load += new System.EventHandler(this.frmAddCategory_Load);
             this.ResumeLayout(false);

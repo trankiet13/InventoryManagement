@@ -39,13 +39,12 @@
             this.cbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbName = new System.Windows.Forms.Label();
             this.txtBarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkDisabled = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbNcc = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.cbXuatxu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMota = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,10 +62,12 @@
             this.spGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
-            // label2
+            // label1
             // 
-            this.label11.Size = new System.Drawing.Size(157, 29);
-            this.label11.Text = "Add Products";
+            this.label1.Location = new System.Drawing.Point(526, 236);
+            this.label1.Size = new System.Drawing.Size(100, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Quantity";
             // 
             // btAddNew
             // 
@@ -222,14 +223,17 @@
             this.guna2DateTimePicker1.UseTransparentBackground = true;
             this.guna2DateTimePicker1.Value = new System.DateTime(2025, 4, 15, 21, 29, 2, 179);
             // 
-            // label1
+            // label100
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(526, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Quantity";
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.Transparent;
+            this.label100.Location = new System.Drawing.Point(81, 441);
+            this.label100.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(133, 25);
+            this.label100.TabIndex = 37;
+            this.label100.Text = "Nhà cung cấp";
             // 
             // txtQuantity
             // 
@@ -319,17 +323,6 @@
             this.cbNcc.Size = new System.Drawing.Size(229, 36);
             this.cbNcc.TabIndex = 38;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(81, 441);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 25);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Nhà cung cấp";
-            // 
             // cbXuatxu
             // 
             this.cbXuatxu.AutoRoundedCorners = true;
@@ -351,6 +344,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Transparent;
             this.label9.Location = new System.Drawing.Point(81, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -381,6 +375,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(545, 301);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -409,6 +404,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(81, 301);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -420,6 +416,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Transparent;
             this.label11.Location = new System.Drawing.Point(545, 228);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -451,6 +448,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Transparent;
             this.label12.Location = new System.Drawing.Point(81, 225);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
@@ -482,6 +480,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Transparent;
             this.label13.Location = new System.Drawing.Point(545, 163);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
@@ -513,6 +512,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Transparent;
             this.label14.Location = new System.Drawing.Point(81, 163);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
@@ -551,13 +551,13 @@
             // 
             // frmAddProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 671);
             this.Controls.Add(this.spGia);
             this.Controls.Add(this.chkDisabled);
             this.Controls.Add(this.cbNcc);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label100);
             this.Controls.Add(this.cbXuatxu);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMota);
@@ -593,13 +593,13 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbSupplier;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label01;
         public Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2TextBox txtBarcode;
         private Guna.UI2.WinForms.Guna2CheckBox chkDisabled;
         private Guna.UI2.WinForms.Guna2ComboBox cbNcc;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label100;
         private Guna.UI2.WinForms.Guna2ComboBox cbXuatxu;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txtMota;

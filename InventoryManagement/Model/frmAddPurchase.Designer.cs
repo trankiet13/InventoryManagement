@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbName = new System.Windows.Forms.Label();
             this.txtBarcode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,9 +60,10 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
+            this.lbName.ForeColor = System.Drawing.Color.Transparent;
             this.lbName.Location = new System.Drawing.Point(69, 237);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(59, 16);
+            this.lbName.Size = new System.Drawing.Size(72, 23);
             this.lbName.TabIndex = 8;
             this.lbName.Text = "Barcode";
             // 
@@ -88,15 +89,16 @@
             this.txtBarcode.TabIndex = 7;
             this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
             // 
-            // label1
+            // label100
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(526, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Quantity";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label100.AutoSize = true;
+            this.label100.ForeColor = System.Drawing.Color.Transparent;
+            this.label100.Location = new System.Drawing.Point(526, 236);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(76, 23);
+            this.label100.TabIndex = 10;
+            this.label100.Text = "Quantity";
+            this.label100.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtQuantity
             // 
@@ -141,9 +143,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(81, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(46, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "Date";
             // 
@@ -184,27 +187,30 @@
             // lbSupplier
             // 
             this.lbSupplier.AutoSize = true;
+            this.lbSupplier.ForeColor = System.Drawing.Color.Transparent;
             this.lbSupplier.Location = new System.Drawing.Point(302, 131);
             this.lbSupplier.Name = "lbSupplier";
-            this.lbSupplier.Size = new System.Drawing.Size(57, 16);
+            this.lbSupplier.Size = new System.Drawing.Size(72, 23);
             this.lbSupplier.TabIndex = 15;
             this.lbSupplier.Text = "Supplier";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(317, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 16);
+            this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 16;
             this.label5.Text = "Product";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(685, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 16);
+            this.label6.Size = new System.Drawing.Size(44, 23);
             this.label6.TabIndex = 18;
             this.label6.Text = "Cost";
             // 
@@ -232,9 +238,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(855, 236);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.Size = new System.Drawing.Size(72, 23);
             this.label7.TabIndex = 20;
             this.label7.Text = "Amount";
             // 
@@ -270,9 +277,9 @@
             this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btAddNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btAddNew.ForeColor = System.Drawing.Color.White;
-            this.btAddNew.Location = new System.Drawing.Point(660, 150);
+            this.btAddNew.Location = new System.Drawing.Point(664, 150);
             this.btAddNew.Name = "btAddNew";
-            this.btAddNew.Size = new System.Drawing.Size(180, 45);
+            this.btAddNew.Size = new System.Drawing.Size(287, 45);
             this.btAddNew.TabIndex = 21;
             this.btAddNew.Text = "Add";
             this.btAddNew.Click += new System.EventHandler(this.btAddNew_Click);
@@ -281,19 +288,19 @@
             // 
             this.dgvAddPurchase.AllowUserToAddRows = false;
             this.dgvAddPurchase.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAddPurchase.ColumnHeadersHeight = 18;
             this.dgvAddPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAddPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -304,14 +311,14 @@
             this.dgvqty,
             this.dgvCost,
             this.dgvAmount});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAddPurchase.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddPurchase.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAddPurchase.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAddPurchase.Location = new System.Drawing.Point(83, 352);
             this.dgvAddPurchase.Name = "dgvAddPurchase";
@@ -396,7 +403,7 @@
             // 
             // frmAddPurchase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 746);
             this.Controls.Add(this.dgvAddPurchase);
@@ -411,12 +418,11 @@
             this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDateTime);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label100);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.txtBarcode);
             this.Name = "frmAddPurchase";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cost";
             this.Load += new System.EventHandler(this.frmAddPurchase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddPurchase)).EndInit();
@@ -429,7 +435,7 @@
 
         private System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2TextBox txtBarcode;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label100;
         public Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtDateTime;
         private System.Windows.Forms.Label label3;

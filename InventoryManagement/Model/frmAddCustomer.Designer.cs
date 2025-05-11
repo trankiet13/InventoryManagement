@@ -36,6 +36,10 @@
             this.lbName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(65, 29);
+            // 
             // txtPhone
             // 
             this.txtPhone.Animated = true;
@@ -61,9 +65,10 @@
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
+            this.lbPhone.ForeColor = System.Drawing.Color.Transparent;
             this.lbPhone.Location = new System.Drawing.Point(366, 145);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(46, 16);
+            this.lbPhone.Size = new System.Drawing.Size(59, 23);
             this.lbPhone.TabIndex = 30;
             this.lbPhone.Text = "Phone";
             // 
@@ -80,7 +85,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(45, 265);
+            this.txtEmail.Location = new System.Drawing.Point(196, 257);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "";
@@ -92,9 +97,10 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(65, 242);
+            this.lbEmail.ForeColor = System.Drawing.Color.Transparent;
+            this.lbEmail.Location = new System.Drawing.Point(215, 234);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(41, 16);
+            this.lbEmail.Size = new System.Drawing.Size(51, 23);
             this.lbEmail.TabIndex = 27;
             this.lbEmail.Text = "Email";
             // 
@@ -123,17 +129,19 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.ForeColor = System.Drawing.Color.Transparent;
             this.lbName.Location = new System.Drawing.Point(65, 145);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(44, 16);
+            this.lbName.Size = new System.Drawing.Size(56, 23);
             this.lbName.TabIndex = 25;
             this.lbName.Text = "Name";
             // 
             // frmAddCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 450);
+            this.ClientSize = new System.Drawing.Size(617, 440);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lbPhone);
             this.Controls.Add(this.txtEmail);
