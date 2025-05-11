@@ -45,7 +45,11 @@ namespace InventoryManagement
                 {
                     btUser.Visible = false;
                 }
-
+                // Hiển thị thông báo "Xin chào + full name"
+                if (LoginInfo.CurrentUser != null)
+                {
+                    lbUsername.Text = "Xin chào " + LoginInfo.CurrentUser.Username +  " !!!!";
+                }
             }
             else
             {
@@ -136,6 +140,72 @@ namespace InventoryManagement
         {
             frmSetting st = new frmSetting();
             st.Show();
+        }
+
+        private void lbUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureboxUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Xác nhận đăng xuất
+            if (MessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                // Đóng tất cả form con đang mở (nếu có)
+                CloseAllChildForms();
+
+                // Xóa thông tin người dùng
+                LoginInfo.CurrentUser = null;
+
+                // Ẩn form chính (frmMai)
+                this.Hide();
+
+                // Mở lại form đăng nhập
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog(); // Hiển thị dưới dạng dialog
+
+                // Xử lý sau khi đăng nhập thành công hoặc hủy
+                if (loginForm.DialogResult == DialogResult.OK)
+                {
+                    // Cập nhật thông tin người dùng mới
+                    lbUsername.Text = "Xin chào " + LoginInfo.CurrentUser.Username;
+                    btUser.Visible = (LoginInfo.CurrentUser.IsGroup == 1);
+
+                    // Hiển thị lại form chính
+                    this.Show();
+                }
+                else
+                {
+                    // Đóng ứng dụng nếu hủy đăng nhập
+                    Application.Exit();
+                }
+            }
+        }
+
+        // Hàm đóng tất cả form con
+        private void CloseAllChildForms()
+        {
+            // Lặp qua danh sách form đang mở và đóng các form con
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != this && !(form is LoginForm))
+                {
+                    openForms.Add(form);
+                }
+            }
+
+            foreach (Form form in openForms)
+            {
+                form.Close();
+            }
         }
     }
 }

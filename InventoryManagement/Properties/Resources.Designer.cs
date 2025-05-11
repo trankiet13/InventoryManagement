@@ -63,6 +63,36 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _1564491_add_create_new_plus_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("_1564491_add_create_new_plus_icon__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _9104334_sign_out_logout_exit_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("_9104334_sign_out_logout_exit_out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap del {
+            get {
+                object obj = ResourceManager.GetObject("del", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap delet {
             get {
                 object obj = ResourceManager.GetObject("delet", resourceCulture);
@@ -73,9 +103,19 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Delivery_Entrega_Sticker_by_Bonito {
+        public static System.Drawing.Bitmap Dog_Hello_Sticker_by_takadabear {
             get {
-                object obj = ResourceManager.GetObject("Delivery_Entrega_Sticker_by_Bonito", resourceCulture);
+                object obj = ResourceManager.GetObject("Dog_Hello_Sticker_by_takadabear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +133,16 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap find {
+            get {
+                object obj = ResourceManager.GetObject("find", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Happy_Bear_Sticker_by_takadabear {
             get {
                 object obj = ResourceManager.GetObject("Happy_Bear_Sticker_by_takadabear", resourceCulture);
@@ -103,9 +153,9 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Happy_Dog_Sticker_by_takadabear {
+        public static System.Drawing.Bitmap Pato_Escondido_GIF_by_Pocoyo {
             get {
-                object obj = ResourceManager.GetObject("Happy_Dog_Sticker_by_takadabear", resourceCulture);
+                object obj = ResourceManager.GetObject("Pato_Escondido_GIF_by_Pocoyo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,19 +163,9 @@ namespace InventoryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Image1 {
+        public static System.Drawing.Bitmap setting {
             get {
-                object obj = ResourceManager.GetObject("Image1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Party_Drumming_Sticker_by_takadabear {
-            get {
-                object obj = ResourceManager.GetObject("Party_Drumming_Sticker_by_takadabear", resourceCulture);
+                object obj = ResourceManager.GetObject("setting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

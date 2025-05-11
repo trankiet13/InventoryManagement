@@ -82,8 +82,7 @@ namespace InventoryManagement
             }
         }
 
-
-        private void lbForgetPass_Click_1(object sender, EventArgs e)
+        private void btnForgetPass_Click(object sender, EventArgs e)
         {
             frmSendCode sc = new frmSendCode();
 

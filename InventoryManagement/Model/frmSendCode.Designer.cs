@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSendCode));
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbWelCome = new System.Windows.Forms.Label();
@@ -38,9 +39,11 @@
             this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCode = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtEmail.Location = new System.Drawing.Point(528, 264);
+            this.txtEmail.Location = new System.Drawing.Point(488, 254);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "abc@gmail.com";
@@ -78,7 +81,7 @@
             this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Location = new System.Drawing.Point(528, 198);
+            this.txtUser.Location = new System.Drawing.Point(488, 197);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
             this.txtUser.PlaceholderText = "Username";
@@ -94,7 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWelCome.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelCome.Location = new System.Drawing.Point(595, 157);
+            this.lbWelCome.Location = new System.Drawing.Point(547, 160);
             this.lbWelCome.Name = "lbWelCome";
             this.lbWelCome.Size = new System.Drawing.Size(107, 23);
             this.lbWelCome.TabIndex = 9;
@@ -104,11 +107,11 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel1.Location = new System.Drawing.Point(43, -1);
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
+            this.guna2Panel1.Location = new System.Drawing.Point(-4, -1);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(401, 452);
+            this.guna2Panel1.Size = new System.Drawing.Size(403, 452);
             this.guna2Panel1.TabIndex = 7;
             // 
             // GNClose
@@ -130,12 +133,12 @@
             this.btnSendCode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSendCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSendCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSendCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendCode.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendCode.ForeColor = System.Drawing.Color.White;
-            this.btnSendCode.Location = new System.Drawing.Point(477, 388);
+            this.btnSendCode.Location = new System.Drawing.Point(465, 388);
             this.btnSendCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.Size = new System.Drawing.Size(153, 34);
+            this.btnSendCode.Size = new System.Drawing.Size(138, 34);
             this.btnSendCode.TabIndex = 13;
             this.btnSendCode.Text = "Send code";
             this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
@@ -161,7 +164,7 @@
             this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCode.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtCode.Location = new System.Drawing.Point(528, 320);
+            this.txtCode.Location = new System.Drawing.Point(488, 312);
             this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCode.Name = "txtCode";
             this.txtCode.PlaceholderText = "Nhập mã code";
@@ -176,12 +179,12 @@
             this.btnCode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCode.Font = new System.Drawing.Font("Microsoft PhagsPa", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCode.ForeColor = System.Drawing.Color.White;
-            this.btnCode.Location = new System.Drawing.Point(648, 388);
+            this.btnCode.Location = new System.Drawing.Point(619, 388);
             this.btnCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCode.Name = "btnCode";
-            this.btnCode.Size = new System.Drawing.Size(140, 34);
+            this.btnCode.Size = new System.Drawing.Size(138, 34);
             this.btnCode.TabIndex = 13;
             this.btnCode.Text = "Verify";
             this.btnCode.Click += new System.EventHandler(this.btnCode_Click);
@@ -191,21 +194,32 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.DimGray;
             this.guna2PictureBox1.Image = global::InventoryManagement.Properties.Resources.tired_dog_Sticker_by_takadabear;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(563, 48);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(525, 60);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(154, 97);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 15;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel2.Location = new System.Drawing.Point(-40, -61);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(483, 574);
+            this.guna2Panel2.TabIndex = 2;
+            // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::InventoryManagement.Properties.Resources.Party_Drumming_Sticker_by_takadabear;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-69, -98);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(123, 163);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(456, 609);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 201);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 0;
             this.guna2PictureBox2.TabStop = false;
             // 
@@ -229,6 +243,7 @@
             this.Load += new System.EventHandler(this.frmSendCode_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -246,6 +261,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtCode;
         public Guna.UI2.WinForms.Guna2Button btnCode;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

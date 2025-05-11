@@ -307,9 +307,6 @@
     <None Include="Resources\Face Wow Sticker by takadabear.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Happy Dog Sticker by takadabear.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Delivery Entrega Sticker by Bonito.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +317,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1491313940-repeat_82991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564502_basket_delete_remove_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9055423_bxs_edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8726331_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3994401_find_magnifier_magnifying glass_search_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pato Escondido GIF by Pocoyo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy Dog Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849830_multimedia_options_setting_settings_gear_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog Hello Sticker by takadabear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564491_add_create_new_plus_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9104334_sign out_logout_exit_out_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

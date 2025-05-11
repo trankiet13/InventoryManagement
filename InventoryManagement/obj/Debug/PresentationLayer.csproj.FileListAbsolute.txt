@@ -46,7 +46,6 @@ E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.f
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddProduct.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddPurchase.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddSale.resources
-E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddUser1.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmProductStatistical.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.frmSetting.resources
 E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmUserAdd.resources
