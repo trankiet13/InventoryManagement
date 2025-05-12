@@ -130,20 +130,11 @@
   <data name="Face_Wow_Sticker_by_takadabear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Face Wow Sticker by takadabear.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gio-hang2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gio-hang2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2849830_multimedia_options_setting_settings_gear_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gio-hang1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gio-hang1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gio-hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gio-hang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Thiet-ke-chua-co-ten-2024-07-31T195959.022" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thiet-ke-chua-co-ten-2024-07-31T195959.022.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_1564491_add_create_new_plus_icon__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564491_add_create_new_plus_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,5 +165,11 @@
   </data>
   <data name="gio-hang4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gio-hang3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3844443_disable_eye_inactive_see_show_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3844441_eye_see_show_view_watch_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

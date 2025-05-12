@@ -29,67 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSendCode));
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbWelCome = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GNClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCode = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderThickness = 3;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtEmail.Location = new System.Drawing.Point(488, 254);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "abc@gmail.com";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(229, 48);
-            this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtEmail.TabIndex = 11;
-            // 
-            // txtUser
-            // 
-            this.txtUser.BorderThickness = 3;
-            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultText = "";
-            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Location = new System.Drawing.Point(488, 197);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.PlaceholderText = "Username";
-            this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(229, 48);
-            this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtUser.TabIndex = 10;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // lbWelCome
             // 
@@ -113,6 +69,28 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(403, 452);
             this.guna2Panel1.TabIndex = 7;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel2.Location = new System.Drawing.Point(-40, -61);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(483, 574);
+            this.guna2Panel2.TabIndex = 2;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(123, 163);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 201);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // GNClose
             // 
@@ -151,28 +129,6 @@
             this.label1.Size = new System.Drawing.Size(0, 23);
             this.label1.TabIndex = 14;
             // 
-            // txtCode
-            // 
-            this.txtCode.BorderThickness = 3;
-            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCode.DefaultText = "";
-            this.txtCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCode.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtCode.Location = new System.Drawing.Point(488, 312);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.PlaceholderText = "Nhập mã code";
-            this.txtCode.SelectedText = "";
-            this.txtCode.Size = new System.Drawing.Size(229, 48);
-            this.txtCode.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtCode.TabIndex = 11;
-            // 
             // btnCode
             // 
             this.btnCode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -201,50 +157,112 @@
             this.guna2PictureBox1.TabIndex = 15;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2Panel2
+            // txtUser
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel2.Location = new System.Drawing.Point(-40, -61);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(483, 574);
-            this.guna2Panel2.TabIndex = 2;
+            this.txtUser.BackColor = System.Drawing.Color.White;
+            this.txtUser.BorderColor = System.Drawing.Color.DimGray;
+            this.txtUser.BorderThickness = 3;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUser.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.IconLeftOffset = new System.Drawing.Point(-2, 0);
+            this.txtUser.Location = new System.Drawing.Point(488, 207);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtUser.PlaceholderText = "Username";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(229, 39);
+            this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtUser.TabIndex = 16;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged_1);
             // 
-            // guna2PictureBox2
+            // txtEmail
             // 
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(123, 163);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 201);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderColor = System.Drawing.Color.DimGray;
+            this.txtEmail.BorderThickness = 3;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.IconLeftOffset = new System.Drawing.Point(-2, 0);
+            this.txtEmail.Location = new System.Drawing.Point(488, 254);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.PlaceholderText = "abc@gmail.com";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(229, 39);
+            this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtEmail.TabIndex = 17;
+            // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.White;
+            this.txtCode.BorderColor = System.Drawing.Color.DimGray;
+            this.txtCode.BorderThickness = 3;
+            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCode.DefaultText = "";
+            this.txtCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCode.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.IconLeftOffset = new System.Drawing.Point(-2, 0);
+            this.txtCode.Location = new System.Drawing.Point(488, 310);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtCode.PlaceholderText = "Code";
+            this.txtCode.SelectedText = "";
+            this.txtCode.Size = new System.Drawing.Size(229, 39);
+            this.txtCode.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtCode.TabIndex = 17;
             // 
             // frmSendCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCode);
             this.Controls.Add(this.btnSendCode);
             this.Controls.Add(this.GNClose);
-            this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lbWelCome);
             this.Controls.Add(this.guna2Panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmSendCode";
             this.Text = "frmSendCode";
             this.Load += new System.EventHandler(this.frmSendCode_Load);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,13 +273,13 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ControlBox GNClose;
         private System.Windows.Forms.Label label1;
-        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        public Guna.UI2.WinForms.Guna2TextBox txtUser;
         public Guna.UI2.WinForms.Guna2Button btnSendCode;
-        public Guna.UI2.WinForms.Guna2TextBox txtCode;
         public Guna.UI2.WinForms.Guna2Button btnCode;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtCode;
     }
 }

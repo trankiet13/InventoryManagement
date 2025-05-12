@@ -22,7 +22,10 @@ namespace BusinessLayer
         {
             return productsDL.GetAllProducts();
         }
-
+        public List<Product> SearchProduct(string keyword)
+        {
+            return productsDL.SearchProduct(keyword);
+        }
         public int AddProduct(Product product)
         {
             try

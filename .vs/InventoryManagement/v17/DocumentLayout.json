@@ -1,14 +1,141 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "H:\\InventoryManagement\\",
+  "WorkspaceRootPath": "E:\\InventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|h:\\inventorymanagement\\inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|e:\\inventorymanagement\\inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmresetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmresetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmsendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PresentationLayer||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\frmmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmuserview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmuserview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\view\\frmviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|E:\\InventoryManagement\\datalayer\\productsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C60BB14-DAF4-473C-B5C5-2A2DCD18BD9D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\productsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|h:\\inventorymanagement\\inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmaddcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmaddpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|E:\\InventoryManagement\\businesslayer\\productsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBEA174-439E-4A04-8537-96CC13C7969E}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\productsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|E:\\InventoryManagement\\inventorymanagement\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,80 +145,404 @@
       "DocumentGroups": [
         {
           "DockedWidth": 328,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmResetPassword.Designer.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.Designer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmResetPassword.Designer.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.Designer.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmResetPassword.Designer.cs",
+              "ViewState": "AQIAAL4AAAAAAAAAAAApwMoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:31:58.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAddProduct.cs",
-              "DocumentMoniker": "H:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddProduct.cs",
-              "ToolTip": "H:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddProduct.cs",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAAwLcAAAAiAAAA",
+              "Title": "frmResetPassword.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAqwD8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T05:28:58.439Z",
+              "WhenOpened": "2025-05-12T09:25:36.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmAddProduct.cs [Design]",
-              "DocumentMoniker": "H:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
+              "Title": "frmResetPassword.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmResetPassword.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmResetPassword.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmResetPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:03:18.332Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Login.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeToolTip": "InventoryManagement\\Login.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAqwF0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:18:57.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PresentationLayer",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\PresentationLayer.csproj",
+              "RelativeDocumentMoniker": "InventoryManagement\\PresentationLayer.csproj",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\PresentationLayer.csproj",
+              "RelativeToolTip": "InventoryManagement\\PresentationLayer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-12T09:14:49.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmSendCode.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAhwGcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:05:30.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmSendCode.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmSendCode.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmSendCode.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmSendCode.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:02:01.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Login.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Login.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:01:44.052Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmMai.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\frmMai.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\frmMai.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\frmMai.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\frmMai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:01:41.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainClass.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\MainClass.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\MainClass.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\MainClass.cs",
+              "RelativeToolTip": "InventoryManagement\\MainClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:01:39.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmUserView.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmUserView.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmUserView.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmUserView.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmUserView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:57:23.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmViewUser.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewUser.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewUser.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:57:19.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmViewSale.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewSale.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewSale.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewSale.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewSale.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:57:16.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SampleView.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\SampleView.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs",
+              "RelativeToolTip": "InventoryManagement\\SampleView.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:55:38.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmViewPurchase.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewPurchase.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewPurchase.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewPurchase.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewPurchase.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:43:55.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmViewCategory.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCategory.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewCategory.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCategory.cs",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewCategory.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAYwDYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:39:36.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmViewCategory.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCategory.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewCategory.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCategory.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:39:35.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmViewPurchase.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewPurchase.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewPurchase.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewPurchase.cs",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewPurchase.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAmwDAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:38:36.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "frmViewCustomer.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewCustomer.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewCustomer.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAqwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:45.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmViewCustomer.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewCustomer.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewCustomer.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:29.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmAddCustomer.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddCustomer.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddCustomer.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddCustomer.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:17.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "frmAddCategory.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddCategory.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddCategory.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddCategory.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:15.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "frmAddPurchase.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddPurchase.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddPurchase.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddPurchase.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddPurchase.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:09.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "frmProductStatistical.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmProductStatistical.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmProductStatistical.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmProductStatistical.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmProductStatistical.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:08.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "frmUserAdd.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmUserAdd.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmUserAdd.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmUserAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:06.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SampleView.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\SampleView.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\SampleView.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\SampleView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:26:59.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SampleAdd.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\SampleAdd.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\SampleAdd.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\SampleAdd.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\SampleAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:26:58.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductsBL.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\BusinessLayer\\ProductsBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\ProductsBL.cs",
+              "ToolTip": "E:\\InventoryManagement\\BusinessLayer\\ProductsBL.cs",
+              "RelativeToolTip": "BusinessLayer\\ProductsBL.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:25:12.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductsDL.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\DataLayer\\ProductsDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\ProductsDL.cs",
+              "ToolTip": "E:\\InventoryManagement\\DataLayer\\ProductsDL.cs",
+              "RelativeToolTip": "DataLayer\\ProductsDL.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAYwPsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:08:26.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "frmViewProduct.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewProduct.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewProduct.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewProduct.cs",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewProduct.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswFYAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:07:54.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmViewProduct.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewProduct.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\View\\frmViewProduct.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\View\\frmViewProduct.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\View\\frmViewProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:07:52.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "InventoryManagement\\Properties\\Resources.resx",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Properties\\Resources.resx",
+              "RelativeToolTip": "InventoryManagement\\Properties\\Resources.resx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAI4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-12T07:58:58.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "frmAddProduct.cs",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddProduct.cs",
-              "ToolTip": "H:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs [Design]",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddProduct.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T05:28:58.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "frmAddProduct.cs [Design]",
+              "DocumentMoniker": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddProduct.cs",
+              "ToolTip": "E:\\InventoryManagement\\InventoryManagement\\Model\\frmAddProduct.cs [Design]",
               "RelativeToolTip": "InventoryManagement\\Model\\frmAddProduct.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T05:30:28.636Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 345,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 126,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2025-05-12T05:30:28.636Z"
             }
           ]
         }

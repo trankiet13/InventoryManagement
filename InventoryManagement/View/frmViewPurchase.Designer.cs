@@ -46,8 +46,9 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(195, 36);
-            this.label1.Size = new System.Drawing.Size(1015, 46);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Size = new System.Drawing.Size(246, 46);
             this.label1.Text = "Purchase List";
             // 
             // dgvViewPurchase
@@ -131,6 +132,7 @@
             // 
             // dgvSr
             // 
+            this.dgvSr.FillWeight = 70F;
             this.dgvSr.HeaderText = "Sr";
             this.dgvSr.MinimumWidth = 6;
             this.dgvSr.Name = "dgvSr";
@@ -138,13 +140,15 @@
             // 
             // dgvid
             // 
-            this.dgvid.HeaderText = "dgvID";
+            this.dgvid.FillWeight = 70F;
+            this.dgvid.HeaderText = "ID";
             this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
             // 
             // dgvDate
             // 
+            this.dgvDate.FillWeight = 150F;
             this.dgvDate.HeaderText = "Date";
             this.dgvDate.MinimumWidth = 6;
             this.dgvDate.Name = "dgvDate";
@@ -159,6 +163,7 @@
             // 
             // dgvSupplier
             // 
+            this.dgvSupplier.FillWeight = 300F;
             this.dgvSupplier.HeaderText = "Supplier";
             this.dgvSupplier.MinimumWidth = 6;
             this.dgvSupplier.Name = "dgvSupplier";

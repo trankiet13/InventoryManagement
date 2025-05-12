@@ -47,6 +47,10 @@ namespace InventoryManagement.View
 
             MainClass.LoadData(qry, dgvViewPurchase, lb);
         }
+        public override void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Update

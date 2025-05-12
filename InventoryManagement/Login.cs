@@ -88,5 +88,16 @@ namespace InventoryManagement
 
             sc.ShowDialog();
         }
+
+        private void btnShowPass_Click(object sender, EventArgs e)
+        {
+            // Đổi trạng thái hiện/ẩn mật khẩu
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+            // Đổi hình ảnh dựa trên trạng thái
+            btnShowPass.Image = txtPassword.UseSystemPasswordChar
+                ? Properties.Resources.eye_close // Mắt đóng
+                : Properties.Resources.eye_open;   // Mắt mở
+        }
     }
 }

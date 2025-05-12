@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GNClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lbWelCome = new System.Windows.Forms.Label();
@@ -41,6 +40,8 @@
             this.btLogin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.btnForgetPass = new Guna.UI2.WinForms.Guna2Button();
+            this.btnShowPass = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,23 +52,10 @@
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(298, 366);
+            this.guna2Panel1.Size = new System.Drawing.Size(397, 450);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(56, 87);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(142, 163);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // GNClose
             // 
@@ -76,10 +64,10 @@
             this.GNClose.BorderColor = System.Drawing.Color.DimGray;
             this.GNClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.GNClose.IconColor = System.Drawing.Color.White;
-            this.GNClose.Location = new System.Drawing.Point(558, 5);
-            this.GNClose.Margin = new System.Windows.Forms.Padding(2);
+            this.GNClose.Location = new System.Drawing.Point(744, 6);
+            this.GNClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GNClose.Name = "GNClose";
-            this.GNClose.Size = new System.Drawing.Size(34, 24);
+            this.GNClose.Size = new System.Drawing.Size(45, 30);
             this.GNClose.TabIndex = 1;
             // 
             // guna2Elipse1
@@ -94,10 +82,9 @@
             this.lbWelCome.BackColor = System.Drawing.Color.Transparent;
             this.lbWelCome.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelCome.ForeColor = System.Drawing.Color.White;
-            this.lbWelCome.Location = new System.Drawing.Point(400, 41);
-            this.lbWelCome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbWelCome.Location = new System.Drawing.Point(533, 50);
             this.lbWelCome.Name = "lbWelCome";
-            this.lbWelCome.Size = new System.Drawing.Size(95, 41);
+            this.lbWelCome.Size = new System.Drawing.Size(127, 50);
             this.lbWelCome.TabIndex = 4;
             this.lbWelCome.Text = "LOGIN";
             this.lbWelCome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,13 +106,13 @@
             this.txtUser.ForeColor = System.Drawing.Color.DimGray;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.IconLeftOffset = new System.Drawing.Point(-2, 0);
-            this.txtUser.Location = new System.Drawing.Point(364, 100);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUser.Location = new System.Drawing.Point(485, 123);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
             this.txtUser.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUser.PlaceholderText = "Username";
             this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(172, 32);
+            this.txtUser.Size = new System.Drawing.Size(229, 39);
             this.txtUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUser.TabIndex = 5;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
@@ -146,15 +133,15 @@
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtPassword.Location = new System.Drawing.Point(365, 152);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassword.Location = new System.Drawing.Point(487, 187);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(172, 32);
+            this.txtPassword.Size = new System.Drawing.Size(229, 39);
             this.txtPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btLogin
             // 
@@ -168,10 +155,10 @@
             this.btLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btLogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btLogin.Location = new System.Drawing.Point(364, 221);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btLogin.Location = new System.Drawing.Point(485, 272);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(173, 29);
+            this.btLogin.Size = new System.Drawing.Size(231, 36);
             this.btLogin.TabIndex = 8;
             this.btLogin.Text = "LOGIN";
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
@@ -187,20 +174,51 @@
             this.btnForgetPass.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btnForgetPass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btnForgetPass.HoverState.ForeColor = System.Drawing.Color.Crimson;
-            this.btnForgetPass.Location = new System.Drawing.Point(349, 337);
-            this.btnForgetPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnForgetPass.Location = new System.Drawing.Point(465, 415);
+            this.btnForgetPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnForgetPass.Name = "btnForgetPass";
-            this.btnForgetPass.Size = new System.Drawing.Size(200, 19);
+            this.btnForgetPass.Size = new System.Drawing.Size(267, 23);
             this.btnForgetPass.TabIndex = 9;
             this.btnForgetPass.Text = "Forget Password? Click here";
             this.btnForgetPass.Click += new System.EventHandler(this.btnForgetPass_Click);
             // 
+            // btnShowPass
+            // 
+            this.btnShowPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnShowPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShowPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShowPass.FillColor = System.Drawing.Color.Transparent;
+            this.btnShowPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnShowPass.ForeColor = System.Drawing.Color.White;
+            this.btnShowPass.Image = global::InventoryManagement.Properties.Resources.eye_close;
+            this.btnShowPass.Location = new System.Drawing.Point(722, 201);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(43, 34);
+            this.btnShowPass.TabIndex = 10;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(75, 107);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(189, 201);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShowPass);
             this.Controls.Add(this.btnForgetPass);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.txtPassword);
@@ -208,8 +226,9 @@
             this.Controls.Add(this.lbWelCome);
             this.Controls.Add(this.GNClose);
             this.Controls.Add(this.guna2Panel1);
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WELCOME";
@@ -233,6 +252,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnForgetPass;
+        private Guna.UI2.WinForms.Guna2Button btnShowPass;
     }
 }
 

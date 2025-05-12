@@ -52,7 +52,7 @@ namespace InventoryManagement.View
                 dgvViewCategory.Columns["dgvId"].DataPropertyName = "ID";
                 dgvViewCategory.Columns["dgvName"].DataPropertyName = "TEN";
 
-                // ❌ KHÔNG gán gì cho dgvDelete (nó là cột icon, không cần dữ liệu)
+                // KHÔNG gán gì cho dgvDelete (nó là cột icon, không cần dữ liệu)
 
                 dgvViewCategory.DataSource = dt;
             }
@@ -60,6 +60,10 @@ namespace InventoryManagement.View
             {
                 MessageBox.Show("Lỗi load dữ liệu: " + ex.Message);
             }
+        }
+        public override void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

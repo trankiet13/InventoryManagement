@@ -134,6 +134,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +241,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SampleAdd.resx">
       <DependentUpon>SampleAdd.cs</DependentUpon>
@@ -353,6 +359,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gio-hang3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844441_eye_see_show_view_watch_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844443_disable_eye_inactive_see_show_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

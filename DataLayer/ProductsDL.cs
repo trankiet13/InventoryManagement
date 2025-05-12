@@ -222,5 +222,33 @@ namespace DataLayer
                 Disconnect();
             }
         }
+        public List<Product> SearchProduct(string keyword)
+        {
+            List<Product> products = new List<Product>();
+            string sql = "SELECT BARCODE, TENHH, TENTAT, DVT, DONGIA, MOTA FROM tb_HANGHOA WHERE TENHH LIKE @keyword OR BARCODE LIKE @keyword";
+
+            using (SqlCommand cmd = new SqlCommand(sql, cn))
+            {
+                cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                Connect();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        products.Add(new Product
+                        {
+                            BARCODE = reader["BARCODE"].ToString(),
+                            TENHH = reader["TENHH"].ToString(),
+                            DVT = reader["DVT"].ToString(),
+                            DONGIA = reader["DONGIA"] as decimal?,
+                            MOTA = reader["MOTA"].ToString()
+                        });
+                    }
+                }
+                Disconnect();
+            }
+
+            return products;
+        }
     }
 }

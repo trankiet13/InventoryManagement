@@ -70,6 +70,24 @@ namespace InventoryManagement.View
             LoadProduct();
 
         }
+        //Tìm kiếm theo tên hàng hóa hoặc mã barcode
+        private void SearchProduct()
+        {
+            string keyword = txtSearch.Text.Trim();
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                dgvProductView.DataSource = productsBL.SearchProduct(keyword);
+            }
+            else
+            {
+                LoadProduct();
+            }
+        }
+
+        public override void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchProduct();
+        }
 
         public override void btAddNew_Click(object sender, EventArgs e)
         {

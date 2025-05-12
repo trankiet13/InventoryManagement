@@ -63,20 +63,18 @@ namespace InventoryManagement
         {
 
         }
-
-        private void GNClose_Click(object sender, EventArgs e)
+        private void btnShowPassword_Click(object sender, EventArgs e)
         {
+            // Đổi trạng thái hiện/ẩn mật khẩu
+            txtResetPass.UseSystemPasswordChar = !txtResetPass.UseSystemPasswordChar;
+            txtResetPassVer.UseSystemPasswordChar = !txtResetPassVer.UseSystemPasswordChar;
 
+            // Đổi hình ảnh dựa trên trạng thái
+            btnShowPassword.Image = txtResetPass.UseSystemPasswordChar && txtResetPassVer.UseSystemPasswordChar
+                ? Properties.Resources.eye_close // Mắt đóng
+                : Properties.Resources.eye_open;   // Mắt mở
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

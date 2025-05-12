@@ -98,5 +98,10 @@ namespace InventoryManagement
         {
 
         }
+
+        private void txtUser_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
