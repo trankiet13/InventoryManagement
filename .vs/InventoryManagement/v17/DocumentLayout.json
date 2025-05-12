@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\InventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|D:\\InventoryManagement\\inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|d:\\inventorymanagement\\inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|d:\\inventorymanagement\\inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\view\\frmproductstatistical.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 592,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmProductStatistical.cs [Design]",
               "DocumentMoniker": "D:\\InventoryManagement\\InventoryManagement\\View\\frmProductStatistical.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\View\\frmProductStatistical.cs",
@@ -66,15 +66,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmProductStatistical.cs",
               "DocumentMoniker": "D:\\InventoryManagement\\InventoryManagement\\View\\frmProductStatistical.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\View\\frmProductStatistical.cs",
               "ToolTip": "D:\\InventoryManagement\\InventoryManagement\\View\\frmProductStatistical.cs",
               "RelativeToolTip": "InventoryManagement\\View\\frmProductStatistical.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAowJMAAAAOAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAowEsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:43:23.393Z",
+              "WhenOpened": "2025-05-12T01:37:28.181Z",
               "EditorCaption": ""
             }
           ]

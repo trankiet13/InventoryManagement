@@ -35,10 +35,9 @@ namespace InventoryManagement.View
             chartDVT.Titles.Clear();
             chartDVT.Legends.Clear();
 
-            // Cấu hình ChartArea
             var areaDVT = new ChartArea("AreaDVT")
             {
-                BackColor = Color.FromArgb(30, 35, 70), // nền tối
+                BackColor = Color.FromArgb(30, 35, 70), 
             };
             areaDVT.AxisX.Title = "Đơn vị tính";
             areaDVT.AxisX.TitleForeColor = Color.White;
@@ -68,7 +67,7 @@ namespace InventoryManagement.View
             {
                 ChartType = SeriesChartType.Column,
                 IsValueShownAsLabel = true,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 Color = Color.DeepSkyBlue,
                 LabelForeColor = Color.White
             };
@@ -83,7 +82,7 @@ namespace InventoryManagement.View
             // Cấu hình tiêu đề
             chartDVT.Titles.Add("Số lượng sản phẩm theo Đơn vị tính");
             chartDVT.Titles[0].ForeColor = Color.White;
-            chartDVT.Titles[0].Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            chartDVT.Titles[0].Font = new Font("Segoe UI", 14, FontStyle.Bold);
 
             // Nền biểu đồ chung
             chartDVT.BackColor = Color.FromArgb(30, 35, 70);
@@ -109,7 +108,7 @@ namespace InventoryManagement.View
             {
                 ChartType = SeriesChartType.Pie,
                 IsValueShownAsLabel = true,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 LabelForeColor = Color.White
             };
 
@@ -126,7 +125,7 @@ namespace InventoryManagement.View
             chartNhom.Series.Add(seriesNhom);
             chartNhom.Titles.Add("Tỷ lệ sản phẩm theo Nhóm");
             chartNhom.Titles[0].ForeColor = Color.White;
-            chartNhom.Titles[0].Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            chartNhom.Titles[0].Font = new Font("Segoe UI", 14, FontStyle.Bold);
             chartNhom.Legends.Add(new Legend("LegendNhom") { Docking = Docking.Right });
             chartNhom.BackColor = Color.FromArgb(30, 35, 70);
 
@@ -135,23 +134,25 @@ namespace InventoryManagement.View
             int totalUsers = userBL.GetAccounts().Count;
             lbTotalUser.Text = $"Tổng user: {totalUsers}";
 
-            // Đặt vị trí - góc dưới bên phải
-            int padding = 30;
-            lbTotalUser.Location = new Point(
-                this.ClientSize.Width - lbTotalUser.Width - padding,
-                this.ClientSize.Height - lbTotalUser.Height - padding
-            );
-
-            lbTotalProduct.Location = new Point(
-                this.ClientSize.Width - lbTotalProduct.Width - padding,
-                lbTotalUser.Top - lbTotalProduct.Height - padding / 2
-            );
 
             // Đảm bảo label luôn hiển thị trên cùng
             lbTotalProduct.BringToFront();
             lbTotalUser.BringToFront();
+
+            pnlTotal.Controls.Add(linkProduct);
+            pnlTotal.Controls.Add(linkUser);
         }
 
-        
+        private void linkProduct_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmProductView frm = new frmProductView();
+            frm.Show();
+        }
+
+        private void linkUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmViewUser frm = new frmViewUser();
+            frm.Show();
+        }
     }
 }
