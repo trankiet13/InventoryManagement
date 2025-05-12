@@ -14,3 +14,11 @@ E:\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.CoreCompil
 E:\InventoryManagement\TransferObject\obj\Debug\Transfer.F5B4361A.Up2Date
 E:\InventoryManagement\TransferObject\obj\Debug\TransferObject.dll
 E:\InventoryManagement\TransferObject\obj\Debug\TransferObject.pdb
+H:\InventoryManagement\TransferObject\bin\Debug\TransferObject.dll
+H:\InventoryManagement\TransferObject\bin\Debug\TransferObject.pdb
+H:\InventoryManagement\TransferObject\bin\Debug\Guna.UI2.dll
+H:\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.AssemblyReference.cache
+H:\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.CoreCompileInputs.cache
+H:\InventoryManagement\TransferObject\obj\Debug\Transfer.F5B4361A.Up2Date
+H:\InventoryManagement\TransferObject\obj\Debug\TransferObject.dll
+H:\InventoryManagement\TransferObject\obj\Debug\TransferObject.pdb

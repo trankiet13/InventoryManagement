@@ -15,7 +15,7 @@ namespace DataLayer
         public bool Login(Account account)
         {
             /// string sql = "SELECT COUNT(username) FROM User WHERE Username ='" + account.Username + "'And PASSWD = '" + account.Password + "'";
-            string sql = "SELECT COUNT(USERNAME) FROM tb_SYS_USER WHERE USERNAME = '" + account.Username + "' AND PASSWD = '" + account.Password + "'";
+            string sql = "SELECT COUNT(USERNAME) FROM dbo.tb_SYS_USER WHERE USERNAME = '" + account.Username + "' AND PASSWD = '" + account.Password + "'";
 
             try
             {

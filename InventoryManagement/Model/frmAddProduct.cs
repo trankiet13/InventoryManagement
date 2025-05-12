@@ -19,6 +19,8 @@ namespace InventoryManagement.Model
     {
         private ProductsBL productsBL;
         private Product selectedProduct;
+        private string autoRandomBarcode;
+
         public frmAddProduct(View.frmViewProduct frmProductView, Product product = null)
         {
             InitializeComponent();
@@ -30,21 +32,39 @@ namespace InventoryManagement.Model
             LoadXuatXu();
             LoadNhaCungCap();
             LoadDVT();
+            LoadNhomSanPham();
 
             if (selectedProduct != null)
             {
-                txtBarcode.Text = selectedProduct.BARCODE;
-                txtBarcode.Enabled = false;
-
+                txtbarcode.Text = selectedProduct.BARCODE;
+                txtbarcode.Enabled = false;
                 txtTenHH.Text = selectedProduct.TENHH;
                 txtTentat.Text = selectedProduct.TENTAT;
                 spGia.Text = selectedProduct.DONGIA?.ToString();
                 cbDvt.Text = selectedProduct.DVT?.ToString();
+                if (!string.IsNullOrEmpty(selectedProduct.IDNHOM))
+                {
+                    cbNhom.SelectedValue = selectedProduct.IDNHOM;
+                }
+
                 cbNcc.SelectedValue = selectedProduct.MANCC;
                 cbXuatxu.SelectedValue = selectedProduct.MAXX;
                 txtMota.Text = selectedProduct.MOTA;
                 chkDisabled.Checked = selectedProduct.DISABLED ?? false;
             }
+            else
+            {
+                autoRandomBarcode = GenerateRandomBarcode();
+                txtbarcode.Text = autoRandomBarcode;
+                txtbarcode.Enabled = false;
+            }
+        }
+
+        private string GenerateRandomBarcode()
+        {
+            Random random = new Random();
+            int barcodeNumber = random.Next(1000000, 9999999);
+            return barcodeNumber.ToString();
         }
 
         public override void btSave_Click(object sender, EventArgs e)
@@ -64,7 +84,7 @@ namespace InventoryManagement.Model
 
             try
             {
-                string barcode = txtBarcode.Text.Trim();
+                string barcode = txtbarcode.Text.Trim();
 
                 Product product = new Product
                 {
@@ -150,6 +170,22 @@ namespace InventoryManagement.Model
             cbDvt.SelectedIndex = -1;
         }
 
+        private void LoadNhomSanPham()
+        {
+            ProductsBL bl = new ProductsBL();
+            DataTable dt = bl.LoadNhomSanPham();
+            cbNhom.DataSource = dt;
+            cbNhom.DisplayMember = "TENNHOM";
+            cbNhom.ValueMember = "IDNHOM";
+            cbNhom.SelectedIndex = -1;
 
+        }
+
+        public string filePath = "";
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

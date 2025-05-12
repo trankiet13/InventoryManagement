@@ -235,14 +235,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SampleAdd.resx">
       <DependentUpon>SampleAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +341,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\9104334_sign out_logout_exit_out_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gio-hang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gio-hang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gio-hang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gio-hang3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

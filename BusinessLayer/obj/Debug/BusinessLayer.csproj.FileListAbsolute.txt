@@ -22,3 +22,15 @@ E:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileI
 E:\InventoryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 E:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb
+H:\InventoryManagement\BusinessLayer\bin\Debug\BusinessLayer.dll
+H:\InventoryManagement\BusinessLayer\bin\Debug\BusinessLayer.pdb
+H:\InventoryManagement\BusinessLayer\bin\Debug\DataLayer.dll
+H:\InventoryManagement\BusinessLayer\bin\Debug\Guna.UI2.dll
+H:\InventoryManagement\BusinessLayer\bin\Debug\TransferObject.dll
+H:\InventoryManagement\BusinessLayer\bin\Debug\DataLayer.pdb
+H:\InventoryManagement\BusinessLayer\bin\Debug\TransferObject.pdb
+H:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+H:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+H:\InventoryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+H:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
+H:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProduct));
             this.btAddNew = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,7 +43,6 @@
             this.label100 = new System.Windows.Forms.Label();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbName = new System.Windows.Forms.Label();
-            this.txtBarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkDisabled = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbNcc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbXuatxu = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -56,16 +56,21 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtTenHH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.spGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbNhom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtbarcode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(526, 236);
-            this.label1.Size = new System.Drawing.Size(100, 29);
+            this.label1.Size = new System.Drawing.Size(78, 24);
             this.label1.TabIndex = 10;
             this.label1.Text = "Quantity";
             // 
@@ -231,7 +236,7 @@
             this.label100.Location = new System.Drawing.Point(81, 441);
             this.label100.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(133, 25);
+            this.label100.Size = new System.Drawing.Size(107, 20);
             this.label100.TabIndex = 37;
             this.label100.Text = "Nhà cung cấp";
             // 
@@ -265,27 +270,6 @@
             this.lbName.TabIndex = 8;
             this.lbName.Text = "Barcode";
             // 
-            // txtBarcode
-            // 
-            this.txtBarcode.Animated = true;
-            this.txtBarcode.AutoRoundedCorners = true;
-            this.txtBarcode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBarcode.DefaultText = "";
-            this.txtBarcode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBarcode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBarcode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBarcode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBarcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBarcode.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBarcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBarcode.Location = new System.Drawing.Point(57, 258);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.PlaceholderText = "";
-            this.txtBarcode.SelectedText = "";
-            this.txtBarcode.Size = new System.Drawing.Size(197, 40);
-            this.txtBarcode.TabIndex = 7;
-            // 
             // chkDisabled
             // 
             this.chkDisabled.AutoSize = true;
@@ -295,10 +279,10 @@
             this.chkDisabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkDisabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDisabled.ForeColor = System.Drawing.Color.Red;
-            this.chkDisabled.Location = new System.Drawing.Point(632, 494);
+            this.chkDisabled.Location = new System.Drawing.Point(632, 578);
             this.chkDisabled.Margin = new System.Windows.Forms.Padding(4);
             this.chkDisabled.Name = "chkDisabled";
-            this.chkDisabled.Size = new System.Drawing.Size(118, 29);
+            this.chkDisabled.Size = new System.Drawing.Size(98, 24);
             this.chkDisabled.TabIndex = 39;
             this.chkDisabled.Text = "Disabled";
             this.chkDisabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -348,7 +332,7 @@
             this.label9.Location = new System.Drawing.Point(81, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 25);
+            this.label9.Size = new System.Drawing.Size(63, 20);
             this.label9.TabIndex = 35;
             this.label9.Text = "Xuất xứ";
             // 
@@ -363,7 +347,7 @@
             this.txtMota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMota.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMota.Location = new System.Drawing.Point(632, 281);
+            this.txtMota.Location = new System.Drawing.Point(632, 369);
             this.txtMota.Margin = new System.Windows.Forms.Padding(5);
             this.txtMota.Name = "txtMota";
             this.txtMota.PlaceholderText = "";
@@ -376,10 +360,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(545, 301);
+            this.label8.Location = new System.Drawing.Point(545, 369);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 25);
+            this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 33;
             this.label8.Text = "Mô tả";
             // 
@@ -408,7 +392,7 @@
             this.label4.Location = new System.Drawing.Point(81, 301);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
+            this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "ĐVT";
             // 
@@ -417,10 +401,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(545, 228);
+            this.label11.Location = new System.Drawing.Point(545, 296);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 25);
+            this.label11.Size = new System.Drawing.Size(51, 20);
             this.label11.TabIndex = 30;
             this.label11.Text = "Trị giá";
             // 
@@ -452,7 +436,7 @@
             this.label12.Location = new System.Drawing.Point(81, 225);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 25);
+            this.label12.Size = new System.Drawing.Size(59, 20);
             this.label12.TabIndex = 28;
             this.label12.Text = "Tên tắt";
             // 
@@ -484,29 +468,9 @@
             this.label13.Location = new System.Drawing.Point(545, 163);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 25);
+            this.label13.Size = new System.Drawing.Size(36, 20);
             this.label13.TabIndex = 26;
             this.label13.Text = "Tên";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(232, 148);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(231, 39);
-            this.guna2TextBox1.TabIndex = 25;
             // 
             // label14
             // 
@@ -516,7 +480,7 @@
             this.label14.Location = new System.Drawing.Point(81, 163);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 25);
+            this.label14.Size = new System.Drawing.Size(69, 20);
             this.label14.TabIndex = 24;
             this.label14.Text = "Barcode";
             // 
@@ -527,7 +491,7 @@
             this.label15.Location = new System.Drawing.Point(92, 177);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 25);
+            this.label15.Size = new System.Drawing.Size(0, 20);
             this.label15.TabIndex = 23;
             // 
             // spGia
@@ -541,7 +505,7 @@
             this.spGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.spGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.spGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.spGia.Location = new System.Drawing.Point(646, 213);
+            this.spGia.Location = new System.Drawing.Point(632, 281);
             this.spGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spGia.Name = "spGia";
             this.spGia.PlaceholderText = "";
@@ -549,11 +513,87 @@
             this.spGia.Size = new System.Drawing.Size(229, 48);
             this.spGia.TabIndex = 40;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(545, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Nhóm";
+            // 
+            // cbNhom
+            // 
+            this.cbNhom.AutoRoundedCorners = true;
+            this.cbNhom.BackColor = System.Drawing.Color.Transparent;
+            this.cbNhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNhom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNhom.ItemHeight = 30;
+            this.cbNhom.Location = new System.Drawing.Point(632, 216);
+            this.cbNhom.Name = "cbNhom";
+            this.cbNhom.Size = new System.Drawing.Size(231, 36);
+            this.cbNhom.TabIndex = 42;
+            // 
+            // txtbarcode
+            // 
+            this.txtbarcode.AutoRoundedCorners = true;
+            this.txtbarcode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbarcode.DefaultText = "";
+            this.txtbarcode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtbarcode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtbarcode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbarcode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtbarcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbarcode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbarcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtbarcode.Location = new System.Drawing.Point(232, 148);
+            this.txtbarcode.Margin = new System.Windows.Forms.Padding(5);
+            this.txtbarcode.Name = "txtbarcode";
+            this.txtbarcode.PlaceholderText = "";
+            this.txtbarcode.SelectedText = "";
+            this.txtbarcode.Size = new System.Drawing.Size(231, 39);
+            this.txtbarcode.TabIndex = 43;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(958, 301);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(142, 45);
+            this.btnBrowse.TabIndex = 46;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(958, 137);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAddProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 671);
+            this.ClientSize = new System.Drawing.Size(1227, 692);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.txtbarcode);
+            this.Controls.Add(this.cbNhom);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.spGia);
             this.Controls.Add(this.chkDisabled);
             this.Controls.Add(this.cbNcc);
@@ -569,12 +609,12 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtTenHH);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Name = "frmAddProduct";
             this.Text = "DonGia";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,7 +636,6 @@
         private System.Windows.Forms.Label label01;
         public Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private System.Windows.Forms.Label lbName;
-        public Guna.UI2.WinForms.Guna2TextBox txtBarcode;
         private Guna.UI2.WinForms.Guna2CheckBox chkDisabled;
         private Guna.UI2.WinForms.Guna2ComboBox cbNcc;
         private System.Windows.Forms.Label label100;
@@ -611,9 +650,13 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txtTenHH;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2TextBox spGia;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox cbNhom;
+        private Guna.UI2.WinForms.Guna2TextBox txtbarcode;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
