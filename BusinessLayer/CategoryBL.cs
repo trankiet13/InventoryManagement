@@ -1,42 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TransferObject;
-using DataLayer;
+﻿using DataLayer;
 using System.Data;
 
 namespace BusinessLayer
 {
     public class CategoryBL
     {
-        //private CategoryDL categoryDL;
-        //public CategoryBL()
-        //{
-        //    categoryDL = new CategoryDL();
-        //}
-        //public List<Category> GetAllCategories()
-        //{
-        //    return categoryDL.GetAllCategories();
-        //}
-        //public int SaveCategory(string ten)
-        //{
-        //    return categoryDL.InsertCategory(ten);
-        //}
-        //public DataTable GetCategories()
-        //{
-        //    return categoryDL.LoadCategories();
-        //}
-        //public int UpdateCategory(int id, string ten)
-        //{
-        //    return categoryDL.UpdateCategory(id, ten);
-        //}
+        private readonly CategoryDL categoryDL = new CategoryDL();
 
-        //public int DeleteCategory(int id)
-        //{
-        //    return categoryDL.DeleteCategory(id);
-        //}
+        public DataTable GetCategories(string searchText)
+        {
+            return categoryDL.GetCategories(searchText);
+        }
 
+        public int DeleteCategory(int id)
+        {
+            return categoryDL.DeleteCategory(id);
+        }
+        // Lưu danh mục (Thêm hoặc Sửa)
+        public int SaveCategory(int id, string name)
+        {
+            if (id == 0)
+                return categoryDL.InsertCategory(name);
+            else
+                return categoryDL.UpdateCategory(id, name);
+        }
     }
 }

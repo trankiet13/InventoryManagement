@@ -1,105 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TransferObject;
 using System.Collections;
-
-using System.Web.UI.WebControls;
-using Guna.UI2.WinForms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DataLayer
 {
     public class CategoryDL : DataProvider
     {
-        //public int id = 0;
-        //public List<Category> GetAllCategories()
-        //{
-        //    List<Category> categories = new List<Category>();
-        //    string sql = "SELECT * FROM dbo.tb_DVT";
+        // Lấy danh sách danh mục theo từ khóa tìm kiếm
+        public DataTable GetCategories(string searchText)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM dbo.tb_DVT WHERE TEN LIKE @searchText ORDER BY ID DESC";
 
-        //    string ID , TEN;
-        //    try
-        //    {
-        //        Connect();
-        //        SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
-        //        while (reader.Read())
-        //        {
-        //            ID = reader[0].ToString();
-        //            TEN = reader[1].ToString();
-        //            Category category = new Category(ID,TEN);
-        //            categories.Add(category);
-        //        }
-        //        reader.Close();
-        //        return categories;
-        //    }
-        //    catch (SqlException ex)
-        //    {
+            try
+            {
+                Connect();
+                using (SqlCommand cmd = new SqlCommand(query, cn))
+                {
+                    cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi truy vấn dữ liệu: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return dt;
+        }
 
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Disconnect();
-        //    }
+        // Xóa danh mục theo ID
+        public int DeleteCategory(int id)
+        {
+            string query = "DELETE FROM dbo.tb_DVT WHERE ID = @id";
+            Hashtable ht = new Hashtable();
+            ht.Add("@id", id);
+            return MyExecuteNonQuery(query, ht);
+        }
+        // Thêm danh mục
+        public int InsertCategory(string name)
+        {
+            string query = "INSERT INTO dbo.tb_DVT (TEN) VALUES (@TEN)";
+            Hashtable ht = new Hashtable();
+            ht.Add("@TEN", name);
+            return MyExecuteNonQuery(query, ht);
+        }
 
-        //}
-
-        //public int InsertCategory(string ten)
-        //{
-        //    string query = "INSERT INTO dbo.tb_DVT (TEN) VALUES (@TEN)";
-        //    SqlCommand cmd = new SqlCommand(query, cn);
-        //    cmd.Parameters.AddWithValue("@TEN", ten);
-
-        //    cn.Open();
-        //    int rows = cmd.ExecuteNonQuery();
-        //    cn.Close();
-
-        //    return rows;
-        //}
-
-        //public DataTable LoadCategories()
-        //{
-        //    string query = "SELECT ID, TEN FROM dbo.tb_DVT";
-        //    SqlDataAdapter da = new SqlDataAdapter(query, cn);
-        //    DataTable dt = new DataTable();
-        //    da.Fill(dt);
-        //    return dt;
-        //}
-        //public int UpdateCategory(int id, string ten)
-        //{
-        //    string query = "UPDATE dbo.tb_DVT SET TEN = @TEN WHERE ID = @ID";
-        //    SqlCommand cmd = new SqlCommand(query, cn);
-        //    cmd.Parameters.AddWithValue("@TEN", ten);
-        //    cmd.Parameters.AddWithValue("@ID", id);
-
-        //    cn.Open();
-        //    int rows = cmd.ExecuteNonQuery();
-        //    cn.Close();
-
-        //    return rows;
-        //}
-
-        //public int DeleteCategory(int id)
-        //{
-        //    string query = "DELETE FROM dbo.tb_DVT WHERE ID = @ID";
-        //    SqlCommand cmd = new SqlCommand(query, cn);
-        //    cmd.Parameters.AddWithValue("@ID", id);
-
-        //    if (cn.State == ConnectionState.Open)
-        //        cn.Close();  // đóng nếu đang mở
-
-        //    cn.Open(); // mở lại
-        //    int rows = cmd.ExecuteNonQuery();
-        //    cn.Close(); // đóng sau khi xong
-
-        //    return rows;
-        //}
-
-
-
+        // Sửa danh mục
+        public int UpdateCategory(int id, string name)
+        {
+            string query = "UPDATE dbo.tb_DVT SET TEN = @TEN WHERE ID = @ID";
+            Hashtable ht = new Hashtable();
+            ht.Add("@ID", id);
+            ht.Add("@TEN", name);
+            return MyExecuteNonQuery(query, ht);
+        }
     }
 }

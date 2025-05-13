@@ -35,7 +35,7 @@ namespace InventoryManagement.View
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvDate);
-            lb.Items.Add(dgvSupid);
+            lb.Items.Add(dgvsupid);
             lb.Items.Add(dgvSupplier);
             lb.Items.Add(dgvAmount);
 
@@ -43,7 +43,7 @@ namespace InventoryManagement.View
     "from tblMian m inner join tblDetails d on d.dMainID = m.MainID " +
     "inner join dbo.tb_NHACUNGCAP s on s.MANCC = m.mSupCusID " +
     "where m.mType = 'PUR' and TENNCC like '%" + txtSearch.Text + "%' " +
-    "group by dMainID, mdate, m.mSupCusID, s.TENNCC"; 
+    "group by dMainID, mdate, m.mSupCusID, s.TENNCC";
 
             MainClass.LoadData(qry, dgvViewPurchase, lb);
         }

@@ -101,20 +101,39 @@ namespace InventoryManagement
             get { return img; }
             set { img = value; }
         }
-        public static void CBFFILL(string qry, ComboBox cb)
+        //public static void CBFFILL(string qry, ComboBox cb)
+        //{
+        //    SqlCommand cmd = new SqlCommand(qry, con);
+        //    cmd.CommandType = CommandType.Text;
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+
+
+        //    cb.DisplayMember = "name";
+        //    cb.ValueMember = "id";
+        //    cb.DataSource = dt;
+        //    cb.SelectedIndex = -1;
+
+        //}
+        public static void CBFFILL(string qry, ComboBox cb, SqlParameter[] parameters = null)
         {
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            using (SqlCommand cmd = new SqlCommand(qry, con))
+            {
+                cmd.CommandType = CommandType.Text;
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-
-            cb.DisplayMember = "name";
-            cb.ValueMember = "id";
-            cb.DataSource = dt;
-            cb.SelectedIndex = -1;
-
+                cb.DisplayMember = "name";
+                cb.ValueMember = "id";
+                cb.DataSource = dt;
+                cb.SelectedIndex = -1;
+            }
         }
         public static void BlurBackGround(Form Model)
         {

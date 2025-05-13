@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static DataLayer.SaleDL;
+﻿using DataLayer;
+using System.Data;
 
 namespace BusinessLayer
 {
     public class SaleBL
     {
-        public class SaleBLL
+        private SaleDL saleDL = new SaleDL();
+
+        public DataTable GetSalesData(string searchText)
         {
-            SaleDAL dal = new SaleDAL();
-
-            public bool DeleteSale(int id)
-            {
-                // Xoá cả main và details
-                int deletedMain = dal.DeleteMainRecord(id);
-                int deletedDetails = dal.DeleteDetailsByMainId(id);
-
-                return deletedMain > 0 || deletedDetails > 0;
-            }
+            return saleDL.LoadSalesData(searchText);
         }
 
+        public bool DeleteSale(int saleID)
+        {
+            return saleDL.DeleteSale(saleID);
+        }
     }
 }

@@ -1,28 +1,17 @@
-﻿using BusinessLayer;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using InventoryManagement.View;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Management;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using TransferObject;
+using BusinessLayer;
 
 namespace InventoryManagement.Model
 {
     public partial class frmAddCategory : SampleAdd
     {
-        
         private frmViewCategory parentForm;
         public int id = 0;
+        private readonly CategoryBL categoryBL = new CategoryBL(); // Sử dụng BusinessLayer
 
         public frmAddCategory(frmViewCategory parent)
         {
@@ -32,52 +21,58 @@ namespace InventoryManagement.Model
 
         private void frmAddCategory_Load(object sender, EventArgs e)
         {
-            
         }
+
         public override void btSave_Click(object sender, EventArgs e)
         {
             if (Validation(this) == false)
             {
-                Guna2MessageDialog messageDialog = new Guna2MessageDialog();
-                messageDialog.Buttons = MessageDialogButtons.OK;
-                messageDialog.Text = "Please fill all the required fields.";
-                messageDialog.Icon = MessageDialogIcon.Warning;
+                ShowMessage("Please fill all the required fields.", MessageDialogIcon.Warning);
                 return;
             }
-            else
-            {
-                string qry = "";
-                if (id == 0)
-                {
-                    qry = "Insert into dbo.tb_DVT values( @TEN)";
-                }
-                else
-                {
-                     qry = "Update dbo.tb_DVT set TEN = @TEN where ID = @ID";
-                }
-                Hashtable ht = new Hashtable();
-                ht.Add("@ID", id);
-                ht.Add("@TEN", txtName.Text);
-              
 
-                if (MainClass.SQL(qry, ht) > 0)
+            try
+            {
+                int result = categoryBL.SaveCategory(id, txtName.Text);
+                if (result > 0)
                 {
-                    Guna.UI2.WinForms.Guna2MessageDialog messageDialog = new Guna2MessageDialog();
-                    messageDialog.Buttons = MessageDialogButtons.OK;
-                    messageDialog.Text = "Cập nhật danh mục thành công!";
-                    messageDialog.Icon = MessageDialogIcon.Information;
-                    messageDialog.Show();
+                    ShowMessage("Cập nhật danh mục thành công!", MessageDialogIcon.Information);
                     id = 0;
                     txtName.Text = "";
                     txtName.Focus();
+
+                    // Load lại danh sách sau khi lưu
+                    parentForm.LoadData();
+                }
+                else
+                {
+                    ShowMessage("Không thể cập nhật danh mục!", MessageDialogIcon.Error);
                 }
             }
+            catch (Exception ex)
+            {
+                ShowMessage("Lỗi: " + ex.Message, MessageDialogIcon.Error);
+            }
         }
-        
+
+        // Hàm hiển thị thông báo
+        private void ShowMessage(string text, MessageDialogIcon icon)
+        {
+            Guna2MessageDialog messageDialog = new Guna2MessageDialog
+            {
+                Buttons = MessageDialogButtons.OK,
+                Text = text,
+                Icon = icon
+            };
+            messageDialog.Show();
+        }
+
         public override void btClosee_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        // Phương thức kiểm tra dữ liệu
         public static bool Validation(Form f)
         {
             bool isValid = true;
@@ -86,44 +81,22 @@ namespace InventoryManagement.Model
             {
                 if (Convert.ToString(c.Tag) != "" && Convert.ToString(c.Tag) != null)
                 {
-                    if (c is Guna.UI2.WinForms.Guna2TextBox)
+                    if (c is Guna2TextBox)
                     {
-                        Guna.UI2.WinForms.Guna2TextBox t = (Guna.UI2.WinForms.Guna2TextBox)c;
+                        Guna2TextBox t = (Guna2TextBox)c;
                         if (t.Text.Trim() == "")
                         {
                             t.BorderColor = Color.Red;
-                            t.FocusedState.BorderColor = Color.Red;
-                            t.HoverState.BorderColor = Color.Red;
                             count++;
                         }
                         else
                         {
                             t.BorderColor = Color.FromArgb(95, 69, 204);
-                            t.FocusedState.BorderColor = Color.Red;
-                            t.HoverState.BorderColor = Color.Red;
                         }
                     }
                 }
-                if (count == 0)
-                {
-                    isValid = true;
-                }
-                else
-                {
-                    isValid = false;
-                }
             }
-            return isValid;
+            return count == 0;
         }
-        private void bnSave_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-
     }
 }

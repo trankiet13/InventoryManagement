@@ -76,4 +76,4 @@ namespace BusinessLayer
             return userDL.InsertOrUpdateUser(id, username, fullname, pass, macty, madvi, role, email);
         }
     }
-  }
+}

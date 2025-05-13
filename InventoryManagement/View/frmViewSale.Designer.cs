@@ -45,7 +45,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(1070, 46);
+            this.label1.Size = new System.Drawing.Size(2130, 46);
             this.label1.Text = "Sales List";
             // 
             // dgvViewSale
@@ -116,7 +116,6 @@
             this.dgvViewSale.ThemeStyle.RowsStyle.Height = 40;
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvViewSale.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // dgvSr
             // 
@@ -189,7 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmViewSale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmViewSale_Load_1);
+         
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewSale)).EndInit();
             this.ResumeLayout(false);
 

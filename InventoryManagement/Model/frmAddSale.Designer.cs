@@ -150,7 +150,7 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 20;
-            this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
+          
             // 
             // guna2Panel1
             // 
@@ -401,7 +401,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(197, 40);
             this.txtSearch.TabIndex = 25;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+           
             // 
             // btClosee
             // 
@@ -420,7 +420,7 @@
             this.btClosee.Size = new System.Drawing.Size(99, 45);
             this.btClosee.TabIndex = 9;
             this.btClosee.Text = "Clear";
-            this.btClosee.Click += new System.EventHandler(this.btClosee_Click);
+           
             // 
             // btSave
             // 

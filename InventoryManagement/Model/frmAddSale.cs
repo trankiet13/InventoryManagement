@@ -18,8 +18,8 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddSale : Form
     {
-        public int id = 0 ;
-        public int cusID = 0;   
+        public int id = 0;
+        public int cusID = 0;
 
         public frmAddSale()
         {
@@ -30,13 +30,13 @@ namespace InventoryManagement.Model
         {
             string qry = "Select cusID 'id' , cusName 'name' from Customer";
             MainClass.CBFFILL(qry, cbCustomer);
-            if (cusID >0 )
+            if (cusID > 0)
             {
                 cbCustomer.SelectedValue = cusID;
             }
             LoadProductsFromDatabase();
         }
-        public void Additems ( string id, string name, string price, Image image , string cost)
+        public void Additems(string id, string name, string price, Image image, string cost)
         {
             var w = new ucProduct()
             {
@@ -50,22 +50,22 @@ namespace InventoryManagement.Model
             flowLayoutPanel1.Controls.Add(w);
 
             w.onSelect += (ss, ee) =>
-             {
-                 var wdg = (ucProduct)ss;
-                 foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-                 {
-                     if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
-                     {
-                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
-                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) * int.Parse(item.Cells["dgvPrice"].Value.ToString());
+            {
+                var wdg = (ucProduct)ss;
+                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
+                    {
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
+                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) * int.Parse(item.Cells["dgvPrice"].Value.ToString());
 
-                         return;
-                     }
-                 }
-                 // if dont find product in row
-                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName,1,wdg.Price,wdg.Pcost,null,null });
-                 GrandTotal();
-             };
+                        return;
+                    }
+                }
+                // if dont find product in row
+                guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.Price, wdg.Pcost, null, null });
+                GrandTotal();
+            };
         }
         private void GrandTotal()
         {
@@ -77,7 +77,7 @@ namespace InventoryManagement.Model
             //}
             //lbTotal.Text = tot.ToString("N2");
             double tot = 0;
-            lbTotal.Text = "0";
+            lbPrice.Text = "0";
             foreach (DataGridViewRow item in guna2DataGridView1.Rows)
             {
                 if (item.Cells["dgvAmount"].Value != null &&
@@ -86,7 +86,7 @@ namespace InventoryManagement.Model
                     tot += amount;
                 }
             }
-            lbTotal.Text = tot.ToString("N2");
+            lbPrice.Text = tot.ToString("N2");
 
         }
         private void LoadProductsFromDatabase()
@@ -100,7 +100,7 @@ namespace InventoryManagement.Model
             {
                 foreach (DataRow row in dt.Rows)
                 {
-                    
+
                     Byte[] imageArray = (Byte[])row["pImage"];
                     byte[] imageByteArray = imageArray;
 
@@ -116,7 +116,7 @@ namespace InventoryManagement.Model
 
                 }
             }
-            ;       
+            ;
         }
 
         private void btClosee_Click(object sender, EventArgs e)
@@ -125,10 +125,10 @@ namespace InventoryManagement.Model
             txtDateTime.Value = DateTime.Now;
             cbCustomer.SelectedIndex = 0;
             cbCustomer.SelectedValue = -1;
-            lbTotal.Text = "0.00";
+            lbPrice.Text = "0.00";
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)  
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             foreach (var item in flowLayoutPanel1.Controls)
             {
@@ -193,7 +193,7 @@ namespace InventoryManagement.Model
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            if ( MainClass.Validation(this) == false)
+            if (MainClass.Validation(this) == false)
             {
                 // First have to create to store data
                 Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
@@ -222,9 +222,9 @@ namespace InventoryManagement.Model
             {
                 MainClass.con.Open();
             }
-            if ( id == 0)
+            if (id == 0)
             {
-               id = Convert.ToInt32(cmd1.ExecuteScalar());
+                id = Convert.ToInt32(cmd1.ExecuteScalar());
             }
             else
             {
@@ -234,7 +234,7 @@ namespace InventoryManagement.Model
             foreach (DataGridViewRow row in guna2DataGridView1.Rows)
             {
                 int did = Convert.ToInt32(row.Cells["dgvId"].Value);
-                if ( did == 0)
+                if (did == 0)
                 {
                     qry2 = "Insert into tblDetails Values (@mID,@proID,@qty,@price,@amount,@cost)";
                 }
@@ -252,7 +252,7 @@ namespace InventoryManagement.Model
                 cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvCost"].Value));
                 record += cmd2.ExecuteNonQuery();
             }
-            if ( record > 0)
+            if (record > 0)
             {
                 Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
                 guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
@@ -265,9 +265,29 @@ namespace InventoryManagement.Model
                 txtDateTime.Value = DateTime.Now;
                 cbCustomer.SelectedIndex = 0;
                 cbCustomer.SelectedValue = -1;
-                lbTotal.Text = "0.00";
+                lbPrice.Text = "0.00";
                 guna2DataGridView1.Rows.Clear();
             }
+        }
+
+        private void lbCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

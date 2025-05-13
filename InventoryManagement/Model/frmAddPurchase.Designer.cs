@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbName = new System.Windows.Forms.Label();
             this.txtBarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.label100 = new System.Windows.Forms.Label();
@@ -48,8 +49,8 @@
             this.btAddNew = new Guna.UI2.WinForms.Guna2Button();
             this.dgvAddPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvproid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvproid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -288,11 +289,15 @@
             // 
             this.dgvAddPurchase.AllowUserToAddRows = false;
             this.dgvAddPurchase.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAddPurchase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,28 +306,36 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAddPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAddPurchase.ColumnHeadersHeight = 18;
+            this.dgvAddPurchase.ColumnHeadersHeight = 40;
             this.dgvAddPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAddPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSR,
-            this.dgvproid,
             this.dgvid,
+            this.dgvproid,
             this.dgvname,
             this.dgvqty,
             this.dgvCost,
             this.dgvAmount});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAddPurchase.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAddPurchase.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAddPurchase.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvAddPurchase.Location = new System.Drawing.Point(83, 352);
             this.dgvAddPurchase.Name = "dgvAddPurchase";
             this.dgvAddPurchase.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddPurchase.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAddPurchase.RowHeadersVisible = false;
             this.dgvAddPurchase.RowHeadersWidth = 51;
             this.dgvAddPurchase.RowTemplate.Height = 24;
@@ -333,22 +346,22 @@
             this.dgvAddPurchase.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvAddPurchase.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvAddPurchase.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvAddPurchase.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAddPurchase.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAddPurchase.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvAddPurchase.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvAddPurchase.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvAddPurchase.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvAddPurchase.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAddPurchase.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvAddPurchase.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvAddPurchase.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAddPurchase.ThemeStyle.HeaderStyle.Height = 18;
+            this.dgvAddPurchase.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvAddPurchase.ThemeStyle.ReadOnly = true;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAddPurchase.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAddPurchase.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
+            this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAddPurchase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAddPurchase_CellFormatting);
             // 
             // dgvSR
@@ -358,20 +371,20 @@
             this.dgvSR.Name = "dgvSR";
             this.dgvSR.ReadOnly = true;
             // 
-            // dgvproid
-            // 
-            this.dgvproid.HeaderText = "Proid";
-            this.dgvproid.MinimumWidth = 6;
-            this.dgvproid.Name = "dgvproid";
-            this.dgvproid.ReadOnly = true;
-            // 
             // dgvid
             // 
             this.dgvid.HeaderText = "id";
             this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
-            this.dgvid.Visible = false;
+            // 
+            // dgvproid
+            // 
+            this.dgvproid.HeaderText = "Proid";
+            this.dgvproid.MinimumWidth = 6;
+            this.dgvproid.Name = "dgvproid";
+            this.dgvproid.ReadOnly = true;
+            this.dgvproid.Visible = false;
             // 
             // dgvname
             // 
@@ -450,8 +463,8 @@
         public Guna.UI2.WinForms.Guna2Button btAddNew;
         private Guna.UI2.WinForms.Guna2DataGridView dgvAddPurchase;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvproid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvproid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvqty;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCost;
