@@ -81,5 +81,22 @@ namespace BusinessLayer
         {
             return productsDL.GetNhomSanPham();
         }
+
+        public List<GroupProduct> GetAll()
+        {
+            var dt = productsDL.GetNhomSanPham();
+            List<GroupProduct> list = new List<GroupProduct>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(new GroupProduct
+                {
+                    IDNHOM = row["IDNHOM"].ToString(),
+                    TENNHOM = row["TENNHOM"].ToString()
+                });
+            }
+
+            return list;
+        }
     }
 }

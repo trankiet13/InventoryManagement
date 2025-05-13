@@ -20,8 +20,15 @@ namespace TransferObject
         public DateTime? CREATED_DATE { get; set; }
         public int? CREATED_BY { get; set; }
         public bool? DISABLED { get; set; }
+        public byte[] pImage { get; set; }
         public Product()
         {
         }
+    }
+
+    public class GroupProduct
+    {
+        public string IDNHOM { get; set; }
+        public string TENNHOM { get; set; }
     }
 }

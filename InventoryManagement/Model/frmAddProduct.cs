@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,11 +96,12 @@ namespace InventoryManagement.Model
                     DONGIA = decimal.TryParse(spGia.Text, out decimal gia) ? gia : 0,
                     MANCC = Convert.ToInt32(cbNcc.SelectedValue),
                     MAXX = Convert.ToInt32(cbXuatxu.SelectedValue),
-                    IDNHOM = "10",
+                    IDNHOM = cbNhom.SelectedValue.ToString(),
                     MOTA = txtMota.Text.Trim(),
                     CREATED_DATE = DateTime.Now,
                     CREATED_BY = MainClass.id,
-                    DISABLED = chkDisabled.Checked
+                    DISABLED = chkDisabled.Checked,
+                    pImage = imageByteArray
                 };
 
 
@@ -182,10 +184,30 @@ namespace InventoryManagement.Model
         }
 
         public string filePath = "";
-
+        Byte[] imageByteArray;
         private void btnBrowse_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Images (.jpg, .png)|*.png;*.jpg;*.jpeg";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    filePath = ofd.FileName;
+                    txtPic.Image = new Bitmap(filePath);
 
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        txtPic.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        imageByteArray = ms.ToArray();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải hình ảnh: " + ex.Message, "Lỗi",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

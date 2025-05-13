@@ -63,8 +63,8 @@
             this.cbNhom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtbarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -503,7 +503,7 @@
             this.spGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.spGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.spGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.spGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.spGia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.spGia.Location = new System.Drawing.Point(632, 281);
             this.spGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -573,23 +573,23 @@
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // pictureBox1
+            // txtPic
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(958, 137);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
+            this.txtPic.BackColor = System.Drawing.Color.White;
+            this.txtPic.Image = ((System.Drawing.Image)(resources.GetObject("txtPic.Image")));
+            this.txtPic.Location = new System.Drawing.Point(958, 137);
+            this.txtPic.Name = "txtPic";
+            this.txtPic.Size = new System.Drawing.Size(142, 145);
+            this.txtPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.txtPic.TabIndex = 47;
+            this.txtPic.TabStop = false;
             // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 692);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtPic);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtbarcode);
             this.Controls.Add(this.cbNhom);
@@ -614,7 +614,7 @@
             this.Name = "frmAddProduct";
             this.Text = "DonGia";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,6 +657,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbNhom;
         private Guna.UI2.WinForms.Guna2TextBox txtbarcode;
         private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox txtPic;
     }
 }

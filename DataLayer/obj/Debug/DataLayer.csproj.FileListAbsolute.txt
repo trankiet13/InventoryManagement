@@ -28,3 +28,13 @@ H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.ca
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.dll
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.pdb
+D:\InventoryManagement\DataLayer\bin\Debug\DataLayer.dll
+D:\InventoryManagement\DataLayer\bin\Debug\DataLayer.pdb
+D:\InventoryManagement\DataLayer\bin\Debug\Guna.UI2.dll
+D:\InventoryManagement\DataLayer\bin\Debug\TransferObject.dll
+D:\InventoryManagement\DataLayer\bin\Debug\TransferObject.pdb
+D:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+D:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+D:\InventoryManagement\DataLayer\obj\Debug\DataLayer.dll
+D:\InventoryManagement\DataLayer\obj\Debug\DataLayer.pdb

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using BusinessLayer;
 using TransferObject;
 
 namespace InventoryManagement.View
@@ -12,6 +13,7 @@ namespace InventoryManagement.View
     public partial class frmProductStatistical : Form
     {
         private List<Product> _products;
+        private UserBL userBL = new UserBL();
 
         public frmProductStatistical(List<Product> products)
         {
@@ -33,10 +35,9 @@ namespace InventoryManagement.View
             chartDVT.Titles.Clear();
             chartDVT.Legends.Clear();
 
-            // Cấu hình ChartArea
             var areaDVT = new ChartArea("AreaDVT")
             {
-                BackColor = Color.FromArgb(30, 35, 70), // nền tối
+                BackColor = Color.FromArgb(30, 35, 70),
             };
             areaDVT.AxisX.Title = "Đơn vị tính";
             areaDVT.AxisX.TitleForeColor = Color.White;
@@ -66,24 +67,32 @@ namespace InventoryManagement.View
             {
                 ChartType = SeriesChartType.Column,
                 IsValueShownAsLabel = true,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 Color = Color.DeepSkyBlue,
                 LabelForeColor = Color.White
             };
 
+            chartDVT.Series.Add(seriesDVT);
+            Color[] colorPalette = { Color.DeepSkyBlue, Color.Orange, Color.MediumPurple, Color.LightGreen, Color.Coral };
+            int colorIndex = 0;
             foreach (var item in groupedByDVT)
             {
-                seriesDVT.Points.AddXY(item.DVT, item.Count);
+                int pointIndex = seriesDVT.Points.AddXY(item.DVT, item.Count);
+                seriesDVT.Points[pointIndex].Color = colorPalette[colorIndex % colorPalette.Length];
+                colorIndex++;
             }
 
-            chartDVT.Series.Add(seriesDVT);
+            foreach (var pt in seriesDVT.Points)
+            {
+                pt.ToolTip = $"Đơn vị: {pt.AxisLabel}, Số lượng: {pt.YValues[0]}";
+            }
+            
+
 
             // Cấu hình tiêu đề
             chartDVT.Titles.Add("Số lượng sản phẩm theo Đơn vị tính");
             chartDVT.Titles[0].ForeColor = Color.White;
-            chartDVT.Titles[0].Font = new Font("Segoe UI", 12, FontStyle.Bold);
-
-            // Nền biểu đồ chung
+            chartDVT.Titles[0].Font = new Font("Segoe UI", 14, FontStyle.Bold);
             chartDVT.BackColor = Color.FromArgb(30, 35, 70);
 
 
@@ -94,36 +103,85 @@ namespace InventoryManagement.View
             chartNhom.Legends.Clear();
 
             chartNhom.ChartAreas.Add(new ChartArea("AreaNhom"));
-            chartNhom.ChartAreas[0].BackColor = Color.White;
+            chartNhom.ChartAreas[0].BackColor = Color.FromArgb(30, 35, 70);
 
+            List<GroupProduct> groups = new ProductsBL().GetAll(); // Lấy danh sách nhóm sản phẩm từ BusinessLayer
+
+            // Grouping theo IDNHOM và tính số lượng sản phẩm trong mỗi nhóm
             var groupedByGroup = _products
                 .Where(p => !string.IsNullOrEmpty(p.IDNHOM))
                 .GroupBy(p => p.IDNHOM)
-                .Select(g => new { IDNHOM = g.Key, Count = g.Count() })
+                .Select(g => new {
+                    IDNHOM = g.Key,
+                    Count = g.Count(),
+                    GroupName = groups.FirstOrDefault(group => group.IDNHOM.ToString() == g.Key)?.TENNHOM 
+                })
                 .OrderByDescending(g => g.Count)
                 .ToList();
 
+            // Tạo series cho biểu đồ Pie
             Series seriesNhom = new Series("Tỷ lệ nhóm sản phẩm")
             {
                 ChartType = SeriesChartType.Pie,
                 IsValueShownAsLabel = true,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
-                LabelForeColor = Color.Black
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                LabelForeColor = Color.White
             };
 
+            // Thêm điểm vào biểu đồ
             foreach (var item in groupedByGroup)
             {
-                seriesNhom.Points.AddXY(item.IDNHOM, item.Count);
+                seriesNhom.Points.AddXY(item.GroupName ?? item.IDNHOM, item.Count); 
             }
 
             seriesNhom["PieLabelStyle"] = "Outside";
-            seriesNhom["PieLineColor"] = "Black";
+            seriesNhom["PieLineColor"] = "White";
             seriesNhom.Label = "#PERCENT{P1}";
             seriesNhom.LegendText = "#VALX";
 
+            // Thêm series vào chart
             chartNhom.Series.Add(seriesNhom);
+
+            // Cấu hình tiêu đề cho biểu đồ
             chartNhom.Titles.Add("Tỷ lệ sản phẩm theo Nhóm");
+            chartNhom.Titles[0].ForeColor = Color.White;
+            chartNhom.Titles[0].Font = new Font("Segoe UI", 14, FontStyle.Bold);
+
+            // Thêm legend
             chartNhom.Legends.Add(new Legend("LegendNhom") { Docking = Docking.Right });
+            chartNhom.BackColor = Color.FromArgb(30, 35, 70);
+
+            // Cấu hình tooltip cho các điểm trong biểu đồ
+            foreach (var pt in seriesNhom.Points)
+            {
+                pt.ToolTip = $"Nhóm: {pt.AxisLabel}, Số lượng: {pt.YValues[0]}";
+            }
+
+            chartDVT.Dock = DockStyle.Fill;
+            chartNhom.Dock = DockStyle.Fill;
+
+            // hiển thị số lượng các label
+            lbTotalProduct.Text = $"Tổng sản phẩm: {_products.Count}";
+            int totalUsers = userBL.GetAccounts().Count;
+            lbTotalUser.Text = $"Tổng user: {totalUsers}";
+
+            pnlTotal.Controls.Add(linkProduct);
+            pnlTotal.Controls.Add(linkUser);
+
+        }
+
+
+
+        private void linkProduct_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmViewProduct frm = new frmViewProduct();
+            frm.Show();
+        }
+
+        private void linkUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmViewUser frm = new frmViewUser();
+            frm.Show();
         }
     }
 }

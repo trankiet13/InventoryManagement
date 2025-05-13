@@ -250,5 +250,36 @@ namespace DataLayer
 
             return products;
         }
+
+        public List<GroupProduct> GetAll()
+        {
+            List<GroupProduct> groups = new List<GroupProduct>();
+            string sql = "SELECT IDNHOM, TENNHOM FROM tb_NHOMHH WHERE IDNHOM IS NOT NULL";
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
+                while (reader.Read())
+                {
+                    groups.Add(new GroupProduct
+                    {
+                        IDNHOM = reader["IDNHOM"].ToString(),
+                        TENNHOM = reader["TENNHOM"].ToString()
+                    });
+                }
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+            return groups;
+        }
     }
 }

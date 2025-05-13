@@ -58,6 +58,12 @@ namespace InventoryManagement.View
                 dgvProductView.CellClick -= dgvProductView_CellClick;
                 dgvProductView.CellClick += dgvProductView_CellClick;
 
+                dgvProductView.Columns["TENTAT"].Visible = false;
+                dgvProductView.Columns["MOTA"].Visible = false;
+                dgvProductView.Columns["CREATED_DATE"].Visible = false;
+                dgvProductView.Columns["CREATED_BY"].Visible = false;
+                dgvProductView.Columns["DISABLED"].Visible = false;
+                dgvProductView.Columns["pImage"].Visible = false;
             }
             catch (SqlException ex)
             {
