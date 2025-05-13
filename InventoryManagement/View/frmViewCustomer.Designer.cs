@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvViewCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(1380, 46);
+            this.label1.Size = new System.Drawing.Size(2682, 46);
             this.label1.Text = "Customer List";
             // 
             // dgvViewCustomer
@@ -57,7 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvViewCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -75,7 +76,7 @@
             this.dgvEmail,
             this.dgvDelete,
             this.dgvUpdate});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
@@ -87,6 +88,14 @@
             this.dgvViewCustomer.Location = new System.Drawing.Point(106, 239);
             this.dgvViewCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvViewCustomer.Name = "dgvViewCustomer";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViewCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvViewCustomer.RowHeadersVisible = false;
             this.dgvViewCustomer.RowHeadersWidth = 51;
             this.dgvViewCustomer.RowTemplate.Height = 30;
@@ -117,36 +126,41 @@
             // 
             // dgvSr
             // 
-            this.dgvSr.HeaderText = "Sr";
-            this.dgvSr.MinimumWidth = 6;
+            this.dgvSr.FillWeight = 25.22035F;
+            this.dgvSr.HeaderText = "Sr #";
+            this.dgvSr.MinimumWidth = 50;
             this.dgvSr.Name = "dgvSr";
             // 
             // dgvId
             // 
+            this.dgvId.FillWeight = 43.11287F;
             this.dgvId.HeaderText = "ID";
             this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
             // 
             // dgvName
             // 
+            this.dgvName.FillWeight = 120F;
             this.dgvName.HeaderText = "Name";
-            this.dgvName.MinimumWidth = 6;
+            this.dgvName.MinimumWidth = 120;
             this.dgvName.Name = "dgvName";
             // 
             // dgvPhone
             // 
+            this.dgvPhone.FillWeight = 60F;
             this.dgvPhone.HeaderText = "Phone";
-            this.dgvPhone.MinimumWidth = 6;
+            this.dgvPhone.MinimumWidth = 60;
             this.dgvPhone.Name = "dgvPhone";
             // 
             // dgvEmail
             // 
             this.dgvEmail.HeaderText = "Email";
-            this.dgvEmail.MinimumWidth = 6;
+            this.dgvEmail.MinimumWidth = 100;
             this.dgvEmail.Name = "dgvEmail";
             // 
             // dgvDelete
             // 
+            this.dgvDelete.FillWeight = 43.11287F;
             this.dgvDelete.HeaderText = "Delete";
             this.dgvDelete.Image = global::InventoryManagement.Properties.Resources.delet;
             this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -155,6 +169,7 @@
             // 
             // dgvUpdate
             // 
+            this.dgvUpdate.FillWeight = 43.11287F;
             this.dgvUpdate.HeaderText = "Update";
             this.dgvUpdate.Image = global::InventoryManagement.Properties.Resources.update;
             this.dgvUpdate.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;

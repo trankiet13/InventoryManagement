@@ -207,5 +207,10 @@ namespace InventoryManagement
                 form.Close();
             }
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new View.frmReport());
+        }
     }
 }

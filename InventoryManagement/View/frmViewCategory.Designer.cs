@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Size = new System.Drawing.Size(2620, 46);
+            this.label1.Size = new System.Drawing.Size(2820, 46);
             this.label1.Text = "Category";
             // 
             // dgvViewCategory
@@ -130,26 +130,26 @@
             // dgvDelete
             // 
             this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvDelete.FillWeight = 50F;
-            this.dgvDelete.HeaderText = "";
+            this.dgvDelete.FillWeight = 70F;
+            this.dgvDelete.HeaderText = "Delete";
             this.dgvDelete.Image = global::InventoryManagement.Properties.Resources.delet;
             this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.MinimumWidth = 50;
+            this.dgvDelete.MinimumWidth = 70;
             this.dgvDelete.Name = "dgvDelete";
             this.dgvDelete.ReadOnly = true;
-            this.dgvDelete.Width = 50;
+            this.dgvDelete.Width = 70;
             // 
             // dgvEdit
             // 
             this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvEdit.FillWeight = 50F;
-            this.dgvEdit.HeaderText = "";
+            this.dgvEdit.FillWeight = 70F;
+            this.dgvEdit.HeaderText = "Update";
             this.dgvEdit.Image = global::InventoryManagement.Properties.Resources.update;
             this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvEdit.MinimumWidth = 50;
+            this.dgvEdit.MinimumWidth = 70;
             this.dgvEdit.Name = "dgvEdit";
             this.dgvEdit.ReadOnly = true;
-            this.dgvEdit.Width = 50;
+            this.dgvEdit.Width = 70;
             // 
             // frmViewCategory
             // 

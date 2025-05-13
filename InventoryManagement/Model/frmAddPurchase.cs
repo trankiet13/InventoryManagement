@@ -110,19 +110,25 @@ namespace InventoryManagement.Model
             qty = txtQuantity.Text;
             cost = txtCost.Text;
             amt = txtAmount.Text;
-            dgvAddPurchase.Rows.Add(0, pid, pname, qty, cost, amt);
+           
+            dgvAddPurchase.Rows.Add(0,0, pid, pname, qty, cost, amt);
+            cbProduct.SelectedIndex = -1;
+            cbProduct.SelectedIndex = 0;
+            txtQuantity.Text = "";
+            
+            txtAmount.Text = "";
+
+
         }
 
         private void dgvAddPurchase_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+
             int count = 0;
             foreach (DataGridViewRow row in dgvAddPurchase.Rows)
             {
-                if (row.Cells[0].Value != null)
-                {
-                    count++;
-                    row.Cells[0].Value = count;
-                }
+                count++;
+                row.Cells[0].Value = count;
             }
         }
         public override void btSave_Click(object sender, EventArgs e)
@@ -170,32 +176,52 @@ namespace InventoryManagement.Model
             }
 
             // insert details table 
-
-            foreach (DataGridViewRow row in dgvAddPurchase.Rows)
+            try
             {
-                //int did = Convert.ToInt32(row.Cells["dgvid"].Value);
-                int did = 0;
-                if (row.Cells["dgvid"].Value != null && int.TryParse(row.Cells["dgvid"].Value.ToString(), out int tempID))
+                foreach (DataGridViewRow row in dgvAddPurchase.Rows)
                 {
-                    did = tempID;
+                    
+
+                    int did = Convert.ToInt32(row.Cells["dgvid"].Value);
+
+
+                    if (did == 0)
+                    {
+                        qry2 = "Insert into tblDetails Values(@mID,@proID,@qty,@price,@amount,@cost)";
+                    }
+                    else
+                    {
+                        qry2 = "Update tblDetails set dMainID = @mID, productID = @proID, qty = @qty, price = @price, amount = @amount, cost = @cost where detailID = @id ";
+                    }
+                    SqlCommand cmd1 = new SqlCommand(qry2, MainClass.con);
+                    cmd1.Parameters.AddWithValue("@id", did);
+                    cmd1.Parameters.AddWithValue("@mID", MainID);
+                    cmd1.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvproid"].Value));
+
+                    cmd1.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvqty"].Value));
+                    cmd1.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvCost"].Value));
+                    cmd1.Parameters.AddWithValue("@amount", Convert.ToDouble(row.Cells["dgvAmount"].Value));
+                    cmd1.Parameters.AddWithValue("@cost", Convert.ToDouble(row.Cells["dgvCost"].Value));
+                    //dgvAddPurchase.Columns["dgvproid"].Visible = false;
+                    Console.WriteLine($"Executing Query: {qry2}");
+                    foreach (SqlParameter param in cmd1.Parameters)
+                    {
+                        Console.WriteLine($"{param.ParameterName}: {param.Value}");
+                    }
+                    record += cmd1.ExecuteNonQuery();
                 }
-                if (did == 0)
-                {
-                    qry2 = "Insert into tblDetails Values(@mID,@proID,@qty,@price,@amount,@cost)";
-                }
-                else
-                {
-                    qry2 = "Update tblDetails set dMainID = @mID, productID = @proID, qty = @qty, price = @price, amount = @amount, cost = @cost where detailID = @id ";
-                }
-                SqlCommand cmd1 = new SqlCommand(qry2, MainClass.con);
-                cmd1.Parameters.AddWithValue("@id", did);
-                cmd1.Parameters.AddWithValue("@mID", MainID);
-                cmd1.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvproid"].Value));
-                cmd1.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
-                cmd1.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvCost"].Value));
-                cmd1.Parameters.AddWithValue("@amount", Convert.ToDouble(row.Cells["dgvAmount"].Value));
-                cmd1.Parameters.AddWithValue("@cost", Convert.ToDouble(row.Cells["dgvCost"].Value));
-                record += cmd1.ExecuteNonQuery();
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết: " + sqlEx.Message + "\n" + "SQL Error Code: " + sqlEx.Number);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            if (record == 0)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết sản phẩm.");
             }
             if (record > 0)
             {
@@ -227,9 +253,9 @@ namespace InventoryManagement.Model
                 string pname;
                 string qty;
                 string cost;
-                string amt; 
+                string amt;
 
-                did =  row["detailID"].ToString();
+                did = row["detailID"].ToString();
                 pid = row["productID"].ToString();
                 pname = row["pName"].ToString();
                 qty = row["qty"].ToString();
@@ -238,6 +264,9 @@ namespace InventoryManagement.Model
                 // 0 for serial and id
                 dgvAddPurchase.Rows.Add(did, pid, pname, qty, cost, amt);
             }
+
         }
+
+
     }
 }

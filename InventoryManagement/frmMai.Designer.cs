@@ -35,11 +35,12 @@
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
             this.pnRight = new Guna.UI2.WinForms.Guna2Panel();
             this.pnLeft = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.pictureboxUsername = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.btUser = new Guna.UI2.WinForms.Guna2Button();
-            this.lbUsername = new System.Windows.Forms.Label();
             this.btSales = new Guna.UI2.WinForms.Guna2Button();
             this.bnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.bnPurchase = new Guna.UI2.WinForms.Guna2Button();
@@ -106,7 +107,7 @@
             this.pnRight.Location = new System.Drawing.Point(308, 45);
             this.pnRight.Name = "pnRight";
             this.pnRight.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.pnRight.Size = new System.Drawing.Size(762, 702);
+            this.pnRight.Size = new System.Drawing.Size(762, 788);
             this.pnRight.TabIndex = 4;
             this.pnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnRight_Paint);
             // 
@@ -114,9 +115,10 @@
             // 
             this.pnLeft.BackColor = System.Drawing.Color.CornflowerBlue;
             this.pnLeft.BorderRadius = 60;
+            this.pnLeft.Controls.Add(this.btnLogout);
+            this.pnLeft.Controls.Add(this.guna2Button1);
             this.pnLeft.Controls.Add(this.btnSetting);
             this.pnLeft.Controls.Add(this.pictureboxUsername);
-            this.pnLeft.Controls.Add(this.btnLogout);
             this.pnLeft.Controls.Add(this.btUser);
             this.pnLeft.Controls.Add(this.lbUsername);
             this.pnLeft.Controls.Add(this.btSales);
@@ -132,8 +134,69 @@
             this.pnLeft.FillColor = System.Drawing.Color.CornflowerBlue;
             this.pnLeft.Location = new System.Drawing.Point(0, 45);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(308, 702);
+            this.pnLeft.Size = new System.Drawing.Size(308, 788);
             this.pnLeft.TabIndex = 4;
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.ForeColor = System.Drawing.Color.Transparent;
+            this.lbUsername.Location = new System.Drawing.Point(80, 149);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(98, 21);
+            this.lbUsername.TabIndex = 1;
+            this.lbUsername.Text = "Username";
+            this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Crimson;
+            this.guna2Button1.Image = global::InventoryManagement.Properties.Resources.file;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(46, 660);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(207, 54);
+            this.guna2Button1.TabIndex = 10;
+            this.guna2Button1.Text = " Report";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.AutoRoundedCorners = true;
+            this.btnSetting.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSetting.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.HoverState.FillColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSetting.Image = global::InventoryManagement.Properties.Resources.setting;
+            this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSetting.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSetting.Location = new System.Drawing.Point(46, 540);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(207, 54);
+            this.btnSetting.TabIndex = 9;
+            this.btnSetting.Text = " Setting";
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // pictureboxUsername
             // 
@@ -174,30 +237,6 @@
             this.btnLogout.Text = " Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnSetting
-            // 
-            this.btnSetting.AutoRoundedCorners = true;
-            this.btnSetting.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
-            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSetting.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.HoverState.FillColor = System.Drawing.Color.LightSkyBlue;
-            this.btnSetting.Image = global::InventoryManagement.Properties.Resources.setting;
-            this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSetting.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSetting.Location = new System.Drawing.Point(46, 540);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(207, 54);
-            this.btnSetting.TabIndex = 9;
-            this.btnSetting.Text = " Setting";
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
             // btUser
             // 
             this.btUser.AutoRoundedCorners = true;
@@ -214,7 +253,7 @@
             this.btUser.Image = ((System.Drawing.Image)(resources.GetObject("btUser.Image")));
             this.btUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.btUser.Location = new System.Drawing.Point(46, 660);
+            this.btUser.Location = new System.Drawing.Point(46, 720);
             this.btUser.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btUser.Name = "btUser";
             this.btUser.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -223,19 +262,6 @@
             this.btUser.Text = " User";
             this.btUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btUser.Click += new System.EventHandler(this.btUser_Click);
-            // 
-            // lbUsername
-            // 
-            this.lbUsername.AutoSize = true;
-            this.lbUsername.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.ForeColor = System.Drawing.Color.Transparent;
-            this.lbUsername.Location = new System.Drawing.Point(80, 149);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(98, 21);
-            this.lbUsername.TabIndex = 1;
-            this.lbUsername.Text = "Username";
-            this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
             // 
             // btSales
             // 
@@ -394,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1070, 747);
+            this.ClientSize = new System.Drawing.Size(1070, 833);
             this.Controls.Add(this.pnRight);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
@@ -430,5 +456,6 @@
         private Guna.UI2.WinForms.Guna2Button btUser;
         public Guna.UI2.WinForms.Guna2Button btnSetting;
         public Guna.UI2.WinForms.Guna2Button btnLogout;
+        public Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

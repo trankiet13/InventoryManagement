@@ -77,7 +77,7 @@ namespace InventoryManagement.Model
             //}
             //lbTotal.Text = tot.ToString("N2");
             double tot = 0;
-            lbTotal.Text = "0";
+            lbPrice.Text = "0";
             foreach (DataGridViewRow item in guna2DataGridView1.Rows)
             {
                 if (item.Cells["dgvAmount"].Value != null &&
@@ -86,7 +86,7 @@ namespace InventoryManagement.Model
                     tot += amount;
                 }
             }
-            lbTotal.Text = tot.ToString("N2");
+            lbPrice.Text = tot.ToString("N2");
 
         }
         private void LoadProductsFromDatabase()
@@ -125,7 +125,7 @@ namespace InventoryManagement.Model
             txtDateTime.Value = DateTime.Now;
             cbCustomer.SelectedIndex = 0;
             cbCustomer.SelectedValue = -1;
-            lbTotal.Text = "0.00";
+            lbPrice.Text = "0.00";
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)  
@@ -265,9 +265,29 @@ namespace InventoryManagement.Model
                 txtDateTime.Value = DateTime.Now;
                 cbCustomer.SelectedIndex = 0;
                 cbCustomer.SelectedValue = -1;
-                lbTotal.Text = "0.00";
+                lbPrice.Text = "0.00";
                 guna2DataGridView1.Rows.Clear();
             }
+        }
+
+        private void lbCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

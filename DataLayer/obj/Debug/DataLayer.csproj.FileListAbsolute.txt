@@ -1,13 +1,3 @@
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\DataLayer.dll
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\DataLayer.pdb
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\TransferObject.dll
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\TransferObject.pdb
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.dll
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.pdb
-C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\Guna.UI2.dll
 E:\InventoryManagement\DataLayer\bin\Debug\DataLayer.dll
 E:\InventoryManagement\DataLayer\bin\Debug\DataLayer.pdb
 E:\InventoryManagement\DataLayer\bin\Debug\Guna.UI2.dll
@@ -28,3 +18,13 @@ H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.ca
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.dll
 H:\InventoryManagement\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\TransferObject.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\bin\Debug\TransferObject.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\LENOVO\Desktop\LTCSDL\InventoryManagement\DataLayer\obj\Debug\DataLayer.pdb
