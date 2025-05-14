@@ -58,7 +58,8 @@ namespace InventoryManagement.View
             {
                 frmAddPurchase frmAddPurchase = new frmAddPurchase();
                 frmAddPurchase.MainID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvid"].Value);
-                frmAddPurchase.supID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvSupId"].Value);
+                frmAddPurchase.supID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvsupid"].Value);
+                
                 MainClass.BlurBackGround(frmAddPurchase);
                 LoadData();
             }

@@ -109,6 +109,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrint";
             this.Text = "frmPrint";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrint_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
