@@ -69,7 +69,7 @@
             this.lbCustomer.Size = new System.Drawing.Size(64, 16);
             this.lbCustomer.TabIndex = 19;
             this.lbCustomer.Text = "Customer";
-            this.lbCustomer.Click += new System.EventHandler(this.lbCustomer_Click);
+           
             // 
             // cbCustomer
             // 
@@ -97,7 +97,7 @@
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Date";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           
             // 
             // txtDateTime
             // 
@@ -129,7 +129,7 @@
             this.lbName.Size = new System.Drawing.Size(59, 16);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Barcode";
-            this.lbName.Click += new System.EventHandler(this.lbName_Click);
+            
             // 
             // txtBarcode
             // 
@@ -151,7 +151,7 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 20;
-            this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
+            
             // 
             // guna2Panel1
             // 
@@ -365,7 +365,7 @@
             this.lbSearch.Size = new System.Drawing.Size(50, 16);
             this.lbSearch.TabIndex = 26;
             this.lbSearch.Text = "Search";
-            this.lbSearch.Click += new System.EventHandler(this.lbSearch_Click);
+            
             // 
             // txtSearch
             // 

@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using BusinessLayer;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,10 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddSale : Form
     {
-        public int id = 0 ;
-        public int cusID = 0;   
+   
+        private SaleBL saleBL = new SaleBL(); // Khởi tạo Business Layer
+        public int id = 0;
+        public int cusID = 0;
 
         public frmAddSale()
         {
@@ -28,273 +31,263 @@ namespace InventoryManagement.Model
 
         private void frmAddSale_Load(object sender, EventArgs e)
         {
-            string qry = "Select cusID 'id' , cusName 'name' from Customer";
-            MainClass.CBFFILL(qry, cbCustomer);
-            if (cusID >0 )
+            try
             {
-                cbCustomer.SelectedValue = cusID;
+                // Đặt ngày hiện tại vào DateTimePicker
+                txtDateTime.Value = DateTime.Now;
+
+                // Load danh sách khách hàng từ BusinessLayer
+                DataTable dtCustomers = saleBL.GetCustomers();
+                cbCustomer.DataSource = dtCustomers;
+                cbCustomer.DisplayMember = "cusName";
+                cbCustomer.ValueMember = "cusID";
+                cbCustomer.SelectedIndex = -1;
+
+                if (cusID > 0)
+                {
+                    cbCustomer.SelectedValue = cusID;
+                }
+
+                LoadProductsFromDatabase();
+                if (id > 0)
+                {
+                    DataTable dtSale = saleBL.GetSaleByID(id);
+                    if (dtSale.Rows.Count > 0)
+                    {
+                        // Load thông tin chính
+                        txtDateTime.Value = Convert.ToDateTime(dtSale.Rows[0]["mdate"]);
+                        cbCustomer.SelectedValue = Convert.ToInt32(dtSale.Rows[0]["mSupCusID"]);
+
+                        // Load chi tiết vào DataGridView
+                        foreach (DataRow row in dtSale.Rows)
+                        {
+                            int productID = Convert.ToInt32(row["productID"]);
+                            int qty = Convert.ToInt32(row["qty"]);
+                            int price = Convert.ToInt32(row["price"]);
+                            int cost = Convert.ToInt32(row["cost"]);
+
+                            // Tìm sản phẩm trong flowLayoutPanel để thêm vào giỏ hàng
+                            foreach (Control control in flowLayoutPanel1.Controls)
+                            {
+                                if (control is ucProduct product && product.id == productID)
+                                {
+                                    // Thêm vào DataGridView
+                                    guna2DataGridView1.Rows.Add(new object[] {
+                                0,
+                                productID,
+                                product.PName,
+                                qty,
+                                price,
+                                cost,
+                                qty * price
+                            });
+                                    break;
+                                }
+                            }
+                        }
+                        GrandTotal(); // Tính lại tổng
+                    }
+                }
             }
-            LoadProductsFromDatabase();
+            catch (Exception ex)
+            {
+                ShowErrorMessage("Lỗi tải danh sách khách hàng: " + ex.Message);
+            }
         }
-        public void Additems ( string id, string name, string price, Image image , string cost)
+
+
+
+        // Thêm sản phẩm vào flowLayoutPanel
+        public void Additems(string id, string name, string price, Image image, string cost)
         {
-            var w = new ucProduct()
+            var productControl = new ucProduct()
             {
                 PName = name,
                 Price = price,
                 Pimage = image,
                 Pcost = cost,
                 id = Convert.ToInt32(id)
-
             };
-            flowLayoutPanel1.Controls.Add(w);
 
-            w.onSelect += (ss, ee) =>
-             {
-                 var wdg = (ucProduct)ss;
-                 foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-                 {
-                     if (Convert.ToInt32(item.Cells["dgvproid"].Value) == wdg.id)
-                     {
-                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
-                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) * int.Parse(item.Cells["dgvPrice"].Value.ToString());
+            flowLayoutPanel1.Controls.Add(productControl);
 
-                         return;
-                     }
-                 }
-                 // if dont find product in row
-                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName,1,wdg.Price,wdg.Pcost,null,null });
-                 GrandTotal();
-             };
+            productControl.onSelect += (ss, ee) =>
+            {
+                var selectedProduct = (ucProduct)ss;
+                UpdateOrAddToCart(selectedProduct);
+            };
         }
+
+        // Cập nhật hoặc thêm sản phẩm vào giỏ hàng
+        private void UpdateOrAddToCart(ucProduct product)
+        {
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (Convert.ToInt32(row.Cells["dgvproid"].Value) == product.id)
+                {
+                    row.Cells["dgvQty"].Value = Convert.ToInt32(row.Cells["dgvQty"].Value) + 1;
+                    row.Cells["dgvAmount"].Value = Convert.ToInt32(row.Cells["dgvQty"].Value) * Convert.ToInt32(row.Cells["dgvPrice"].Value);
+                    GrandTotal();
+                    return;
+                }
+            }
+            guna2DataGridView1.Rows.Add(new object[] { 0, product.id, product.PName, 1, product.Price, product.Pcost, null, null });
+            GrandTotal();
+        }
+
+        // Tính tổng tiền
         private void GrandTotal()
         {
-            //double tot = 0;
-            //lbTotal.Text = "";
-            //foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-            //{
-            //    tot += double.Parse(item.Cells["dgvAmount"].Value.ToString());
-            //}
-            //lbTotal.Text = tot.ToString("N2");
-            double tot = 0;
-            lbPrice.Text = "0";
-            foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+            double total = 0;
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
             {
-                if (item.Cells["dgvAmount"].Value != null &&
-                    double.TryParse(item.Cells["dgvAmount"].Value.ToString(), out double amount))
+                if (row.Cells["dgvAmount"].Value != null)
                 {
-                    tot += amount;
+                    total += Convert.ToDouble(row.Cells["dgvAmount"].Value);
                 }
             }
-            lbPrice.Text = tot.ToString("N2");
-
+            lbPrice.Text = total.ToString("N2");
         }
+
+        // Tải sản phẩm từ Business Layer
         private void LoadProductsFromDatabase()
         {
-            string qry = "Select * from dbo.tb_HANGHOA";
-            SqlCommand cmd = new SqlCommand(qry, MainClass.con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            try
             {
-                foreach (DataRow row in dt.Rows)
+                DataTable dtProducts = saleBL.GetProducts();
+                foreach (DataRow row in dtProducts.Rows)
                 {
-                    
-                    Byte[] imageArray = (Byte[])row["pImage"];
-                    byte[] imageByteArray = imageArray;
-
-                    try
-                    {
-                        Image img = Image.FromStream(new MemoryStream(imageByteArray));
-                        Additems(row["BARCODE"].ToString(), row["TENHH"].ToString(), row["DONGIA"].ToString(), img, row["DONGIA"].ToString());
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi khi load ảnh sản phẩm: " + ex.Message);
-                    }
-
+                    byte[] imageBytes = (byte[])row["pImage"];
+                    Image productImage = Image.FromStream(new MemoryStream(imageBytes));
+                    Additems(
+                        row["BARCODE"].ToString(),
+                        row["TENHH"].ToString(),
+                        row["DONGIA"].ToString(),
+                        productImage,
+                        row["DONGIA"].ToString()
+                    );
                 }
             }
-            ;       
+            catch (Exception ex)
+            {
+                ShowErrorMessage("Lỗi tải sản phẩm: " + ex.Message);
+            }
         }
 
-        private void btClosee_Click(object sender, EventArgs e)
+        // Xử lý lưu đơn hàng
+        private void btSave_Click(object sender, EventArgs e)
         {
-            guna2DataGridView1.Rows.Clear();
+            if (!ValidateForm()) return;
+
+            try
+            {
+                // Lưu đơn hàng chính
+                int mainID = saleBL.SaveSale(
+                    mainID: id,
+                    date: txtDateTime.Value.Date,
+                    cusID: Convert.ToInt32(cbCustomer.SelectedValue)
+                );
+
+                // Lưu chi tiết đơn hàng
+                int recordsAffected = 0;
+                foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                {
+                    recordsAffected += saleBL.SaveSaleDetail(
+                        detailID: Convert.ToInt32(row.Cells["dgvId"].Value),
+                        mainID: mainID,
+                        productID: Convert.ToInt32(row.Cells["dgvproid"].Value),
+                        qty: Convert.ToInt32(row.Cells["dgvQty"].Value),
+                        price: Convert.ToInt32(row.Cells["dgvPrice"].Value),
+                        cost: Convert.ToInt32(row.Cells["dgvCost"].Value)
+                    );
+                }
+
+                if (recordsAffected > 0)
+                {
+                    ShowSuccessMessage("Lưu đơn hàng thành công!");
+                    ResetForm();
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessage("Lỗi lưu đơn hàng: " + ex.Message);
+            }
+        }
+
+        // Validate form
+        private bool ValidateForm()
+        {
+            if (cbCustomer.SelectedIndex == -1)
+            {
+                ShowErrorMessage("Vui lòng chọn khách hàng!");
+                return false;
+            }
+
+            if (guna2DataGridView1.Rows.Count == 0)
+            {
+                ShowErrorMessage("Vui lòng thêm sản phẩm vào đơn hàng!");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Reset form sau khi lưu
+        private void ResetForm()
+        {
+            id = 0;
+            cusID = 0;
             txtDateTime.Value = DateTime.Now;
-            cbCustomer.SelectedIndex = 0;
-            cbCustomer.SelectedValue = -1;
+            cbCustomer.SelectedIndex = -1;
+            guna2DataGridView1.Rows.Clear();
             lbPrice.Text = "0.00";
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)  
+        // Hiển thị thông báo lỗi
+        private void ShowErrorMessage(string message)
         {
-            foreach (var item in flowLayoutPanel1.Controls)
+            new Guna2MessageDialog()
             {
-                var pro = (ucProduct)item;
-                pro.Visible = pro.PName.ToLower().Contains(txtSearch.Text.Trim().ToLower());
-            }
+                Buttons = MessageDialogButtons.OK,
+                Icon = MessageDialogIcon.Error,
+                Text = message
+            }.Show();
         }
 
-        private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
+        // Hiển thị thông báo thành công
+        private void ShowSuccessMessage(string message)
         {
-            if (e.KeyCode == Keys.Enter)
+            new Guna2MessageDialog()
             {
-                // Sử dụng tham số để tránh lỗi SQL injection
-                string qry = "SELECT * FROM dbo.tb_HANGHOA WHERE BARCODE = @barcode";
-                SqlCommand cmd = new SqlCommand(qry, MainClass.con);
-                cmd.Parameters.AddWithValue("@barcode", txtBarcode.Text.Trim());
+                Buttons = MessageDialogButtons.OK,
+                Icon = MessageDialogIcon.Information,
+                Text = message
+            }.Show();
+        }
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+        // Các sự kiện khác
+        private void btClosee_Click(object sender, EventArgs e) => ResetForm();
+        private void txtSearch_TextChanged(object sender, EventArgs e) => FilterProducts();
 
-                if (dt.Rows.Count > 0)
+        // Lọc sản phẩm
+        private void FilterProducts()
+        {
+            string searchText = txtSearch.Text.Trim().ToLower();
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is ucProduct product)
                 {
-                    DataRow row = dt.Rows[0];
-
-                    // Kiểm tra nếu sản phẩm đã có trong DataGridView
-                    foreach (DataGridViewRow item in guna2DataGridView1.Rows)
-                    {
-                        if (item.Cells["dgvproid"].Value != null &&
-                            item.Cells["dgvproid"].Value.ToString() == row["BARCODE"].ToString())
-                        {
-                            int currentQty = int.Parse(item.Cells["dgvQty"].Value.ToString());
-                            int price = int.Parse(item.Cells["dgvPrice"].Value.ToString());
-
-                            item.Cells["dgvQty"].Value = currentQty + 1;
-                            item.Cells["dgvAmount"].Value = (currentQty + 1) * price;
-                            txtBarcode.Text = "";
-                            return;
-                        }
-                    }
-
-                    // Nếu chưa có, thêm mới vào DataGridView
-                    guna2DataGridView1.Rows.Add(new object[]
-                    {
-                0, // ID chi tiết bán (nếu có)
-                row["BARCODE"].ToString(), // dgvproid
-                row["TENHH"].ToString(),   // dgvName
-                1,                         // dgvQty
-                row["DONGIA"].ToString(),  // dgvPrice
-                row["DONGIA"].ToString()   // dgvCost (giá vốn, nếu khác thì thay)
-                    });
-
-                    txtBarcode.Text = "";
-                    GrandTotal(); // tính lại tổng tiền
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy sản phẩm với mã barcode: " + txtBarcode.Text);
+                    product.Visible = product.PName.ToLower().Contains(searchText);
                 }
             }
         }
 
-        private void btSave_Click(object sender, EventArgs e)
-        {
-            if (cbCustomer.SelectedIndex == -1 || cbCustomer.SelectedValue == null)
-            {
-                Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
-                guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                guna2MessageDialog.Text = "Vui lòng chọn khách hàng!";
-                guna2MessageDialog.Show(); // Thêm lệnh Show()
-                return; // Dừng xử lý nếu chưa chọn
-            }
-            if ( MainClass.Validation(this) == false)
-            {
-                // First have to create to store data
-                Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
-                guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                guna2MessageDialog.Text = "Vui lòng nhập đầy đủ thông tin bắt buộc!";
-            }
-            string qry1 = "";
-            string qry2 = "";
-            int record = 0;
-            if (id == 0)
-            {
-                qry1 = @"insert into tblMian Values (@date,@type,@supID)
-                        Select SCOPE_IDENTITY()";
-            }
-            else
-            {
-                qry1 = @"update tblMian set mdate = @date, mType = @type, mSupCusID = @supID where MainID = @id";
-            }
-            SqlCommand cmd1 = new SqlCommand(qry1, MainClass.con);
-            cmd1.Parameters.AddWithValue("@id", id);
-            cmd1.Parameters.AddWithValue("@Date", Convert.ToDateTime(txtDateTime.Value).Date);
-            cmd1.Parameters.AddWithValue("@Type", "SAL");
-            cmd1.Parameters.AddWithValue("@supID", Convert.ToInt32(cbCustomer.SelectedValue));
-            if (MainClass.con.State == ConnectionState.Closed)
-            {
-                MainClass.con.Open();
-            }
-            if ( id == 0)
-            {
-               id = Convert.ToInt32(cmd1.ExecuteScalar());
-            }
-            else
-            {
-                cmd1.ExecuteNonQuery();
-            }
-            // insert details table
-            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
-            {
-                int did = Convert.ToInt32(row.Cells["dgvId"].Value);
-                if ( did == 0)
-                {
-                    qry2 = "Insert into tblDetails Values (@mID,@proID,@qty,@price,@amount,@cost)";
-                }
-                else
-                {
-                    qry2 = "Update tblDetails set dMainID = @mID, productID = @proID, qty = @qty, price = @price, amount = @amount where detailID = @id";
-                }
-                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
-                cmd2.Parameters.AddWithValue("@id", did);
-                cmd2.Parameters.AddWithValue("@mID", id);
-                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvproid"].Value));
-                cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
-                cmd2.Parameters.AddWithValue("@cost", Convert.ToInt32(row.Cells["dgvCost"].Value));
-                cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
-                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvCost"].Value));
-                record += cmd2.ExecuteNonQuery();
-            }
-            if ( record > 0)
-            {
-                Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
-                guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                guna2MessageDialog.Text = "Lưu thành công!";
-                guna2MessageDialog.Show();
-
-                id = 0;
-                cusID = 0;
-                txtDateTime.Value = DateTime.Now;
-                cbCustomer.SelectedIndex = 0;
-                cbCustomer.SelectedValue = -1;
-                lbPrice.Text = "0.00";
-                guna2DataGridView1.Rows.Clear();
-            }
-        }
-
-        private void lbCustomer_Click(object sender, EventArgs e)
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbSearch_Click(object sender, EventArgs e)
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

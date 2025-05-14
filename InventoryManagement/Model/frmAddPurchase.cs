@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,29 +16,22 @@ namespace InventoryManagement.Model
 {
     public partial class frmAddPurchase : SampleAdd
     {
+        PurchaseBL bll = new PurchaseBL();
+        public int MainID = 0;
+        public int supID = 0;
         public frmAddPurchase()
         {
             InitializeComponent();
         }
-        public int MainID = 0;
-        public int supID = 0;
+
+
+
+
         // Thêm vào lớp frmAddPurchase
-        public decimal Amount = 0;
-        public string ProductNam = "";
-        public int Quantity = 0;
-        public decimal Cost = 0;
+
         private void frmAddPurchase_Load(object sender, EventArgs e)
         {
-            //string qry = "Select  BARCODE 'id' , TENHH 'name' from dbo.tb_HangHoa";
-            //string qry2 = " select MANCC  'id', TENNCC 'name' from dbo.tb_NHACUNGCAP";
-            //MainClass.CBFFILL(qry, cbProduct);
-            //MainClass.CBFFILL(qry2, cbSupplier);
-            //if (supID > 0)
-            //{
-            //    cbSupplier.SelectedValue = supID;
-            //    LoadForEdit();
-            //}
-            // Load danh sách nhà cung cấp
+
 
             string qry2 = "SELECT MANCC 'id', TENNCC 'name' FROM dbo.tb_NHACUNGCAP";
             MainClass.CBFFILL(qry2, cbSupplier);
@@ -49,10 +44,7 @@ namespace InventoryManagement.Model
             {
                 cbSupplier.SelectedValue = supID;
                 // Sự kiện SelectedIndexChanged sẽ tự động kích hoạt
-                txtAmount.Text = Amount.ToString();
-                cbProduct.Text = ProductName;
-                txtQuantity.Text = Quantity.ToString();
-                txtCost.Text = Cost.ToString();
+
             }
             else
             {
@@ -68,7 +60,7 @@ namespace InventoryManagement.Model
                 string qry = "SELECT BARCODE AS 'id', TENHH AS 'name' FROM dbo.tb_HANGHOA WHERE MANCC = @mancc";
                 SqlParameter[] parameters = new SqlParameter[]
                 {
-            new SqlParameter("@mancc", supplierID)
+                    new SqlParameter("@mancc", supplierID)
                 };
                 MainClass.CBFFILL(qry, cbProduct, parameters);
             }
@@ -191,7 +183,7 @@ namespace InventoryManagement.Model
             if (MainID == 0)
             {
                 qry1 = @"insert into tblMian Values (@date,@type,@supID)
-                        Select SCOPE_IDENTITY()";
+                                Select SCOPE_IDENTITY()";
             }
             else
             {

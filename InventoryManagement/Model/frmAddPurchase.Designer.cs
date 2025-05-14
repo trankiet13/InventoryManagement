@@ -88,7 +88,7 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 7;
-            this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
+           
             // 
             // label100
             // 
@@ -99,7 +99,7 @@
             this.label100.Size = new System.Drawing.Size(76, 23);
             this.label100.TabIndex = 10;
             this.label100.Text = "Quantity";
-            this.label100.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // txtQuantity
             // 
@@ -121,7 +121,7 @@
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.Size = new System.Drawing.Size(124, 40);
             this.txtQuantity.TabIndex = 9;
-            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
+            
             // 
             // txtDateTime
             // 
@@ -183,7 +183,7 @@
             this.cbProduct.Size = new System.Drawing.Size(187, 36);
             this.cbProduct.TabIndex = 14;
             this.cbProduct.Tag = "v";
-            this.cbProduct.SelectedIndexChanged += new System.EventHandler(this.cbProduct_SelectedIndexChanged);
+           
             // 
             // lbSupplier
             // 
@@ -283,7 +283,7 @@
             this.btAddNew.Size = new System.Drawing.Size(287, 45);
             this.btAddNew.TabIndex = 21;
             this.btAddNew.Text = "Add";
-            this.btAddNew.Click += new System.EventHandler(this.btAddNew_Click);
+            
             // 
             // dgvAddPurchase
             // 
@@ -362,7 +362,7 @@
             this.dgvAddPurchase.ThemeStyle.RowsStyle.Height = 24;
             this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvAddPurchase.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAddPurchase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAddPurchase_CellFormatting);
+          
             // 
             // dgvSR
             // 
@@ -437,7 +437,7 @@
             this.Controls.Add(this.txtBarcode);
             this.Name = "frmAddPurchase";
             this.Text = "Cost";
-            this.Load += new System.EventHandler(this.frmAddPurchase_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddPurchase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -58,75 +58,148 @@ namespace DataLayer
                 return false;
             }
         }
-        public DataTable LoadCustomers()
+        // Trong UserDL.cs
+        public DataTable LoadAccountsData()
         {
-            string qry = "SELECT cusID 'id', cusName 'name' FROM Customer";
-            return ExecuteQuery(qry);
-        }
-
-        public DataTable LoadProducts()
-        {
-            string qry = "SELECT BARCODE, TENHH, DONGIA, pImage FROM tb_HANGHOA";
-            return ExecuteQuery(qry);
-        }
-
-        public int SaveMainSale(DateTime date, string type, int customerID, int saleID = 0)
-        {
-            string qry = saleID == 0
-                ? @"INSERT INTO tblMian (mdate, mType, mSupCusID) 
-                   VALUES (@Date, @Type, @CustomerID);
-                   SELECT SCOPE_IDENTITY();"
-                : @"UPDATE tblMian SET mdate = @Date, 
-                   mSupCusID = @CustomerID 
-                   WHERE MainID = @SaleID";
-
-            Hashtable ht = new Hashtable();
-            ht.Add("@Date", date.Date);
-            ht.Add("@Type", type);
-            ht.Add("@CustomerID", customerID);
-            if (saleID > 0) ht.Add("@SaleID", saleID);
-
-            return Convert.ToInt32(MyExecuteScalar(qry, CommandType.Text, ht));
-        }
-
-        public int SaveSaleDetail(int saleID, DataGridViewRow row)
-        {
-            string qry = row.Cells["dgvId"].Value.ToString() == "0"
-                ? @"INSERT INTO tblDetails (dMainID, productID, qty, price, amount, cost) 
-                   VALUES (@SaleID, @ProductID, @Qty, @Price, @Amount, @Cost)"
-                : @"UPDATE tblDetails SET 
-                   productID = @ProductID,
-                   qty = @Qty,
-                   price = @Price,
-                   amount = @Amount,
-                   cost = @Cost
-                   WHERE detailID = @DetailID";
-
-            Hashtable ht = new Hashtable();
-            ht.Add("@SaleID", saleID);
-            ht.Add("@ProductID", Convert.ToInt32(row.Cells["dgvproid"].Value));
-            ht.Add("@Qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
-            ht.Add("@Price", Convert.ToDecimal(row.Cells["dgvPrice"].Value));
-            ht.Add("@Amount", Convert.ToDecimal(row.Cells["dgvAmount"].Value));
-            ht.Add("@Cost", Convert.ToDecimal(row.Cells["dgvCost"].Value));
-            if (row.Cells["dgvId"].Value.ToString() != "0")
-                ht.Add("@DetailID", Convert.ToInt32(row.Cells["dgvId"].Value));
-
-            return MyExecuteNonQuery(qry, ht);
-        }
-
-        private DataTable ExecuteQuery(string query)
-        {
+            string qry = "SELECT * FROM Accounts"; // Thay đổi query theo CSDL thực tế
             DataTable dt = new DataTable();
+
             try
             {
-                SqlCommand cmd = new SqlCommand(query, con);
+                SqlCommand cmd = new SqlCommand(qry, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Database error: " + ex.Message);
+                MessageBox.Show("Lỗi tải tài khoản: " + ex.Message);
+            }
+
+            return dt;
+        }
+        // Thêm phương thức để thêm/cập nhật đơn hàng
+        public int SaveSale(int mainID, DateTime date, int cusID)
+        {
+            string qry = (mainID == 0) ?
+                @"INSERT INTO tblMian (mdate, mType, mSupCusID) 
+          VALUES (@date, 'SAL', @cusID); 
+          SELECT SCOPE_IDENTITY();" : // Lấy ID mới tạo
+                @"UPDATE tblMian SET mdate = @date, mSupCusID = @cusID 
+          WHERE MainID = @mainID";
+
+            Hashtable ht = new Hashtable();
+            ht.Add("@date", date);
+            ht.Add("@cusID", cusID);
+            if (mainID != 0) ht.Add("@mainID", mainID);
+
+            // Thực thi và xử lý kết quả
+            if (mainID == 0)
+            {
+                // INSERT và lấy ID mới
+                DataTable dt = new DataTable();
+                using (SqlCommand cmd = new SqlCommand(qry, con))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    foreach (DictionaryEntry item in ht)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                    }
+                    con.Open();
+                    object result = cmd.ExecuteScalar(); // Lấy SCOPE_IDENTITY()
+                    con.Close();
+                    return Convert.ToInt32(result);
+                }
+            }
+            else
+            {
+                // UPDATE
+                int rowsAffected = SQL(qry, ht);
+                return (rowsAffected > 0) ? mainID : 0;
+            }
+        }
+        public DataTable GetCustomers()
+        {
+            string qry = "SELECT cusID, cusName FROM Customer";
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(qry, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi tải danh sách khách hàng: " + ex.Message);
+            }
+            return dt;
+        }
+
+        // Thêm phương thức để lấy danh sách sản phẩm
+        public DataTable LoadProducts()
+        {
+            string qry = "SELECT BARCODE, TENHH, DONGIA, pImage FROM tb_HANGHOA";
+            DataTable dt = new DataTable();
+            try
+            {
+                // Sử dụng SqlDataAdapter như code gốc
+                SqlCommand cmd = new SqlCommand(qry, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi tải sản phẩm: " + ex.Message);
+            }
+            return dt;
+        }
+        // Thêm phương thức lưu chi tiết đơn hàng
+        public int SaveSaleDetail(int detailID, int mainID, int productID, int qty, int price, int cost)
+        {
+            string qry = (detailID == 0) ?
+                @"INSERT INTO tblDetails (dMainID, productID, qty, price, cost, amount) 
+          VALUES (@mainID, @productID, @qty, @price, @cost, @amount)" :
+                @"UPDATE tblDetails SET 
+            qty = @qty, 
+            price = @price, 
+            cost = @cost, 
+            amount = @amount 
+          WHERE detailID = @detailID";
+
+            Hashtable ht = new Hashtable();
+            ht.Add("@mainID", mainID);
+            ht.Add("@productID", productID);
+            ht.Add("@qty", qty);
+            ht.Add("@price", price);
+            ht.Add("@cost", cost);
+            ht.Add("@amount", qty * price);
+            if (detailID != 0) ht.Add("@detailID", detailID);
+
+            return SQL(qry, ht);
+        }
+        // Lấy id để load dữ liệu cũ
+        public DataTable GetSaleByID(int mainID)
+        {
+            string qry = @"SELECT m.mdate, m.mSupCusID, d.productID, d.qty, d.price, d.cost 
+                   FROM tblMian m 
+                   INNER JOIN tblDetails d ON m.MainID = d.dMainID 
+                   WHERE m.MainID = @mainID";
+            Hashtable ht = new Hashtable();
+            ht.Add("@mainID", mainID);
+            return ExecuteQuery(qry, ht);
+        }
+
+        private DataTable ExecuteQuery(string qry, Hashtable ht)
+        {
+            DataTable dt = new DataTable();
+            using (SqlCommand cmd = new SqlCommand(qry, con))
+            {
+                cmd.CommandType = CommandType.Text;
+                foreach (DictionaryEntry item in ht)
+                {
+                    cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
             }
             return dt;
         }

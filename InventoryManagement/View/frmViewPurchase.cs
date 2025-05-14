@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Model;
+﻿using BusinessLayer;
+using InventoryManagement.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -59,7 +60,7 @@ namespace InventoryManagement.View
                 frmAddPurchase frmAddPurchase = new frmAddPurchase();
                 frmAddPurchase.MainID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvid"].Value);
                 frmAddPurchase.supID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvsupid"].Value);
-                
+
                 //frmAddPurchase.Amount = Convert.ToDecimal(dgvViewPurchase.CurrentRow.Cells["dgvAmount"].Value);
                 //frmAddPurchase.ProductNam = dgvViewPurchase.CurrentRow.Cells["dgvname"].Value.ToString();
                 //frmAddPurchase.Quantity = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvqty"].Value);
@@ -93,5 +94,8 @@ namespace InventoryManagement.View
                 }
             }
         }
+
     }
 }
+
+
