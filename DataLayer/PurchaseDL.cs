@@ -93,7 +93,8 @@ namespace DataLayer
 
         public DataTable GetProductsBySupplier(int supplierID)
         {
-            string qry = "SELECT BARCODE AS id, TENHH AS name FROM dbo.tb_HANGHOA WHERE MANCC = @mancc";
+            // Đảm bảo tên cột trả về là "id" và "name"
+            string qry = "SELECT BARCODE AS id, TENHH AS name FROM tb_HANGHOA WHERE MANCC = @mancc";
             Hashtable ht = new Hashtable();
             ht.Add("@mancc", supplierID);
             return ExecuteQuery(qry, ht);

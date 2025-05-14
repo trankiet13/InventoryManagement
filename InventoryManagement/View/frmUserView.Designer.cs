@@ -51,7 +51,7 @@
             // 
             this.label1.AllowDrop = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Size = new System.Drawing.Size(841, 49);
+            this.label1.Size = new System.Drawing.Size(918, 49);
             this.label1.Text = "User Detail";
             // 
             // guna2DataGridView1
@@ -208,7 +208,7 @@
             // 
             this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvEdit.FillWeight = 70F;
-            this.dgvEdit.HeaderText = "Delete";
+            this.dgvEdit.HeaderText = "Update";
             this.dgvEdit.Image = global::InventoryManagement.Properties.Resources.delet;
             this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvEdit.MinimumWidth = 70;
@@ -220,7 +220,7 @@
             // 
             this.dgvDel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dgvDel.FillWeight = 70F;
-            this.dgvDel.HeaderText = "Update";
+            this.dgvDel.HeaderText = "Delete";
             this.dgvDel.Image = global::InventoryManagement.Properties.Resources.update;
             this.dgvDel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvDel.MinimumWidth = 70;

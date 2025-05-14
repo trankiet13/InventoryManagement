@@ -70,6 +70,7 @@ namespace DataLayer
             parameters.Add(new SqlParameter("@MAXX", product.MAXX));
             parameters.Add(new SqlParameter("@IDNHOM", product.IDNHOM));
             parameters.Add(new SqlParameter("@MOTA", product.MOTA));
+            parameters.Add(new SqlParameter("@pImage", product.pImage));
             parameters.Add(new SqlParameter("@CREATED_DATE", product.CREATED_DATE));
             parameters.Add(new SqlParameter("@CREATED_BY", product.CREATED_BY));
             parameters.Add(new SqlParameter("@DISABLED", product.DISABLED));
@@ -99,6 +100,7 @@ namespace DataLayer
             new SqlParameter("@IDNHOM", product.IDNHOM),
             new SqlParameter("@MOTA", product.MOTA),
             new SqlParameter("@CREATED_DATE", product.CREATED_DATE),
+            new SqlParameter("@pImage", product.pImage),
             new SqlParameter("@CREATED_BY", product.CREATED_BY),
             new SqlParameter("@DISABLED", product.DISABLED)
             };

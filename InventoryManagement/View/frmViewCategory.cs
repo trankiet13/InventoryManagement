@@ -43,7 +43,23 @@ namespace InventoryManagement.View
                 colName.HeaderText = "Name";
                 colName.DataPropertyName = "TEN";
                 dgvViewCategory.Columns.Add(colName);
+                // Cột Edit
+                DataGridViewImageColumn dgvEdit = new DataGridViewImageColumn();
+                dgvEdit.Name = "dgvEdit";
+                dgvEdit.HeaderText = "Sửa";
+                dgvEdit.Image = Properties.Resources.update; // Thêm icon từ Resources
+                dgvEdit.Width = 60;
+                dgvEdit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                dgvViewCategory.Columns.Add(dgvEdit);
 
+                // Cột Xóa (Sử dụng ImageColumn)
+                DataGridViewImageColumn dgvDelete = new DataGridViewImageColumn();
+                dgvDelete.Name = "dgvDelete";
+                dgvDelete.HeaderText = "Xóa";
+                dgvDelete.Image = Properties.Resources.delet; // Thêm icon từ Resources
+                dgvDelete.Width = 60;
+                dgvDelete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                dgvViewCategory.Columns.Add(dgvDelete);
                 dgvViewCategory.DataSource = dt;
             }
             catch (Exception ex)

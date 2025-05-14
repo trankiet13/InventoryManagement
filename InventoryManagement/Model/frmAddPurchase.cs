@@ -24,16 +24,16 @@ namespace InventoryManagement.Model
         // Load form và khởi tạo dữ liệu
         private void frmAddPurchase_Load(object sender, EventArgs e)
         {
-
-            // Load danh sách nhà cung cấp
+            // Load danh sách NCC
             DataTable dtSuppliers = purchaseBL.GetSuppliers();
             cbSupplier.DataSource = dtSuppliers;
-            cbSupplier.DisplayMember = "name"; // Tên cột hiển thị
-            cbSupplier.ValueMember = "id";      // Tên cột giá trị
+            cbSupplier.DisplayMember = "name";
+            cbSupplier.ValueMember = "id";
             cbSupplier.SelectedIndex = -1;
             // Xử lý khi chỉnh sửa
             if (supID > 0)
             {
+
                 cbSupplier.SelectedValue = supID;
                 LoadProductsBySupplier(supID);
                 txtAmount.Text = Amount.ToString();
@@ -46,14 +46,14 @@ namespace InventoryManagement.Model
         // Load sản phẩm theo NCC được chọn
         private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbSupplier.SelectedValue != null && cbSupplier.SelectedValue.ToString() != "")
+            if (cbSupplier.SelectedValue != null &&
+                int.TryParse(cbSupplier.SelectedValue.ToString(), out int supplierID))
             {
-                int supplierID = Convert.ToInt32(cbSupplier.SelectedValue);
-                LoadProductsBySupplier(supplierID);
+                LoadProductsBySupplier(supplierID); // Load sản phẩm khi NCC thay đổi
             }
             else
             {
-                cbProduct.DataSource = null;
+                cbProduct.DataSource = null; // Reset nếu không có NCC được chọn
             }
         }
         // Trong LoadProductsBySupplier:
@@ -62,19 +62,23 @@ namespace InventoryManagement.Model
             try
             {
                 DataTable dtProducts = purchaseBL.GetProductsBySupplier(supplierID);
+
+                // Kiểm tra dữ liệu hợp lệ
                 if (dtProducts == null || dtProducts.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có sản phẩm nào cho nhà cung cấp này.");
-                    cbProduct.DataSource = new DataTable();
+                    MessageBox.Show("Nhà cung cấp này không có sản phẩm.");
+                    cbProduct.DataSource = null; // Sửa thành null
                     return;
                 }
+
+                // Đảm bảo tên cột "id" và "name" tồn tại
                 cbProduct.DataSource = dtProducts;
                 cbProduct.DisplayMember = "name";
                 cbProduct.ValueMember = "id";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tải sản phẩm: " + ex.Message);
+                MessageBox.Show($"Lỗi khi tải sản phẩm: {ex.Message}");
             }
         }
 
@@ -170,6 +174,7 @@ namespace InventoryManagement.Model
                     Convert.ToDecimal(row.Cells["dgvAmount"].Value)
                 );
             }
+
             return dt;
         }
 
@@ -211,13 +216,17 @@ namespace InventoryManagement.Model
         {
             if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(txtBarcode.Text))
             {
-                DataTable product = purchaseBL.GetProductDetails(Convert.ToInt32(txtBarcode.Text));
-                if (product.Rows.Count > 0)
+                if (int.TryParse(txtBarcode.Text, out int barcode))
                 {
-                    cbProduct.SelectedValue = product.Rows[0]["BARCODE"];
-                    txtCost.Text = product.Rows[0]["DONGIA"].ToString();
-                    txtBarcode.Text = "";
-                    txtQuantity.Focus();
+                    DataTable product = purchaseBL.GetProductDetails(barcode);
+                    if (product.Rows.Count > 0)
+                    {
+                        // Sửa thành cột "id" thay vì "BARCODE"
+                        cbProduct.SelectedValue = product.Rows[0]["id"];
+                        txtCost.Text = product.Rows[0]["DONGIA"].ToString();
+                        txtBarcode.Text = "";
+                        txtQuantity.Focus();
+                    }
                 }
             }
         }
