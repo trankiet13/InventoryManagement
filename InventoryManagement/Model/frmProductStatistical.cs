@@ -167,6 +167,10 @@ namespace InventoryManagement.View
 
             pnlTotal.Controls.Add(linkProduct);
             pnlTotal.Controls.Add(linkUser);
+            
+            
+
+           
 
         }
 

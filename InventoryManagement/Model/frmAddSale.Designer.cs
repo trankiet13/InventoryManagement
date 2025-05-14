@@ -64,12 +64,11 @@
             // 
             this.lbCustomer.AutoSize = true;
             this.lbCustomer.ForeColor = System.Drawing.Color.Transparent;
-            this.lbCustomer.Location = new System.Drawing.Point(277, 32);
+            this.lbCustomer.Location = new System.Drawing.Point(284, 32);
             this.lbCustomer.Name = "lbCustomer";
             this.lbCustomer.Size = new System.Drawing.Size(64, 16);
             this.lbCustomer.TabIndex = 19;
             this.lbCustomer.Text = "Customer";
-           
             // 
             // cbCustomer
             // 
@@ -82,7 +81,7 @@
             this.cbCustomer.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCustomer.ItemHeight = 30;
-            this.cbCustomer.Location = new System.Drawing.Point(255, 53);
+            this.cbCustomer.Location = new System.Drawing.Point(273, 53);
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(187, 36);
             this.cbCustomer.TabIndex = 18;
@@ -97,7 +96,6 @@
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Date";
-           
             // 
             // txtDateTime
             // 
@@ -115,7 +113,7 @@
             this.txtDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDateTime.Name = "txtDateTime";
-            this.txtDateTime.Size = new System.Drawing.Size(200, 38);
+            this.txtDateTime.Size = new System.Drawing.Size(221, 38);
             this.txtDateTime.TabIndex = 16;
             this.txtDateTime.UseTransparentBackground = true;
             this.txtDateTime.Value = new System.DateTime(2025, 4, 15, 21, 29, 2, 179);
@@ -129,7 +127,6 @@
             this.lbName.Size = new System.Drawing.Size(59, 16);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Barcode";
-            
             // 
             // txtBarcode
             // 
@@ -151,7 +148,6 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 20;
-            
             // 
             // guna2Panel1
             // 
@@ -365,7 +361,6 @@
             this.lbSearch.Size = new System.Drawing.Size(50, 16);
             this.lbSearch.TabIndex = 26;
             this.lbSearch.Text = "Search";
-            
             // 
             // txtSearch
             // 
@@ -385,7 +380,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(197, 40);
+            this.txtSearch.Size = new System.Drawing.Size(221, 40);
             this.txtSearch.TabIndex = 25;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 

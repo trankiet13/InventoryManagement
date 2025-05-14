@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartDVT = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,22 +53,23 @@
             this.panel1.Controls.Add(this.chartDVT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1254, 446);
+            this.panel1.Size = new System.Drawing.Size(1672, 549);
             this.panel1.TabIndex = 0;
             // 
             // chartDVT
             // 
             this.chartDVT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(75)))));
-            this.chartDVT.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartDVT.Legends.Add(legend1);
+            legend5.Name = "Legend1";
+            this.chartDVT.Legends.Add(legend5);
             this.chartDVT.Location = new System.Drawing.Point(0, 0);
+            this.chartDVT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartDVT.Name = "chartDVT";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDVT.Series.Add(series1);
-            this.chartDVT.Size = new System.Drawing.Size(1254, 446);
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartDVT.Series.Add(series5);
+            this.chartDVT.Size = new System.Drawing.Size(1672, 549);
             this.chartDVT.TabIndex = 0;
             this.chartDVT.Text = "chart1";
             // 
@@ -76,24 +77,25 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(75)))));
             this.panel2.Controls.Add(this.chartNhom);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 446);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(694, 549);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1254, 345);
+            this.panel2.Size = new System.Drawing.Size(978, 425);
             this.panel2.TabIndex = 1;
             // 
             // chartNhom
             // 
             this.chartNhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(75)))));
-            this.chartNhom.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartNhom.Legends.Add(legend2);
-            this.chartNhom.Location = new System.Drawing.Point(0, 0);
+            legend6.Name = "Legend1";
+            this.chartNhom.Legends.Add(legend6);
+            this.chartNhom.Location = new System.Drawing.Point(705, 8);
+            this.chartNhom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartNhom.Name = "chartNhom";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartNhom.Series.Add(series2);
-            this.chartNhom.Size = new System.Drawing.Size(1254, 345);
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartNhom.Series.Add(series6);
+            this.chartNhom.Size = new System.Drawing.Size(967, 417);
             this.chartNhom.TabIndex = 0;
             this.chartNhom.Text = "chart2";
             // 
@@ -105,9 +107,10 @@
             this.pnlTotal.Controls.Add(this.lbTotalProduct);
             this.pnlTotal.Controls.Add(this.lbTotalUser);
             this.pnlTotal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlTotal.Location = new System.Drawing.Point(0, 446);
+            this.pnlTotal.Location = new System.Drawing.Point(0, 549);
+            this.pnlTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTotal.Name = "pnlTotal";
-            this.pnlTotal.Size = new System.Drawing.Size(523, 345);
+            this.pnlTotal.Size = new System.Drawing.Size(783, 425);
             this.pnlTotal.TabIndex = 1;
             // 
             // linkUser
@@ -117,9 +120,10 @@
             this.linkUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkUser.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkUser.LinkColor = System.Drawing.Color.IndianRed;
-            this.linkUser.Location = new System.Drawing.Point(54, 270);
+            this.linkUser.Location = new System.Drawing.Point(116, 332);
+            this.linkUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkUser.Name = "linkUser";
-            this.linkUser.Size = new System.Drawing.Size(322, 23);
+            this.linkUser.Size = new System.Drawing.Size(429, 28);
             this.linkUser.TabIndex = 7;
             this.linkUser.TabStop = true;
             this.linkUser.Text = "More Info";
@@ -134,9 +138,10 @@
             this.linkProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkProduct.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkProduct.LinkColor = System.Drawing.Color.IndianRed;
-            this.linkProduct.Location = new System.Drawing.Point(54, 146);
+            this.linkProduct.Location = new System.Drawing.Point(116, 180);
+            this.linkProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkProduct.Name = "linkProduct";
-            this.linkProduct.Size = new System.Drawing.Size(322, 23);
+            this.linkProduct.Size = new System.Drawing.Size(429, 28);
             this.linkProduct.TabIndex = 6;
             this.linkProduct.TabStop = true;
             this.linkProduct.Text = "More Info";
@@ -149,9 +154,10 @@
             this.lbTotalProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalProduct.ForeColor = System.Drawing.Color.White;
             this.lbTotalProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbTotalProduct.Location = new System.Drawing.Point(54, 53);
+            this.lbTotalProduct.Location = new System.Drawing.Point(116, 65);
+            this.lbTotalProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotalProduct.Name = "lbTotalProduct";
-            this.lbTotalProduct.Size = new System.Drawing.Size(322, 93);
+            this.lbTotalProduct.Size = new System.Drawing.Size(429, 114);
             this.lbTotalProduct.TabIndex = 4;
             this.lbTotalProduct.Text = "Tổng sản phẩm";
             this.lbTotalProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,21 +168,23 @@
             this.lbTotalUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalUser.ForeColor = System.Drawing.Color.White;
             this.lbTotalUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbTotalUser.Location = new System.Drawing.Point(54, 188);
+            this.lbTotalUser.Location = new System.Drawing.Point(116, 231);
+            this.lbTotalUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotalUser.Name = "lbTotalUser";
-            this.lbTotalUser.Size = new System.Drawing.Size(322, 82);
+            this.lbTotalUser.Size = new System.Drawing.Size(429, 101);
             this.lbTotalUser.TabIndex = 5;
             this.lbTotalUser.Text = "Tổng user";
             this.lbTotalUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmProductStatistical
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 791);
+            this.ClientSize = new System.Drawing.Size(1672, 974);
             this.Controls.Add(this.pnlTotal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProductStatistical";
             this.Text = "Statistical";
             this.Load += new System.EventHandler(this.frmProductStatistical_Load);

@@ -39,6 +39,8 @@
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(65, 29);
+            this.label1.Size = new System.Drawing.Size(185, 29);
+            this.label1.Text = "Customer Detail";
             // 
             // txtPhone
             // 

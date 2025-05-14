@@ -32,26 +32,25 @@ namespace InventoryManagement.View
             {
                 dgvProductView.DataSource = productsBL.GetAllProducts();
 
-                // Thêm nút Update nếu chưa có
+               
                 if (!dgvProductView.Columns.Contains("Update"))
                 {
-                    DataGridViewButtonColumn updateButton = new DataGridViewButtonColumn();
-                    updateButton.Name = "Update";
-                    updateButton.HeaderText = "Sửa";
-                    updateButton.Text = "Sửa";
-                    updateButton.UseColumnTextForButtonValue = true;
-                    dgvProductView.Columns.Add(updateButton);
+                    DataGridViewImageColumn updateIcon = new DataGridViewImageColumn();
+                    updateIcon.Name = "Update";
+                    updateIcon.HeaderText = "Sửa";
+                    updateIcon.Image = Properties.Resources.update; // đường dẫn icon
+                    updateIcon.ImageLayout = DataGridViewImageCellLayout.Zoom; // hoặc .Normal, .Stretch
+                    dgvProductView.Columns.Add(updateIcon);
                 }
-
                 // Thêm nút Delete nếu chưa có
                 if (!dgvProductView.Columns.Contains("Delete"))
                 {
-                    DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
-                    deleteButton.Name = "Delete";
-                    deleteButton.HeaderText = "Xóa";
-                    deleteButton.Text = "Xóa";
-                    deleteButton.UseColumnTextForButtonValue = true;
-                    dgvProductView.Columns.Add(deleteButton);
+                    DataGridViewImageColumn updateIcon = new DataGridViewImageColumn();
+                    updateIcon.Name = "Delete";
+                    updateIcon.HeaderText = "Xóa";
+                    updateIcon.Image = Properties.Resources.delet; // đường dẫn icon
+                    updateIcon.ImageLayout = DataGridViewImageCellLayout.Zoom; // hoặc .Normal, .Stretch
+                    dgvProductView.Columns.Add(updateIcon);
                 }
 
                 // Gắn sự kiện nếu chưa gắn
