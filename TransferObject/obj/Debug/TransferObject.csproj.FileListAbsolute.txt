@@ -30,3 +30,11 @@ D:\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.CoreCompil
 D:\InventoryManagement\TransferObject\obj\Debug\Transfer.F5B4361A.Up2Date
 D:\InventoryManagement\TransferObject\obj\Debug\TransferObject.dll
 D:\InventoryManagement\TransferObject\obj\Debug\TransferObject.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\bin\Debug\TransferObject.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\bin\Debug\TransferObject.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\obj\Debug\TransferObject.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\obj\Debug\Transfer.F5B4361A.Up2Date
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\obj\Debug\TransferObject.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\TransferObject\obj\Debug\TransferObject.pdb

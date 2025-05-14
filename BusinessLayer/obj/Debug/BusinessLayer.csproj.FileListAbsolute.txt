@@ -46,3 +46,15 @@ D:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileI
 D:\InventoryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 D:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\TransferObject.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\bin\Debug\TransferObject.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb

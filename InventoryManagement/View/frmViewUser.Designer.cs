@@ -48,7 +48,7 @@ namespace InventoryManagement.View
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(220, 27);
-            this.label1.Size = new System.Drawing.Size(385, 46);
+            this.label1.Size = new System.Drawing.Size(203, 46);
             this.label1.Text = "User";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 

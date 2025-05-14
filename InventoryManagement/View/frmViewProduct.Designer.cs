@@ -37,7 +37,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(3106, 46);
+            this.label1.Size = new System.Drawing.Size(3679, 46);
             this.label1.Text = "Product";
             // 
             // dgvProductView

@@ -46,28 +46,36 @@
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(13, 44);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(126, 140);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(164, 140);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
             // lbPrice
             // 
-            this.lbPrice.AutoSize = true;
+            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(43, 98);
+            this.lbPrice.ForeColor = System.Drawing.Color.Black;
+            this.lbPrice.Location = new System.Drawing.Point(3, 91);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(39, 20);
+            this.lbPrice.Size = new System.Drawing.Size(158, 29);
             this.lbPrice.TabIndex = 2;
             this.lbPrice.Text = "200";
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbProductName
             // 
-            this.lbProductName.AutoSize = true;
+            this.lbProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductName.Location = new System.Drawing.Point(10, 67);
+            this.lbProductName.ForeColor = System.Drawing.Color.Black;
+            this.lbProductName.Location = new System.Drawing.Point(7, 56);
             this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(106, 18);
+            this.lbProductName.Size = new System.Drawing.Size(154, 29);
             this.lbProductName.TabIndex = 1;
             this.lbProductName.Text = "Prduct Name";
+            this.lbProductName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbProductName.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPic
@@ -75,7 +83,7 @@
             this.txtPic.BackColor = System.Drawing.Color.Transparent;
             this.txtPic.Image = ((System.Drawing.Image)(resources.GetObject("txtPic.Image")));
             this.txtPic.ImageRotate = 0F;
-            this.txtPic.Location = new System.Drawing.Point(32, 11);
+            this.txtPic.Location = new System.Drawing.Point(54, 7);
             this.txtPic.Name = "txtPic";
             this.txtPic.Size = new System.Drawing.Size(90, 90);
             this.txtPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,9 +99,8 @@
             this.Controls.Add(this.txtPic);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(153, 196);
+            this.Size = new System.Drawing.Size(189, 216);
             this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).EndInit();
             this.ResumeLayout(false);
 

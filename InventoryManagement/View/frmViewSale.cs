@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Model;
+﻿using BusinessLayer;
+using InventoryManagement.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,20 +10,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLayer; // Thêm namespace BusinessLayer
-using Guna.UI2.WinForms;
+using static BusinessLayer.SaleBL;
 
 namespace InventoryManagement.View
 {
     public partial class frmViewSale : SampleView
     {
-        private SaleBL saleBL = new SaleBL(); // Khởi tạo BLL
-
         public frmViewSale()
         {
             InitializeComponent();
         }
-
         private void frmViewSale_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -32,85 +29,65 @@ namespace InventoryManagement.View
         {
             MainClass.BlurBackGround(new frmAddSale());
             LoadData();
-        }
 
+        }
         private void LoadData()
         {
-            try
-            {
-                // Gọi BLL để lấy dữ liệu
-                DataTable dt = saleBL.GetSalesData(txtSearch.Text.Trim());
+            ListBox lb = new ListBox();
+            lb.Items.Add(dgvId);
+            lb.Items.Add(dgvDate);
+            lb.Items.Add(dgvsupid);
+            lb.Items.Add(dgvCustomer);
+            lb.Items.Add(dgvAmount);
 
-                // Định dạng DataGridView
-                dgvViewSale.AutoGenerateColumns = false;
-                dgvViewSale.DataSource = dt;
+            string qry = "select dMainID, mdate, m.mSupCusId, c.cusName, SUM(d.amount) " +
+    "from tblMian m inner join tblDetails d on d.dMainID = m.MainID " +
+    "inner join Customer c on c.cusID = m.mSupCusID " +
+    "where m.mType = 'SAL' and c.cusName like '%" + txtSearch.Text + "%' " +
+    "group by dMainID, mdate, m.mSupCusID, c.cusName";
 
-                // Thiết lập các cột (nếu cần customize)
-                dgvId.DataPropertyName = "dMainID";
-                dgvDate.DataPropertyName = "mdate";
-                dgvCustomer.DataPropertyName = "cusName";
-                dgvCusID.DataPropertyName = "mSupCusId";
-                dgvAmount.DataPropertyName = "TotalAmount";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MainClass.LoadData(qry, dgvViewSale, lb);
         }
-
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Xử lý Update
+            
             if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
                 frmAddSale frmAddSale = new frmAddSale();
                 frmAddSale.id = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvid"].Value);
-                frmAddSale.cusID = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvCusID"].Value); // Sửa lại binding đúng cột
+                frmAddSale.cusID = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvCustomer"].Value);
                 MainClass.BlurBackGround(frmAddSale);
                 LoadData();
             }
 
-            // Xử lý Delete
+            // Delete
             if (dgvViewSale.CurrentCell.OwningColumn.Name == "dgvDelete")
             {
-                var dialog = new Guna2MessageDialog
+                var dialog = new Guna.UI2.WinForms.Guna2MessageDialog
                 {
-                    Buttons = MessageDialogButtons.YesNo,
-                    Icon = MessageDialogIcon.Warning,
-                    Text = "Bạn có chắc chắn muốn xóa bản ghi này?",
-                    Caption = "Xác nhận xóa"
+                    Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo,
+                    Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning
                 };
 
-                if (dialog.Show() == DialogResult.Yes)
+                if (dialog.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(dgvViewSale.CurrentRow.Cells["dgvid"].Value);
+                    SaleBL bll = new SaleBL();
 
-                    if (saleBL.DeleteSale(id))
+                    if (bll.DeleteSale(id))
                     {
-                        new Guna2MessageDialog
+                        var successDialog = new Guna.UI2.WinForms.Guna2MessageDialog
                         {
-                            Buttons = MessageDialogButtons.OK,
-                            Icon = MessageDialogIcon.Information,
-                            Text = "Xóa bản ghi thành công!"
-                        }.Show();
+                            Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK,
+                            Icon = Guna.UI2.WinForms.MessageDialogIcon.Information,
+                            Text = "Record deleted successfully."
+                        };
+                        successDialog.Show();
                         LoadData();
-                    }
-                    else
-                    {
-                        new Guna2MessageDialog
-                        {
-                            Buttons = MessageDialogButtons.OK,
-                            Icon = MessageDialogIcon.Error,
-                            Text = "Xóa bản ghi thất bại!"
-                        }.Show();
                     }
                 }
             }
-        }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            LoadData(); // Tải lại dữ liệu khi có thay đổi tìm kiếm
         }
     }
-}
+    }

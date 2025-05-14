@@ -173,6 +173,105 @@ namespace InventoryManagement.Model
                 Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                guna2MessageDialog1.Text = "Please fill all the required fields.";
+                return;
+            }
+            string qry1 = ""; // for main table
+            string qry2 = ""; // for details table
+            int record = 0;
+            if (MainID == 0)
+            {
+                qry1 = @"insert into tblMian Values (@date,@type,@supID)
+                        Select SCOPE_IDENTITY()";
+            }
+            else
+            {
+                qry1 = @"update tblMian set mdate = @date, mType = @type, mSupCusID = @supID where MainID = @id";
+            }
+            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
+            cmd.Parameters.AddWithValue("@id", MainID);
+            //cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(txtDateTime.Value).Date);
+            //cmd.Parameters.AddWithValue("@type", "Pur");
+            //cmd.Parameters.AddWithValue("@supID", Convert.ToInt32(cbSupplier.SelectedValue));
+            cmd.Parameters.Add("@date", SqlDbType.DateTime).Value = Convert.ToDateTime(txtDateTime.Value).Date;
+            cmd.Parameters.Add("@type", SqlDbType.VarChar).Value = "Pur";
+            cmd.Parameters.Add("@supID", SqlDbType.Int).Value = Convert.ToInt32(cbSupplier.SelectedValue);
+
+            if (MainClass.con.State == ConnectionState.Closed)
+            {
+                MainClass.con.Open();
+            }
+            if (MainID == 0)
+            {
+                MainID = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            else
+            {
+                cmd.ExecuteNonQuery();
+            }
+
+            // insert details table 
+            try
+            {
+                foreach (DataGridViewRow row in dgvAddPurchase.Rows)
+                {
+
+
+                    int did = Convert.ToInt32(row.Cells["dgvid"].Value);
+
+
+                    if (did == 0)
+                    {
+                        qry2 = "Insert into tblDetails Values(@mID,@proID,@qty,@price,@amount,@cost)";
+                    }
+                    else
+                    {
+                        qry2 = "Update tblDetails set dMainID = @mID, productID = @proID, qty = @qty, price = @price, amount = @amount, cost = @cost where detailID = @id ";
+                    }
+                    SqlCommand cmd1 = new SqlCommand(qry2, MainClass.con);
+                    cmd1.Parameters.AddWithValue("@id", did);
+                    cmd1.Parameters.AddWithValue("@mID", MainID);
+                    cmd1.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvproid"].Value));
+
+                    cmd1.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvqty"].Value));
+                    cmd1.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvCost"].Value));
+                    cmd1.Parameters.AddWithValue("@amount", Convert.ToDouble(row.Cells["dgvAmount"].Value));
+                    cmd1.Parameters.AddWithValue("@cost", Convert.ToDouble(row.Cells["dgvCost"].Value));
+                    //dgvAddPurchase.Columns["dgvproid"].Visible = false;
+                    Console.WriteLine($"Executing Query: {qry2}");
+                    foreach (SqlParameter param in cmd1.Parameters)
+                    {
+                        Console.WriteLine($"{param.ParameterName}: {param.Value}");
+                    }
+                    record += cmd1.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết: " + sqlEx.Message + "\n" + "SQL Error Code: " + sqlEx.Number);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết: " + ex.Message + "\n" + ex.StackTrace);
+            }
+            if (record == 0)
+            {
+                MessageBox.Show("Lỗi khi lưu chi tiết sản phẩm.");
+            }
+            if (record > 0)
+            {
+                Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                guna2MessageDialog1.Text = "Data Saved Successfully";
+                guna2MessageDialog1.Show();
+
+                MainID = 0;
+                supID = 0;
+                txtDateTime.Value = DateTime.Now;
+                cbSupplier.SelectedIndex = 0;
+                cbSupplier.SelectedIndex = -1;
+
             }
         }
     }

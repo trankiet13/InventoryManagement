@@ -35,7 +35,7 @@
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCusID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvsupid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -45,7 +45,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(2130, 46);
+            this.label1.Size = new System.Drawing.Size(1918, 46);
             this.label1.Text = "Sales List";
             // 
             // dgvViewSale
@@ -72,7 +72,7 @@
             this.dgvSr,
             this.dgvId,
             this.dgvDate,
-            this.dgvCusID,
+            this.dgvsupid,
             this.dgvCustomer,
             this.dgvAmount,
             this.dgvDelete,
@@ -116,10 +116,12 @@
             this.dgvViewSale.ThemeStyle.RowsStyle.Height = 40;
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvViewSale.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvViewSale.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // dgvSr
             // 
-            this.dgvSr.HeaderText = "Sr";
+            this.dgvSr.FillWeight = 28.17449F;
+            this.dgvSr.HeaderText = "Sr #";
             this.dgvSr.MinimumWidth = 6;
             this.dgvSr.Name = "dgvSr";
             this.dgvSr.ReadOnly = true;
@@ -130,23 +132,27 @@
             this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
             this.dgvId.ReadOnly = true;
+            this.dgvId.Visible = false;
             // 
             // dgvDate
             // 
+            this.dgvDate.FillWeight = 28.17449F;
             this.dgvDate.HeaderText = "Date";
             this.dgvDate.MinimumWidth = 6;
             this.dgvDate.Name = "dgvDate";
             this.dgvDate.ReadOnly = true;
             // 
-            // dgvCusID
+            // dgvsupid
             // 
-            this.dgvCusID.HeaderText = "CustomerID";
-            this.dgvCusID.MinimumWidth = 6;
-            this.dgvCusID.Name = "dgvCusID";
-            this.dgvCusID.ReadOnly = true;
+            this.dgvsupid.HeaderText = "supId";
+            this.dgvsupid.MinimumWidth = 6;
+            this.dgvsupid.Name = "dgvsupid";
+            this.dgvsupid.ReadOnly = true;
+            this.dgvsupid.Visible = false;
             // 
             // dgvCustomer
             // 
+            this.dgvCustomer.FillWeight = 28.17449F;
             this.dgvCustomer.HeaderText = "Customer";
             this.dgvCustomer.MinimumWidth = 6;
             this.dgvCustomer.Name = "dgvCustomer";
@@ -154,6 +160,7 @@
             // 
             // dgvAmount
             // 
+            this.dgvAmount.FillWeight = 28.17449F;
             this.dgvAmount.HeaderText = "Amount";
             this.dgvAmount.MinimumWidth = 6;
             this.dgvAmount.Name = "dgvAmount";
@@ -161,21 +168,27 @@
             // 
             // dgvDelete
             // 
+            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDelete.FillWeight = 70F;
             this.dgvDelete.HeaderText = "Delete";
             this.dgvDelete.Image = global::InventoryManagement.Properties.Resources.delet;
             this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.MinimumWidth = 6;
+            this.dgvDelete.MinimumWidth = 70;
             this.dgvDelete.Name = "dgvDelete";
             this.dgvDelete.ReadOnly = true;
+            this.dgvDelete.Width = 70;
             // 
             // dgvUpdate
             // 
+            this.dgvUpdate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvUpdate.FillWeight = 70F;
             this.dgvUpdate.HeaderText = "Update";
             this.dgvUpdate.Image = global::InventoryManagement.Properties.Resources.update;
             this.dgvUpdate.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvUpdate.MinimumWidth = 6;
+            this.dgvUpdate.MinimumWidth = 70;
             this.dgvUpdate.Name = "dgvUpdate";
             this.dgvUpdate.ReadOnly = true;
+            this.dgvUpdate.Width = 70;
             // 
             // frmViewSale
             // 
@@ -188,7 +201,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmViewSale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-         
+            this.Load += new System.EventHandler(this.frmViewSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewSale)).EndInit();
             this.ResumeLayout(false);
 
@@ -199,7 +212,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCusID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvsupid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
