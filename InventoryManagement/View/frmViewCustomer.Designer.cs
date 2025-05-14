@@ -45,7 +45,7 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(1380, 46);
+            this.label1.Size = new System.Drawing.Size(1597, 46);
             this.label1.Text = "Customer List";
             // 
             // dgvViewCustomer
@@ -113,7 +113,7 @@
             this.dgvViewCustomer.ThemeStyle.RowsStyle.Height = 30;
             this.dgvViewCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.dgvViewCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            this.dgvViewCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // dgvSr
             // 
