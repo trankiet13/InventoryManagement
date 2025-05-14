@@ -1,101 +1,191 @@
-﻿using BusinessLayer;
-using InventoryManagement.Model;
+﻿using InventoryManagement.Model;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer; // Thêm namespace BusinessLayer
+using Guna.UI2.WinForms;
 
 namespace InventoryManagement.View
 {
     public partial class frmViewPurchase : SampleView
     {
+        private readonly PurchaseBL _purchaseBL = new PurchaseBL();
+
         public frmViewPurchase()
         {
             InitializeComponent();
+            dgvViewPurchase.CellContentClick += guna2DataGridView1_CellContentClick;
         }
 
         private void frmViewPurchase_Load(object sender, EventArgs e)
         {
+            ConfigureDataGridView();
+            dgvViewPurchase.RowPostPaint += DgvViewPurchase_RowPostPaint; // Thêm dòng này
             LoadData();
         }
-        public override void btAddNew_Click(object sender, EventArgs e)
-        {
-            frmAddPurchase frmaddPurchase = new frmAddPurchase();
-            frmaddPurchase.ShowDialog();
-            LoadData();
 
+        private void DgvViewPurchase_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            // Chỉ gán số thứ tự vào cột "dgvSr" (xóa phần vẽ lên header)
+            if (dgvViewPurchase.Columns.Contains("dgvSr"))
+            {
+                dgvViewPurchase.Rows[e.RowIndex].Cells["dgvSr"].Value = e.RowIndex + 1;
+            }
         }
+
+        private void ConfigureDataGridView()
+        {
+            dgvViewPurchase.AutoGenerateColumns = false;
+            dgvViewPurchase.Columns.Clear();
+
+            // --- Cột Số thứ tự (KHÔNG liên kết CSDL) ---
+            DataGridViewTextBoxColumn dgvSr = new DataGridViewTextBoxColumn();
+            dgvSr.Name = "dgvSr";
+            dgvSr.HeaderText = "Sr #";
+            dgvSr.ReadOnly = true;
+            dgvSr.Width = 50;
+            dgvViewPurchase.Columns.Add(dgvSr);
+
+            // --- Các cột dữ liệu từ CSDL ---
+            // Cột ID (Ẩn đi nếu không cần hiển thị)
+            DataGridViewTextBoxColumn dgvid = new DataGridViewTextBoxColumn();
+            dgvid.Name = "dgvid";
+            dgvid.HeaderText = "ID";
+            dgvid.DataPropertyName = "dMainID";
+            dgvid.Visible = false; // Ẩn cột ID
+            dgvViewPurchase.Columns.Add(dgvid);
+
+            // Cột Ngày
+            DataGridViewTextBoxColumn dgvDate = new DataGridViewTextBoxColumn();
+            dgvDate.Name = "dgvDate";
+            dgvDate.HeaderText = "Ngày";
+            dgvDate.DataPropertyName = "mdate";
+            dgvViewPurchase.Columns.Add(dgvDate);
+
+            // Cột Mã NCC
+            DataGridViewTextBoxColumn dgvsupid = new DataGridViewTextBoxColumn();
+            dgvsupid.Name = "dgvsupid";
+            dgvsupid.HeaderText = "Mã NCC";
+            dgvsupid.DataPropertyName = "mSupCusId";
+            dgvViewPurchase.Columns.Add(dgvsupid);
+
+            // Cột Tên NCC
+            DataGridViewTextBoxColumn dgvSupplier = new DataGridViewTextBoxColumn();
+            dgvSupplier.Name = "dgvSupplier";
+            dgvSupplier.HeaderText = "Nhà cung cấp";
+            dgvSupplier.DataPropertyName = "TENNCC";
+            dgvViewPurchase.Columns.Add(dgvSupplier);
+
+            // Cột Tổng tiền (Sửa lại DataPropertyName)
+            DataGridViewTextBoxColumn dgvAmount = new DataGridViewTextBoxColumn();
+            dgvAmount.Name = "dgvAmount";
+            dgvAmount.HeaderText = "Tổng tiền";
+            dgvAmount.DataPropertyName = "TotalAmount"; // Phải trùng với tên cột trong SQL
+            dgvViewPurchase.Columns.Add(dgvAmount);
+
+            // Thêm nút Edit/Delete (tuỳ chỉnh theo control thực tế của bạn)
+            DataGridViewImageColumn dgvEdit = new DataGridViewImageColumn();
+            dgvEdit.Name = "dgvEdit";
+            dgvEdit.HeaderText = "Sửa";
+            dgvEdit.Image = Properties.Resources.update; // Thêm icon từ Resources
+            dgvEdit.Width = 60;
+            dgvEdit.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dgvViewPurchase.Columns.Add(dgvEdit);
+
+            // Cột Xóa (Sử dụng ImageColumn)
+            DataGridViewImageColumn dgvDelete = new DataGridViewImageColumn();
+            dgvDelete.Name = "dgvDelete";
+            dgvDelete.HeaderText = "Xóa";
+            dgvDelete.Image = Properties.Resources.delet; // Thêm icon từ Resources
+            dgvDelete.Width = 60;
+            dgvDelete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dgvViewPurchase.Columns.Add(dgvDelete);
+        }
+
         private void LoadData()
         {
-            ListBox lb = new ListBox();
-            lb.Items.Add(dgvid);
-            lb.Items.Add(dgvDate);
-            lb.Items.Add(dgvsupid);
-            lb.Items.Add(dgvSupplier);
-            lb.Items.Add(dgvAmount);
+            try
+            {
+                string searchText = txtSearch.Text.Trim();
+                DataTable dt = _purchaseBL.LoadPurchases(searchText);
+                dgvViewPurchase.DataSource = dt;
 
-            string qry = "select dMainID, mdate, m.mSupCusId, s.TENNCC, SUM(d.amount) " +
-    "from tblMian m inner join tblDetails d on d.dMainID = m.MainID " +
-    "inner join dbo.tb_NHACUNGCAP s on s.MANCC = m.mSupCusID " +
-    "where m.mType = 'PUR' and TENNCC like '%" + txtSearch.Text + "%' " +
-    "group by dMainID, mdate, m.mSupCusID, s.TENNCC";
-
-            MainClass.LoadData(qry, dgvViewPurchase, lb);
+                // Kích hoạt đánh lại số thứ tự
+                dgvViewPurchase.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        public override void btAddNew_Click(object sender, EventArgs e)
+        {
+            frmAddPurchase frmAddPurchase = new frmAddPurchase();
+            frmAddPurchase.ShowDialog();
+            LoadData();
+        }
+
         public override void txtSearch_TextChanged(object sender, EventArgs e)
         {
             LoadData();
         }
+
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Update
-            if (dgvViewPurchase.CurrentCell.OwningColumn.Name == "dgvEdit")
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             {
-                frmAddPurchase frmAddPurchase = new frmAddPurchase();
-                frmAddPurchase.MainID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvid"].Value);
-                frmAddPurchase.supID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvsupid"].Value);
-
-                //frmAddPurchase.Amount = Convert.ToDecimal(dgvViewPurchase.CurrentRow.Cells["dgvAmount"].Value);
-                //frmAddPurchase.ProductNam = dgvViewPurchase.CurrentRow.Cells["dgvname"].Value.ToString();
-                //frmAddPurchase.Quantity = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvqty"].Value);
-                //frmAddPurchase.Cost = Convert.ToDecimal(dgvViewPurchase.CurrentRow.Cells["dgvCost"].Value);
-                MainClass.BlurBackGround(frmAddPurchase);
-                LoadData();
-            }
-            // Delete
-            if (dgvViewPurchase.CurrentCell.OwningColumn.Name == "dgvDelete")
-            {
-                Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
-                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
-                if (guna2MessageDialog1.Show("Are you sure you want to delete this record?") == DialogResult.Yes)
+                // Xử lý nút Sửa
+                if (dgvViewPurchase.Columns[e.ColumnIndex].Name == "dgvEdit")
                 {
-                    int id = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "delete from tblMian where MainID = " + id + "";
-                    string qry2 = "delete from tblDetails where dMainID = " + id + "";
-                    Hashtable ht = new Hashtable();
-                    MainClass.SQL(qry, ht);
-                    if (MainClass.SQL(qry2, ht) > 0)
+                    DataGridViewRow row = dgvViewPurchase.Rows[e.RowIndex];
+                    frmAddPurchase frm = new frmAddPurchase
                     {
-                        Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
-                        guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                        guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                        guna2MessageDialog.Text = "Record deleted successfully.";
-                        guna2MessageDialog.Show();
-                        LoadData();
-                    }
+                        MainID = Convert.ToInt32(row.Cells["dgvid"].Value),
+                        supID = Convert.ToInt32(row.Cells["dgvsupid"].Value)
+                    };
+                    frm.ShowDialog();
+                    LoadData();
+                }
 
+                // Xử lý nút Xóa
+                if (dgvViewPurchase.Columns[e.ColumnIndex].Name == "dgvDelete")
+                {
+                    Guna2MessageDialog confirmDialog = new Guna2MessageDialog
+                    {
+                        Buttons = MessageDialogButtons.YesNo,
+                        Icon = MessageDialogIcon.Warning,
+                        Text = "Bạn có chắc chắn muốn xóa đơn hàng này?"
+                    };
+
+                    if (confirmDialog.Show() == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            int mainID = Convert.ToInt32(dgvViewPurchase.Rows[e.RowIndex].Cells["dgvid"].Value);
+                            bool success = _purchaseBL.DeletePurchase(mainID);
+
+                            if (success)
+                            {
+                                Guna2MessageDialog successDialog = new Guna2MessageDialog
+                                {
+                                    Buttons = MessageDialogButtons.OK,
+                                    Icon = MessageDialogIcon.Information,
+                                    Text = "Xóa đơn hàng thành công!"
+                                };
+                                successDialog.Show();
+                                LoadData();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi khi xóa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
         }
-
     }
 }
-
-

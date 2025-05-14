@@ -1,280 +1,230 @@
 ﻿using BusinessLayer;
-using Guna.UI2.WinForms;
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InventoryManagement.Model
 {
     public partial class frmAddPurchase : SampleAdd
     {
-        PurchaseBL bll = new PurchaseBL();
+        private readonly PurchaseBL purchaseBL = new PurchaseBL();
         public int MainID = 0;
         public int supID = 0;
+        public decimal Amount = 0;
+        public string ProductName = "";
+        public int Quantity = 0;
+        public decimal Cost = 0;
+
         public frmAddPurchase()
         {
             InitializeComponent();
         }
 
-
-
-
-        // Thêm vào lớp frmAddPurchase
-
+        // Load form và khởi tạo dữ liệu
         private void frmAddPurchase_Load(object sender, EventArgs e)
         {
 
-
-            string qry2 = "SELECT MANCC 'id', TENNCC 'name' FROM dbo.tb_NHACUNGCAP";
-            MainClass.CBFFILL(qry2, cbSupplier);
-
-            // Đăng ký sự kiện chọn NCC
-            cbSupplier.SelectedIndexChanged += cbSupplier_SelectedIndexChanged;
-
+            // Load danh sách nhà cung cấp
+            DataTable dtSuppliers = purchaseBL.GetSuppliers();
+            cbSupplier.DataSource = dtSuppliers;
+            cbSupplier.DisplayMember = "name"; // Tên cột hiển thị
+            cbSupplier.ValueMember = "id";      // Tên cột giá trị
+            cbSupplier.SelectedIndex = -1;
             // Xử lý khi chỉnh sửa
             if (supID > 0)
             {
                 cbSupplier.SelectedValue = supID;
-                // Sự kiện SelectedIndexChanged sẽ tự động kích hoạt
-
+                LoadProductsBySupplier(supID);
+                txtAmount.Text = Amount.ToString();
+                cbProduct.Text = ProductName;
+                txtQuantity.Text = Quantity.ToString();
+                txtCost.Text = Cost.ToString();
             }
-            else
-            {
-                cbProduct.DataSource = null; // Khởi tạo rỗng
-            }
-
         }
+
+        // Load sản phẩm theo NCC được chọn
         private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSupplier.SelectedValue != null && cbSupplier.SelectedValue.ToString() != "")
             {
                 int supplierID = Convert.ToInt32(cbSupplier.SelectedValue);
-                string qry = "SELECT BARCODE AS 'id', TENHH AS 'name' FROM dbo.tb_HANGHOA WHERE MANCC = @mancc";
-                SqlParameter[] parameters = new SqlParameter[]
-                {
-                    new SqlParameter("@mancc", supplierID)
-                };
-                MainClass.CBFFILL(qry, cbProduct, parameters);
+                LoadProductsBySupplier(supplierID);
             }
             else
             {
-                cbProduct.DataSource = null; // Xóa dữ liệu nếu không chọn NCC
+                cbProduct.DataSource = null;
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        // Trong LoadProductsBySupplier:
+        private void LoadProductsBySupplier(int supplierID)
         {
-
-        }
-
-        private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbProduct.SelectedIndex != -1)
+            try
             {
-                txtQuantity.Text = "";
-                getDetail();
+                DataTable dtProducts = purchaseBL.GetProductsBySupplier(supplierID);
+                if (dtProducts == null || dtProducts.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có sản phẩm nào cho nhà cung cấp này.");
+                    cbProduct.DataSource = new DataTable();
+                    return;
+                }
+                cbProduct.DataSource = dtProducts;
+                cbProduct.DisplayMember = "name";
+                cbProduct.ValueMember = "id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải sản phẩm: " + ex.Message);
             }
         }
-        private void getDetail()
+
+        // Thêm sản phẩm vào DataGridView
+        private void btAddNew_Click(object sender, EventArgs e)
         {
-            string qry = "select * from dbo.tb_HANGHOA where BARCODE = " + Convert.ToInt32(cbProduct.SelectedValue) + "";
-            SqlCommand cmd = new SqlCommand(qry, MainClass.con); SqlDataAdapter da = new SqlDataAdapter(cmd);
+            if (cbProduct.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm!");
+                return;
+            }
+
+            // Lấy giá trị ID từ SelectedValue
+            int productID = Convert.ToInt32(cbProduct.SelectedValue);
+            string productName = cbProduct.Text;
+
+            if (string.IsNullOrEmpty(txtQuantity.Text) || string.IsNullOrEmpty(txtCost.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin sản phẩm!");
+                return;
+            }
+
+            decimal quantity = Convert.ToDecimal(txtQuantity.Text);
+            decimal cost = Convert.ToDecimal(txtCost.Text);
+            decimal amount = quantity * cost;
+
+            dgvAddPurchase.Rows.Add(
+                0,              // dgvid
+                productID,      // ProductID
+                productName,    // ProductName
+                quantity,       // Quantity
+                cost,           // Cost
+                amount.ToString("N2") // Amount
+            );
+
+            // Reset controls
+            cbProduct.SelectedIndex = -1;
+            txtQuantity.Text = "";
+            txtCost.Text = "";
+            txtAmount.Text = "";
+        }
+
+        // Lưu đơn hàng
+        public override void btSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!ValidateInputs())
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                    return;
+                }
+
+                DataTable dtDetails = ConvertGridToDataTable();
+                int result = purchaseBL.SavePurchase(
+                    MainID,
+                    txtDateTime.Value.Date,
+                    Convert.ToInt32(cbSupplier.SelectedValue),
+                    dtDetails
+                );
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Lưu đơn hàng thành công!");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        // Chuyển DataGridView sang DataTable
+        private DataTable ConvertGridToDataTable()
+        {
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            dt.Columns.Add("detailID", typeof(int));
+            dt.Columns.Add("productID", typeof(int));
+            dt.Columns.Add("qty", typeof(int));
+            dt.Columns.Add("price", typeof(decimal));
+            dt.Columns.Add("amount", typeof(decimal));
+
+            foreach (DataGridViewRow row in dgvAddPurchase.Rows)
             {
-                txtCost.Text = dt.Rows[0]["DONGIA"].ToString();
+                if (row.IsNewRow) continue;
+
+                dt.Rows.Add(
+                    Convert.ToInt32(row.Cells["dgvid"].Value),
+                    Convert.ToInt32(row.Cells["dgvproid"].Value),
+                    Convert.ToInt32(row.Cells["dgvqty"].Value),
+                    Convert.ToDecimal(row.Cells["dgvCost"].Value),
+                    Convert.ToDecimal(row.Cells["dgvAmount"].Value)
+                );
             }
+            return dt;
         }
-        private void Caculate()
+
+        // Validate dữ liệu đầu vào
+        private bool ValidateInputs()
         {
-            double qty = 0;
-            double cost = 0;
-            double tamt = 0;
-            double.TryParse(txtQuantity.Text, out qty);
-            double.TryParse(txtCost.Text, out cost);
-            tamt = qty * cost;
-            txtAmount.Text = tamt.ToString();
+            bool isValid = true;
 
+            if (cbSupplier.SelectedIndex == -1)
+            {
+                cbSupplier.Focus();
+                isValid = false;
+            }
+
+            if (dgvAddPurchase.Rows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng thêm ít nhất một sản phẩm!");
+                isValid = false;
+            }
+
+            return isValid;
         }
 
+        // Tính toán Amount tự động
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            Caculate();
+            if (!string.IsNullOrEmpty(txtQuantity.Text) && !string.IsNullOrEmpty(txtCost.Text))
+            {
+                decimal qty, cost;
+                if (decimal.TryParse(txtQuantity.Text, out qty) && decimal.TryParse(txtCost.Text, out cost))
+                {
+                    txtAmount.Text = (qty * cost).ToString("N2");
+                }
+            }
         }
 
+        // Xử lý nhập barcode
         private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(txtBarcode.Text))
             {
-                string qry = "select * from dbo.tb_HANGHOA where BARCODE = " + txtBarcode.Text + "";
-                SqlCommand cmd = new SqlCommand(qry, MainClass.con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count > 0)
+                DataTable product = purchaseBL.GetProductDetails(Convert.ToInt32(txtBarcode.Text));
+                if (product.Rows.Count > 0)
                 {
-                    cbProduct.SelectedValue = dt.Rows[0]["BARCODE"].ToString();
-                    txtCost.Text = dt.Rows[0]["DONGIA"].ToString();
+                    cbProduct.SelectedValue = product.Rows[0]["BARCODE"];
+                    txtCost.Text = product.Rows[0]["DONGIA"].ToString();
                     txtBarcode.Text = "";
                     txtQuantity.Focus();
                 }
             }
         }
-        public override void btClosee_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void btAddNew_Click(object sender, EventArgs e)
-        {
-            string pid;
-            string pname;
-            string qty;
-            string cost;
-            string amt;
 
-            pid = cbProduct.SelectedValue.ToString();
-            pname = cbProduct.Text;
-            qty = txtQuantity.Text;
-            cost = txtCost.Text;
-            amt = txtAmount.Text;
-
-            dgvAddPurchase.Rows.Add(0, 0, pid, pname, qty, cost, amt);
-            cbProduct.SelectedIndex = -1;
-            cbProduct.SelectedIndex = 0;
-            txtQuantity.Text = "";
-
-            txtAmount.Text = "";
-
-
-        }
-
-        private void dgvAddPurchase_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            int count = 0;
-            foreach (DataGridViewRow row in dgvAddPurchase.Rows)
-            {
-                count++;
-                row.Cells[0].Value = count;
-            }
         }
-        public override void btSave_Click(object sender, EventArgs e)
-        {
-            if (MainClass.Validation(this) == false)
-            {
-                Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                guna2MessageDialog1.Text = "Please fill all the required fields.";
-                return;
-            }
-            string qry1 = ""; // for main table
-            string qry2 = ""; // for details table
-            int record = 0;
-            if (MainID == 0)
-            {
-                qry1 = @"insert into tblMian Values (@date,@type,@supID)
-                                Select SCOPE_IDENTITY()";
-            }
-            else
-            {
-                qry1 = @"update tblMian set mdate = @date, mType = @type, mSupCusID = @supID where MainID = @id";
-            }
-            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
-            cmd.Parameters.AddWithValue("@id", MainID);
-            //cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(txtDateTime.Value).Date);
-            //cmd.Parameters.AddWithValue("@type", "Pur");
-            //cmd.Parameters.AddWithValue("@supID", Convert.ToInt32(cbSupplier.SelectedValue));
-            cmd.Parameters.Add("@date", SqlDbType.DateTime).Value = Convert.ToDateTime(txtDateTime.Value).Date;
-            cmd.Parameters.Add("@type", SqlDbType.VarChar).Value = "Pur";
-            cmd.Parameters.Add("@supID", SqlDbType.Int).Value = Convert.ToInt32(cbSupplier.SelectedValue);
-
-            if (MainClass.con.State == ConnectionState.Closed)
-            {
-                MainClass.con.Open();
-            }
-            if (MainID == 0)
-            {
-                MainID = Convert.ToInt32(cmd.ExecuteScalar());
-            }
-            else
-            {
-                cmd.ExecuteNonQuery();
-            }
-
-            // insert details table 
-            try
-            {
-                foreach (DataGridViewRow row in dgvAddPurchase.Rows)
-                {
-
-
-                    int did = Convert.ToInt32(row.Cells["dgvid"].Value);
-
-
-                    if (did == 0)
-                    {
-                        qry2 = "Insert into tblDetails Values(@mID,@proID,@qty,@price,@amount,@cost)";
-                    }
-                    else
-                    {
-                        qry2 = "Update tblDetails set dMainID = @mID, productID = @proID, qty = @qty, price = @price, amount = @amount, cost = @cost where detailID = @id ";
-                    }
-                    SqlCommand cmd1 = new SqlCommand(qry2, MainClass.con);
-                    cmd1.Parameters.AddWithValue("@id", did);
-                    cmd1.Parameters.AddWithValue("@mID", MainID);
-                    cmd1.Parameters.AddWithValue("@proID", Convert.ToString(row.Cells["proid"].Value));
-
-                    cmd1.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvqty"].Value));
-                    cmd1.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvCost"].Value));
-                    cmd1.Parameters.AddWithValue("@amount", Convert.ToDouble(row.Cells["dgvAmount"].Value));
-                    cmd1.Parameters.AddWithValue("@cost", Convert.ToDouble(row.Cells["dgvCost"].Value));
-                    //dgvAddPurchase.Columns["dgvproid"].Visible = false;
-                    Console.WriteLine($"Executing Query: {qry2}");
-                    foreach (SqlParameter param in cmd1.Parameters)
-                    {
-                        Console.WriteLine($"{param.ParameterName}: {param.Value}");
-                    }
-                    record += cmd1.ExecuteNonQuery();
-                }
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show("Lỗi khi lưu chi tiết: " + sqlEx.Message + "\n" + "SQL Error Code: " + sqlEx.Number);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi lưu chi tiết: " + ex.Message + "\n" + ex.StackTrace);
-            }
-            if (record == 0)
-            {
-                MessageBox.Show("Lỗi khi lưu chi tiết sản phẩm.");
-            }
-            if (record > 0)
-            {
-                Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                guna2MessageDialog1.Text = "Data Saved Successfully";
-                guna2MessageDialog1.Show();
-
-                MainID = 0;
-                supID = 0;
-                txtDateTime.Value = DateTime.Now;
-                cbSupplier.SelectedIndex = 0;
-                cbSupplier.SelectedIndex = -1;
-
-            }
-        }
-
     }
 }

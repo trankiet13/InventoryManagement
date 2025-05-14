@@ -1,46 +1,44 @@
 ﻿using DataLayer;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
     public class PurchaseBL
     {
-        //PurchaseDL dal = new PurchaseDL();
+        private readonly PurchaseDL purchaseDL = new PurchaseDL();
 
-        //public int SaveMain(int mainID, DateTime date, string type, int supID)
-        //{
-        //    if (mainID == 0)
-        //        return dal.InsertMain(date, type, supID);
-        //    else
-        //    {
-        //        dal.UpdateMain(mainID, date, type, supID);
-        //        return mainID;
-        //    }
-        //}
+        public DataTable LoadPurchases(string searchText)
+        {
+            return purchaseDL.GetPurchases(searchText);
+        }
 
-        //public int SaveDetail(int did, int mID, string proID, int qty, double cost, double amount)
-        //{
-        //    return dal.InsertOrUpdateDetail(did, mID, proID, qty, cost, amount);
-        //}
+        public bool DeletePurchase(int mainID)
+        {
+            return purchaseDL.DeletePurchase(mainID) > 0;
+        }
+        // Lấy danh sách nhà cung cấp
+        public DataTable GetSuppliers()
+        {
+            return purchaseDL.GetSuppliers();
+        }
 
-        //public void DeletePurchase(int mainID)
-        //{
-        //    dal.DeleteMainAndDetails(mainID);
-        //}
-        //public DataTable GetAllPurchases()
-        //{
-        //    return dal.GetAllPurchases();
-        //}
+        // Lấy sản phẩm theo NCC
+        public DataTable GetProductsBySupplier(int supplierID)
+        {
+            return purchaseDL.GetProductsBySupplier(supplierID);
+        }
 
-        //public DataTable GetPurchaseDetails(int mainID)
-        //{
-        //    return dal.GetPurchaseDetails(mainID);
-        //}
+        // Lấy thông tin chi tiết sản phẩm
+        public DataTable GetProductDetails(int productID)
+        {
+            return purchaseDL.GetProductDetails(productID);
+        }
 
+        // Lưu đơn mua hàng
+        public int SavePurchase(int mainID, DateTime date, int supplierID, DataTable dtDetails)
+        {
+            return purchaseDL.SavePurchase(mainID, date, supplierID, dtDetails);
+        }
     }
 }
