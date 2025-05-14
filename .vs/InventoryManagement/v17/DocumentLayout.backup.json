@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\1\\inventorymanagement\\inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\1\\inventorymanagement\\inventorymanagement\\model\\frmaddsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\model\\frmaddsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\1\\inventorymanagement\\inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|solutionrelative:inventorymanagement\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7096152A-7717-4959-9B95-C43C4FFA2D70}|InventoryManagement\\PresentationLayer.csproj|c:\\users\\lenovo\\desktop\\ltcsdl\\1\\inventorymanagement\\inventorymanagement\\model\\frmaddsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -133,7 +133,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 338,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -149,26 +149,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainClass.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\MainClass.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\MainClass.cs",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\MainClass.cs",
               "RelativeToolTip": "InventoryManagement\\MainClass.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAowBUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAwCcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T05:29:45.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmAddSale.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddSale.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs*",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddSale.cs*",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAwwCUBAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddSale.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAswMsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T05:28:11.92Z",
               "EditorCaption": ""
@@ -179,8 +179,8 @@
               "Title": "frmAddSale.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Model\\frmAddSale.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs [Design]*",
-              "RelativeToolTip": "InventoryManagement\\Model\\frmAddSale.cs [Design]*",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\LTCSDL\\1\\InventoryManagement\\InventoryManagement\\Model\\frmAddSale.cs [Design]",
+              "RelativeToolTip": "InventoryManagement\\Model\\frmAddSale.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T05:26:39.501Z",
               "EditorCaption": " [Design]"
