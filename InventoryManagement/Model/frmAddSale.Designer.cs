@@ -104,10 +104,11 @@
             this.txtDateTime.Animated = true;
             this.txtDateTime.AutoRoundedCorners = true;
             this.txtDateTime.BackColor = System.Drawing.Color.Transparent;
-            this.txtDateTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
+            this.txtDateTime.BorderColor = System.Drawing.Color.White;
             this.txtDateTime.Checked = true;
             this.txtDateTime.FillColor = System.Drawing.Color.White;
             this.txtDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDateTime.ForeColor = System.Drawing.Color.Black;
             this.txtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtDateTime.IndicateFocus = true;
             this.txtDateTime.Location = new System.Drawing.Point(32, 51);

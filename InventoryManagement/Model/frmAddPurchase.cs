@@ -20,6 +20,11 @@ namespace InventoryManagement.Model
         }
         public int MainID = 0;
         public int supID = 0;
+        // Thêm vào lớp frmAddPurchase
+        public decimal Amount = 0;
+        public string ProductNam = "";
+        public int Quantity = 0;
+        public decimal Cost = 0;
         private void frmAddPurchase_Load(object sender, EventArgs e)
         {
             //string qry = "Select  BARCODE 'id' , TENHH 'name' from dbo.tb_HangHoa";
@@ -44,6 +49,10 @@ namespace InventoryManagement.Model
             {
                 cbSupplier.SelectedValue = supID;
                 // Sự kiện SelectedIndexChanged sẽ tự động kích hoạt
+                txtAmount.Text = Amount.ToString();
+                cbProduct.Text = ProductName;
+                txtQuantity.Text = Quantity.ToString();
+                txtCost.Text = Cost.ToString();
             }
             else
             {
@@ -231,7 +240,7 @@ namespace InventoryManagement.Model
                     SqlCommand cmd1 = new SqlCommand(qry2, MainClass.con);
                     cmd1.Parameters.AddWithValue("@id", did);
                     cmd1.Parameters.AddWithValue("@mID", MainID);
-                    cmd1.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvproid"].Value));
+                    cmd1.Parameters.AddWithValue("@proID", Convert.ToString(row.Cells["proid"].Value));
 
                     cmd1.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvqty"].Value));
                     cmd1.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvCost"].Value));
@@ -274,5 +283,6 @@ namespace InventoryManagement.Model
 
             }
         }
+
     }
 }

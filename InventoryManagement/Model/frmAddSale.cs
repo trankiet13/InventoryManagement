@@ -193,6 +193,15 @@ namespace InventoryManagement.Model
 
         private void btSave_Click(object sender, EventArgs e)
         {
+            if (cbCustomer.SelectedIndex == -1 || cbCustomer.SelectedValue == null)
+            {
+                Guna2MessageDialog guna2MessageDialog = new Guna2MessageDialog();
+                guna2MessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                guna2MessageDialog.Text = "Vui lòng chọn khách hàng!";
+                guna2MessageDialog.Show(); // Thêm lệnh Show()
+                return; // Dừng xử lý nếu chưa chọn
+            }
             if ( MainClass.Validation(this) == false)
             {
                 // First have to create to store data

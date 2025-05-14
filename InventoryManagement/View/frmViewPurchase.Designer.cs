@@ -35,6 +35,7 @@
             this.dgvViewPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvsupid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +77,7 @@
             this.dgvViewPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSr,
             this.dgvid,
+            this.dgvname,
             this.dgvDate,
             this.dgvsupid,
             this.dgvSupplier,
@@ -147,6 +149,13 @@
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
             this.dgvid.Visible = false;
+            // 
+            // dgvname
+            // 
+            this.dgvname.HeaderText = "Product Name";
+            this.dgvname.MinimumWidth = 6;
+            this.dgvname.Name = "dgvname";
+            this.dgvname.ReadOnly = true;
             // 
             // dgvDate
             // 
@@ -222,6 +231,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvViewPurchase;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvsupid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSupplier;

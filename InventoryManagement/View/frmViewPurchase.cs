@@ -60,6 +60,10 @@ namespace InventoryManagement.View
                 frmAddPurchase.MainID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvid"].Value);
                 frmAddPurchase.supID = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvsupid"].Value);
                 
+                //frmAddPurchase.Amount = Convert.ToDecimal(dgvViewPurchase.CurrentRow.Cells["dgvAmount"].Value);
+                //frmAddPurchase.ProductNam = dgvViewPurchase.CurrentRow.Cells["dgvname"].Value.ToString();
+                //frmAddPurchase.Quantity = Convert.ToInt32(dgvViewPurchase.CurrentRow.Cells["dgvqty"].Value);
+                //frmAddPurchase.Cost = Convert.ToDecimal(dgvViewPurchase.CurrentRow.Cells["dgvCost"].Value);
                 MainClass.BlurBackGround(frmAddPurchase);
                 LoadData();
             }

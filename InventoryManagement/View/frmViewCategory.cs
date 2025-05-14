@@ -63,6 +63,7 @@ namespace InventoryManagement.View
                     frmAddCategory frm = new frmAddCategory(this);
                     frm.id = Convert.ToInt32(dgvViewCategory.Rows[e.RowIndex].Cells["dgvId"].Value);
                     frm.txtName.Text = dgvViewCategory.Rows[e.RowIndex].Cells["dgvName"].Value.ToString();
+                    
                     MainClass.BlurBackGround(frm);
                     LoadData();
                 }
