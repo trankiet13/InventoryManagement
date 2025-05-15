@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagement.View
 {
-    partial class frmReport
+    partial class frm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btSale = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -40,7 +41,7 @@
             this.lbTitle.ForeColor = System.Drawing.Color.Transparent;
             this.lbTitle.Location = new System.Drawing.Point(76, 54);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(160, 51);
+            this.lbTitle.Size = new System.Drawing.Size(158, 49);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Report";
             // 
@@ -72,17 +73,37 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 2;
             // 
-            // frmReport
+            // btSale
+            // 
+            this.btSale.AutoRoundedCorners = true;
+            this.btSale.BackColor = System.Drawing.Color.Transparent;
+            this.btSale.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btSale.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btSale.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btSale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btSale.FillColor = System.Drawing.Color.DarkBlue;
+            this.btSale.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSale.ForeColor = System.Drawing.Color.White;
+            this.btSale.IndicateFocus = true;
+            this.btSale.Location = new System.Drawing.Point(276, 145);
+            this.btSale.Name = "btSale";
+            this.btSale.Size = new System.Drawing.Size(177, 47);
+            this.btSale.TabIndex = 3;
+            this.btSale.Text = "SALE";
+            this.btSale.Click += new System.EventHandler(this.btSale_Click);
+            // 
+            // frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btSale);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.lbTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmReport";
+            this.Name = "frm";
             this.Text = "frmReport";
             this.Load += new System.EventHandler(this.frmReport_Load);
             this.ResumeLayout(false);
@@ -95,5 +116,6 @@
         private System.Windows.Forms.Label lbTitle;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Button btSale;
     }
 }

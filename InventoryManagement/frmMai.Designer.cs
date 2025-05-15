@@ -36,6 +36,7 @@
             this.pnRight = new Guna.UI2.WinForms.Guna2Panel();
             this.pnLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUsername = new System.Windows.Forms.Label();
+            this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
             this.btUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
@@ -58,7 +59,7 @@
             this.btMaxizeBox.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.btMaxizeBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btMaxizeBox.IconColor = System.Drawing.Color.White;
-            this.btMaxizeBox.Location = new System.Drawing.Point(951, 9);
+            this.btMaxizeBox.Location = new System.Drawing.Point(960, 9);
             this.btMaxizeBox.Name = "btMaxizeBox";
             this.btMaxizeBox.Size = new System.Drawing.Size(45, 29);
             this.btMaxizeBox.TabIndex = 0;
@@ -70,7 +71,7 @@
             this.btExit.CustomClick = true;
             this.btExit.FillColor = System.Drawing.Color.Crimson;
             this.btExit.IconColor = System.Drawing.Color.White;
-            this.btExit.Location = new System.Drawing.Point(1014, 9);
+            this.btExit.Location = new System.Drawing.Point(1023, 9);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(45, 29);
             this.btExit.TabIndex = 1;
@@ -82,7 +83,7 @@
             this.btMinizeBox.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btMinizeBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.btMinizeBox.IconColor = System.Drawing.Color.White;
-            this.btMinizeBox.Location = new System.Drawing.Point(880, 9);
+            this.btMinizeBox.Location = new System.Drawing.Point(889, 9);
             this.btMinizeBox.Name = "btMinizeBox";
             this.btMinizeBox.Size = new System.Drawing.Size(45, 29);
             this.btMinizeBox.TabIndex = 2;
@@ -96,7 +97,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1070, 45);
+            this.pnTop.Size = new System.Drawing.Size(1079, 45);
             this.pnTop.TabIndex = 3;
             this.pnTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTop_Paint);
             // 
@@ -107,7 +108,7 @@
             this.pnRight.Location = new System.Drawing.Point(308, 45);
             this.pnRight.Name = "pnRight";
             this.pnRight.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.pnRight.Size = new System.Drawing.Size(762, 702);
+            this.pnRight.Size = new System.Drawing.Size(771, 828);
             this.pnRight.TabIndex = 4;
             this.pnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnRight_Paint);
             // 
@@ -115,6 +116,7 @@
             // 
             this.pnLeft.BackColor = System.Drawing.Color.CornflowerBlue;
             this.pnLeft.BorderRadius = 60;
+            this.pnLeft.Controls.Add(this.btnSupplier);
             this.pnLeft.Controls.Add(this.btUser);
             this.pnLeft.Controls.Add(this.guna2Button1);
             this.pnLeft.Controls.Add(this.btnSetting);
@@ -134,7 +136,7 @@
             this.pnLeft.FillColor = System.Drawing.Color.CornflowerBlue;
             this.pnLeft.Location = new System.Drawing.Point(0, 45);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(308, 702);
+            this.pnLeft.Size = new System.Drawing.Size(308, 828);
             this.pnLeft.TabIndex = 4;
             // 
             // lbUsername
@@ -149,6 +151,31 @@
             this.lbUsername.TabIndex = 1;
             this.lbUsername.Text = "Username";
             this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
+            // 
+            // btnSupplier
+            // 
+            this.btnSupplier.AutoRoundedCorners = true;
+            this.btnSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSupplier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSupplier.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSupplier.FillColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.HoverState.FillColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSupplier.Image = global::InventoryManagement.Properties.Resources.supplier;
+            this.btnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSupplier.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSupplier.Location = new System.Drawing.Point(46, 720);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnSupplier.Size = new System.Drawing.Size(207, 54);
+            this.btnSupplier.TabIndex = 13;
+            this.btnSupplier.Text = "     Supplier";
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btUser
             // 
@@ -166,7 +193,7 @@
             this.btUser.Image = ((System.Drawing.Image)(resources.GetObject("btUser.Image")));
             this.btUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.btUser.Location = new System.Drawing.Point(46, 720);
+            this.btUser.Location = new System.Drawing.Point(46, 780);
             this.btUser.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btUser.Name = "btUser";
             this.btUser.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -419,8 +446,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(38)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1070, 747);
+            this.ClientSize = new System.Drawing.Size(1079, 873);
             this.Controls.Add(this.pnRight);
             this.Controls.Add(this.pnLeft);
             this.Controls.Add(this.pnTop);
@@ -457,5 +486,6 @@
         public Guna.UI2.WinForms.Guna2Button btnSetting;
         public Guna.UI2.WinForms.Guna2Button btnLogout;
         public Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSupplier;
     }
 }

@@ -101,21 +101,6 @@ namespace InventoryManagement
             get { return img; }
             set { img = value; }
         }
-        //public static void CBFFILL(string qry, ComboBox cb)
-        //{
-        //    SqlCommand cmd = new SqlCommand(qry, con);
-        //    cmd.CommandType = CommandType.Text;
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    DataTable dt = new DataTable();
-        //    da.Fill(dt);
-
-
-        //    cb.DisplayMember = "name";
-        //    cb.ValueMember = "id";
-        //    cb.DataSource = dt;
-        //    cb.SelectedIndex = -1;
-
-        //}
         public static void CBFFILL(string qry, ComboBox cb, SqlParameter[] parameters = null)
         {
             using (SqlCommand cmd = new SqlCommand(qry, con))
@@ -155,28 +140,6 @@ namespace InventoryManagement
                 BackGround.Dispose();   
             }
         }
-        //public static void LoadData(string qry,DataGridView gv, ListBox lb)
-        //{
-        //    gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
-        //    try
-        //    {
-        //        SqlCommand cmd = new SqlCommand(qry, con);
-        //        cmd.CommandType = CommandType.Text;
-        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //        DataTable dt = new DataTable();
-        //        da.Fill(dt);
-        //        for (int i = 0; i < lb.Items.Count; i++)
-        //        {
-        //            string colName1 = ((DataGridViewTextBoxColumn)lb.Items[i]).Name;
-        //            gv.Columns[colName1].DataPropertyName = dt.Columns[i].ToString();
-        //        }
-        //        gv.DataSource = dt;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    } 
-        //}
         public static void LoadData(string qry, DataGridView gv, ListBox lb)
         {
             gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);

@@ -172,7 +172,6 @@ C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Deb
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Properties.Resources.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.SampleAdd.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.SampleView.resources
-C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmReport.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmUserView.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewCategory.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewCustomer.resources
@@ -212,3 +211,6 @@ C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\bin\Deb
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\Presenta.9C561136.Up2Date
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frm.resources
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddSupplier.resources
+C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewSupplier.resources

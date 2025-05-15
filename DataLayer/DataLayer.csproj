@@ -57,7 +57,9 @@
     <Compile Include="ProductsDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseDL.cs" />
+    <Compile Include="ReportDL.cs" />
     <Compile Include="SaleDL.cs" />
+    <Compile Include="SupplierDL.cs" />
     <Compile Include="UserDL.cs" />
   </ItemGroup>
   <ItemGroup>

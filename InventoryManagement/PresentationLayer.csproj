@@ -107,6 +107,12 @@
     <Compile Include="Model\frmAddSale.Designer.cs">
       <DependentUpon>frmAddSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddSupplier.Designer.cs">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmProductStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptSale.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rptStock1.cs">
       <AutoGen>True</AutoGen>
@@ -216,6 +228,12 @@
     <Compile Include="View\frmViewSale.Designer.cs">
       <DependentUpon>frmViewSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmViewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewSupplier.Designer.cs">
+      <DependentUpon>frmViewSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmViewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +264,9 @@
     <EmbeddedResource Include="Model\frmAddSale.resx">
       <DependentUpon>frmAddSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddSupplier.resx">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductStatistical.resx">
       <DependentUpon>frmProductStatistical.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +289,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSale.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -299,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewSale.resx">
       <DependentUpon>frmViewSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewSupplier.resx">
+      <DependentUpon>frmViewSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewUser.resx">
       <DependentUpon>frmViewUser.cs</DependentUpon>
@@ -404,6 +432,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

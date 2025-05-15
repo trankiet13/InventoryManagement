@@ -42,6 +42,7 @@ namespace InventoryManagement.Model
                 txtCost.Text = Cost.ToString();
             }
         }
+       
 
         // Load sản phẩm theo NCC được chọn
         private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,12 +50,14 @@ namespace InventoryManagement.Model
             if (cbSupplier.SelectedValue != null &&
                 int.TryParse(cbSupplier.SelectedValue.ToString(), out int supplierID))
             {
-                LoadProductsBySupplier(supplierID); // Load sản phẩm khi NCC thay đổi
+                LoadProductsBySupplier(supplierID);
+                 // Load sản phẩm khi NCC thay đổi
             }
             else
             {
                 cbProduct.DataSource = null; // Reset nếu không có NCC được chọn
             }
+
         }
         // Trong LoadProductsBySupplier:
         private void LoadProductsBySupplier(int supplierID)
@@ -80,6 +83,7 @@ namespace InventoryManagement.Model
             {
                 MessageBox.Show($"Lỗi khi tải sản phẩm: {ex.Message}");
             }
+
         }
 
         // Thêm sản phẩm vào DataGridView

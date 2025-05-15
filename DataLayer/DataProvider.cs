@@ -303,6 +303,21 @@ namespace DataLayer
                 row.Cells[0].Value = count;
             }
         }
-    
-}
+        private DataTable ExecuteQuery(string qry, Hashtable ht)
+        {
+            DataTable dt = new DataTable();
+            using (SqlCommand cmd = new SqlCommand(qry, con))
+            {
+                cmd.CommandType = CommandType.Text;
+                foreach (DictionaryEntry item in ht)
+                {
+                    cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
+
+    }
 }

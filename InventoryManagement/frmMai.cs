@@ -210,7 +210,12 @@ namespace InventoryManagement
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            LoadChildForm(new View.frmReport());
+            LoadChildForm(new View.frm());
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new frmViewSupplier());
         }
     }
     
