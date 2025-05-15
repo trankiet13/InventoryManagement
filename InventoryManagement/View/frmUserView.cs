@@ -149,5 +149,11 @@ namespace InventoryManagement.View
         {
 
         }
+        private void btnAddCompany_Click(object sender, EventArgs e)
+        {
+            frmAddCompany cpn = new frmAddCompany();
+            cpn.ShowDialog();
+
+        }
     }
 }

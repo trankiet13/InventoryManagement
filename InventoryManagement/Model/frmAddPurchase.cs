@@ -15,11 +15,13 @@ namespace InventoryManagement.Model
         public string ProductName = "";
         public int Quantity = 0;
         public decimal Cost = 0;
-
+        public DateTime PurchaseDate { get; set; }
+        public decimal TotalAmount { get; set; }
         public frmAddPurchase()
         {
             InitializeComponent();
         }
+
 
         // Load form và khởi tạo dữ liệu
         private void frmAddPurchase_Load(object sender, EventArgs e)
@@ -30,60 +32,91 @@ namespace InventoryManagement.Model
             cbSupplier.DisplayMember = "name";
             cbSupplier.ValueMember = "id";
             cbSupplier.SelectedIndex = -1;
-            // Xử lý khi chỉnh sửa
-            if (supID > 0)
-            {
 
+            // Xử lý khi chỉnh sửa
+            if (MainID > 0)
+            {
+                // Set giá trị từ đơn cũ
+                txtDateTime.Value = PurchaseDate;
+                txtAmount.Text = TotalAmount.ToString("N0");
                 cbSupplier.SelectedValue = supID;
+
+                // Load sản phẩm và chi tiết
                 LoadProductsBySupplier(supID);
-                txtAmount.Text = Amount.ToString();
-                cbProduct.Text = ProductName;
-                txtQuantity.Text = Quantity.ToString();
-                txtCost.Text = Cost.ToString();
+                LoadPurchaseDetails(MainID); // Load chi tiết từ CSDL
+            }
+
+            dgvAddPurchase.Columns["dgvAmount"].DefaultCellStyle.Format = "N0";
+        }
+        // Thêm phương thức load chi tiết
+        private void LoadPurchaseDetails(int mainID)
+        {
+            try
+            {
+                DataTable dtDetails = purchaseBL.GetPurchaseDetails(mainID);
+                dgvAddPurchase.Rows.Clear();
+
+                foreach (DataRow row in dtDetails.Rows)
+                {
+                    dgvAddPurchase.Rows.Add(
+                        dgvAddPurchase.Rows.Count + 1, // dgvSR
+                        row["detailID"],                // dgvid
+                        row["productID"],              // dgvproid
+                        row["name"],                   // dgvname
+                        row["qty"],                    // dgvqty
+                        row["cost"],                   // dgvCost 
+                        row["amount"]                  // dgvAmount
+                    );
+                }
+
+                // Cập nhật tổng tiền
+                txtAmount.Text = TotalAmount.ToString("N0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải chi tiết: " + ex.Message);
             }
         }
-       
-
         // Load sản phẩm theo NCC được chọn
         private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSupplier.SelectedValue != null &&
                 int.TryParse(cbSupplier.SelectedValue.ToString(), out int supplierID))
             {
-                LoadProductsBySupplier(supplierID);
-                 // Load sản phẩm khi NCC thay đổi
+                LoadProductsBySupplier(supplierID); // Load sản phẩm khi NCC thay đổi
             }
             else
             {
                 cbProduct.DataSource = null; // Reset nếu không có NCC được chọn
             }
-
         }
-        // Trong LoadProductsBySupplier:
+
         private void LoadProductsBySupplier(int supplierID)
         {
             try
             {
                 DataTable dtProducts = purchaseBL.GetProductsBySupplier(supplierID);
-
-                // Kiểm tra dữ liệu hợp lệ
                 if (dtProducts == null || dtProducts.Rows.Count == 0)
                 {
                     MessageBox.Show("Nhà cung cấp này không có sản phẩm.");
-                    cbProduct.DataSource = null; // Sửa thành null
+                    cbProduct.DataSource = null;
+                    txtCost.Text = "";
                     return;
                 }
 
-                // Đảm bảo tên cột "id" và "name" tồn tại
+                // Gán DataSource và hiển thị tên sản phẩm
                 cbProduct.DataSource = dtProducts;
                 cbProduct.DisplayMember = "name";
                 cbProduct.ValueMember = "id";
+                cbProduct.SelectedIndex = 0;
+
+                // Tự động điền giá vào txtCost khi chọn sản phẩm đầu tiên
+                txtCost.Text = dtProducts.Rows[0]["DONGIA"].ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi tải sản phẩm: {ex.Message}");
             }
-
         }
 
         // Thêm sản phẩm vào DataGridView
@@ -95,27 +128,22 @@ namespace InventoryManagement.Model
                 return;
             }
 
-            // Lấy giá trị ID từ SelectedValue
-            int productID = Convert.ToInt32(cbProduct.SelectedValue);
+            // Lấy giá trị từ các controls
+            string productID = cbProduct.SelectedValue.ToString();
             string productName = cbProduct.Text;
-
-            if (string.IsNullOrEmpty(txtQuantity.Text) || string.IsNullOrEmpty(txtCost.Text))
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin sản phẩm!");
-                return;
-            }
-
             decimal quantity = Convert.ToDecimal(txtQuantity.Text);
-            decimal cost = Convert.ToDecimal(txtCost.Text);
+            decimal cost = Convert.ToDecimal(txtCost.Text); // Lấy từ txtCost (đã điền tự động)
             decimal amount = quantity * cost;
 
+            // Thêm hàng vào DataGridView
             dgvAddPurchase.Rows.Add(
-                0,              // dgvid
-                productID,      // ProductID
-                productName,    // ProductName
-                quantity,       // Quantity
-                cost,           // Cost
-                amount.ToString("N2") // Amount
+                dgvAddPurchase.Rows.Count + 1, // dgvSR (số thứ tự)
+                0,                             // dgvid = 0 (hàng mới)
+                productID,                     // dgvproid (ẩn)
+                productName,                   // dgvname
+                quantity,                      // dgvqty
+                cost,                          // dgvCost (lấy từ txtCost)
+                amount.ToString("N0")          // dgvAmount
             );
 
             // Reset controls
@@ -124,7 +152,6 @@ namespace InventoryManagement.Model
             txtCost.Text = "";
             txtAmount.Text = "";
         }
-
         // Lưu đơn hàng
         public override void btSave_Click(object sender, EventArgs e)
         {
@@ -161,10 +188,11 @@ namespace InventoryManagement.Model
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("detailID", typeof(int));
-            dt.Columns.Add("productID", typeof(int));
+            dt.Columns.Add("productID", typeof(string));
             dt.Columns.Add("qty", typeof(int));
             dt.Columns.Add("price", typeof(decimal));
             dt.Columns.Add("amount", typeof(decimal));
+            dt.Columns.Add("cost", typeof(decimal)); // Thêm cột cost
 
             foreach (DataGridViewRow row in dgvAddPurchase.Rows)
             {
@@ -172,16 +200,16 @@ namespace InventoryManagement.Model
 
                 dt.Rows.Add(
                     Convert.ToInt32(row.Cells["dgvid"].Value),
-                    Convert.ToInt32(row.Cells["dgvproid"].Value),
+                    row.Cells["dgvproid"].Value.ToString(),
                     Convert.ToInt32(row.Cells["dgvqty"].Value),
-                    Convert.ToDecimal(row.Cells["dgvCost"].Value),
-                    Convert.ToDecimal(row.Cells["dgvAmount"].Value)
+                    Convert.ToDecimal(row.Cells["dgvCost"].Value), // Lấy từ dgvCost
+                    Convert.ToDecimal(row.Cells["dgvAmount"].Value),
+                    Convert.ToDecimal(row.Cells["dgvCost"].Value)   // Gán cost từ dgvCost
                 );
             }
 
             return dt;
         }
-
         // Validate dữ liệu đầu vào
         private bool ValidateInputs()
         {
@@ -220,22 +248,36 @@ namespace InventoryManagement.Model
         {
             if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(txtBarcode.Text))
             {
-                if (int.TryParse(txtBarcode.Text, out int barcode))
+                string barcode = txtBarcode.Text;
+                DataTable product = purchaseBL.GetProductDetails(barcode);
+                if (product.Rows.Count > 0)
                 {
-                    DataTable product = purchaseBL.GetProductDetails(barcode);
-                    if (product.Rows.Count > 0)
-                    {
-                        // Sửa thành cột "id" thay vì "BARCODE"
-                        cbProduct.SelectedValue = product.Rows[0]["id"];
-                        txtCost.Text = product.Rows[0]["DONGIA"].ToString();
-                        txtBarcode.Text = "";
-                        txtQuantity.Focus();
-                    }
+                    cbProduct.SelectedValue = product.Rows[0]["BARCODE"].ToString();
+                    txtCost.Text = product.Rows[0]["DONGIA"].ToString();
+                    txtBarcode.Text = "";
+                    txtQuantity.Focus();
                 }
             }
         }
 
         private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProduct.SelectedValue != null && cbProduct.DataSource != null)
+            {
+                DataTable dtProducts = (DataTable)cbProduct.DataSource;
+                string selectedProductID = cbProduct.SelectedValue.ToString();
+
+                // Tìm hàng tương ứng với productID được chọn
+                DataRow[] rows = dtProducts.Select($"id = '{selectedProductID}'");
+                if (rows.Length > 0)
+                {
+                    // Lấy giá từ cột DONGIA và gán vào txtCost
+                    txtCost.Text = rows[0]["DONGIA"].ToString();
+                }
+            }
+        }
+
+        private void dgvAddPurchase_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

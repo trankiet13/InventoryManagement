@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AccountBL.cs" />
     <Compile Include="CategoryBL.cs" />
+    <Compile Include="CompanyBL.cs" />
     <Compile Include="CustomerBL.cs" />
     <Compile Include="LoginBL.cs" />
     <Compile Include="ProductsBL.cs" />

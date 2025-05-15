@@ -303,7 +303,7 @@ namespace DataLayer
                 row.Cells[0].Value = count;
             }
         }
-        private DataTable ExecuteQuery(string qry, Hashtable ht)
+        public DataTable ExecuteQuery(string qry, Hashtable ht)
         {
             DataTable dt = new DataTable();
             using (SqlCommand cmd = new SqlCommand(qry, con))

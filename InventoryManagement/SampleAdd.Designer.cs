@@ -121,7 +121,7 @@
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(847, 91);
+            this.guna2Panel3.Size = new System.Drawing.Size(847, 90);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2ControlBox1

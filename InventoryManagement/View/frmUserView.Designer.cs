@@ -44,6 +44,7 @@
             this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAddCompany = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.label1.AllowDrop = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Size = new System.Drawing.Size(918, 49);
+            this.label1.Size = new System.Drawing.Size(1226, 49);
             this.label1.Text = "User Detail";
             // 
             // guna2DataGridView1
@@ -99,7 +100,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(106, 239);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(99, 274);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -113,7 +114,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(747, 256);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(747, 189);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -228,11 +229,31 @@
             this.dgvDel.ReadOnly = true;
             this.dgvDel.Width = 70;
             // 
+            // btnAddCompany
+            // 
+            this.btnAddCompany.Animated = true;
+            this.btnAddCompany.AutoRoundedCorners = true;
+            this.btnAddCompany.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCompany.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCompany.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(51)))), ((int)(((byte)(255)))));
+            this.btnAddCompany.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddCompany.ForeColor = System.Drawing.Color.White;
+            this.btnAddCompany.Image = global::InventoryManagement.Properties.Resources._1564491_add_create_new_plus_icon__1_;
+            this.btnAddCompany.Location = new System.Drawing.Point(79, 205);
+            this.btnAddCompany.Name = "btnAddCompany";
+            this.btnAddCompany.Size = new System.Drawing.Size(177, 45);
+            this.btnAddCompany.TabIndex = 3;
+            this.btnAddCompany.Text = "Add New Company";
+            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
+            // 
             // frmUserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 507);
+            this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.guna2DataGridView1);
             this.Name = "frmUserView";
             this.Text = "frmUserView";
@@ -256,5 +277,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEmail;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDel;
+        public Guna.UI2.WinForms.Guna2Button btnAddCompany;
     }
 }

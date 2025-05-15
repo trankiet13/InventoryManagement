@@ -16,7 +16,7 @@ namespace InventoryManagement.View
         public frmViewPurchase()
         {
             InitializeComponent();
-            dgvViewPurchase.CellContentClick += guna2DataGridView1_CellContentClick;
+
         }
 
         private void frmViewPurchase_Load(object sender, EventArgs e)
@@ -34,7 +34,15 @@ namespace InventoryManagement.View
                 dgvViewPurchase.Rows[e.RowIndex].Cells["dgvSr"].Value = e.RowIndex + 1;
             }
         }
+        public void LoadPurchases()
+        {
+            // Giả sử phương thức này tải dữ liệu từ CSDL
+            DataTable dt = _purchaseBL.LoadPurchases("");
+            dgvViewPurchase.DataSource = dt;
 
+            // Định dạng cột Amount không hiển thị số thập phân
+            dgvViewPurchase.Columns["Amount"].DefaultCellStyle.Format = "N0";
+        }
         private void ConfigureDataGridView()
         {
             dgvViewPurchase.AutoGenerateColumns = false;
@@ -144,10 +152,13 @@ namespace InventoryManagement.View
                     frmAddPurchase frm = new frmAddPurchase
                     {
                         MainID = Convert.ToInt32(row.Cells["dgvid"].Value),
-                        supID = Convert.ToInt32(row.Cells["dgvsupid"].Value)
+                        supID = Convert.ToInt32(row.Cells["dgvsupid"].Value),
+                        PurchaseDate = Convert.ToDateTime(row.Cells["dgvDate"].Value),
+                        TotalAmount = Convert.ToDecimal(row.Cells["dgvAmount"].Value)
                     };
                     frm.ShowDialog();
                     LoadData();
+                    return;
                 }
 
                 // Xử lý nút Xóa

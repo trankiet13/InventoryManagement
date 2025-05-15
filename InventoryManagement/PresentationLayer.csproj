@@ -77,11 +77,23 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="Model\frmAddBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddBranch.Designer.cs">
+      <DependentUpon>frmAddBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\frmAddCategory.Designer.cs">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmAddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddCompany.Designer.cs">
+      <DependentUpon>frmAddCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmAddCustomer.cs">
       <SubType>Form</SubType>
@@ -249,8 +261,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddBranch.resx">
+      <DependentUpon>frmAddBranch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddCategory.resx">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddCompany.resx">
+      <DependentUpon>frmAddCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>

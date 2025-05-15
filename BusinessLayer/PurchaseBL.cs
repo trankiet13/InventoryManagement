@@ -30,9 +30,13 @@ namespace BusinessLayer
         }
 
         // Lấy thông tin chi tiết sản phẩm
-        public DataTable GetProductDetails(int productID)
+        public DataTable GetProductDetails(string barcode)
         {
-            return purchaseDL.GetProductDetails(productID);
+            return purchaseDL.GetProductDetails(barcode);
+        }
+        public DataTable GetPurchaseDetails(int mainID)
+        {
+            return purchaseDL.GetPurchaseDetails(mainID);
         }
 
         // Lưu đơn mua hàng

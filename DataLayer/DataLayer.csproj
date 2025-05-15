@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AccountDL.cs" />
     <Compile Include="CategoryDL.cs" />
+    <Compile Include="CompanyDL.cs" />
     <Compile Include="CustomerDL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoginDL.cs" />

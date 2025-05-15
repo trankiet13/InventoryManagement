@@ -46,7 +46,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(882, 148);
+            this.guna2Panel1.Size = new System.Drawing.Size(882, 165);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -118,7 +118,7 @@
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(81, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 26);
+            this.label1.Size = new System.Drawing.Size(201, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sample Header";
             // 

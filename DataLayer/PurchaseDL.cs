@@ -62,6 +62,7 @@ namespace DataLayer
             DataTable dt = new DataTable();
             try
             {
+                Connect(); // Thêm kết nối
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.CommandType = CommandType.Text;
 
@@ -80,6 +81,10 @@ namespace DataLayer
             {
                 throw;
             }
+            finally
+            {
+                Disconnect(); // Đóng kết nối sau khi hoàn tất
+            }
             return dt;
         }
         // Lấy danh sách nhà cung cấp
@@ -93,73 +98,112 @@ namespace DataLayer
 
         public DataTable GetProductsBySupplier(int supplierID)
         {
-            // Đảm bảo tên cột trả về là "id" và "name"
-            string qry = "SELECT BARCODE AS id, TENHH AS name FROM tb_HANGHOA WHERE MANCC = @mancc";
+            string qry = "SELECT BARCODE AS id, TENHH AS name, DONGIA FROM tb_HANGHOA WHERE MANCC = @mancc";
             Hashtable ht = new Hashtable();
             ht.Add("@mancc", supplierID);
             return ExecuteQuery(qry, ht);
         }
-
         // Lấy thông tin sản phẩm theo barcode
-        public DataTable GetProductDetails(int productID)
+        public DataTable GetProductDetails(string barcode)
         {
             string qry = "SELECT * FROM dbo.tb_HANGHOA WHERE BARCODE = @barcode";
             Hashtable ht = new Hashtable();
-            ht.Add("@barcode", productID);
+            ht.Add("@barcode", barcode);
             return ExecuteQuery(qry, ht);
         }
 
         // Thêm/Xóa đơn mua hàng (Main và Details)
         public int SavePurchase(int mainID, DateTime date, int supplierID, DataTable dtDetails)
         {
+            SqlTransaction transaction = null;
             try
             {
-                Connect();
-                using (SqlTransaction transaction = cn.BeginTransaction())
-                {
-                    // Xử lý tblMain
-                    string qryMain = (mainID == 0) ?
-                        "INSERT INTO tblMian (mdate, mType, mSupCusID) VALUES (@date, 'PUR', @supID); SELECT SCOPE_IDENTITY();" :
-                        "UPDATE tblMian SET mdate = @date, mSupCusID = @supID WHERE MainID = @id";
+                Connect(); // Mở kết nối
+                transaction = cn.BeginTransaction(); // Bắt đầu transaction
 
-                    SqlCommand cmdMain = new SqlCommand(qryMain, cn, transaction);
+                // 1. Xử lý bảng chính (tblMain)
+                string qryMain = (mainID == 0) ?
+      "INSERT INTO tblMian (mdate, mType, mSupCusID) VALUES (@date, 'PUR', @supID); SELECT SCOPE_IDENTITY();" :
+      "UPDATE tblMian SET mdate = @date, mSupCusID = @supID WHERE MainID = @id";
+
+                using (SqlCommand cmdMain = new SqlCommand(qryMain, cn, transaction))
+                {
                     cmdMain.Parameters.AddWithValue("@date", date);
                     cmdMain.Parameters.AddWithValue("@supID", supplierID);
-                    if (mainID != 0) cmdMain.Parameters.AddWithValue("@id", mainID);
 
-                    // Lấy MainID mới nếu là thêm mới
-                    if (mainID == 0)
-                        mainID = Convert.ToInt32(cmdMain.ExecuteScalar());
-                    else
-                        cmdMain.ExecuteNonQuery();
-
-                    // Xử lý tblDetails
-                    foreach (DataRow row in dtDetails.Rows)
+                    if (mainID != 0)
                     {
-                        string qryDetails = (row["detailID"].ToString() == "0") ?
-                            "INSERT INTO tblDetails (dMainID, productID, qty, price, amount) VALUES (@mID, @proID, @qty, @price, @amount)" :
-                            "UPDATE tblDetails SET productID = @proID, qty = @qty, price = @price, amount = @amount WHERE detailID = @id";
+                        cmdMain.Parameters.AddWithValue("@id", mainID);
+                        cmdMain.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        mainID = Convert.ToInt32(cmdMain.ExecuteScalar());
+                    }
+                }
 
-                        SqlCommand cmdDetails = new SqlCommand(qryDetails, cn, transaction);
+                // 2. Xử lý chi tiết (tblDetails)
+                foreach (DataRow row in dtDetails.Rows)
+                {
+                    int detailID = Convert.ToInt32(row["detailID"]);
+                    string qryDetails = (detailID == 0) ?
+                        @"INSERT INTO tblDetails (dMainID, productID, qty, price, amount,cost) 
+                  VALUES (@mID, @proID, @qty, @price, @amount,@cost)" :
+                        @"UPDATE tblDetails SET 
+                    productID = @proID, 
+                    qty = @qty, 
+                    price = @price, 
+                    amount = @amount,
+                    cost = @cost
+                  WHERE detailID = @id";
+
+                    using (SqlCommand cmdDetails = new SqlCommand(qryDetails, cn, transaction))
+                    {
                         cmdDetails.Parameters.AddWithValue("@mID", mainID);
                         cmdDetails.Parameters.AddWithValue("@proID", row["productID"]);
                         cmdDetails.Parameters.AddWithValue("@qty", row["qty"]);
                         cmdDetails.Parameters.AddWithValue("@price", row["price"]);
                         cmdDetails.Parameters.AddWithValue("@amount", row["amount"]);
-                        if (row["detailID"].ToString() != "0")
-                            cmdDetails.Parameters.AddWithValue("@id", row["detailID"]);
+                        cmdDetails.Parameters.AddWithValue("@cost", row["cost"]);
+
+                        if (detailID != 0)
+                            cmdDetails.Parameters.AddWithValue("@id", detailID);
 
                         cmdDetails.ExecuteNonQuery();
                     }
-
-                    transaction.Commit();
-                    return mainID;
                 }
+
+                transaction.Commit(); // Commit transaction
+                return mainID;
+            }
+            catch (Exception ex)
+            {
+                // Rollback transaction nếu có lỗi
+                transaction?.Rollback();
+                throw new Exception("Lỗi khi lưu đơn hàng: " + ex.Message);
             }
             finally
             {
-                Disconnect();
+                Disconnect(); // Đóng kết nối
             }
+        }
+        public DataTable GetPurchaseDetails(int mainID)
+        {
+            string qry = @"SELECT 
+        d.detailID, 
+        d.productID, 
+        h.TENHH AS name, 
+        d.qty, 
+        d.cost, 
+        d.amount 
+        FROM tblDetails d
+        INNER JOIN tb_HANGHOA h ON h.BARCODE = d.productID
+        WHERE d.dMainID = @mainID";
+
+            Hashtable ht = new Hashtable();
+            ht.Add("@mainID", mainID);
+
+            return ExecuteQuery(qry, ht);
         }
     }
 }
