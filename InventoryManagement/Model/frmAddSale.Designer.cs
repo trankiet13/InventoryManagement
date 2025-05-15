@@ -127,6 +127,7 @@
             this.lbName.Size = new System.Drawing.Size(59, 16);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Barcode";
+            this.lbName.Visible = false;
             // 
             // txtBarcode
             // 
@@ -148,6 +149,7 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 20;
+            this.txtBarcode.Visible = false;
             // 
             // guna2Panel1
             // 

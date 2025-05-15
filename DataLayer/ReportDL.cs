@@ -15,8 +15,8 @@ namespace DataLayer
             string qry = @"SELECT 
                             P.BARCODE,
                             P.TENHH,
-                            ISNULL(SUM(CASE WHEN M.mType = 'NH' THEN D.qty ELSE 0 END), 0)
-                            - ISNULL(SUM(CASE WHEN M.mType = 'XH' THEN D.qty ELSE 0 END), 0) AS TonKho
+                            ISNULL(SUM(CASE WHEN M.mType = 'PUR' THEN D.qty ELSE 0 END), 0)
+                            - ISNULL(SUM(CASE WHEN M.mType = 'SAL' THEN D.qty ELSE 0 END), 0) AS TonKho
                         FROM dbo.tb_HANGHOA P
                         LEFT JOIN tblDetails D ON CAST(P.BARCODE AS INT) = D.productID
                         LEFT JOIN tblMian M ON D.dMainID = M.MainId

@@ -67,6 +67,7 @@
             this.lbName.Size = new System.Drawing.Size(72, 23);
             this.lbName.TabIndex = 8;
             this.lbName.Text = "Barcode";
+            this.lbName.Visible = false;
             // 
             // txtBarcode
             // 
@@ -88,13 +89,14 @@
             this.txtBarcode.SelectedText = "";
             this.txtBarcode.Size = new System.Drawing.Size(197, 40);
             this.txtBarcode.TabIndex = 7;
+            this.txtBarcode.Visible = false;
             this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
             // 
             // label100
             // 
             this.label100.AutoSize = true;
             this.label100.ForeColor = System.Drawing.Color.Transparent;
-            this.label100.Location = new System.Drawing.Point(526, 236);
+            this.label100.Location = new System.Drawing.Point(395, 236);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(76, 23);
             this.label100.TabIndex = 10;
@@ -113,7 +115,7 @@
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.Location = new System.Drawing.Point(514, 258);
+            this.txtQuantity.Location = new System.Drawing.Point(383, 258);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceholderText = "";
@@ -131,7 +133,7 @@
             this.txtDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtDateTime.IndicateFocus = true;
-            this.txtDateTime.Location = new System.Drawing.Point(57, 150);
+            this.txtDateTime.Location = new System.Drawing.Point(155, 150);
             this.txtDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDateTime.Name = "txtDateTime";
@@ -144,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(81, 131);
+            this.label3.Location = new System.Drawing.Point(179, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 23);
             this.label3.TabIndex = 12;
@@ -161,10 +163,11 @@
             this.cbSupplier.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSupplier.ItemHeight = 30;
-            this.cbSupplier.Location = new System.Drawing.Point(281, 150);
+            this.cbSupplier.Location = new System.Drawing.Point(379, 150);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(187, 36);
             this.cbSupplier.TabIndex = 13;
+            this.cbSupplier.SelectedIndexChanged += new System.EventHandler(this.cbSupplier_SelectedIndexChanged);
             // 
             // cbProduct
             // 
@@ -177,7 +180,7 @@
             this.cbProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbProduct.ItemHeight = 30;
-            this.cbProduct.Location = new System.Drawing.Point(286, 262);
+            this.cbProduct.Location = new System.Drawing.Point(155, 262);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(187, 36);
             this.cbProduct.TabIndex = 14;
@@ -188,7 +191,7 @@
             // 
             this.lbSupplier.AutoSize = true;
             this.lbSupplier.ForeColor = System.Drawing.Color.Transparent;
-            this.lbSupplier.Location = new System.Drawing.Point(302, 131);
+            this.lbSupplier.Location = new System.Drawing.Point(400, 131);
             this.lbSupplier.Name = "lbSupplier";
             this.lbSupplier.Size = new System.Drawing.Size(72, 23);
             this.lbSupplier.TabIndex = 15;
@@ -198,7 +201,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(317, 239);
+            this.label5.Location = new System.Drawing.Point(186, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 16;
@@ -208,7 +211,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(685, 236);
+            this.label6.Location = new System.Drawing.Point(554, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 23);
             this.label6.TabIndex = 18;
@@ -227,7 +230,7 @@
             this.txtCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Location = new System.Drawing.Point(673, 258);
+            this.txtCost.Location = new System.Drawing.Point(542, 258);
             this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCost.Name = "txtCost";
             this.txtCost.PlaceholderText = "";
@@ -239,7 +242,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(855, 236);
+            this.label7.Location = new System.Drawing.Point(724, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 23);
             this.label7.TabIndex = 20;
@@ -258,7 +261,7 @@
             this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Location = new System.Drawing.Point(843, 258);
+            this.txtAmount.Location = new System.Drawing.Point(712, 258);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderText = "";
@@ -277,9 +280,9 @@
             this.btAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.btAddNew.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btAddNew.ForeColor = System.Drawing.Color.White;
-            this.btAddNew.Location = new System.Drawing.Point(664, 150);
+            this.btAddNew.Location = new System.Drawing.Point(640, 150);
             this.btAddNew.Name = "btAddNew";
-            this.btAddNew.Size = new System.Drawing.Size(287, 45);
+            this.btAddNew.Size = new System.Drawing.Size(179, 45);
             this.btAddNew.TabIndex = 21;
             this.btAddNew.Text = "Add";
             this.btAddNew.Click += new System.EventHandler(this.btAddNew_Click);
@@ -293,8 +296,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAddPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvAddPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAddPurchase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -375,6 +378,7 @@
             this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
+            this.dgvid.Visible = false;
             // 
             // dgvproid
             // 

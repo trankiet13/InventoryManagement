@@ -254,6 +254,8 @@ namespace InventoryManagement.Model
                 {
                     cbProduct.SelectedValue = product.Rows[0]["BARCODE"].ToString();
                     txtCost.Text = product.Rows[0]["DONGIA"].ToString();
+                    cbSupplier.SelectedValue = product.Rows[0]["MANCC"].ToString();
+                    cbProduct.SelectedValue = product.Rows[0]["TENHH"].ToString();
                     txtBarcode.Text = "";
                     txtQuantity.Focus();
                 }
@@ -280,6 +282,10 @@ namespace InventoryManagement.Model
         private void dgvAddPurchase_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public override void btClosee_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
