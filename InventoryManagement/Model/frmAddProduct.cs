@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using InventoryManagement.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -180,7 +181,6 @@ namespace InventoryManagement.Model
             cbNhom.DisplayMember = "TENNHOM";
             cbNhom.ValueMember = "IDNHOM";
             cbNhom.SelectedIndex = -1;
-
         }
 
         public string filePath = "";
@@ -209,5 +209,21 @@ namespace InventoryManagement.Model
                 }
             }
         }
+
+        private void btnAddNhom_Click(object sender, EventArgs e)
+        {
+            frmViewNhom frmViewNhom = new frmViewNhom();
+            frmViewNhom.ShowDialog();
+            LoadNhomSanPham();
+        }
+
+        private void btnAddXX_Click(object sender, EventArgs e)
+        {
+            frmViewXuatXu frmViewXuatXu = new frmViewXuatXu();
+            frmViewXuatXu.ShowDialog();
+            LoadXuatXu();
+        }
+
+     
     }
 }

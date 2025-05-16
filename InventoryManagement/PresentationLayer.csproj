@@ -101,6 +101,12 @@
     <Compile Include="Model\frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmAddNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddNhom.Designer.cs">
+      <DependentUpon>frmAddNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmAddPurchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,12 @@
     </Compile>
     <Compile Include="Model\frmUserAdd.Designer.cs">
       <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmAddXuatXu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmAddXuatXu.Designer.cs">
+      <DependentUpon>frmAddXuatXu.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ucProduct.cs">
       <SubType>UserControl</SubType>
@@ -222,6 +234,12 @@
     <Compile Include="View\frmViewCustomer.Designer.cs">
       <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmViewNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewNhom.Designer.cs">
+      <DependentUpon>frmViewNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmViewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +270,12 @@
     <Compile Include="View\frmViewUser.Designer.cs">
       <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmViewXuatXu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewXuatXu.Designer.cs">
+      <DependentUpon>frmViewXuatXu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMai.resx">
       <DependentUpon>frmMai.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +297,9 @@
     <EmbeddedResource Include="Model\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddNhom.resx">
+      <DependentUpon>frmAddNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddSupplier.resx">
       <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmAddXuatXu.resx">
+      <DependentUpon>frmAddXuatXu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductStatistical.resx">
       <DependentUpon>frmProductStatistical.cs</DependentUpon>
@@ -334,6 +364,9 @@
     <EmbeddedResource Include="View\frmViewCustomer.resx">
       <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewNhom.resx">
+      <DependentUpon>frmViewNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewProduct.resx">
       <DependentUpon>frmViewProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmViewUser.resx">
       <DependentUpon>frmViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewXuatXu.resx">
+      <DependentUpon>frmViewXuatXu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

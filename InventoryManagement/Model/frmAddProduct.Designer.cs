@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProduct));
             this.btAddNew = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,13 +65,16 @@
             this.txtbarcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPic = new System.Windows.Forms.PictureBox();
+            this.btnAddXX = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddNhom = new Guna.UI2.WinForms.Guna2Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(526, 236);
-            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.Size = new System.Drawing.Size(100, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Quantity";
             // 
@@ -236,7 +240,7 @@
             this.label100.Location = new System.Drawing.Point(81, 441);
             this.label100.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(107, 20);
+            this.label100.Size = new System.Drawing.Size(133, 25);
             this.label100.TabIndex = 37;
             this.label100.Text = "Nhà cung cấp";
             // 
@@ -282,7 +286,7 @@
             this.chkDisabled.Location = new System.Drawing.Point(632, 578);
             this.chkDisabled.Margin = new System.Windows.Forms.Padding(4);
             this.chkDisabled.Name = "chkDisabled";
-            this.chkDisabled.Size = new System.Drawing.Size(98, 24);
+            this.chkDisabled.Size = new System.Drawing.Size(118, 29);
             this.chkDisabled.TabIndex = 39;
             this.chkDisabled.Text = "Disabled";
             this.chkDisabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -332,7 +336,7 @@
             this.label9.Location = new System.Drawing.Point(81, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 20);
+            this.label9.Size = new System.Drawing.Size(79, 25);
             this.label9.TabIndex = 35;
             this.label9.Text = "Xuất xứ";
             // 
@@ -363,7 +367,7 @@
             this.label8.Location = new System.Drawing.Point(545, 369);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.Size = new System.Drawing.Size(61, 25);
             this.label8.TabIndex = 33;
             this.label8.Text = "Mô tả";
             // 
@@ -392,7 +396,7 @@
             this.label4.Location = new System.Drawing.Point(81, 301);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.Size = new System.Drawing.Size(53, 25);
             this.label4.TabIndex = 31;
             this.label4.Text = "ĐVT";
             // 
@@ -404,7 +408,7 @@
             this.label11.Location = new System.Drawing.Point(545, 296);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 20);
+            this.label11.Size = new System.Drawing.Size(66, 25);
             this.label11.TabIndex = 30;
             this.label11.Text = "Trị giá";
             // 
@@ -436,7 +440,7 @@
             this.label12.Location = new System.Drawing.Point(81, 225);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.Size = new System.Drawing.Size(73, 25);
             this.label12.TabIndex = 28;
             this.label12.Text = "Tên tắt";
             // 
@@ -468,7 +472,7 @@
             this.label13.Location = new System.Drawing.Point(545, 163);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 20);
+            this.label13.Size = new System.Drawing.Size(47, 25);
             this.label13.TabIndex = 26;
             this.label13.Text = "Tên";
             // 
@@ -480,7 +484,7 @@
             this.label14.Location = new System.Drawing.Point(81, 163);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 20);
+            this.label14.Size = new System.Drawing.Size(85, 25);
             this.label14.TabIndex = 24;
             this.label14.Text = "Barcode";
             // 
@@ -491,7 +495,7 @@
             this.label15.Location = new System.Drawing.Point(92, 177);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 20);
+            this.label15.Size = new System.Drawing.Size(0, 25);
             this.label15.TabIndex = 23;
             // 
             // spGia
@@ -521,7 +525,7 @@
             this.label2.Location = new System.Drawing.Point(545, 225);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 41;
             this.label2.Text = "Nhóm";
             // 
@@ -584,11 +588,49 @@
             this.txtPic.TabIndex = 47;
             this.txtPic.TabStop = false;
             // 
+            // btnAddXX
+            // 
+            this.btnAddXX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddXX.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddXX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddXX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddXX.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddXX.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddXX.ForeColor = System.Drawing.Color.White;
+            this.btnAddXX.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAddXX.Image = global::InventoryManagement.Properties.Resources._1564491_add_create_new_plus_icon__1_;
+            this.btnAddXX.Location = new System.Drawing.Point(468, 354);
+            this.btnAddXX.Name = "btnAddXX";
+            this.btnAddXX.Size = new System.Drawing.Size(45, 31);
+            this.btnAddXX.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.btnAddXX, "Chỉnh sửa xuất xứ");
+            this.btnAddXX.Click += new System.EventHandler(this.btnAddXX_Click);
+            // 
+            // btnAddNhom
+            // 
+            this.btnAddNhom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNhom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNhom.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNhom.ForeColor = System.Drawing.Color.White;
+            this.btnAddNhom.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAddNhom.Image = global::InventoryManagement.Properties.Resources._1564491_add_create_new_plus_icon__1_;
+            this.btnAddNhom.Location = new System.Drawing.Point(869, 219);
+            this.btnAddNhom.Name = "btnAddNhom";
+            this.btnAddNhom.Size = new System.Drawing.Size(45, 31);
+            this.btnAddNhom.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.btnAddNhom, "Chỉnh sửa nhóm hàng hóa");
+            this.btnAddNhom.Click += new System.EventHandler(this.btnAddNhom_Click);
+            // 
             // frmAddProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 692);
+            this.Controls.Add(this.btnAddNhom);
+            this.Controls.Add(this.btnAddXX);
             this.Controls.Add(this.txtPic);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtbarcode);
@@ -658,5 +700,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtbarcode;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox txtPic;
+        private Guna.UI2.WinForms.Guna2Button btnAddXX;
+        private Guna.UI2.WinForms.Guna2Button btnAddNhom;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

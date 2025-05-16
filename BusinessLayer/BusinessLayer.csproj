@@ -53,6 +53,7 @@
     <Compile Include="CompanyBL.cs" />
     <Compile Include="CustomerBL.cs" />
     <Compile Include="LoginBL.cs" />
+    <Compile Include="NhomHHBL.cs" />
     <Compile Include="ProductsBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseBL.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="SaleBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="UserBL.cs" />
+    <Compile Include="XuatXuBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

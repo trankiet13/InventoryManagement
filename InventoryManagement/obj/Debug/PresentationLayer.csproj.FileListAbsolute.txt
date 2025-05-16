@@ -236,3 +236,7 @@ E:\InventoryManagement\InventoryManagement\bin\Debug\CrystalDecisions.ReportAppS
 E:\InventoryManagement\InventoryManagement\bin\Debug\stdole.dll
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddBranch.resources
 C:\Users\LENOVO\Desktop\LTCSDL\1\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddCompany.resources
+E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddNhom.resources
+E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Model.frmAddXuatXu.resources
+E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewNhom.resources
+E:\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.View.frmViewXuatXu.resources
